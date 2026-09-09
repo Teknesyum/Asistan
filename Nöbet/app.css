@@ -45,6 +45,13 @@ body { overflow: hidden; background: transparent; }
   -webkit-app-region: no-drag;
 }
 
+.basbar-senk {
+  font-size: var(--tk-fs-1);
+  line-height: var(--tk-lh-heading);
+  color: var(--tk-text-label);
+  -webkit-app-region: no-drag;
+}
+
 .pdgm-grup { display: flex; -webkit-app-region: no-drag; }
 .pdgm-grup[hidden] { display: none; }
 .pdgm {

@@ -1,117 +1,116 @@
-const { execFile, execFileSync } = require("child_process");
+const { execFileSync, execFile } = require("child_process");
 const path = require("path");
 const fs = require("fs");
+const os = require("os");
 
 const KOK = path.resolve(__dirname, "..");
-const VERI = path.join(KOK, "veri", "nobet");
-const YOL = "veri/nobet";
+const IZLENEN = ["Nöbet/main.js", "Nöbet/preload.js", "Nöbet/arayuz.html", "Nöbet/app.css", "Nöbet/package.json", "Nöbet/nobet.py", "Nöbet/senkron.js"];
 
-let etkin = false;
-let bekleyen = null;
+let gunluk = [];
+function not(s) {
+  gunluk.push(new Date().toISOString().slice(11, 19) + " " + s);
+  if (gunluk.length > 200) gunluk.shift();
+}
+function kayit() { return gunluk.slice(); }
 
-function veriDizin() {
-  try { fs.mkdirSync(VERI, { recursive: true }); } catch (e) {}
-  return VERI;
+function git(args, opt) {
+  return execFileSync("git", ["-c", "core.quotepath=false"].concat(args), {
+    cwd: KOK,
+    encoding: "utf-8",
+    windowsHide: true,
+    timeout: (opt && opt.timeout) || 30000,
+    stdio: ["ignore", "pipe", "pipe"]
+  }).trim();
+}
+function gitSessiz(args, opt) {
+  try { return { ok: true, cikti: git(args, opt) }; }
+  catch (e) { return { ok: false, cikti: ((e.stdout || "") + (e.stderr || "")).toString().trim() }; }
 }
 
-function git(args, opts) {
-  return new Promise(cevap => {
-    execFile("git", args, { cwd: KOK, windowsHide: true, timeout: (opts && opts.sure) || 30000 },
-      (hata, cikti, hataCikti) => cevap({ ok: !hata, cikti: (cikti || "").trim(), hata: (hataCikti || "").trim() }));
-  });
+function depoVar() {
+  return fs.existsSync(path.join(KOK, ".git")) && gitSessiz(["remote", "get-url", "origin"]).ok;
 }
 
-function gitSenkron(args) {
-  try {
-    return { ok: true, cikti: String(execFileSync("git", args, { cwd: KOK, windowsHide: true, timeout: 20000 })).trim() };
-  } catch (e) {
-    return { ok: false, cikti: "" };
+function kimlik() {
+  if (!gitSessiz(["config", "user.email"]).ok) {
+    gitSessiz(["config", "user.email", os.userInfo().username + "@" + os.hostname()]);
+    gitSessiz(["config", "user.name", os.userInfo().username]);
   }
 }
 
-async function depoMu() {
-  const a = await git(["rev-parse", "--is-inside-work-tree"], { sure: 8000 });
-  if (!a.ok || a.cikti !== "true") return false;
-  const b = await git(["remote", "get-url", "origin"], { sure: 8000 });
-  return b.ok && !!b.cikti;
+function surum() {
+  const r = gitSessiz(["rev-parse", "HEAD"]);
+  return r.ok ? r.cikti : "";
 }
 
-async function kirliMi() {
-  const a = await git(["status", "--porcelain", "--", YOL]);
-  return a.ok && a.cikti.length > 0;
+function degisenler(a, b) {
+  if (!a || !b || a === b) return [];
+  const r = gitSessiz(["diff", "--name-only", a, b]);
+  return r.ok ? r.cikti.split("\n").filter(Boolean) : [];
 }
 
-async function veriIsle(mesaj) {
-  if (!(await kirliMi())) return false;
-  await git(["add", "--", YOL]);
-  const a = await git(["commit", "-m", mesaj]);
-  return a.ok;
+function yerelKaydet(mesaj) {
+  const d = gitSessiz(["status", "--porcelain", "--", "Nöbet/veri"]);
+  if (!d.ok || !d.cikti) return false;
+  gitSessiz(["add", "--", "Nöbet/veri"]);
+  const c = gitSessiz(["commit", "-m", mesaj + " (" + os.hostname() + ")"]);
+  if (c.ok) not("kayıt: " + mesaj);
+  return c.ok;
 }
 
-async function tasi() {
-  veriDizin();
-  if (fs.readdirSync(VERI).length) return;
-  const eski = path.join(process.env.APPDATA || "", "asistan-nobet", "veri");
-  if (!eski || !fs.existsSync(eski)) return;
-  for (const ad of fs.readdirSync(eski)) {
-    try { fs.copyFileSync(path.join(eski, ad), path.join(VERI, ad)); } catch (e) {}
+function cek() {
+  if (!depoVar()) return { ok: false, kodDegisti: false, sebep: "depo yok" };
+  kimlik();
+  const once = surum();
+  yerelKaydet("veri");
+  let r = gitSessiz(["pull", "--no-rebase", "--no-edit", "-X", "ours", "origin", "HEAD"], { timeout: 45000 });
+  if (!r.ok) {
+    not("çekme başarısız: " + r.cikti.split("\n").slice(-2).join(" "));
+    gitSessiz(["merge", "--abort"]);
+    return { ok: false, kodDegisti: false, sebep: r.cikti };
   }
-}
-
-async function baslat() {
-  const sonuc = { depo: false, yenilendi: false, not: "" };
-  veriDizin();
-  if (!(await depoMu())) { sonuc.not = "depo yok, yalniz yerel"; await tasi(); return sonuc; }
-  sonuc.depo = true;
-  await tasi();
-
-  const dal = (await git(["rev-parse", "--abbrev-ref", "HEAD"])).cikti || "main";
-  const once = (await git(["rev-parse", "HEAD"])).cikti;
-
-  await veriIsle("veri: yerel degisiklik");
-
-  const getir = await git(["fetch", "origin", dal], { sure: 45000 });
-  if (!getir.ok) { sonuc.not = "cevrimdisi"; etkin = true; return sonuc; }
-
-  const cek = await git(["rebase", "-X", "theirs", "origin/" + dal], { sure: 45000 });
-  if (!cek.ok) {
-    await git(["rebase", "--abort"]);
-    sonuc.not = "birlestirme cakismasi, yerel korundu";
-  }
-
-  const sonra = (await git(["rev-parse", "HEAD"])).cikti;
-  if (once && sonra && once !== sonra) {
-    const fark = await git(["diff", "--name-only", once, sonra]);
-    const kod = fark.cikti.split("\n").filter(s => s && !s.startsWith(YOL) && !s.startsWith("veri/"));
-    if (kod.length) sonuc.yenilendi = true;
-  }
-
-  etkin = true;
-  it();
-  return sonuc;
+  const sonra = surum();
+  const list = degisenler(once, sonra);
+  const kodDegisti = list.some(f => IZLENEN.includes(f));
+  if (list.length) not("güncellendi: " + list.length + " dosya" + (kodDegisti ? " (kod)" : ""));
+  return { ok: true, kodDegisti, degisen: list };
 }
 
 function it() {
-  git(["push", "origin", "HEAD"], { sure: 45000 });
+  if (!depoVar()) return false;
+  const r = gitSessiz(["push", "origin", "HEAD"], { timeout: 45000 });
+  if (!r.ok) not("gönderim başarısız: " + r.cikti.split("\n").slice(-1)[0]);
+  return r.ok;
 }
 
-function degisti() {
-  if (!etkin) return;
-  clearTimeout(bekleyen);
-  bekleyen = setTimeout(async () => {
-    if (await veriIsle("veri: " + new Date().toISOString().slice(0, 19).replace("T", " "))) it();
-  }, 4000);
+let zamanlayici = null;
+function gecikmeliGonder(ms) {
+  if (zamanlayici) clearTimeout(zamanlayici);
+  zamanlayici = setTimeout(() => {
+    zamanlayici = null;
+    try {
+      if (!yerelKaydet("veri")) return;
+      cek();
+      it();
+    } catch (e) { not("senkron hatası: " + e.message); }
+  }, ms || 4000);
 }
 
-function kapat() {
-  if (!etkin) return;
-  clearTimeout(bekleyen);
-  const a = gitSenkron(["status", "--porcelain", "--", YOL]);
-  if (a.ok && a.cikti) {
-    gitSenkron(["add", "--", YOL]);
-    gitSenkron(["commit", "-m", "veri: " + new Date().toISOString().slice(0, 19).replace("T", " ")]);
-  }
-  gitSenkron(["push", "origin", "HEAD"]);
+function simdiGonder() {
+  if (zamanlayici) { clearTimeout(zamanlayici); zamanlayici = null; }
+  try {
+    if (!yerelKaydet("veri")) return false;
+    cek();
+    return it();
+  } catch (e) { not("senkron hatası: " + e.message); return false; }
 }
 
-module.exports = { veriDizin, baslat, degisti, kapat, KOK };
+function arkadaGonder() {
+  execFile(process.execPath, [path.join(__dirname, "senkron-cli.js")], {
+    cwd: KOK,
+    windowsHide: true,
+    env: Object.assign({}, process.env, { ELECTRON_RUN_AS_NODE: "1" })
+  }, () => {});
+}
+
+module.exports = { KOK, cek, it, gecikmeliGonder, simdiGonder, arkadaGonder, depoVar, kayit, not };

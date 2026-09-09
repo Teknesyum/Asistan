@@ -3,8 +3,27 @@ const path = require("path");
 const fs = require("fs");
 const senkron = require("./senkron");
 
+let VERIDIZIN = null;
 function veriDizin() {
-  return senkron.veriDizin();
+  if (!VERIDIZIN) {
+    VERIDIZIN = path.join(__dirname, "veri");
+    try { fs.mkdirSync(VERIDIZIN, { recursive: true }); } catch (e) {}
+    tasi();
+  }
+  return VERIDIZIN;
+}
+
+function tasi() {
+  const eski = path.join(app.getPath("userData"), "veri");
+  if (eski === VERIDIZIN || !fs.existsSync(eski)) return;
+  try {
+    for (const ad of fs.readdirSync(eski)) {
+      const hedef = path.join(VERIDIZIN, ad);
+      if (!fs.existsSync(hedef)) fs.copyFileSync(path.join(eski, ad), hedef);
+    }
+    fs.renameSync(eski, eski + "-devredildi-" + Date.now());
+    senkron.not("eski veri taşındı");
+  } catch (e) {}
 }
 function veriYol(k) {
   const ad = String(k).replace(/[^A-Za-z0-9:_-]/g, "_").replace(/:/g, "@");
@@ -45,8 +64,18 @@ function hedef(e) {
   return BrowserWindow.fromWebContents(e.sender);
 }
 
-app.whenReady().then(async () => {
+app.whenReady().then(() => {
   Menu.setApplicationMenu(null);
+  try {
+    const g = senkron.cek();
+    if (g.ok && g.kodDegisti) {
+      senkron.not("kod güncellendi, yeniden başlatılıyor");
+      app.relaunch();
+      app.exit(0);
+      return;
+    }
+  } catch (e) { senkron.not("başlangıç senkronu: " + e.message); }
+  veriDizin();
   ipcMain.on("pencere:kucult", e => { const w = hedef(e); if (w) w.minimize(); });
   ipcMain.on("pencere:buyult", e => {
     const w = hedef(e);
@@ -66,23 +95,20 @@ app.whenReady().then(async () => {
     catch (err) { e.returnValue = null; }
   });
   ipcMain.on("veri:yaz", (e, { k, m }) => {
-    try { fs.writeFileSync(veriYol(k), m, "utf-8"); senkron.degisti(); } catch (err) {}
+    try { fs.writeFileSync(veriYol(k), m, "utf-8"); senkron.gecikmeliGonder(5000); } catch (err) {}
   });
 
-  let durum = { depo: false, yenilendi: false, not: "baslatiliyor" };
-  try { durum = await senkron.baslat(); } catch (err) { durum = { depo: false, yenilendi: false, not: "senkron hatasi" }; }
-  if (durum.yenilendi) { app.relaunch(); app.exit(0); return; }
-
-  const p = pencere();
-  p.webContents.on("did-finish-load", () => p.webContents.send("senkron:durum", durum));
+  ipcMain.handle("senkron:durum", () => ({ depo: senkron.depoVar(), gunluk: senkron.kayit() }));
+  ipcMain.handle("senkron:simdi", () => { try { senkron.cek(); return senkron.simdiGonder(); } catch (e) { return false; } });
+  pencere();
   app.on("activate", () => { if (!BrowserWindow.getAllWindows().length) pencere(); });
 });
 
-let kapaniyor = false;
+let cikisSenkronu = false;
 app.on("before-quit", () => {
-  if (kapaniyor) return;
-  kapaniyor = true;
-  try { senkron.kapat(); } catch (e) {}
+  if (cikisSenkronu) return;
+  cikisSenkronu = true;
+  try { senkron.arkadaGonder(); } catch (e) {}
 });
 
 app.on("window-all-closed", () => app.quit());

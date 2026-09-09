@@ -4,7 +4,7 @@ const fs = require("fs");
 const os = require("os");
 
 const KOK = path.resolve(__dirname, "..");
-const IZLENEN = ["Görevlendirme/main.js", "Görevlendirme/preload.js", "Görevlendirme/arayuz.html", "Görevlendirme/app.css", "Görevlendirme/package.json"];
+const IZLENEN = ["Görevlendirme/main.js", "Görevlendirme/preload.js", "Görevlendirme/arayuz.html", "Görevlendirme/app.css", "Görevlendirme/package.json", "Görevlendirme/senkron.js"];
 
 let gunluk = [];
 function not(s) {
@@ -14,7 +14,7 @@ function not(s) {
 function kayit() { return gunluk.slice(); }
 
 function git(args, opt) {
-  return execFileSync("git", args, {
+  return execFileSync("git", ["-c", "core.quotepath=false"].concat(args), {
     cwd: KOK,
     encoding: "utf-8",
     windowsHide: true,

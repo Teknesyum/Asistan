@@ -17,6 +17,7 @@
 <header class="basbar" id="basbar">
   <span class="marka">Asistan <span class="marka-vurgu">Nöbet</span></span>
   <span class="basbar-ay" id="basbarAy"></span>
+  <span class="basbar-senk" id="basbarSenk"></span>
   <span class="bosluk"></span>
   <div class="pdgm-grup">
     <button type="button" class="pdgm" id="pKucult" aria-label="Küçült">
@@ -1602,6 +1603,22 @@ $("#fileIn").onchange = e => {
 
 const PENCERE = window.pencere;
 if (PENCERE) {
+  if (window.pencere && window.pencere.senkron) {
+    const senkGoster = () => window.pencere.senkron.durum().then(d => {
+      const e = $("#basbarSenk");
+      if (!e) return;
+      const son = d && d.gunluk && d.gunluk.length ? d.gunluk[d.gunluk.length - 1].slice(9) : "eşitlendi";
+      e.textContent = d && d.depo ? "· " + son : "· yerel";
+    }).catch(() => {});
+    senkGoster();
+    setInterval(senkGoster, 15000);
+    const eSenk = $("#basbarSenk");
+    if (eSenk) {
+      eSenk.title = "Şimdi eşitle";
+      eSenk.style.cursor = "pointer";
+      eSenk.onclick = () => window.pencere.senkron.simdi().then(senkGoster);
+    }
+  }
   $("#pKucult").onclick = () => PENCERE.kucult();
   $("#pBuyult").onclick = () => PENCERE.buyult();
   $("#pKapat").onclick = () => PENCERE.kapat();
