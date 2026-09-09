@@ -18,6 +18,7 @@
   <span class="marka">Asistan <span class="marka-vurgu">Görevlendirme</span></span>
   <span class="basbar-ay" id="basbarAy"></span>
   <span class="bosluk"></span>
+  <button type="button" class="imza" id="imza" title="Teknesyum — GitHub sayfamız">Teknesyum</button>
   <div class="pdgm-grup">
     <button type="button" class="pdgm" id="pKucult" aria-label="Küçült">
       <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 5h10" /></svg>
@@ -49,20 +50,20 @@
   <div class="gosterge">
     <div class="sol">
       <div class="pnl a-matris">
-        <div class="pnl-bas">Ay Matrisi — Gönderilenler</div>
         <div class="pnl-icerik" id="matris1"></div>
       </div>
+      <div class="ayirac ayirac-yatay" data-ayirac="sol"></div>
       <div class="sol-alt">
         <div class="pnl a-cetele">
-          <div class="pnl-bas">Geçmiş — Kişi × Yer</div>
           <div class="pnl-icerik" id="cetele"></div>
         </div>
+        <div class="ayirac ayirac-dikey" data-ayirac="solAlt"></div>
         <div class="pnl a-ekip">
-          <div class="pnl-bas" id="ekipBas">Kişi × Bölüm</div>
           <div class="pnl-icerik" id="ekip"></div>
         </div>
       </div>
     </div>
+    <div class="ayirac ayirac-dikey" data-ayirac="gosterge"></div>
     <div class="sag">
       <div class="pnl a-bugun">
         <div class="pnl-bas">
@@ -77,8 +78,8 @@
         </div>
         <div class="pnl-icerik" id="bugunIc"></div>
       </div>
+      <div class="ayirac ayirac-yatay" data-ayirac="sag"></div>
       <div class="pnl a-gkural">
-        <div class="pnl-bas">Kurallar <span id="gkuralGun" class="sayi"></span></div>
         <div class="pnl-icerik" id="gkural"></div>
       </div>
     </div>
@@ -239,6 +240,83 @@ const GUNADI = ["Paz","Pzt","Sal","Çar","Per","Cum","Cmt"];
 const GUNADI_UZUN = ["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"];
 const LSKEY = "asistan-gorevlendirme-v2";
 const ayAnahtar = (y, a) => LSKEY + ":" + y + "-" + String(a).padStart(2, "0");
+const OLCU_ANAHTAR = "asistan-gorevlendirme-olcu";
+const OLCU_VAR = {gosterge: "--g-kol", sol: "--sol-satir", solAlt: "--sa-kol", sag: "--sag-satir"};
+const OLCU = (() => { try { return JSON.parse(localStorage.getItem(OLCU_ANAHTAR)) || {}; } catch (e) { return {}; } })();
+
+function olcuUygula() {
+  const k = document.documentElement;
+  for (const ad in OLCU_VAR) if (OLCU[ad]) k.style.setProperty(OLCU_VAR[ad], OLCU[ad] + "fr");
+}
+
+function autofit() {
+  document.querySelectorAll("#s-gosterge .pnl-icerik").forEach(e => {
+    e.style.zoom = "1";
+    e.style.setProperty("--satir-y", "0px");
+    if (!e.clientHeight) return;
+    const tasar = () => e.scrollHeight > e.clientHeight || e.scrollWidth > e.clientWidth;
+    if (tasar()) {
+      let z = 1;
+      while (z > 0.5 && tasar()) { z -= 0.02; e.style.zoom = z.toFixed(2); }
+      return;
+    }
+    let y = 0;
+    for (const adim of [1, 0.25, 0.05]) {
+      while (y + adim <= 12) {
+        e.style.setProperty("--satir-y", (y + adim).toFixed(2) + "px");
+        if (tasar()) break;
+        y += adim;
+      }
+      e.style.setProperty("--satir-y", y.toFixed(2) + "px");
+    }
+  });
+}
+
+function ayiraclar() {
+  document.querySelectorAll(".ayirac").forEach(a => {
+    const ad = a.dataset.ayirac, kap = a.parentElement, dik = a.classList.contains("ayirac-dikey");
+    a.onmousedown = e => {
+      e.preventDefault();
+      const r = kap.getBoundingClientRect();
+      const tasi = m => {
+        const p = dik ? (m.clientX - r.left) / r.width : (m.clientY - r.top) / r.height;
+        const o = Math.min(0.85, Math.max(0.15, p));
+        OLCU[ad] = (o / (1 - o)).toFixed(3);
+        document.documentElement.style.setProperty(OLCU_VAR[ad], OLCU[ad] + "fr");
+        autofit();
+      };
+      const bit = () => {
+        document.removeEventListener("mousemove", tasi);
+        document.removeEventListener("mouseup", bit);
+        document.body.classList.remove("ayirma");
+        try { localStorage.setItem(OLCU_ANAHTAR, JSON.stringify(OLCU)); } catch (_) {}
+        autofit();
+      };
+      document.body.classList.add("ayirma");
+      document.addEventListener("mousemove", tasi);
+      document.addEventListener("mouseup", bit);
+    };
+    a.ondblclick = () => {
+      delete OLCU[ad];
+      document.documentElement.style.removeProperty(OLCU_VAR[ad]);
+      try { localStorage.setItem(OLCU_ANAHTAR, JSON.stringify(OLCU)); } catch (_) {}
+      autofit();
+    };
+  });
+}
+
+olcuUygula();
+ayiraclar();
+addEventListener("resize", autofit);
+addEventListener("load", () => setTimeout(autofit, 60));
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => setTimeout(autofit, 0));
+
+const IMZA_ADRES = "https://github.com/Teknesyum";
+document.getElementById("imza").onclick = () => {
+  if (window.pencere && window.pencere.ac) window.pencere.ac(IMZA_ADRES);
+  else window.open(IMZA_ADRES, "_blank", "noopener");
+};
+
 const DEPO = (window.pencere && window.pencere.veri)
   ? {disk: true,
      oku: k => { try { return window.pencere.veri.oku(k); } catch (e) { return null; } },
@@ -455,6 +533,7 @@ function haftaIci(g) {
 }
 function varsayilanBugun() {
   const d = new Date();
+  d.setDate(d.getDate() + 1);
   const g = (d.getFullYear() === V.yil && d.getMonth() + 1 === V.ay) ? d.getDate() : 1;
   return haftaIci(g);
 }
@@ -492,24 +571,62 @@ function refakatSuruyor(ad, sayilan) {
 function zorlandi(gun, ad) {
   return (V.force[String(gun)] || []).some(z => z.ad === ad);
 }
-function isimCip(ad, rozet, zorla, ek) {
+function isimCip(ad, rozet, zorla, ek, tasi) {
   const c = el("span", {className: "isim" + (zorla ? " isim-zorla" : "") + (ek ? " isim-refakat" : "")});
   if (zorla) c.title = "Elle zorlandı";
   if (ek) c.title = "Refakatçi — kadroya sayılmaz, tek başına bırakılmaz";
   c.appendChild(el("span", {textContent: kisaAd(ad)}));
   if (rozet) c.appendChild(el("span", {className: "rozet", textContent: "K" + kademesi(ad)}));
   if (ek) c.appendChild(el("span", {className: "rozet", textContent: "R"}));
+  if (tasi) cipTasi(c, ad, tasi.gun, tasi.yer);
   return c;
+}
+function cipTasi(c, ad, gun, yer) {
+  c.draggable = true;
+  c.classList.add("isim-tasinir");
+  if (!c.title) c.title = "Sürükleyip başka bir ismin üstüne bırakın: yerleri değişir";
+  c.ondragstart = e => {
+    e.dataTransfer.setData("text/plain", JSON.stringify({ad, yer}));
+    e.dataTransfer.effectAllowed = "move";
+    c.classList.add("isim-tasiniyor");
+  };
+  c.ondragend = () => c.classList.remove("isim-tasiniyor", "isim-hedef");
+  c.ondragover = e => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; c.classList.add("isim-hedef"); };
+  c.ondragleave = () => c.classList.remove("isim-hedef");
+  c.ondrop = e => {
+    e.preventDefault(); e.stopPropagation();
+    c.classList.remove("isim-hedef");
+    let k = null;
+    try { k = JSON.parse(e.dataTransfer.getData("text/plain")); } catch (_) { return; }
+    if (!k || !k.ad || k.ad === ad) return;
+    yerTakas(gun, k.ad, k.yer, ad, yer);
+  };
+}
+function yerTakas(g, a, ya, b, yb) {
+  const gs = String(g);
+  if (V.gecmis[gs]) { toast(g + ". gün kilitli, önce kilidi açın"); return; }
+  if (ya === yb) return;
+  const l = V.force[gs] = V.force[gs] || [];
+  const koy = (ad, yer) => {
+    const i = l.findIndex(z => z.ad === ad);
+    if (i >= 0) l.splice(i, 1);
+    if (yer) l.push({ad, yer});
+  };
+  koy(a, yb); koy(b, ya);
+  if (!l.length) delete V.force[gs];
+  sakla(); ciz_gosterge(); ciz_kural();
+  toast(kisaAd(a) + " → " + (yb || "Ameliyathane") + ", " + kisaAd(b) + " → " + (ya || "Ameliyathane"));
 }
 function cipSeritDuz(liste) {
   const d = el("div", {className: "isim-serit"});
   liste.forEach(ad => d.appendChild(isimCip(ad, false, false)));
   return d;
 }
-function isimSerit(liste, kd, rozet, gun, rf) {
+function isimSerit(liste, kd, rozet, gun, rf, tasiYer) {
   const d = el("div", {className: "isim-serit"});
   liste.slice().sort((x,y) => kd[x] - kd[y]).forEach(ad =>
-    d.appendChild(isimCip(ad, rozet, gun ? zorlandi(gun, ad) : false, rf ? rf[ad] : 0)));
+    d.appendChild(isimCip(ad, rozet, gun ? zorlandi(gun, ad) : false, rf ? rf[ad] : 0,
+      (gun && tasiYer !== undefined) ? {gun, yer: tasiYer} : null)));
   return d;
 }
 function bugunDurum(s, ad) {
@@ -889,9 +1006,10 @@ function bugunKart(hedef, gun, s) {
   const ar = el("div", {className: "esles-satir esles-amel grid-line"});
   ar.appendChild(el("div", {className: "esles-yer", textContent: "Ameliyathanede"}));
   const ad2 = el("div", {className: "esles-amel-liste"});
-  if (kalan.length) ad2.appendChild(isimSerit(kalan, kd, false));
+  if (kalan.length) ad2.appendChild(isimSerit(kalan, kd, false, gun, null, ""));
   else ad2.textContent = "Kimse kalmıyor";
   ar.appendChild(ad2);
+  amelHedef(ar, gun);
   es.appendChild(ar);
   let n2 = 0;
   tumYer.forEach(yer => {
@@ -917,7 +1035,7 @@ function bugunKart(hedef, gun, s) {
     const rf = {};
     (s.refakat || []).forEach(r => { if (r.yer === yer) rf[r.ad] = 1; });
     if (gelen) {
-      sag.appendChild(isimSerit(gelen, kd, false, gun, rf));
+      sag.appendChild(isimSerit(gelen, kd, false, gun, rf, yer));
       if (gelen.some(ad => yasak(ad, yer))) {
         r.classList.add("esles-ihlal");
         sag.appendChild(cip("Kademe alt sınırı aşıldı", "cip-ihlal"));
@@ -935,13 +1053,42 @@ function bugunKart(hedef, gun, s) {
   hedef.appendChild(es);
 }
 
+function amelHedef(r, gun) {
+  r.title = "Bir ismi buraya bırakın: ameliyathaneye geçer, yerine en uygun kişi görevlendirilir";
+  r.ondragover = e => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; r.classList.add("esles-hedef"); };
+  r.ondragleave = () => r.classList.remove("esles-hedef");
+  r.ondrop = e => {
+    e.preventDefault();
+    r.classList.remove("esles-hedef");
+    let k = null;
+    try { k = JSON.parse(e.dataTransfer.getData("text/plain")); } catch (_) { return; }
+    if (!k || !k.ad || !k.yer) return;
+    amelAl(gun, k.ad);
+  };
+}
+function amelAl(g, ad) {
+  const gs = String(g);
+  if (V.gecmis[gs]) { toast(g + ". gün kilitli, önce kilidi açın"); return; }
+  if (V.force[gs]) {
+    V.force[gs] = V.force[gs].filter(z => z.ad !== ad);
+    if (!V.force[gs].length) delete V.force[gs];
+  }
+  const l = V.sabit[gs] = V.sabit[gs] || [];
+  if (l.indexOf(ad) < 0) l.push(ad);
+  sakla(); ciz_gosterge(); ciz_kural();
+  toast(kisaAd(ad) + " ameliyathanede kaldı, yeri en uygun kişiye verildi");
+}
+
+const YER_ADI = {Pol: "Poliklinik"};
+function yerAdi(y) { return YER_ADI[y] || y; }
+
 let ONCEKI = null;
 let DEGISEN = 0;
 
 function matrisBlok(satirlar, ilk, sonG, yeniHar, degisenGun) {
   const t = el("table", {className: "grid-line matris-tablo"});
   t.innerHTML = "<thead><tr><th>Gün</th>" +
-    V.zorunlu_yerler.map(y => "<th>" + y + "</th>").join("") + "</tr></thead>";
+    V.zorunlu_yerler.map(y => "<th>" + yerAdi(y) + "</th>").join("") + "</tr></thead>";
   const tb = el("tbody");
   const kd = kidem();
   for (let g = ilk; g <= sonG; g++) {
@@ -955,6 +1102,9 @@ function matrisBlok(satirlar, ilk, sonG, yeniHar, degisenGun) {
     const kilitli = !!V.gecmis[String(g)];
     if (kilitli) tr.classList.add("kilit-satir");
     const gh = el("td", {className: "gun-hucre"});
+    tr.classList.add("secilebilir");
+    tr.title = g + ". günü düzenlemek için tıklayın";
+    tr.onclick = e => { if (e.target.closest(".kilit-sim")) return; gunSec(g); };
     gh.appendChild(el("span", {textContent: g + " " + s.gunAdi}));
     const kb = el("button", {type: "button", className: "kilit-sim kilit-mini",
       textContent: kilitli ? "🔒" : "🔓"});
@@ -970,7 +1120,7 @@ function matrisBlok(satirlar, ilk, sonG, yeniHar, degisenGun) {
     V.zorunlu_yerler.forEach(y => {
       const l = yerler[y];
       const metin = l ? l.slice().sort((x,z)=>kd[x]-kd[z])
-        .map(ad => kisaAd(ad) + (rf[ad] ? "(R)" : "")).join(" ") : "";
+        .map(ad => kisaAd(ad) + (rf[ad] ? "(R)" : "")).join(", ") : "";
       const anahtar = g + "|" + y;
       yeniHar[anahtar] = metin;
       const td = el("td", {textContent: metin});
@@ -1003,9 +1153,10 @@ function matris(hedef, satirlar) {
   DEGISEN = Object.keys(dg).length;
 }
 
-function ceteleTablo(liste, sayac, max, s, sade) {
+function ceteleTablo(liste, sayac, max, s, sade, bas) {
   const t = el("table", {className: "grid-line"});
-  t.innerHTML = sade
+  if (bas) t.appendChild(el("caption", {className: "tablo-bas", textContent: bas}));
+  t.innerHTML += sade
     ? "<thead><tr><th>Asistan</th><th>Bugün</th></tr></thead>"
     : "<thead><tr><th>Asistan</th><th>Bugün</th><th title=\"Ay içindeki toplam görevlendirme sayısı\">Σ</th>" +
       "<th title=\"Kişinin ay içindeki toplam görev sayısının, en çok görev alan kişiye oranı. Dolu çubuk o ayın en yüklü kişisi demektir.\">Yük</th>" +
@@ -1051,9 +1202,9 @@ function ceteleTablo(liste, sayac, max, s, sade) {
   return t;
 }
 
-function ekipTablo(liste) {
+function ekipTablo(liste, bas) {
   const t = el("table", {className: "grid-line"});
-  t.innerHTML = "<thead><tr><th>Asistan</th><th>Bölüm</th></tr></thead>";
+  if (bas) t.appendChild(el("caption", {className: "tablo-bas", textContent: bas}));
   const tb = el("tbody");
   liste.forEach(a => {
     const tr = el("tr");
@@ -1067,9 +1218,7 @@ function ekipTablo(liste) {
 
 function ciz_ekip() {
   const c = $("#ekip"); c.innerHTML = "";
-  const l = V.asistanlar;
-  const n = Math.ceil(l.length / 3);
-  for (let i = 0; i < l.length; i += n) c.appendChild(ekipTablo(l.slice(i, i + n)));
+  c.appendChild(ekipTablo(V.asistanlar, ""));
 }
 
 function ciz_cetele(sayac, s) {
@@ -1080,14 +1229,8 @@ function ciz_cetele(sayac, s) {
     && V.zorunlu_yerler.indexOf(a.yer) < 0;
   const ana = V.asistanlar.filter(a => havuzda(a) || (sayac.toplam[a.ad] && !istisna(a.ad)));
   const diger = V.asistanlar.filter(a => ana.indexOf(a) < 0);
-  const blok = (bas, liste, sade) => {
-    const d = el("div", {className: "cetele-blok"});
-    d.appendChild(el("div", {className: "alt-bas", textContent: bas}));
-    d.appendChild(ceteleTablo(liste, sayac, max, s, sade));
-    return d;
-  };
-  c.appendChild(blok("Havuz", ana, false));
-  if (diger.length) c.appendChild(blok("Diğer Bölümler", diger, true));
+  c.appendChild(ceteleTablo(ana, sayac, max, s, false, ""));
+  if (diger.length) c.appendChild(ceteleTablo(diger, sayac, max, s, true, ""));
 }
 
 function ciz_gosterge() {
@@ -1112,8 +1255,9 @@ function ciz_gosterge() {
   matris($("#matris1"), satirlar);
   ciz_cetele(sayac, satirlar[BUGUN-1]);
   ciz_ekip();
-  $("#ekipBas").textContent = AYLAR[V.ay-1] + " — Kişi × Bölüm";
   ciz_gkural(satirlar, sayac);
+  requestAnimationFrame(() => requestAnimationFrame(autofit));
+  setTimeout(autofit, 80);
 }
 function gunSec(g) {
   const n = gunSayisi();
@@ -1623,7 +1767,7 @@ function otoAta(yer) {
 function ciz_gkural(satirlar, sayac) {
   const c = $("#gkural"); c.innerHTML = "";
   const g = BUGUN, gs = String(g);
-  $("#gkuralGun").textContent = g + " " + AYLAR[V.ay-1];
+  c.appendChild(el("div", {className: "gk-ust", textContent: "Kurallar — " + g + " " + AYLAR[V.ay-1]}));
 
   const bl = (bas) => {
     const d = el("div", {className: "gk-blok"});
@@ -1675,14 +1819,21 @@ function ciz_gkural(satirlar, sayac) {
   const y2 = el("select", {className: "gir gir-mini"});
   V.zorunlu_yerler.concat(["Ders", "Diğer"]).forEach(y =>
     y2.appendChild(el("option", {value: y, textContent: y})));
+  const a2 = el("input", {className: "gir gir-mini", placeholder: "ne için?"});
+  a2.title = "'Diğer' için açıklama — atamada ve çıktıda bu yazı görünür";
+  a2.hidden = y2.value !== "Diğer";
+  y2.onchange = () => { a2.hidden = y2.value !== "Diğer"; if (!a2.hidden) a2.focus(); };
   const d2 = el("button", {type: "button", className: "dgm dgm-mini", textContent: "Zorla"});
   d2.title = "Kurala bakılmaz, bugün bu kişi bu yere yazılır";
   d2.onclick = () => {
+    const not = a2.value.trim();
+    const yer = (y2.value === "Diğer" && not) ? "Diğer — " + not : y2.value;
     const l = V.force[gs] = V.force[gs] || [];
-    if (!l.some(z => z.ad === k2.value && z.yer === y2.value)) l.push({ad: k2.value, yer: y2.value});
+    if (!l.some(z => z.ad === k2.value && z.yer === yer)) l.push({ad: k2.value, yer});
+    a2.value = "";
     sakla(); ciz_gosterge(); ciz_kural();
   };
-  f2.appendChild(k2); f2.appendChild(y2); f2.appendChild(d2);
+  f2.appendChild(k2); f2.appendChild(y2); f2.appendChild(a2); f2.appendChild(d2);
   b1.appendChild(f2);
 
   const f3 = el("div", {className: "gk-satir"});

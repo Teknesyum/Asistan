@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, ipcMain, clipboard } = require("electron");
+const { app, BrowserWindow, Menu, ipcMain, clipboard, shell } = require("electron");
 const path = require("path");
 const fs = require("fs");
 const senkron = require("./senkron");
@@ -89,6 +89,7 @@ app.whenReady().then(() => {
     try { clipboard.write({ image: img }); } catch (e) {}
     return img.toPNG();
   });
+  ipcMain.on("pencere:ac", (e, u) => { if (/^https:\/\//.test(u)) shell.openExternal(u); });
   ipcMain.on("pencere:kapat", e => { const w = hedef(e); if (w) w.close(); });
   ipcMain.on("veri:oku", (e, k) => {
     try { e.returnValue = fs.readFileSync(veriYol(k), "utf-8"); }

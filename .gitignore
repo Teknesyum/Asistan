@@ -5,3 +5,4 @@ trash/
 .claude/settings.local.json
 Thumbs.db
 desktop.ini
+.claude/launch.json

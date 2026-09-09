@@ -4,7 +4,7 @@ const fs = require("fs");
 const os = require("os");
 
 const KOK = path.resolve(__dirname, "..");
-const IZLENEN = ["Görevlendirme/main.js", "Görevlendirme/preload.js", "Görevlendirme/arayuz.html", "Görevlendirme/app.css", "Görevlendirme/package.json", "Görevlendirme/senkron.js"];
+const IZLENEN = ["Görevlendirme/main.js", "Görevlendirme/preload.js", "Görevlendirme/arayuz.html", "Görevlendirme/app.css", "Görevlendirme/package.json", "Görevlendirme/gorevlendir.py", "Görevlendirme/senkron.js"];
 
 let gunluk = [];
 function not(s) {

@@ -19,6 +19,7 @@
   <span class="basbar-ay" id="basbarAy"></span>
   <span class="basbar-senk" id="basbarSenk"></span>
   <span class="bosluk"></span>
+  <button type="button" class="imza" id="imza" title="Teknesyum — GitHub sayfamız">Teknesyum</button>
   <div class="pdgm-grup">
     <button type="button" class="pdgm" id="pKucult" aria-label="Küçült">
       <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M0 5h10" /></svg>
@@ -39,6 +40,7 @@
   <span class="bosluk"></span>
   <label class="tk-sr-only" for="ay">Ay</label>
   <input id="ay" class="gir gir-orta" type="month">
+  <button type="button" id="btnCoz" class="dgm dgm-birincil">Listeyi Oluştur</button>
   <button id="btnKurallar" class="dgm" type="button">Kurallar</button>
   <button id="btnKaydet" class="dgm" type="button">Kaydet</button>
   <button id="btnYukle" class="dgm" type="button">Yükle</button>
@@ -50,22 +52,25 @@
 <section id="s-kadro" role="tabpanel" hidden>
   <div class="kadro">
     <div class="pnl">
-      <div class="pnl-bas"><span>Asistanlar</span><span class="bosluk"></span><span id="kadroYardim"></span></div>
+      <div class="pnl-bas"><span id="kadroEkle" class="satir"></span><span class="bosluk"></span><span id="kadroYardim"></span></div>
       <div class="pnl-icerik" id="asistanIc"></div>
     </div>
+    <div class="ayirac ayirac-dikey" data-ayirac="kadro"></div>
     <div class="kadro-sag">
       <div class="kadro-ay">
         <div class="pnl">
-          <div class="pnl-bas"><span>Ay Takvimi</span><span class="bosluk"></span><span id="ayYardim"></span></div>
+          <div class="pnl-bas"><span class="bosluk"></span><span id="ayYardim"></span></div>
           <div class="pnl-icerik" id="ayIc"></div>
         </div>
+        <div class="ayirac ayirac-dikey" data-ayirac="kadroAy"></div>
         <div class="pnl">
           <div class="pnl-bas" id="gunBas">Gün</div>
           <div class="pnl-icerik" id="gunIc"></div>
         </div>
       </div>
+      <div class="ayirac ayirac-yatay" data-ayirac="kadroSag"></div>
       <div class="pnl">
-        <div class="pnl-bas"><span>İstek ve İzin</span><span class="bosluk"></span><span id="istekYardim"></span></div>
+        <div class="pnl-bas"><span class="bosluk"></span><span id="istekYardim"></span></div>
         <div class="pnl-icerik" id="istekIc"></div>
       </div>
     </div>
@@ -75,16 +80,16 @@
 <section id="s-liste" role="tabpanel" hidden>
   <div class="liste-duzen">
     <div class="pnl">
-      <div class="pnl-bas"><span>Nöbet Listesi</span><span class="bosluk"></span>
-        <button type="button" id="btnCoz" class="dgm dgm-birincil dgm-mini">Listeyi Oluştur</button></div>
       <div class="pnl-icerik" id="listeIc"></div>
     </div>
+    <div class="ayirac ayirac-dikey" data-ayirac="liste1"></div>
     <div class="pnl">
       <div class="pnl-bas" id="ortaBas"><span>Durum</span></div>
       <div class="pnl-icerik" id="durumIc"></div>
     </div>
+    <div class="ayirac ayirac-dikey" data-ayirac="liste2"></div>
     <div class="pnl">
-      <div class="pnl-bas"><span>Kişi Dengesi</span><span class="bosluk"></span><span id="dengeYardim"></span></div>
+      <div class="pnl-bas"><span class="bosluk"></span><span id="dengeYardim"></span></div>
       <div class="pnl-icerik" id="dengeIc"></div>
     </div>
   </div>
@@ -93,7 +98,7 @@
 <section id="s-cikti" role="tabpanel" hidden>
   <div class="cikti-duzen">
     <div class="pnl">
-      <div class="pnl-bas"><span>Aylık Liste</span><span class="bosluk"></span>
+      <div class="pnl-bas"><span class="bosluk"></span>
         <button id="btnKopyaTablo" class="dgm dgm-mini" type="button">Excel'e Kopyala</button>
         <button id="btnKopyaCsv" class="dgm dgm-mini" type="button">CSV Kopyala</button></div>
       <div class="pnl-icerik" id="ciktiIc"></div>
@@ -623,6 +628,74 @@ function ozet(v, p) {
 const LSKEY = "asistan-nobet";
 function ayAnahtar(y, a) { return LSKEY + ":" + y + "-" + String(a).padStart(2, "0"); }
 
+const OLCU_ANAHTAR = "asistan-nobet-olcu";
+const OLCU_VAR = {kadro: "--k-kol", kadroSag: "--ks-satir", kadroAy: "--ka-kol",
+                  liste1: "--l-kol1", liste2: "--l-kol2"};
+const OLCU = (() => { try { return JSON.parse(localStorage.getItem(OLCU_ANAHTAR)) || {}; } catch (e) { return {}; } })();
+
+function olcuUygula() {
+  const k = document.documentElement;
+  for (const ad in OLCU_VAR) if (OLCU[ad]) k.style.setProperty(OLCU_VAR[ad], OLCU[ad] + "fr");
+}
+
+function autofit() {
+  document.querySelectorAll("section:not([hidden]) .pnl-icerik").forEach(e => {
+    e.style.zoom = "1";
+    if (!e.clientHeight) return;
+    const tasar = () => e.scrollHeight > e.clientHeight || e.scrollWidth > e.clientWidth;
+    let z = 1;
+    while (z > 0.5 && tasar()) { z -= 0.02; e.style.zoom = z.toFixed(2); }
+  });
+}
+
+function ayiraclar() {
+  document.querySelectorAll(".ayirac").forEach(a => {
+    const ad = a.dataset.ayirac, kap = a.parentElement, dik = a.classList.contains("ayirac-dikey");
+    const onceki = a.previousElementSibling, son = kap.lastElementChild;
+    a.onmousedown = e => {
+      e.preventDefault();
+      const bas = dik ? onceki.getBoundingClientRect().left : onceki.getBoundingClientRect().top;
+      const tasi = m => {
+        const yeni = (dik ? m.clientX : m.clientY) - bas;
+        const sr = son.getBoundingClientRect();
+        const sp = dik ? sr.width : sr.height;
+        if (yeni < 60 || sp < 40) return;
+        OLCU[ad] = (yeni / sp).toFixed(3);
+        document.documentElement.style.setProperty(OLCU_VAR[ad], OLCU[ad] + "fr");
+        autofit();
+      };
+      const bit = () => {
+        document.removeEventListener("mousemove", tasi);
+        document.removeEventListener("mouseup", bit);
+        document.body.classList.remove("ayirma");
+        try { localStorage.setItem(OLCU_ANAHTAR, JSON.stringify(OLCU)); } catch (_) {}
+        autofit();
+      };
+      document.body.classList.add("ayirma");
+      document.addEventListener("mousemove", tasi);
+      document.addEventListener("mouseup", bit);
+    };
+    a.ondblclick = () => {
+      delete OLCU[ad];
+      document.documentElement.style.removeProperty(OLCU_VAR[ad]);
+      try { localStorage.setItem(OLCU_ANAHTAR, JSON.stringify(OLCU)); } catch (_) {}
+      autofit();
+    };
+  });
+}
+
+olcuUygula();
+ayiraclar();
+addEventListener("resize", autofit);
+addEventListener("load", () => setTimeout(autofit, 60));
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => setTimeout(autofit, 0));
+
+const IMZA_ADRES = "https://github.com/Teknesyum";
+document.getElementById("imza").onclick = () => {
+  if (window.pencere && window.pencere.ac) window.pencere.ac(IMZA_ADRES);
+  else window.open(IMZA_ADRES, "_blank", "noopener");
+};
+
 const DEPO = (window.pencere && window.pencere.veri)
   ? {disk: true,
      oku: k => { try { return window.pencere.veri.oku(k); } catch (e) { return null; } },
@@ -766,6 +839,8 @@ function ciz(id) {
   if (id === "kadro") ciz_kadro();
   if (id === "liste") ciz_liste();
   if (id === "cikti") ciz_cikti();
+  requestAnimationFrame(() => requestAnimationFrame(autofit));
+  setTimeout(autofit, 80);
 }
 
 function tazele() {
@@ -862,8 +937,7 @@ function ciz_asistan() {
   t.appendChild(tb);
   ic.appendChild(t);
 
-  const ekle = el("div", {className: "satir"});
-  ekle.style.marginTop = "var(--tk-sp-2)";
+  const ekle = $("#kadroEkle"); ekle.innerHTML = "";
   const yeni = el("input", {className: "gir gir-orta", placeholder: "Yeni asistan adı"});
   const bd = el("button", {className: "dgm", type: "button", textContent: "Ekle"});
   bd.onclick = () => {
@@ -874,7 +948,6 @@ function ciz_asistan() {
     P = null; normalize(V); tazele();
   };
   ekle.appendChild(yeni); ekle.appendChild(bd);
-  ic.appendChild(ekle);
 }
 
 function uzmanKisa(g) {
