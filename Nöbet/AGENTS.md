@@ -14,7 +14,7 @@ Katı kota, nöbet ertesi izni, istek/izin, uzman çakışması, sunum yükü, h
   kişi dengesi; bir kişiye tıklamak orta paneli o kişinin dökümüne çevirir), **3 Çıktı**
   (Excel'e Kopyala = TSV, CSV Kopyala = `;`). Ağırlıklar, hafta günü eğimi, sunum günleri,
   Oto Ayarla ve sütun listesi sağdan açılan **Kurallar çekmecesindedir** (`#cekmece`).
-  Açıklamalar `?` balonlarında. Çevrimdışı. Veri diskte (`%APPDATA%/asistan-nobet/veri`),
+  Açıklamalar `?` balonlarında. Çevrimdışı. Veri depoda (`Nöbet/veri/`),
   tarayıcıda localStorage. 1440×900'de yalnız nöbet tablosu dikey kaydırır.
 - **İki motor birebir aynı listeyi üretir.** Ortak 32 bit xorshift (`Zar`) sayesinde aynı
   JSON + tur + tohum = aynı CSV. Motoru değiştirdiysen iki tarafı da değiştir ve `nobet.py`
@@ -26,3 +26,8 @@ Katı kota, nöbet ertesi izni, istek/izin, uzman çakışması, sunum yükü, h
 - `<ay>.json` — sutunlar, asistanlar (kıdem sırası, `torba`, `kota`, `izin`, `istiyor`,
   `istemiyor`, `ozel`), tatil, sunum_gunleri, sunum_yok, uzman, kilit, agirlik.
 - `.claude/launch.json` — arayüzü localhost:8778'de servis eder (8777 komşu projenin).
+
+- `senkron.js` — git tabanlı güncelleme ve geçmiş eşitlemesi. Açılışta `git pull`; `IZLENEN`
+  kod dosyaları değiştiyse uygulama kendini yeniden başlatır. Veri yazımından 5 sn sonra ve
+  çıkışta commit + push. Çakışmada yerel kazanır (`-X ours`). Başlık çubuğundaki küçük not
+  son senkron satırıdır, tıklayınca hemen eşitler. `kur.ps1` yeni makinede kurar.

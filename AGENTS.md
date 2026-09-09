@@ -1,8 +1,8 @@
 # Asistan
 
-Özel depo. Her araç kendi klasöründe. Şimdilik tek klasör var: `Görevlendirme`.
+Özel depo. Her araç kendi klasöründe: `Görevlendirme`, `Nöbet`.
 
-Veri de depoda: `Görevlendirme/veri/` altındaki aylık JSON'lar commit edilir, böylece
+Veri de depoda: her aracın `veri/` klasöründeki JSON'lar commit edilir, böylece
 her makinede aynı geçmiş görünür.
 
 ## Yeni makinede kurulum
@@ -11,11 +11,11 @@ her makinede aynı geçmiş görünür.
 git clone https://github.com/Teknesyum/Asistan.git "$env:USERPROFILE\Desktop\Projeler\Asistan"
 ```
 
-Sonra `Görevlendirme\kur.ps1` — Electron'u kurar, masaüstü kısayolunu yazar.
+Sonra her araç klasöründe `kur.ps1` — Electron'u kurar, masaüstü kısayolunu yazar.
 Gerekenler: Node.js, Git, GitHub kimliği (`gh auth login` yeter).
 
 ## Senkron
 
-`Görevlendirme/senkron.js`. Açılışta `git pull`; kod dosyaları değiştiyse uygulama
+`<araç>/senkron.js` (iki araçta da aynı). Açılışta `git pull`; kod dosyaları değiştiyse uygulama
 kendini yeniden başlatır. Veri her değişiklikten ~5 sn sonra ve çıkışta commit + push
 edilir. Çakışmada çeken makine kazanır (`-X ours`).

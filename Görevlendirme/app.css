@@ -787,4 +787,3 @@ section[role="tabpanel"]:not([hidden]) { animation: tk-belir var(--tk-t-instant)
   color: var(--tk-text);
   font-weight: var(--tk-fw-semi);
 }
-
