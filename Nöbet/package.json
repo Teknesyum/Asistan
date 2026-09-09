@@ -1,0 +1,13 @@
+{
+  "name": "asistan-nobet",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aylik nobet listesi olusturucu",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^44.2.0"
+  }
+}

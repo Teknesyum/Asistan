@@ -1,0 +1,13 @@
+{
+  "name": "asistan-gorevlendirme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aylik nobet ve izin listesinden zorunlu yerlere asistan gorevlendirme",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^44.2.0"
+  }
+}

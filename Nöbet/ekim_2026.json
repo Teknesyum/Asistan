@@ -1,0 +1,374 @@
+{
+  "yil": 2026,
+  "ay": 10,
+  "sutunlar": [
+    {
+      "ad": "YBÜ Kıdemli",
+      "tur": "yb"
+    },
+    {
+      "ad": "Ameliyathane Kıdemli",
+      "tur": "amel"
+    },
+    {
+      "ad": "YBÜ Çömez",
+      "tur": "yb"
+    },
+    {
+      "ad": "Ameliyathane Çömez",
+      "tur": "amel",
+      "opsiyonel": true
+    }
+  ],
+  "asistanlar": [
+    {
+      "ad": "MUSTAFA ÖZEL",
+      "kisa": "MustafaÖ",
+      "torba": [
+        "YBÜ Kıdemli"
+      ],
+      "kota": 6,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "AYŞE ÇETİN",
+      "kisa": "Ayşe",
+      "torba": [
+        "YBÜ Kıdemli",
+        "Ameliyathane Kıdemli"
+      ],
+      "kota": 6,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "BAHTİYAR MAHMUT",
+      "kisa": "Bahtiyar",
+      "torba": [
+        "YBÜ Kıdemli"
+      ],
+      "kota": 7,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "ALİ TOPUZ",
+      "kisa": "Ali",
+      "torba": [
+        "YBÜ Kıdemli",
+        "Ameliyathane Kıdemli"
+      ],
+      "kota": 6,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "FATİH TALHA KORUCU",
+      "kisa": "FatihTalha",
+      "torba": [
+        "YBÜ Kıdemli",
+        "Ameliyathane Kıdemli"
+      ],
+      "kota": 6,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "EMRAH KÖKSAL",
+      "kisa": "Emrah",
+      "torba": [
+        "YBÜ Kıdemli",
+        "Ameliyathane Kıdemli"
+      ],
+      "kota": 6,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "MUSTAFA DEMİR",
+      "kisa": "MustafaD",
+      "torba": [
+        "YBÜ Kıdemli"
+      ],
+      "kota": 7,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "SÜMEYYE DEMİR",
+      "kisa": "SümeyyeD",
+      "torba": [
+        "Ameliyathane Kıdemli"
+      ],
+      "kota": 6,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "HİLAL YILMAZ USLU",
+      "kisa": "Hilal",
+      "torba": [
+        "Ameliyathane Kıdemli"
+      ],
+      "kota": 6,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "EYYÜP ÇETİN",
+      "kisa": "Eyyüp",
+      "torba": [
+        "Ameliyathane Kıdemli"
+      ],
+      "kota": 6,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "BAYRAM ALİ",
+      "kisa": "BayramAli",
+      "torba": [],
+      "kota": 0,
+      "izin": [
+        "1-31"
+      ],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "BÜŞRA ŞENER",
+      "kisa": "Büşra",
+      "torba": [
+        "YBÜ Çömez"
+      ],
+      "kota": 8,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "RUMEYSA ULUKUŞ",
+      "kisa": "Rümeysa",
+      "torba": [
+        "YBÜ Çömez",
+        "Ameliyathane Çömez"
+      ],
+      "kota": 8,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "HARUN GİRAZ",
+      "kisa": "Harun",
+      "torba": [
+        "YBÜ Çömez",
+        "Ameliyathane Çömez"
+      ],
+      "kota": 8,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "FATİH EREN",
+      "kisa": "FatihEren",
+      "torba": [
+        "YBÜ Çömez",
+        "Ameliyathane Çömez"
+      ],
+      "kota": 8,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "ÖMER ALTINÖZ",
+      "kisa": "Ömer",
+      "torba": [
+        "YBÜ Çömez",
+        "Ameliyathane Çömez"
+      ],
+      "kota": 8,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    },
+    {
+      "ad": "ALPEREN KARAOĞLAN",
+      "kisa": "Alperen",
+      "torba": [
+        "YBÜ Çömez",
+        "Ameliyathane Çömez"
+      ],
+      "kota": 8,
+      "izin": [],
+      "istiyor": [],
+      "istemiyor": [],
+      "ozel": []
+    }
+  ],
+  "tatil": [
+    "29"
+  ],
+  "sunum_gunleri": [
+    1,
+    2
+  ],
+  "sunum_yok": [],
+  "uzman": {
+    "1": {
+      "yb": "AHMET YASİR ARIK",
+      "amel": "HAKAN AKAN"
+    },
+    "2": {
+      "yb": "AHMET FIRAT",
+      "amel": "HACER YENİCE"
+    },
+    "3": {
+      "yb": "ONUR KARACA",
+      "amel": "GÜLENCAN YUMUŞAK ERGİN"
+    },
+    "4": {
+      "yb": "HAVVA NUR AKYOL",
+      "amel": "TUĞBA AÇIKGÖZ"
+    },
+    "5": {
+      "yb": "MUHARREM ATASEVER",
+      "amel": "ASİYE CEYLAN"
+    },
+    "6": {
+      "yb": "ADEM YILMAZ",
+      "amel": "YELİZ KOÇ"
+    },
+    "7": {
+      "yb": "UĞUR AYDOĞAN",
+      "amel": "HAKAN YENİCE"
+    },
+    "8": {
+      "yb": "AHMET YASİR ARIK",
+      "amel": "İBRAHİM KÖSEMEN"
+    },
+    "9": {
+      "yb": "AHMET FIRAT",
+      "amel": "HAKAN AKAN"
+    },
+    "10": {
+      "yb": "ONUR KARACA",
+      "amel": "HACER YENİCE"
+    },
+    "11": {
+      "yb": "HAVVA NUR AKYOL",
+      "amel": "GÜLENCAN YUMUŞAK ERGİN"
+    },
+    "12": {
+      "yb": "MUHARREM ATASEVER",
+      "amel": "TUĞBA AÇIKGÖZ"
+    },
+    "13": {
+      "yb": "ADEM YILMAZ",
+      "amel": "ASİYE CEYLAN"
+    },
+    "14": {
+      "yb": "UĞUR AYDOĞAN",
+      "amel": "YELİZ KOÇ"
+    },
+    "15": {
+      "yb": "AHMET YASİR ARIK",
+      "amel": "HAKAN YENİCE"
+    },
+    "16": {
+      "yb": "AHMET FIRAT",
+      "amel": "İBRAHİM KÖSEMEN"
+    },
+    "17": {
+      "yb": "ONUR KARACA",
+      "amel": "HAKAN AKAN"
+    },
+    "18": {
+      "yb": "HAVVA NUR AKYOL",
+      "amel": "HACER YENİCE"
+    },
+    "19": {
+      "yb": "MUHARREM ATASEVER",
+      "amel": "GÜLENCAN YUMUŞAK ERGİN"
+    },
+    "20": {
+      "yb": "ADEM YILMAZ",
+      "amel": "TUĞBA AÇIKGÖZ"
+    },
+    "21": {
+      "yb": "UĞUR AYDOĞAN",
+      "amel": "ASİYE CEYLAN"
+    },
+    "22": {
+      "yb": "AHMET YASİR ARIK",
+      "amel": "YELİZ KOÇ"
+    },
+    "23": {
+      "yb": "AHMET FIRAT",
+      "amel": "HAKAN YENİCE"
+    },
+    "24": {
+      "yb": "ONUR KARACA",
+      "amel": "İBRAHİM KÖSEMEN"
+    },
+    "25": {
+      "yb": "HAVVA NUR AKYOL",
+      "amel": "HAKAN AKAN"
+    },
+    "26": {
+      "yb": "MUHARREM ATASEVER",
+      "amel": "HACER YENİCE"
+    },
+    "27": {
+      "yb": "ADEM YILMAZ",
+      "amel": "GÜLENCAN YUMUŞAK ERGİN"
+    },
+    "28": {
+      "yb": "UĞUR AYDOĞAN",
+      "amel": "TUĞBA AÇIKGÖZ"
+    },
+    "29": {
+      "yb": "AHMET YASİR ARIK",
+      "amel": "ASİYE CEYLAN"
+    },
+    "30": {
+      "yb": "AHMET FIRAT",
+      "amel": "YELİZ KOÇ"
+    },
+    "31": {
+      "yb": "ONUR KARACA",
+      "amel": "HAKAN YENİCE"
+    }
+  },
+  "kilit": {},
+  "agirlik": {}
+}
