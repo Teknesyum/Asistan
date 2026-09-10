@@ -249,27 +249,37 @@ function olcuUygula() {
   for (const ad in OLCU_VAR) if (OLCU[ad]) k.style.setProperty(OLCU_VAR[ad], OLCU[ad] + "fr");
 }
 
-function autofit() {
+function autofitHemen() {
   document.querySelectorAll("#s-gosterge .pnl-icerik").forEach(e => {
     e.style.zoom = "1";
     e.style.setProperty("--satir-y", "0px");
     if (!e.clientHeight) return;
     const tasar = () => e.scrollHeight > e.clientHeight || e.scrollWidth > e.clientWidth;
     if (tasar()) {
-      let z = 1;
-      while (z > 0.5 && tasar()) { z -= 0.02; e.style.zoom = z.toFixed(2); }
+      let alt = 0.5, ust = 1;
+      while (ust - alt > 0.01) {
+        const z = (alt + ust) / 2;
+        e.style.zoom = z.toFixed(3);
+        if (tasar()) ust = z; else alt = z;
+      }
+      e.style.zoom = alt.toFixed(3);
       return;
     }
-    let y = 0;
-    for (const adim of [1, 0.25, 0.05]) {
-      while (y + adim <= 12) {
-        e.style.setProperty("--satir-y", (y + adim).toFixed(2) + "px");
-        if (tasar()) break;
-        y += adim;
-      }
+    let alt = 0, ust = 12;
+    e.style.setProperty("--satir-y", ust + "px");
+    if (!tasar()) return;
+    while (ust - alt > 0.05) {
+      const y = (alt + ust) / 2;
       e.style.setProperty("--satir-y", y.toFixed(2) + "px");
+      if (tasar()) ust = y; else alt = y;
     }
+    e.style.setProperty("--satir-y", alt.toFixed(2) + "px");
   });
+}
+let autofitIstek = 0;
+function autofit() {
+  if (autofitIstek) return;
+  autofitIstek = requestAnimationFrame(() => { autofitIstek = 0; autofitHemen(); });
 }
 
 function ayiraclar() {
@@ -1256,8 +1266,7 @@ function ciz_gosterge() {
   ciz_cetele(sayac, satirlar[BUGUN-1]);
   ciz_ekip();
   ciz_gkural(satirlar, sayac);
-  requestAnimationFrame(() => requestAnimationFrame(autofit));
-  setTimeout(autofit, 80);
+  autofit();
 }
 function gunSec(g) {
   const n = gunSayisi();

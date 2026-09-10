@@ -64,10 +64,10 @@ function hedef(e) {
   return BrowserWindow.fromWebContents(e.sender);
 }
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
   Menu.setApplicationMenu(null);
   try {
-    const g = senkron.cek();
+    const g = await senkron.cek();
     if (g.ok && g.kodDegisti) {
       senkron.not("kod güncellendi, yeniden başlatılıyor");
       app.relaunch();
@@ -98,8 +98,8 @@ app.whenReady().then(() => {
   ipcMain.on("veri:yaz", (e, { k, m }) => {
     try { fs.writeFileSync(veriYol(k), m, "utf-8"); senkron.gecikmeliGonder(5000); } catch (err) {}
   });
-  ipcMain.handle("senkron:durum", () => ({ depo: senkron.depoVar(), gunluk: senkron.kayit() }));
-  ipcMain.handle("senkron:simdi", () => { try { senkron.cek(); return senkron.simdiGonder(); } catch (e) { return false; } });
+  ipcMain.handle("senkron:durum", async () => ({ depo: await senkron.depoVar(), gunluk: senkron.kayit() }));
+  ipcMain.handle("senkron:simdi", async () => { try { await senkron.cek(); return await senkron.simdiGonder(); } catch (e) { return false; } });
   pencere();
   app.on("activate", () => { if (!BrowserWindow.getAllWindows().length) pencere(); });
 });
