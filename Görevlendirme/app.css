@@ -66,6 +66,8 @@ body {
   border-color: var(--tk-pink);
   box-shadow: 0 0 var(--tk-sp-2) var(--tk-pink);
 }
+.imza:active { color: var(--tk-purple); border-color: var(--tk-purple); box-shadow: none; }
+.imza:disabled { color: var(--tk-disabled); border-color: var(--tk-disabled); box-shadow: none; cursor: not-allowed; }
 .basbar-ay {
   font-size: var(--tk-fs-1);
   line-height: var(--tk-lh-heading);
@@ -369,8 +371,9 @@ tr.bugun-satir td {
   background: color-mix(in srgb, var(--tk-blue) 18%, var(--tk-surface));
 }
 tr.bugun-satir .gun-hucre { color: var(--tk-blue); font-weight: var(--tk-fw-semi); }
-tr.bugun-satir td:first-child { box-shadow: inset var(--tk-focus-w) 0 0 var(--tk-blue); }
+tr.bugun-satir td:first-child { border-left: var(--tk-focus-w) solid var(--tk-blue); }
 .matris-tablo tbody tr.secilebilir { cursor: pointer; }
+.matris-tablo tbody tr.bugun-satir td { transition: background var(--tk-t-instant) var(--tk-e-out); }
 .matris-tablo tbody tr.bugun-satir:hover td {
   background: color-mix(in srgb, var(--tk-blue) 18%, var(--tk-surface));
 }
@@ -767,6 +770,7 @@ section[role="tabpanel"]:not([hidden]) { animation: tk-belir var(--tk-t-instant)
   line-height: var(--tk-lh-heading);
   color: var(--tk-text-label);
   cursor: pointer;
+  transition: color var(--tk-t-instant) var(--tk-e-out);
 }
 .kilit-sim:hover { color: var(--tk-pink-text); }
 .isim-refakat { border-color: var(--tk-purple); }
@@ -774,11 +778,11 @@ section[role="tabpanel"]:not([hidden]) { animation: tk-belir var(--tk-t-instant)
 .kilit-mini {
   font-size: var(--tk-fs-1);
   padding: 0 0 0 var(--tk-sp-1);
-  opacity: 0;
-  transition: opacity var(--tk-t-instant) var(--tk-e-out);
+  color: transparent;
+  transition: color var(--tk-t-instant) var(--tk-e-out);
 }
-.matris-tablo tr:hover .kilit-mini { opacity: 1; }
-.kilit-satir .kilit-mini { opacity: 1; }
+.matris-tablo tr:hover .kilit-mini { color: var(--tk-text-label); }
+.kilit-satir .kilit-mini { color: var(--tk-text-label); }
 .kilit-satir .gun-hucre { color: var(--tk-purple-text); }
 .a-bugun.kopya .pnl-bas .dgm { visibility: hidden; }
 
