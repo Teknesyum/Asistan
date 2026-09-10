@@ -1,5 +1,4 @@
-$ErrorActionPreference = "Stop"
-$kok = Split-Path -Parent $MyInvocation.MyCommand.Path
+﻿$kok = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $kok
 
 npm install
