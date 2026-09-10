@@ -70,11 +70,29 @@ body { overflow: hidden; background: transparent; }
 }
 
 .basbar-senk {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tk-sp-2);
   font-size: var(--tk-fs-1);
   line-height: var(--tk-lh-heading);
   color: var(--tk-text-label);
+  cursor: pointer;
   -webkit-app-region: no-drag;
+  transition: color var(--tk-t-base) var(--tk-e-out);
 }
+.basbar-senk:empty { display: none; }
+.basbar-senk::before {
+  content: "";
+  width: var(--tk-sp-2);
+  height: var(--tk-sp-2);
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 var(--tk-sp-2) currentColor;
+}
+.basbar-senk[data-durum="esitlendi"] { color: var(--tk-success); }
+.basbar-senk[data-durum="cevrimdisi"] { color: var(--tk-warning); }
+.basbar-senk[data-durum="yerel"] { color: var(--tk-disabled); }
+.basbar-senk[data-durum="esitleniyor"]::before { box-shadow: none; }
 
 .pdgm-grup { display: flex; -webkit-app-region: no-drag; }
 .pdgm-grup[hidden] { display: none; }

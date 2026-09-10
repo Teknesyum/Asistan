@@ -17,6 +17,7 @@
 <header class="basbar" id="basbar">
   <span class="marka">Asistan <span class="marka-vurgu">Görevlendirme</span></span>
   <span class="basbar-ay" id="basbarAy"></span>
+  <span class="basbar-senk" id="basbarSenk"></span>
   <span class="bosluk"></span>
   <button type="button" class="imza" id="imza" title="Teknesyum — GitHub sayfamız">Teknesyum</button>
   <div class="pdgm-grup">
@@ -2240,8 +2241,32 @@ baslat();
 
 /* ---------- pencere çubuğu ---------- */
 
+function senkronBagla() {
+  const S = window.pencere && window.pencere.senkron;
+  const e = $("#basbarSenk");
+  if (!S || !e) return;
+  const saat = t => t ? new Date(t).toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" }) : "";
+  const METIN = { bekliyor: "Bağlanıyor…", esitleniyor: "Eşitleniyor…", esitlendi: "Eşitlendi", cevrimdisi: "Çevrimdışı", yerel: "Yalnız bu bilgisayar" };
+  const goster = d => {
+    if (!d) return;
+    const a = METIN[d.asama] ? d.asama : "bekliyor";
+    e.dataset.durum = a;
+    e.textContent = METIN[a] + ((a === "esitlendi" || a === "cevrimdisi") && d.zaman ? " · " + saat(d.zaman) : "");
+    e.title = (d.hata ? d.hata + "\n" : "") + "Tıkla: şimdi eşitle";
+  };
+  S.durum().then(goster).catch(() => {});
+  if (S.olay) S.olay(d => {
+    if (d.tur === "durum") goster(d.durum);
+    else if (d.tur === "veri") { try { sessionStorage.setItem("senkBildirim", "Başka bilgisayardaki değişiklikler geldi"); } catch (_) {} location.reload(); }
+    else if (d.tur === "kod") toast("Yeni sürüm geldi, program yenileniyor…");
+  });
+  e.onclick = () => { goster({ asama: "esitleniyor" }); S.simdi(); };
+  try { const m = sessionStorage.getItem("senkBildirim"); if (m) { sessionStorage.removeItem("senkBildirim"); setTimeout(() => toast(m), 400); } } catch (_) {}
+}
+
 const PENCERE = window.pencere;
 if (PENCERE) {
+  senkronBagla();
   $("#pKucult").onclick = () => PENCERE.kucult();
   $("#pBuyult").onclick = () => PENCERE.buyult();
   $("#pKapat").onclick = () => PENCERE.kapat();

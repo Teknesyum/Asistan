@@ -1,4 +1,2 @@
 @echo off
-chcp 65001 >nul
-powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0kur-usb.ps1"
-pause
+start "" powershell -NoProfile -ExecutionPolicy Bypass -STA -WindowStyle Hidden -File "%~dp0kur-usb.ps1"

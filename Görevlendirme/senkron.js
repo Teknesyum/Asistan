@@ -4,7 +4,10 @@ const fs = require("fs");
 const os = require("os");
 
 const KOK = path.resolve(__dirname, "..");
+const ARAC = "Görevlendirme";
 const IZLENEN = ["Görevlendirme/main.js", "Görevlendirme/preload.js", "Görevlendirme/arayuz.html", "Görevlendirme/app.css", "Görevlendirme/package.json", "Görevlendirme/gorevlendir.py", "Görevlendirme/senkron.js"];
+const YEREL_GIT = path.join(KOK, ".araclar", "git", "cmd", "git.exe");
+const GIT = fs.existsSync(YEREL_GIT) ? YEREL_GIT : "git";
 
 let gunluk = [];
 function not(s) {
@@ -13,15 +16,25 @@ function not(s) {
 }
 function kayit() { return gunluk.slice(); }
 
+const dinleyiciler = [];
+const durumBilgi = { asama: "bekliyor", zaman: null, hata: "" };
+function dinle(fn) { dinleyiciler.push(fn); }
+function durumYaz(asama, hata) {
+  durumBilgi.asama = asama;
+  durumBilgi.hata = hata || "";
+  if (asama !== "esitleniyor") durumBilgi.zaman = Date.now();
+  for (const fn of dinleyiciler) { try { fn({ tur: "durum", durum: Object.assign({}, durumBilgi) }); } catch (e) {} }
+}
+
 function gitSessiz(args, opt) {
   return new Promise(coz => {
-    execFile("git", ["-c", "core.quotepath=false"].concat(args), {
+    execFile(GIT, ["-c", "core.quotepath=false"].concat(args), {
       cwd: KOK,
       encoding: "utf-8",
       windowsHide: true,
       timeout: (opt && opt.timeout) || 30000
     }, (err, stdout, stderr) => {
-      if (err) coz({ ok: false, cikti: ((stdout || "") + (stderr || "")).toString().trim() });
+      if (err) coz({ ok: false, cikti: ((stdout || "") + (stderr || "") || err.message).toString().trim() });
       else coz({ ok: true, cikti: String(stdout).trim() });
     });
   });
@@ -57,16 +70,17 @@ async function degisenler(a, b) {
 }
 
 async function yerelKaydet(mesaj) {
-  const d = await gitSessiz(["status", "--porcelain", "--", "Görevlendirme/veri"]);
+  const d = await gitSessiz(["status", "--porcelain", "--", ARAC + "/veri"]);
   if (!d.ok || !d.cikti) return false;
-  await gitSessiz(["add", "--", "Görevlendirme/veri"]);
+  await gitSessiz(["add", "--", ARAC + "/veri"]);
   const c = await gitSessiz(["commit", "-m", mesaj + " (" + os.hostname() + ")"]);
   if (c.ok) not("kayıt: " + mesaj);
   return c.ok;
 }
 
 async function cekIc() {
-  if (!(await depoVar())) return { ok: false, kodDegisti: false, sebep: "depo yok" };
+  if (!(await depoVar())) { durumYaz("yerel"); return { ok: false, kodDegisti: false, veriDegisti: false, sebep: "depo yok" }; }
+  durumYaz("esitleniyor");
   await kimlik();
   const once = await surum();
   await yerelKaydet("veri");
@@ -74,31 +88,48 @@ async function cekIc() {
   if (!r.ok) {
     not("çekme başarısız: " + r.cikti.split("\n").slice(-2).join(" "));
     await gitSessiz(["merge", "--abort"]);
-    return { ok: false, kodDegisti: false, sebep: r.cikti };
+    durumYaz("cevrimdisi", r.cikti.split("\n").slice(-1)[0]);
+    return { ok: false, kodDegisti: false, veriDegisti: false, sebep: r.cikti };
   }
   const list = await degisenler(once, await surum());
   const kodDegisti = list.some(f => IZLENEN.includes(f));
+  const veriDegisti = list.some(f => f.startsWith(ARAC + "/veri/"));
   if (list.length) not("güncellendi: " + list.length + " dosya" + (kodDegisti ? " (kod)" : ""));
-  return { ok: true, kodDegisti, degisen: list };
+  durumYaz("esitlendi");
+  return { ok: true, kodDegisti, veriDegisti, degisen: list };
 }
 
 async function itIc() {
   if (!(await depoVar())) return false;
+  const ileride = await gitSessiz(["rev-list", "--count", "@{u}..HEAD"]);
+  if (ileride.ok && ileride.cikti === "0") return true;
+  durumYaz("esitleniyor");
   const r = await gitSessiz(["push", "origin", "HEAD"], { timeout: 45000 });
-  if (!r.ok) not("gönderim başarısız: " + r.cikti.split("\n").slice(-1)[0]);
+  if (!r.ok) { not("gönderim başarısız: " + r.cikti.split("\n").slice(-1)[0]); durumYaz("cevrimdisi", r.cikti.split("\n").slice(-1)[0]); }
+  else durumYaz("esitlendi");
   return r.ok;
+}
+
+let izleyici = null;
+async function esitleIc() {
+  try {
+    const r = await cekIc();
+    if (r.ok) await itIc();
+    if (izleyici) izleyici(r);
+    return r.ok;
+  } catch (e) { not("senkron hatası: " + e.message); durumYaz("cevrimdisi", e.message); return false; }
 }
 
 async function gonderIc() {
   try {
     if (!(await yerelKaydet("veri"))) return false;
-    await cekIc();
-    return await itIc();
+    return await esitleIc();
   } catch (e) { not("senkron hatası: " + e.message); return false; }
 }
 
 function cek() { return sirala(cekIc); }
 function it() { return sirala(itIc); }
+function esitle() { return sirala(esitleIc); }
 
 let zamanlayici = null;
 function gecikmeliGonder(ms) {
@@ -114,6 +145,15 @@ function simdiGonder() {
   return sirala(gonderIc);
 }
 
+function izle(ms, fn) {
+  izleyici = fn;
+  setInterval(esitle, ms || 60000);
+}
+
+async function durum() {
+  return Object.assign({ depo: await depoVar(), gunluk: kayit() }, durumBilgi);
+}
+
 function arkadaGonder() {
   execFile(process.execPath, [path.join(__dirname, "senkron-cli.js")], {
     cwd: KOK,
@@ -122,4 +162,4 @@ function arkadaGonder() {
   }, () => {});
 }
 
-module.exports = { KOK, cek, it, gecikmeliGonder, simdiGonder, arkadaGonder, depoVar, kayit, not };
+module.exports = { KOK, cek, it, esitle, gecikmeliGonder, simdiGonder, arkadaGonder, depoVar, kayit, not, dinle, izle, durum };

@@ -13,6 +13,7 @@ contextBridge.exposeInMainWorld("pencere", {
   },
   senkron: {
     durum: () => ipcRenderer.invoke("senkron:durum"),
-    simdi: () => ipcRenderer.invoke("senkron:simdi")
+    simdi: () => ipcRenderer.invoke("senkron:simdi"),
+    olay: cb => ipcRenderer.on("senkron:olay", (e, d) => cb(d))
   }
 });

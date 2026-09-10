@@ -99,9 +99,17 @@ app.whenReady().then(async () => {
     try { fs.writeFileSync(veriYol(k), m, "utf-8"); senkron.gecikmeliGonder(5000); } catch (err) {}
   });
 
-  ipcMain.handle("senkron:durum", async () => ({ depo: await senkron.depoVar(), gunluk: senkron.kayit() }));
-  ipcMain.handle("senkron:simdi", async () => { try { await senkron.cek(); return await senkron.simdiGonder(); } catch (e) { return false; } });
-  pencere();
+  ipcMain.handle("senkron:durum", () => senkron.durum());
+  ipcMain.handle("senkron:simdi", async () => { try { await senkron.simdiGonder(); return await senkron.esitle(); } catch (e) { return false; } });
+  const w = pencere();
+  senkron.dinle(d => { if (!w.isDestroyed()) w.webContents.send("senkron:olay", d); });
+  senkron.izle(60000, r => {
+    if (!r || !r.ok || w.isDestroyed()) return;
+    if (r.kodDegisti) {
+      w.webContents.send("senkron:olay", { tur: "kod" });
+      setTimeout(() => { app.relaunch(); app.exit(0); }, 2500);
+    } else if (r.veriDegisti) w.webContents.send("senkron:olay", { tur: "veri" });
+  });
   app.on("activate", () => { if (!BrowserWindow.getAllWindows().length) pencere(); });
 });
 

@@ -8,7 +8,8 @@ contextBridge.exposeInMainWorld("pencere", {
   kopyala: r => ipcRenderer.invoke("pencere:kopyala", r),
   senkron: {
     durum: () => ipcRenderer.invoke("senkron:durum"),
-    simdi: () => ipcRenderer.invoke("senkron:simdi")
+    simdi: () => ipcRenderer.invoke("senkron:simdi"),
+    olay: cb => ipcRenderer.on("senkron:olay", (e, d) => cb(d))
   },
   durum: cb => ipcRenderer.on("pencere:durum", (e, buyuk) => cb(buyuk)),
   veri: {
