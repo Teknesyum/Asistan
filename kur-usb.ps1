@@ -21,9 +21,9 @@ $is = {
   $ErrorActionPreference = "Continue"
   New-Item -ItemType Directory -Force (Split-Path $S.gunluk) | Out-Null
   function Yaz([string]$m) {
-    $s = (Get-Date -Format "HH:mm:ss") + "  " + $m
-    [void]$S.log.Add($s)
-    Add-Content -Path $S.gunluk -Value $s -Encoding UTF8
+    $satir = (Get-Date -Format "HH:mm:ss") + "  " + $m
+    [void]$S.log.Add($satir)
+    Add-Content -Path $S.gunluk -Value $satir -Encoding UTF8
   }
   function Adim([int]$y, [int]$t, [string]$m) { $S.yuzde = $y; $S.tavan = $t; $S.adim = $m; Yaz $m }
   function Kilitle([string]$f) { icacls $f /inheritance:r /grant:r "$($env:USERNAME):(R)" | Out-Null }
@@ -199,7 +199,7 @@ $R = @{
   basari = Renk "#34d399"; tehlike = Renk "#ff54eb"; sonuk = Renk "#71717a"
   kenar = Renk "#00f3ff" 128; iz = Renk "#00f3ff" 77
 }
-$F = @{ baslik = Yazi 24 "Bold"; adim = Yazi 16; kucuk = Yazi 14; log = Yazi 14 "Regular" "Consolas"; dugme = Yazi 14 "Bold" }
+$YZ = @{ baslik = Yazi 24 "Bold"; adim = Yazi 16; kucuk = Yazi 14; log = Yazi 14 "Regular" "Consolas"; dugme = Yazi 14 "Bold" }
 $B = @{}
 foreach ($k in $R.Keys) { $B[$k] = New-Object System.Drawing.SolidBrush $R[$k] }
 $G = @{ goster = 0.0; faz = 0.0; surukle = $null; sonlandi = $false; ikon = $null }
@@ -224,37 +224,37 @@ $f.Add_MouseMove({ if ($G.surukle) { $f.Location = New-Object System.Drawing.Poi
 $f.Add_MouseUp({ $G.surukle = $null })
 
 $f.Add_Paint({
-  $g = $_.Graphics
-  $g.SmoothingMode = "AntiAlias"
-  $g.TextRenderingHint = "ClearTypeGridFit"
+  $cz = $_.Graphics
+  $cz.SmoothingMode = "AntiAlias"
+  $cz.TextRenderingHint = "ClearTypeGridFit"
   $w = $f.ClientSize.Width
   $h = $f.ClientSize.Height
-  $g.DrawRectangle((New-Object System.Drawing.Pen($R.kenar, 1)), 0, 0, $w - 1, $h - 1)
-  if ($G.ikon) { $g.DrawImage($G.ikon, 24, 24, 48, 48) }
-  $g.DrawString("Asistan", $F.baslik, $B.metin, 84, 20)
-  $gen = $g.MeasureString("Asistan", $F.baslik).Width
-  $g.DrawString("Kurulum", $F.baslik, $B.mavi, 84 + $gen - 4, 20)
-  $g.DrawString("Görevlendirme ve Nöbet  ·  " + $S.hedef, $F.kucuk, $B.sonuk, 86, 52)
+  $cz.DrawRectangle((New-Object System.Drawing.Pen($R.kenar, 1)), 0, 0, $w - 1, $h - 1)
+  if ($G.ikon) { $cz.DrawImage($G.ikon, 24, 24, 48, 48) }
+  $cz.DrawString("Asistan", $YZ.baslik, $B.metin, 84, 20)
+  $gen = $cz.MeasureString("Asistan", $YZ.baslik).Width
+  $cz.DrawString("Kurulum", $YZ.baslik, $B.mavi, 84 + $gen - 4, 20)
+  $cz.DrawString("Görevlendirme ve Nöbet  ·  " + $S.hedef, $YZ.kucuk, $B.sonuk, 86, 52)
 
   $renk = switch ($S.durum) { "bitti" { $R.basari } "hata" { $R.tehlike } default { $R.metin } }
   $yuzdeMetin = [string][math]::Floor($G.goster) + "%"
-  $yg = $g.MeasureString($yuzdeMetin, $F.adim).Width
+  $yg = $cz.MeasureString($yuzdeMetin, $YZ.adim).Width
   $alan = New-Object System.Drawing.RectangleF(24, 100, ($w - 60 - $yg), 22)
   $bicim = New-Object System.Drawing.StringFormat
   $bicim.Trimming = "EllipsisCharacter"
   $bicim.FormatFlags = "NoWrap"
-  $g.DrawString($S.adim, $F.adim, (New-Object System.Drawing.SolidBrush $renk), $alan, $bicim)
-  $g.DrawString($yuzdeMetin, $F.adim, $B.mavi, ($w - 24 - $yg), 100)
+  $cz.DrawString($S.adim, $YZ.adim, (New-Object System.Drawing.SolidBrush $renk), $alan, $bicim)
+  $cz.DrawString($yuzdeMetin, $YZ.adim, $B.mavi, ($w - 24 - $yg), 100)
 
   $bx = 24; $by = 132; $bw = $w - 48; $bh = 8
-  $g.FillRectangle((New-Object System.Drawing.SolidBrush $R.iz), $bx, $by, $bw, $bh)
+  $cz.FillRectangle((New-Object System.Drawing.SolidBrush $R.iz), $bx, $by, $bw, $bh)
   $dolu = [int]($bw * [math]::Min(100, $G.goster) / 100)
   if ($dolu -gt 1) {
-    $r = New-Object System.Drawing.Rectangle($bx, $by, $dolu, $bh)
-    if ($S.durum -eq "calisiyor") { $fr = New-Object System.Drawing.Drawing2D.LinearGradientBrush($r, $R.mavi, $R.mor, 0.0) }
+    $dik = New-Object System.Drawing.Rectangle($bx, $by, $dolu, $bh)
+    if ($S.durum -eq "calisiyor") { $fr = New-Object System.Drawing.Drawing2D.LinearGradientBrush($dik, $R.mavi, $R.mor, 0.0) }
     else { $fr = New-Object System.Drawing.SolidBrush $renk }
-    $g.FillRectangle($fr, $r)
-    for ($i = 1; $i -le 3; $i++) { $g.FillRectangle((New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb([int](40 / $i), $renk))), $bx, $by - $i, $dolu, $bh + 2 * $i) }
+    $cz.FillRectangle($fr, $dik)
+    for ($i = 1; $i -le 3; $i++) { $cz.FillRectangle((New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb([int](40 / $i), $renk))), $bx, $by - $i, $dolu, $bh + 2 * $i) }
     if ($S.durum -eq "calisiyor") {
       $px = $bx + (($G.faz % 1.0) * ($dolu + 120)) - 120
       $pr = New-Object System.Drawing.Rectangle([int]$px, $by, 120, $bh)
@@ -263,9 +263,9 @@ $f.Add_Paint({
       $bl.Colors = @((Renk "#ffffff" 0), (Renk "#ffffff" 150), (Renk "#ffffff" 0))
       $bl.Positions = @(0.0, 0.5, 1.0)
       $pg.InterpolationColors = $bl
-      $g.SetClip($r)
-      $g.FillRectangle($pg, $pr)
-      $g.ResetClip()
+      $cz.SetClip($dik)
+      $cz.FillRectangle($pg, $pr)
+      $cz.ResetClip()
     }
   }
 
@@ -275,24 +275,24 @@ $f.Add_Paint({
   $y = 160
   for ($i = $bas; $i -lt $n; $i++) {
     $fircaLog = if ($i -eq $n - 1) { $B.mavi } else { $B.sonuk }
-    $g.DrawString($satirlar[$i], $F.log, $fircaLog, (New-Object System.Drawing.RectangleF(24, $y, ($w - 48), 20)), $bicim)
+    $cz.DrawString($satirlar[$i], $YZ.log, $fircaLog, (New-Object System.Drawing.RectangleF(24, $y, ($w - 48), 20)), $bicim)
     $y += 20
   }
 })
 
 function Dugme([string]$metin, [bool]$birincil, [int]$x) {
-  $b = New-Object System.Windows.Forms.Button
-  $b.Text = $metin
-  $b.FlatStyle = "Flat"
-  $b.Font = $F.dugme
-  $b.Size = New-Object System.Drawing.Size(160, 36)
-  $b.Location = New-Object System.Drawing.Point($x, 364)
-  $b.Cursor = "Hand"
-  if ($birincil) { $b.BackColor = $R.mavi; $b.ForeColor = $R.zemin; $b.FlatAppearance.BorderSize = 0 }
-  else { $b.BackColor = $R.zemin; $b.ForeColor = $R.mavi; $b.FlatAppearance.BorderColor = $R.mavi }
-  $b.Visible = $false
-  $f.Controls.Add($b)
-  $b
+  $dg = New-Object System.Windows.Forms.Button
+  $dg.Text = $metin
+  $dg.FlatStyle = "Flat"
+  $dg.Font = $YZ.dugme
+  $dg.Size = New-Object System.Drawing.Size(160, 36)
+  $dg.Location = New-Object System.Drawing.Point($x, 364)
+  $dg.Cursor = "Hand"
+  if ($birincil) { $dg.BackColor = $R.mavi; $dg.ForeColor = $R.zemin; $dg.FlatAppearance.BorderSize = 0 }
+  else { $dg.BackColor = $R.zemin; $dg.ForeColor = $R.mavi; $dg.FlatAppearance.BorderColor = $R.mavi }
+  $dg.Visible = $false
+  $f.Controls.Add($dg)
+  $dg
 }
 $acG = Dugme "Görevlendirme'yi Aç" $true 24
 $acN = Dugme "Nöbet'i Aç" $true 200
