@@ -7,11 +7,14 @@ her makinede aynı geçmiş görünür.
 
 ## Yeni makinede kurulum
 
+Tek satır — güncel sürümü geçici klasöre çeker, `kur-usb.ps1`'i çalıştırır; anahtar yoksa
+https + GitHub kimliğiyle bağlanır, Belgeler\Asistan'a kurar:
+
 ```powershell
-git clone https://github.com/Teknesyum/Asistan.git "$env:USERPROFILE\Desktop\Projeler\Asistan"
+$k = Join-Path $env:TEMP ("asistan-" + [guid]::NewGuid().ToString("N").Substring(0, 8)); git clone --depth 1 https://github.com/Teknesyum/Asistan.git $k; if ($?) { powershell -NoProfile -ExecutionPolicy Bypass -STA -File "$k\kur-usb.ps1" }
 ```
 
-Sonra her araç klasöründe `kur.ps1` — Electron'u kurar, masaüstü kısayolunu yazar.
+Elle: `git clone`, sonra her araç klasöründe `kur.ps1` — Electron'u kurar, kısayolu yazar.
 Gerekenler: Node.js, Git, GitHub kimliği (`gh auth login` yeter).
 
 ## USB kurulumu

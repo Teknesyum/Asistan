@@ -1779,8 +1779,8 @@ function ciz_gkural(satirlar, sayac) {
   const g = BUGUN, gs = String(g);
   c.appendChild(el("div", {className: "gk-ust", textContent: "Kurallar — " + g + " " + AYLAR[V.ay-1]}));
 
-  const bl = (bas) => {
-    const d = el("div", {className: "gk-blok"});
+  const bl = (bas, alan) => {
+    const d = el("div", {className: "gk-blok gkb-" + alan});
     d.appendChild(el("div", {className: "gk-bas", textContent: bas}));
     return d;
   };
@@ -1790,7 +1790,7 @@ function ciz_gkural(satirlar, sayac) {
     return s2;
   };
 
-  const b0 = bl("Genel kurallar");
+  const b0 = bl("Genel kurallar", "genel");
   for (const k in KURAL_ETIKET) {
     const l = el("label", {className: "gk-kural"});
     const cb = el("input", {type: "checkbox", checked: !!V.kural[k]});
@@ -1811,7 +1811,7 @@ function ciz_gkural(satirlar, sayac) {
   }
   c.appendChild(b0);
 
-  const b1 = bl("Bugünün ek kuralları");
+  const b1 = bl("Bugünün ek kuralları", "bugun");
   const f1 = el("div", {className: "gk-satir"});
   const k1 = kisiSec();
   const d1 = el("button", {type: "button", className: "dgm dgm-mini", textContent: "Sabitle"});
@@ -1923,7 +1923,7 @@ function ciz_gkural(satirlar, sayac) {
   b1.appendChild(liste);
   c.appendChild(b1);
 
-  const b2 = bl("Dengeleme ağırlıkları");
+  const b2 = bl("Dengeleme ağırlıkları", "agirlik");
   const ag = el("div", {className: "gk-agirlik"});
   for (const k in AGIRLIK_ETIKET) {
     const l = el("label", {className: "gk-ag"});
@@ -1942,7 +1942,7 @@ function ciz_gkural(satirlar, sayac) {
   b2.appendChild(ob);
   c.appendChild(b2);
 
-  const b4 = bl("Ay devri");
+  const b4 = bl("Ay devri", "devir");
   const dv = el("div", {className: "gk-satir"});
   const dt = Object.values(V.devir.toplam || {}).reduce((x,y) => x+y, 0);
   dv.appendChild(el("span", {className: "gk-bos",
@@ -1968,7 +1968,7 @@ function ciz_gkural(satirlar, sayac) {
   c.appendChild(b4);
 
   const bak = analizUyarilari(satirlar, sayac);
-  const b3 = bl("Uyarılar");
+  const b3 = bl("Uyarılar", "uyari");
   if (bak.length) bak.forEach(x => b3.appendChild(el("div", {className: "uyari gk-uyari", textContent: x})));
   else b3.appendChild(el("div", {className: "gk-bos", textContent: "Uyarı yok"}));
   c.appendChild(b3);

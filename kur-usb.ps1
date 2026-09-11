@@ -57,13 +57,18 @@ $is = {
     else { throw "Git bulunamadı: ne bilgisayarda ne USB'de (.kurulum\git)" }
 
     $anahtarUsb = Join-Path $kur "anahtar\id_ed25519"
-    if (-not (Test-Path $anahtarUsb)) { throw "Erişim anahtarı yok: $anahtarUsb" }
-    $anahtar = Join-Path $gecici "id_ed25519"
-    $bilinen = Join-Path $gecici "known_hosts"
-    Copy-Item $anahtarUsb $anahtar
-    Kilitle $anahtar
-    $env:GIT_SSH_COMMAND = SshKomut $ssh $anahtar $bilinen
-    $env:GIT_TERMINAL_PROMPT = "0"
+    $anahtar = $null
+    if (Test-Path $anahtarUsb) {
+      $anahtar = Join-Path $gecici "id_ed25519"
+      $bilinen = Join-Path $gecici "known_hosts"
+      Copy-Item $anahtarUsb $anahtar
+      Kilitle $anahtar
+      $env:GIT_SSH_COMMAND = SshKomut $ssh $anahtar $bilinen
+      $env:GIT_TERMINAL_PROMPT = "0"
+    } else {
+      $depo = "https://github.com/Teknesyum/Asistan.git"
+      Yaz "Erişim anahtarı yok, GitHub kimliğiyle (https) bağlanılacak"
+    }
 
     Adim 6 12 "GitHub bağlantısı sınanıyor"
     $uzak = & $git ls-remote $depo HEAD 2>&1
@@ -136,14 +141,17 @@ $is = {
     }
     if (-not (Test-Path (Join-Path $hedef ".git"))) { throw "Kurulum klasörü eksik: $hedef" }
 
-    Adim 52 56 "Erişim anahtarı yerleştiriliyor"
     $arac = Join-Path $hedef ".araclar"
-    New-Item -ItemType Directory -Force (Join-Path $arac "anahtar") | Out-Null
-    $kaliciAnahtar = Join-Path $arac "anahtar\id_ed25519"
-    $kaliciBilinen = Join-Path $arac "known_hosts"
-    Copy-Item $anahtar $kaliciAnahtar -Force
-    Kilitle $kaliciAnahtar
-    if (Test-Path $bilinen) { Copy-Item $bilinen $kaliciBilinen -Force }
+    New-Item -ItemType Directory -Force $arac | Out-Null
+    if ($anahtar) {
+      Adim 52 56 "Erişim anahtarı yerleştiriliyor"
+      New-Item -ItemType Directory -Force (Join-Path $arac "anahtar") | Out-Null
+      $kaliciAnahtar = Join-Path $arac "anahtar\id_ed25519"
+      $kaliciBilinen = Join-Path $arac "known_hosts"
+      Copy-Item $anahtar $kaliciAnahtar -Force
+      Kilitle $kaliciAnahtar
+      if (Test-Path $bilinen) { Copy-Item $bilinen $kaliciBilinen -Force }
+    }
     $kaliciSsh = $ssh
     if (-not $sistemGit) {
       Adim 56 76 "Taşınabilir Git kuruluyor"
@@ -152,7 +160,7 @@ $is = {
       $git = Join-Path $arac "git\cmd\git.exe"
       $kaliciSsh = Join-Path $arac "git\usr\bin\ssh.exe"
     }
-    & $git -C $hedef config core.sshCommand ((SshKomut $kaliciSsh $kaliciAnahtar $kaliciBilinen) -replace '"', '\"')
+    if ($anahtar) { & $git -C $hedef config core.sshCommand ((SshKomut $kaliciSsh $kaliciAnahtar $kaliciBilinen) -replace '"', '\"') }
     & $git -C $hedef config remote.origin.url $depo
     & $git -C $hedef config user.name $env:USERNAME
     & $git -C $hedef config user.email "$env:USERNAME@$env:COMPUTERNAME"
