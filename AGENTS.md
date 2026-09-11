@@ -7,11 +7,11 @@ her makinede aynı geçmiş görünür.
 
 ## Yeni makinede kurulum
 
-Tek satır — güncel sürümü geçici klasöre çeker, `kur-usb.ps1`'i çalıştırır; anahtar yoksa
-https + GitHub kimliğiyle bağlanır, Belgeler\Asistan'a kurar:
+Tek satır — Git/Node yoksa winget ile kurar, güncel sürümü geçici klasöre çeker,
+`kur-usb.ps1`'i çalıştırır; anahtar yoksa https + GitHub girişiyle bağlanır, Belgeler\Asistan'a kurar:
 
 ```powershell
-$k = Join-Path $env:TEMP ("asistan-" + [guid]::NewGuid().ToString("N").Substring(0, 8)); git clone --depth 1 https://github.com/Teknesyum/Asistan.git $k; if ($?) { powershell -NoProfile -ExecutionPolicy Bypass -STA -File "$k\kur-usb.ps1" }
+$w = "--accept-source-agreements", "--accept-package-agreements", "-e", "--silent"; if (-not (Get-Command git -ErrorAction SilentlyContinue)) { winget install --id Git.Git @w }; if (-not (Get-Command npm -ErrorAction SilentlyContinue)) { winget install --id OpenJS.NodeJS.LTS @w }; $env:Path = [Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [Environment]::GetEnvironmentVariable("Path", "User"); $k = Join-Path $env:TEMP ("asistan-" + [guid]::NewGuid().ToString("N").Substring(0, 8)); git clone --depth 1 https://github.com/Teknesyum/Asistan.git $k; if ($?) { powershell -NoProfile -ExecutionPolicy Bypass -STA -File "$k\kur-usb.ps1" }
 ```
 
 Elle: `git clone`, sonra her araç klasöründe `kur.ps1` — Electron'u kurar, kısayolu yazar.

@@ -808,7 +808,7 @@ function hesapla() {
     } else {
       let ad = havuz(yok, kalsin).filter(x => !atama[x]);
       const sira = V.refakat.slice().sort((x, y) =>
-        (sayac.refakat[x.ad] || 0) - (sayac.refakat[y.ad] || 0));
+        (dun.has(x.ad) - dun.has(y.ad)) || (sayac.refakat[x.ad] || 0) - (sayac.refakat[y.ad] || 0));
       for (const r of sira) {
         if (refakat.length) break;
         if (atama[r.ad] || ad.indexOf(r.ad) < 0) continue;
