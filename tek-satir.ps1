@@ -13,3 +13,8 @@ $komut = "iex ([IO.StreamReader]::new([IO.Compression.GZipStream]::new([IO.Memor
 $cikti = Join-Path $kok ".kurulum\Kurulum-Komutu.txt"
 [IO.File]::WriteAllText($cikti, $komut)
 Write-Output "Komut: $cikti ($($komut.Length) karakter)"
+$bat = "@echo off`r`ntitle Asistan Kurulum`r`npowershell -NoProfile -ExecutionPolicy Bypass -Command `"$komut`"`r`npause`r`n"
+foreach ($yer in (Join-Path $kok ".kurulum\Asistan Kur.bat"), (Join-Path ([Environment]::GetFolderPath("Desktop")) "Asistan Kur.bat")) {
+  [IO.File]::WriteAllText($yer, $bat, [Text.Encoding]::ASCII)
+  Write-Output "Bat: $yer"
+}

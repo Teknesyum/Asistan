@@ -8,7 +8,8 @@ her makinede aynı geçmiş görünür.
 ## Yeni makinede kurulum
 
 Girişsiz tek satır: `tek-satir.ps1`, `.kurulum\anahtar` deploy key'ini `kur-tek.ps1`'e gömüp
-sıkıştırır, `.kurulum\Kurulum-Komutu.txt`'e yazar. Komut PortableGit ve Node'u TEMP'e indirir,
+sıkıştırır, `.kurulum\Kurulum-Komutu.txt`'e ve aynısını çift tıklanır `Asistan Kur.bat` olarak
+`.kurulum\` ile masaüstüne yazar. Komut PortableGit ve Node'u TEMP'e indirir,
 depoyu anahtarla çeker, USB düzenini kurup `kur-usb.ps1`'i çalıştırır. Komut = depoya yazma
 yetkisi; parola gibi saklanır, git'e girmez.
 
