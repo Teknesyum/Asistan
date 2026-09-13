@@ -35,6 +35,7 @@ def yukle(yol):
     v.setdefault("ders", {})
     v.setdefault("gruplar", {})
     v.setdefault("yer_min_kademe", {})
+    v.setdefault("yer_kadro", {})
     v.setdefault("egitim", [])
     for a in v["asistanlar"]:
         a.setdefault("kisa", a["ad"])
@@ -120,6 +121,14 @@ def kalanlar(v, gun, yok):
     return sebep
 
 
+KADRO_SIRA = ("tek", "kidemli_tek", "cift")
+
+
+def kadro_kurali(v, yer):
+    m = v.get("yer_kadro", {}).get(yer, "tek")
+    return m if m in KADRO_SIRA else "tek"
+
+
 def bosluklar(v, yok, gun):
     sonuc = []
     adet = v["yer_adet"].get(str(gun), {})
@@ -127,12 +136,36 @@ def bosluklar(v, yok, gun):
         kadro = [ad for ad, y in v["yer"].items() if y == yer]
         if not kadro:
             continue
-        gerek = adet.get(yer, 1)
+        gerek = adet.get(yer, 2 if kadro_kurali(v, yer) == "cift" else 1)
         mevcut = [ad for ad in kadro if ad not in yok]
         hedef_kidem = sum(v["kidem"][ad] for ad in kadro) / len(kadro)
         eksik = [(ad, yok[ad]) for ad in kadro] if not mevcut else [("—", "Ek kadro isteniyor")]
         for _ in range(gerek - len(mevcut)):
-            sonuc.append({"yer": yer, "eksik": eksik, "hedef_kidem": hedef_kidem})
+            sonuc.append({"yer": yer, "eksik": eksik, "hedef_kidem": hedef_kidem,
+                          "yalniz": gerek <= 1})
+    return sonuc
+
+
+def yerdekiler(v, atama, yok, yer):
+    return [ad for ad in v["kidem"]
+            if atama.get(ad) == yer or (v["yer"][ad] == yer and ad not in yok and ad not in atama)]
+
+
+def ek_bosluk(v, atama, yok, gun):
+    adet = v["yer_adet"].get(str(gun), {})
+    sonuc = []
+    for yer in v["zorunlu_yerler"]:
+        if kadro_kurali(v, yer) != "kidemli_tek" or yer in adet:
+            continue
+        kisiler = yerdekiler(v, atama, yok, yer)
+        if len(kisiler) != 1 or not yasak(v, kisiler[0], yer):
+            continue
+        kadro = [ad for ad, y in v["yer"].items() if y == yer]
+        sonuc.append({
+            "yer": yer, "yalniz": False,
+            "eksik": [("—", "Kıdem eşiğinin altı, yanına ikinci kişi")],
+            "hedef_kidem": sum(v["kidem"][ad] for ad in kadro) / len(kadro) if kadro else 9,
+        })
     return sonuc
 
 
@@ -173,7 +206,7 @@ def maliyet(v, ad, bos, sayac, dun_gidenler, yb_nobet=()):
         and grup(v, bos["yer"]) == "Ybü"
     )
     return (
-        1e6 * yasak(v, ad, bos["yer"])
+        1e6 * (bos.get("yalniz", True) and yasak(v, ad, bos["yer"]))
         + 1e6 * refakat_bekliyor(v, ad, sayac["refakat"], bos["yer"])
         - 1e3 * bool(tercih)
         +
@@ -255,6 +288,12 @@ def calistir(v):
                 adaylar = [a for a in adaylar if a != r["ad"]]
             ek, _ = gun_ata(v, boslar, adaylar, sayac, dun_gidenler, set(nobet_o_gun(v, gun)["yb"]))
             atama.update(ek)
+            ikinci = ek_bosluk(v, atama, yok, gun)
+            if ikinci:
+                kalan = [a for a in havuz(v, yok, kalsin) if a not in atama]
+                ek2, _ = gun_ata(v, ikinci, kalan, sayac, dun_gidenler, set(nobet_o_gun(v, gun)["yb"]))
+                atama.update(ek2)
+                boslar = boslar + ikinci
         elenen = []
         for r in refakat:
             baska = any(a != r["ad"] and y == r["yer"] for a, y in atama.items()) or \

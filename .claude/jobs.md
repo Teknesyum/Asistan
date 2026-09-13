@@ -1,0 +1,3 @@
+- [x] Yer kadrosu kuralı: Tek / Kıdemliyse Tek / Çift toggle (arayuz + gorevlendir.py)
+- [x] Otomatik kilit bugünü kapsamasın (dün ve öncesi)
+- [x] Sürüm 1.1.0, depoya gönderildi
