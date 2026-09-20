@@ -36,7 +36,10 @@ def yukle(yol):
     v.setdefault("gruplar", {})
     v.setdefault("yer_min_kademe", {})
     v.setdefault("yer_kadro", {})
-    v["degisim"] = [d for d in v.get("degisim", []) if d.get("gun") and d.get("cikan") and d.get("giren")]
+    v["degisim"] = [
+        {"gun": int(d["gun"]), "cikan": d["cikan"], "giren": d["giren"], "karsi": int(d.get("karsi") or 0)}
+        for d in v.get("degisim", []) if d.get("gun") and d.get("cikan") and d.get("giren")
+    ]
     v.setdefault("egitim", [])
     for a in v["asistanlar"]:
         a.setdefault("kisa", a["ad"])
@@ -97,11 +100,13 @@ def nobet_o_gun(v, gun):
         "uzman_amel": k.get("uzman_amel", []),
     }
     for d in v.get("degisim", []):
-        if int(d["gun"]) != gun:
+        ters = int(d.get("karsi") or 0) == gun
+        if int(d["gun"]) != gun and not ters:
             continue
+        cik, gir = (d["giren"], d["cikan"]) if ters else (d["cikan"], d["giren"])
         for t in ("yb", "amel"):
-            if d["cikan"] in n[t]:
-                n[t][n[t].index(d["cikan"])] = d["giren"]
+            if cik in n[t]:
+                n[t][n[t].index(cik)] = gir
     return n
 
 

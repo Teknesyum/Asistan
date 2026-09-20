@@ -1,2 +1,3 @@
-- [x] Boş günler de kilitlenebilir (gecmis = {}), boş kilitte uyarı çıkmaz
-- [x] Sürüm 1.3.0
+- [x] Nöbet değişimi karşılıklı oldu (degisim.karsi): arayüz + gorevlendir.py
+- [x] 20↔21 MustafaD ile Bahtiyar değişimi veriye işlendi
+- [x] Sürüm 1.4.0

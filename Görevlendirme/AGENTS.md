@@ -30,8 +30,11 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
   `gecmis` o günü kilitler: boş nesne `{}` de geçerlidir — o gün kimse gönderilmemiş sayılır,
   boş yer uyarısı çıkmaz. Toplu kilit (Kalanı Hesapla, kendiliğinden kilit) hafta sonlarına dokunmaz,
   kilit simgesiyle elle kilitlenebilir.
-  `degisim` `[{gun, cikan, giren}]`: o günün nöbetini çıkan yerine giren tutar — nöbet listesi
-  olduğu gibi kalır, nöbetçi sayılan ve ertesi gün izinli olan girendir.
+  `degisim` `[{gun, cikan, giren, karsi}]`: `gun` günü nöbeti çıkan yerine giren tutar; `karsi`
+  verilirse o günü de giren yerine çıkan tutar — karşılıklı değişim, iki taraf da yer değiştirir.
+  `karsi: 0` tek taraflıdır. Nöbet listesi olduğu gibi kalır; nöbetçi sayılan ve ertesi gün
+  nöbet ertesi olan, o gün fiilen tutandır. Arayüz karşı günü girenin nöbetlerinden en yakınıyla
+  (7 günü aşmıyorsa) önerir.
   `refakat` `[{ad, yer, gun}]`: kişi `gun` gün o yerin refakatçisi olur — kadroya sayılmaz,
   boşluğu başkası doldurur, yanında hep biri bulunur; süre dolmadan o yere tek başına
   gönderilmez. Günde tek refakatçi çıkar (sayacı en az olan) ve yalnız o yerde tek kişi
