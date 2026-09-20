@@ -177,6 +177,18 @@
     <th>Kişi</th><th style="width:120px">Yer</th><th style="width:90px">Gün</th><th style="width:190px">Durum</th><th style="width:60px"></th>
   </tr></thead><tbody></tbody></table>
 
+  <div class="blok-bas">Nöbet Değişimi — Nöbeti Başkası Tuttu</div>
+  <div class="satir">
+    <select id="nGun" class="gir gir-orta"></select>
+    <select id="nCikan" class="gir gir-orta"></select>
+    <select id="nGiren" class="gir gir-orta"></select>
+    <button id="btnDegisim" class="dgm dgm-birincil">Değiştir</button>
+  </div>
+  <p class="ipucu">Seçilen günün nöbetini çıkan yerine giren tutar. Ertesi günün nöbet ertesi izni de girene geçer, çıkan o gün havuza döner. Nöbet listesi yeniden içe aktarılsa da bu kayıt durur.</p>
+  <table id="tblDegisim" class="grid-line"><thead><tr>
+    <th style="width:90px">Gün</th><th>Çıkan</th><th>Giren</th><th style="width:60px"></th>
+  </tr></thead><tbody></tbody></table>
+
   <div class="blok-bas">Zorlamalar — Kural Dışı Atama</div>
   <div class="satir">
     <select id="fGun" class="gir gir-orta"></select>
@@ -427,6 +439,7 @@ const VARSAYILAN = {
     {gunler:"1-11", kisiler:["FatihEren","Ömer","Alperen"]}
   ],
   force: {},
+  degisim: [],
   gecmis: {
     "1":{"SümeyyeD":"Pol"},
     "2":{"Emrah":"Ybü1","Eyyüp":"Bblok"},
@@ -506,6 +519,7 @@ function normalize(v) {
   if (!v.gruplar) v.gruplar = {"Ybü1":"Ybü","Ybü2":"Ybü"};
   if (!v.yer_min_kademe) v.yer_min_kademe = {"Ybü1":1,"Ybü2":1};
   v.yer_kadro = v.yer_kadro || {};
+  v.degisim = (v.degisim || []).filter(d => d && d.gun && d.cikan && d.giren);
   for (const y in v.yer_kadro) if (KADRO_SIRA.indexOf(v.yer_kadro[y]) < 0) delete v.yer_kadro[y];
   v.egitim = v.egitim || [];
   v.asistanlar.forEach(a => {
@@ -578,12 +592,22 @@ function kademesi(ad) {
 function yasak(ad, yer) { return kademesi(ad) < (V.yer_min_kademe[yer] || 0); }
 function kadroKurali(yer) { return KADRO_SIRA.indexOf(V.yer_kadro[yer]) >= 0 ? V.yer_kadro[yer] : "tek"; }
 function nobetGun(g) {
+  let n;
   if (g >= 1) {
-    const n = V.nobet[String(g)];
-    return n ? {yb:n.yb||[], amel:n.amel||[], uzman_yb:n.uzman_yb||[], uzman_amel:n.uzman_amel||[]}
-             : {yb:[], amel:[], uzman_yb:[], uzman_amel:[]};
+    const k = V.nobet[String(g)];
+    n = k ? {yb:(k.yb||[]).slice(), amel:(k.amel||[]).slice(), uzman_yb:k.uzman_yb||[], uzman_amel:k.uzman_amel||[]}
+          : {yb:[], amel:[], uzman_yb:[], uzman_amel:[]};
+  } else {
+    n = {yb:(V.onceki_ay_son_gun_nobet.yb||[]).slice(), amel:(V.onceki_ay_son_gun_nobet.amel||[]).slice(),
+         uzman_yb:[], uzman_amel:[]};
   }
-  return {yb: V.onceki_ay_son_gun_nobet.yb||[], amel: V.onceki_ay_son_gun_nobet.amel||[], uzman_yb:[], uzman_amel:[]};
+  V.degisim.filter(d => +d.gun === g).forEach(d => {
+    ["yb", "amel"].forEach(t => {
+      const i = n[t].indexOf(d.cikan);
+      if (i >= 0) n[t][i] = d.giren;
+    });
+  });
+  return n;
 }
 function refakatKaydi(ad) { return V.refakat.find(r => r.ad === ad); }
 function refakatSuruyor(ad, sayilan) {
@@ -1408,6 +1432,7 @@ function adDegistir(eski, yeni) {
   for (const g in V.gecmis) if (V.gecmis[g][eski] !== undefined) { V.gecmis[g][yeni] = V.gecmis[g][eski]; delete V.gecmis[g][eski]; }
   for (const g in V.force) V.force[g].forEach(z => { if (z.ad === eski) z.ad = yeni; });
   V.refakat.forEach(r => { if (r.ad === eski) r.ad = yeni; });
+  V.degisim.forEach(d => { if (d.cikan === eski) d.cikan = yeni; if (d.giren === eski) d.giren = yeni; });
   if (V.devir.refakat && V.devir.refakat[eski] !== undefined) {
     V.devir.refakat[yeni] = V.devir.refakat[eski]; delete V.devir.refakat[eski];
   }
@@ -1421,6 +1446,7 @@ function asistanSil(ad) {
   for (const g in V.gecmis) delete V.gecmis[g][ad];
   for (const g in V.force) V.force[g] = V.force[g].filter(z => z.ad !== ad);
   V.refakat = V.refakat.filter(r => r.ad !== ad);
+  V.degisim = V.degisim.filter(d => d.cikan !== ad && d.giren !== ad);
   sakla(); ciz_nobet(); ciz_izin(); ciz_kural();
 }
 $("#btnEkle").onclick = () => {
@@ -1634,7 +1660,12 @@ function ciz_kural() {
   adlar().forEach(a => rk.appendChild(el("option", {value: a, textContent: a})));
   const ry = $("#rYer"); ry.innerHTML = "";
   V.zorunlu_yerler.forEach(y => ry.appendChild(el("option", {value: y, textContent: y})));
-  ciz_refakat(); ciz_force(); ciz_gecmis();
+  gunOpt($("#nGun"));
+  ["#nCikan", "#nGiren"].forEach(s => {
+    const e = $(s); e.innerHTML = "";
+    adlar().forEach(a => e.appendChild(el("option", {value: a, textContent: a})));
+  });
+  ciz_refakat(); ciz_force(); ciz_degisim(); ciz_gecmis();
 }
 function ciz_refakat() {
   const tb = $("#tblRefakat tbody"); tb.innerHTML = "";
@@ -1672,6 +1703,30 @@ $("#btnRefakat").onclick = () => {
   sakla(); ciz_kural(); ciz_gosterge();
   toast(kisaAd(ad) + " → " + yer + " refakati " + gun + " gün");
 };
+function ciz_degisim() {
+  const tb = $("#tblDegisim tbody"); tb.innerHTML = "";
+  V.degisim.slice().sort((a, b) => a.gun - b.gun).forEach(d => {
+    const tr = el("tr");
+    tr.appendChild(el("td", {className: "gun-hucre", textContent: d.gun}));
+    tr.appendChild(el("td", {textContent: d.cikan}));
+    tr.appendChild(el("td", {textContent: d.giren}));
+    const td = el("td"), b = el("button", {className: "dgm", textContent: "Sil"});
+    b.onclick = () => {
+      V.degisim = V.degisim.filter(x => x !== d);
+      sakla(); ciz_degisim(); ciz_gosterge();
+    };
+    td.appendChild(b); tr.appendChild(td); tb.appendChild(tr);
+  });
+}
+function degisimEkle(gun, cikan, giren) {
+  if (cikan === giren) { toast("Çıkan ve giren aynı kişi olamaz"); return; }
+  const n = nobetGun(+gun);
+  if (n.yb.concat(n.amel).indexOf(cikan) < 0) { toast(gun + ". gün " + kisaAd(cikan) + " nöbetçi değil"); return; }
+  V.degisim = V.degisim.filter(d => !(+d.gun === +gun && d.cikan === cikan));
+  V.degisim.push({gun: +gun, cikan, giren});
+  sakla(); ciz_degisim(); ciz_gosterge();
+  toast(gun + ". gün nöbeti " + kisaAd(cikan) + " yerine " + kisaAd(giren) + " tuttu");
+}
 function ciz_force() {
   const tb = $("#tblForce tbody"); tb.innerHTML = "";
   Object.keys(V.force).sort((a,b) => a-b).forEach(g => {
@@ -1686,6 +1741,7 @@ function ciz_force() {
     });
   });
 }
+$("#btnDegisim").onclick = () => degisimEkle($("#nGun").value, $("#nCikan").value, $("#nGiren").value);
 $("#btnForce").onclick = () => {
   const g = $("#fGun").value, ad = $("#fKisi").value, yer = $("#fYer").value;
   V.force[g] = (V.force[g]||[]).filter(z => z.ad !== ad);
@@ -1923,6 +1979,18 @@ function ciz_gkural(satirlar, sayac) {
   f3.appendChild(y3); f3.appendChild(n3); f3.appendChild(d3);
   b1.appendChild(f3);
 
+  const f6 = el("div", {className: "gk-satir"});
+  const nb = nobetGun(g);
+  const c6 = el("select", {className: "gir gir-mini"});
+  nb.yb.concat(nb.amel).forEach(a => c6.appendChild(el("option", {value: a, textContent: kisaAd(a)})));
+  const g6 = kisiSec();
+  const d6 = el("button", {type: "button", className: "dgm dgm-mini", textContent: "Nöbet Değişti"});
+  d6.title = "Bugünün nöbetini çıkan yerine giren tutar; yarınki nöbet ertesi de girene geçer";
+  d6.disabled = !c6.options.length;
+  d6.onclick = () => degisimEkle(g, c6.value, g6.value);
+  f6.appendChild(c6); f6.appendChild(g6); f6.appendChild(d6);
+  b1.appendChild(f6);
+
   const f4 = el("div", {className: "gk-satir"});
   f4.appendChild(el("span", {className: "gk-bos", textContent: "Otomatik ata:"}));
   V.zorunlu_yerler.forEach(y => {
@@ -1976,6 +2044,13 @@ function ciz_gkural(satirlar, sayac) {
     r.appendChild(el("span", {textContent: kisaAd(z.ad) + " → " + z.yer}));
     const x = el("button", {type: "button", className: "gk-sil", textContent: "×", title: "Kaldır"});
     x.onclick = () => { V.force[gs].splice(i,1); if (!V.force[gs].length) delete V.force[gs]; sakla(); ciz_gosterge(); ciz_kural(); };
+    r.appendChild(x); liste.appendChild(r);
+  });
+  V.degisim.filter(d => +d.gun === g).forEach(d => {
+    const r = el("div", {className: "gk-oge"});
+    r.appendChild(el("span", {textContent: "Nöbet: " + kisaAd(d.cikan) + " → " + kisaAd(d.giren)}));
+    const x = el("button", {type: "button", className: "gk-sil", textContent: "×", title: "Kaldır"});
+    x.onclick = () => { V.degisim = V.degisim.filter(y => y !== d); sakla(); ciz_gosterge(); ciz_kural(); };
     r.appendChild(x); liste.appendChild(r);
   });
   if (!liste.children.length) liste.appendChild(el("div", {className: "gk-bos", textContent: "Bugüne ek kural yok"}));

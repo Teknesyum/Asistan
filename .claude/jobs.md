@@ -1,3 +1,3 @@
-- [x] Yer kadrosu kuralı: Tek / Kıdemliyse Tek / Çift toggle (arayuz + gorevlendir.py)
-- [x] Otomatik kilit bugünü kapsamasın (dün ve öncesi)
-- [x] Sürüm 1.1.0, depoya gönderildi
+- [x] Nöbet değişimi kuralı (degisim): arayüz + gorevlendir.py
+- [x] 20 Eylül MustafaD → Bahtiyar değişimi veriye işlendi
+- [x] Sürüm 1.2.0, depoya gönderildi

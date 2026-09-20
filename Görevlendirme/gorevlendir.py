@@ -36,6 +36,7 @@ def yukle(yol):
     v.setdefault("gruplar", {})
     v.setdefault("yer_min_kademe", {})
     v.setdefault("yer_kadro", {})
+    v["degisim"] = [d for d in v.get("degisim", []) if d.get("gun") and d.get("cikan") and d.get("giren")]
     v.setdefault("egitim", [])
     for a in v["asistanlar"]:
         a.setdefault("kisa", a["ad"])
@@ -86,8 +87,22 @@ def gruplar(v):
 
 def nobet_o_gun(v, gun):
     if gun >= 1:
-        return v["nobet"].get(str(gun), {"yb": [], "amel": []})
-    return v["onceki_ay_son_gun_nobet"]
+        k = v["nobet"].get(str(gun), {})
+    else:
+        k = v["onceki_ay_son_gun_nobet"]
+    n = {
+        "yb": list(k.get("yb", [])),
+        "amel": list(k.get("amel", [])),
+        "uzman_yb": k.get("uzman_yb", []),
+        "uzman_amel": k.get("uzman_amel", []),
+    }
+    for d in v.get("degisim", []):
+        if int(d["gun"]) != gun:
+            continue
+        for t in ("yb", "amel"):
+            if d["cikan"] in n[t]:
+                n[t][n[t].index(d["cikan"])] = d["giren"]
+    return n
 
 
 def yok_olanlar(v, gun):
