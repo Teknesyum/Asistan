@@ -27,6 +27,9 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
   `yer_kadro` o yere kaç kişi gider: `tek` (varsayılan), `kidemli_tek` (eşiği geçen düşerse tek,
   düşmezse yanına ikinci kişi), `cift` (her zaman iki kişi). Kurallar panelindeki kısaltmalı
   düğme tıklandıkça bu üçü arasında döner. Gün için verilen `yer_adet` bu kuralı ezer.
+  `gecmis` o günü kilitler: boş nesne `{}` de geçerlidir — o gün kimse gönderilmemiş sayılır,
+  boş yer uyarısı çıkmaz. Toplu kilit (Kalanı Hesapla, kendiliğinden kilit) hafta sonlarına dokunmaz,
+  kilit simgesiyle elle kilitlenebilir.
   `degisim` `[{gun, cikan, giren}]`: o günün nöbetini çıkan yerine giren tutar — nöbet listesi
   olduğu gibi kalır, nöbetçi sayılan ve ertesi gün izinli olan girendir.
   `refakat` `[{ad, yer, gun}]`: kişi `gun` gün o yerin refakatçisi olur — kadroya sayılmaz,

@@ -1,3 +1,2 @@
-- [x] Nöbet değişimi kuralı (degisim): arayüz + gorevlendir.py
-- [x] 20 Eylül MustafaD → Bahtiyar değişimi veriye işlendi
-- [x] Sürüm 1.2.0, depoya gönderildi
+- [x] Boş günler de kilitlenebilir (gecmis = {}), boş kilitte uyarı çıkmaz
+- [x] Sürüm 1.3.0

@@ -856,6 +856,7 @@ function hesapla() {
     if (V.gecmis[String(g)]) {
       atama = Object.assign({}, V.gecmis[String(g)], atama);
       kaynak = "geçmiş";
+      if (!Object.keys(atama).length) boslar = [];
     } else if (hg === 0 || hg === 6) {
       kaynak = "hafta sonu";
       boslar = [];
@@ -1181,7 +1182,7 @@ function matrisBlok(satirlar, ilk, sonG, yeniHar, degisenGun) {
     const kb = el("button", {type: "button", className: "kilit-sim kilit-mini",
       textContent: kilitli ? "🔒" : "🔓"});
     kb.title = kilitli ? g + ". gün kilitli — açmak için tıklayın"
-                       : g + ". günü kilitle: bugünkü atama aynen sabitlenir";
+                       : g + ". günü kilitle: o günkü atama (boşsa boş olarak) sabitlenir";
     kb.onclick = () => gunKilit(g);
     gh.appendChild(kb);
     tr.appendChild(gh);
@@ -1357,7 +1358,7 @@ function gunKilit(g) {
   }
   if (!SON) hesapla();
   const s = SON.satirlar[g-1];
-  if (!s || !Object.keys(s.atama).length) { toast(g + ". günde kilitlenecek atama yok"); return; }
+  if (!s) return;
   V.gecmis[gs] = Object.assign({}, s.atama);
   sakla(); ciz_gosterge(); ciz_kural();
   toast(g + ". gün kilitlendi");
@@ -1763,7 +1764,7 @@ function ciz_gecmis() {
     const m = V.gecmis[g];
     const kl = Object.keys(m);
     if (kl.length) kl.forEach(ad => t.appendChild(cip(ad + " → " + m[ad], "cip-yer")));
-    else t.textContent = "Boş";
+    else t.appendChild(cip("Görevlendirme yok", "cip-yer"));
     tr.appendChild(t);
     const d = el("td"); const b = el("button", {className:"dgm", textContent:"Kilidi Aç"});
     b.onclick = () => { delete V.gecmis[g]; sakla(); ciz_gecmis(); };
@@ -1802,7 +1803,7 @@ function ciz_cikti() {
     const b1 = el("button", {className: "dgm", textContent: "Kopyala"});
     b1.onclick = () => kopyala(gunMetin(s), s.gun + ". gün kopyalandı");
     hd.appendChild(b1);
-    if (s.kaynak !== "geçmiş" && Object.keys(s.atama).length) {
+    if (s.kaynak !== "geçmiş") {
       const b2 = el("button", {className: "dgm", textContent: "Geçmişe Kaydet"});
       b2.onclick = () => { V.gecmis[String(s.gun)] = Object.assign({}, s.atama); sakla(); ciz_cikti(); toast(s.gun + ". gün kilitlendi"); };
       hd.appendChild(b2);
@@ -1824,8 +1825,7 @@ $("#btnKilitle").onclick = () => {
   if (!SON) hesapla();
   let k = 0;
   SON.satirlar.forEach(s => {
-    if (s.gun > son || s.kaynak === "geçmiş") return;
-    if (!Object.keys(s.atama).length) return;
+    if (s.gun > son || s.kaynak === "geçmiş" || s.kaynak === "hafta sonu") return;
     V.gecmis[String(s.gun)] = Object.assign({}, s.atama); k++;
   });
   sakla(); ciz_cikti(); ciz_kural();
@@ -2413,8 +2413,7 @@ function kilitle(son) {
   const {satirlar} = hesapla();
   let k = 0;
   satirlar.forEach(x => {
-    if (x.gun > son || x.kaynak === "geçmiş") return;
-    if (!Object.keys(x.atama).length) return;
+    if (x.gun > son || x.kaynak === "geçmiş" || x.kaynak === "hafta sonu") return;
     V.gecmis[String(x.gun)] = Object.assign({}, x.atama); k++;
   });
   return k;

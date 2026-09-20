@@ -274,6 +274,8 @@ def calistir(v):
         if str(gun) in v["gecmis"]:
             atama = {**v["gecmis"][str(gun)], **atama}
             kaynak = "geçmiş"
+            if not atama:
+                boslar = []
         elif hafta_gunu >= 5:
             kaynak = "hafta sonu"
             boslar = []
