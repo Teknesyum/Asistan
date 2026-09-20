@@ -10,7 +10,8 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
   `node node_modules/electron/install.js` (npm'in postinstall'ı bu makinede sessizce atlanıyor).
 - `kisayol.ps1` — simgeyi üretir, masaüstü kısayolunu yazar. Yol değişirse yeniden çalıştır.
 - `arayuz.html` — arayüzün kendisi, çevrimdışı, ağ isteği yok. İlk sekme Gösterge:
-  seçili gün + sonraki iki gün, ay matrisi, çetele — kaydırmasız. Veri uygulamada diske yazılır (`%APPDATA%/asistan-gorevlendirme/veri/`, her
+  seçili gün + sonraki iki gün, ay matrisi, çetele — kaydırmasız. Kademe aşımı ve
+  doldurulamayan yer uyarıları gün panelinin altında ayrı "Uyarılar" şeridinde toplanır. Veri uygulamada diske yazılır (`%APPDATA%/asistan-gorevlendirme/veri/`, her
   ay ayrı dosya), tarayıcıda localStorage'a. "Dosyaya Kaydet / Yükle" yalnız dışa/içe
   aktarma. Ay değişince önceki ayın sayacı kendiliğinden devredilir. Hesap motoru betikle birebir aynı.
 - `app.css` — arayüzün kendi katmanı, her değer `--tk-*`. Değiştirince

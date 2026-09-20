@@ -1,2 +1,3 @@
-- [x] Boş yer sebebinde eksik kişi adı gösteriliyor (Ybü2 → Bahtiyar Nöbet Ertesi)
-- [x] Sürüm 1.4.1
+- [x] Zorlanan/oto atanan yerde de eksik kişi sebebi gösteriliyor
+- [x] Kademe aşımı ve doldurulamadı uyarıları gün panelinin altındaki Uyarılar şeridine taşındı
+- [x] Sürüm 1.4.2

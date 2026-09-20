@@ -1100,6 +1100,7 @@ function bugunKart(hedef, gun, s) {
   amelHedef(ar, gun);
   es.appendChild(ar);
   let n2 = 0;
+  const uyarilar = [];
   tumYer.forEach(yer => {
     const boslarY = s.boslar.filter(b => b.yer === yer);
     const bos = boslarY[0];
@@ -1110,12 +1111,14 @@ function bugunKart(hedef, gun, s) {
     r.appendChild(el("div", {className: "esles-yer", textContent: yer}));
     const kim = el("div", {className: "esles-kim"});
     const nic = el("div", {className: "esles-sebep"});
-    if (boslarY.length) {
-      boslarY.forEach(b => b.eksik.forEach(e => {
-        kim.appendChild(el("div", {textContent: kisaAd(e[0])}));
-        nic.appendChild(el("div", {textContent: e[1]}));
-      }));
-    }
+    const sebepler = boslarY.length
+      ? boslarY.reduce((a, b) => a.concat(b.eksik), [])
+      : yerEksikleri(yer, gun);
+    sebepler.forEach(e => {
+      if (!e) return;
+      kim.appendChild(el("div", {textContent: kisaAd(e[0])}));
+      nic.appendChild(el("div", {textContent: e[1]}));
+    });
     r.appendChild(kim);
     r.appendChild(nic);
     r.appendChild(el("div", {className: "esles-ok", textContent: gelen ? "→" : "×"}));
@@ -1124,23 +1127,35 @@ function bugunKart(hedef, gun, s) {
     (s.refakat || []).forEach(r => { if (r.yer === yer) rf[r.ad] = 1; });
     if (gelen) {
       sag.appendChild(isimSerit(gelen, kd, false, gun, rf, yer));
-      if (gelen.some(ad => yasak(ad, yer))) {
+      const asan = gelen.filter(ad => yasak(ad, yer));
+      if (asan.length) {
         r.classList.add("esles-ihlal");
-        sag.appendChild(cip("Kademe alt sınırı aşıldı", "cip-ihlal"));
+        uyarilar.push(asan.map(kisaAd).join(", ") + " → " + yer + ": kademe alt sınırı aşıldı");
       }
     } else {
       sag.textContent = "Doldurulamadı";
       sag.className = "esles-gelir hata-metin";
+      uyarilar.push(yer + ": doldurulamadı, havuzda uygun kimse yok");
     }
     r.appendChild(sag);
     es.appendChild(r);
   });
+  if (uyarilar.length) {
+    const u = el("div", {className: "gun-uyari"});
+    u.appendChild(el("span", {className: "gun-uyari-bas", textContent: "Uyarılar"}));
+    uyarilar.forEach(x => u.appendChild(el("span", {className: "gun-uyari-oge", textContent: x})));
+    es.appendChild(u);
+  }
   if (!n2 && s.kaynak === "hafta sonu") {
     es.appendChild(el("p", {className: "ipucu", textContent: "Hafta sonu, görevlendirme yok."}));
   }
   hedef.appendChild(es);
 }
 
+function yerEksikleri(yer, gun) {
+  const yok = yokOlanlar(gun, izinGun(), egitimGun()), yh = yerHarita();
+  return adlar().filter(ad => yh[ad] === yer && yok[ad]).map(ad => [ad, yok[ad]]);
+}
 function amelHedef(r, gun) {
   r.title = "Bir ismi buraya bırakın: ameliyathaneye geçer, yerine en uygun kişi görevlendirilir";
   r.ondragover = e => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; r.classList.add("esles-hedef"); };
