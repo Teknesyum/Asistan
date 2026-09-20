@@ -159,8 +159,15 @@ def bosluklar(v, yok, gun):
         gerek = adet.get(yer, 2 if kadro_kurali(v, yer) == "cift" else 1)
         mevcut = [ad for ad in kadro if ad not in yok]
         hedef_kidem = sum(v["kidem"][ad] for ad in kadro) / len(kadro)
-        eksik = [(ad, yok[ad]) for ad in kadro] if not mevcut else [("—", "Ek kadro isteniyor")]
-        for _ in range(gerek - len(mevcut)):
+        yoklar = [(ad, yok[ad]) for ad in kadro if ad in yok]
+        kac = gerek - len(mevcut)
+        for i in range(kac):
+            if not yoklar:
+                eksik = [("—", "Ek kadro isteniyor")]
+            elif len(yoklar) == kac:
+                eksik = [yoklar[i]]
+            else:
+                eksik = yoklar
             sonuc.append({"yer": yer, "eksik": eksik, "hedef_kidem": hedef_kidem,
                           "yalniz": gerek <= 1})
     return sonuc

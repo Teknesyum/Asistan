@@ -764,10 +764,12 @@ function bosluklar(yok, g) {
     const hedef = kadro.reduce((s,ad) => s + kd[ad], 0) / kadro.length;
     const mevcut = kadro.filter(ad => !yok[ad]);
     const eksik = gerek - mevcut.length;
+    const yoklar = kadro.filter(ad => yok[ad]).map(ad => [ad, yok[ad]]);
     for (let i = 0; i < eksik; i++) {
       out.push({
         yer, yalniz,
-        eksik: mevcut.length ? [["—", "Ek kadro isteniyor"]] : kadro.map(ad => [ad, yok[ad]]),
+        eksik: !yoklar.length ? [["—", "Ek kadro isteniyor"]]
+             : yoklar.length === eksik ? [yoklar[i]] : yoklar,
         hedef
       });
     }

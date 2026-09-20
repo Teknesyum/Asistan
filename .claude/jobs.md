@@ -1,3 +1,2 @@
-- [x] Nöbet değişimi karşılıklı oldu (degisim.karsi): arayüz + gorevlendir.py
-- [x] 20↔21 MustafaD ile Bahtiyar değişimi veriye işlendi
-- [x] Sürüm 1.4.0
+- [x] Boş yer sebebinde eksik kişi adı gösteriliyor (Ybü2 → Bahtiyar Nöbet Ertesi)
+- [x] Sürüm 1.4.1
