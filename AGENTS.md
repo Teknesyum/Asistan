@@ -40,4 +40,5 @@ Git yoksa `.kurulum\git` (PortableGit) `.araclar\git`e kopyalanır. Özel depoya
 dakika eşitler. Kod dosyaları değiştiyse uygulama kendini yeniden başlatır, veri değiştiyse
 arayüz yenilenir. Veri her değişiklikten ~5 sn sonra ve çıkışta commit + push edilir.
 Başlık çubuğundaki gösterge durumu gösterir, tıklanınca hemen eşitler. Çakışmada çeken
-makine kazanır (`-X ours`). `.araclar\git` varsa onu kullanır.
+makine kazanır (`-X ours`). Git sırası: `.araclar\git`, Program Files\Git, PATH; her çağrı
+`safe.directory=*` ile gider. "Yalnız bu bilgisayar" görünürse sebebi göstergenin ipucunda.
