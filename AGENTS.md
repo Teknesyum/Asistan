@@ -45,4 +45,4 @@ arayüz yenilenir. Veri her değişiklikten ~5 sn sonra ve çıkışta commit + 
 Başlık çubuğundaki gösterge durumu gösterir, tıklanınca hemen eşitler. Çakışmada çeken
 makine kazanır (`-X ours`). Git sırası: `.araclar\git`, Program Files\Git, PATH; her çağrı
 `safe.directory=*` ile gider. "Yalnız bu bilgisayar" ya da "Çevrimdışı" görünürse sebebi göstergenin ipucunda (`ozet()`:
-git'in genel "repository exists" satırları atılır). Başlıkta sürüm: `v<package.json> · <commit>`.
+git'in genel "repository exists" satırları atılır). Başlıkta sürüm: `v<package.json>`.
