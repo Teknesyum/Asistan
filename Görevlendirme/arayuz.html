@@ -671,6 +671,7 @@ function yerTakas(g, a, ya, b, yb) {
     const i = l.findIndex(z => z.ad === ad);
     if (i >= 0) l.splice(i, 1);
     if (yer) l.push({ad, yer});
+    if (yer && V.sabit[gs]) { V.sabit[gs] = V.sabit[gs].filter(x => x !== ad); if (!V.sabit[gs].length) delete V.sabit[gs]; }
   };
   koy(a, yb); koy(b, ya);
   if (!l.length) delete V.force[gs];
@@ -1111,17 +1112,17 @@ function bugunKart(hedef, gun, s) {
     const r = el("div", {className: "esles-satir grid-line"});
     r.appendChild(el("div", {className: "esles-yer", textContent: yer}));
     const kim = el("div", {className: "esles-kim"});
-    const nic = el("div", {className: "esles-sebep"});
     const sebepler = boslarY.length
       ? boslarY.reduce((a, b) => a.concat(b.eksik), [])
       : yerEksikleri(yer, gun);
     sebepler.forEach(e => {
       if (!e) return;
-      kim.appendChild(el("div", {textContent: kisaAd(e[0])}));
-      nic.appendChild(el("div", {textContent: e[1]}));
+      const d = el("div");
+      if (e[0] !== "—") d.appendChild(document.createTextNode(kisaAd(e[0])));
+      d.appendChild(el("span", {className: "esles-sebep", textContent: e[0] !== "—" ? "(" + e[1] + ")" : e[1]}));
+      kim.appendChild(d);
     });
     r.appendChild(kim);
-    r.appendChild(nic);
     r.appendChild(el("div", {className: "esles-ok", textContent: gelen ? "→" : "×"}));
     const sag = el("div", {className: "esles-gelir"});
     const rf = {};
@@ -1139,6 +1140,7 @@ function bugunKart(hedef, gun, s) {
       uyarilar.push(yer + ": doldurulamadı, havuzda uygun kimse yok");
     }
     r.appendChild(sag);
+    yerHedef(r, gun, yer, gelen || []);
     es.appendChild(r);
   });
   if (uyarilar.length) {
@@ -1168,6 +1170,27 @@ function amelHedef(r, gun) {
     try { k = JSON.parse(e.dataTransfer.getData("text/plain")); } catch (_) { return; }
     if (!k || !k.ad || !k.yer) return;
     amelAl(gun, k.ad);
+  };
+}
+function yerHedef(r, gun, yer, gelen) {
+  r.title = "Bir ismi buraya bırakın: " + yerAdi(yer) + "'e geçer" + (gelen.length ? ", buradaki kişi onun yerine gider" : "");
+  r.ondragover = e => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; r.classList.add("esles-hedef"); };
+  r.ondragleave = () => r.classList.remove("esles-hedef");
+  r.ondrop = e => {
+    e.preventDefault();
+    r.classList.remove("esles-hedef");
+    let k = null;
+    try { k = JSON.parse(e.dataTransfer.getData("text/plain")); } catch (_) { return; }
+    if (!k || !k.ad || k.yer === yer || gelen.indexOf(k.ad) >= 0) return;
+    if (gelen.length) { yerTakas(gun, k.ad, k.yer, gelen[gelen.length - 1], yer); return; }
+    const gs = String(gun);
+    if (V.gecmis[gs]) { toast(gun + ". gün kilitli, önce kilidi açın"); return; }
+    const l = (V.force[gs] || []).filter(z => z.ad !== k.ad);
+    l.push({ad: k.ad, yer});
+    V.force[gs] = l;
+    if (V.sabit[gs]) { V.sabit[gs] = V.sabit[gs].filter(x => x !== k.ad); if (!V.sabit[gs].length) delete V.sabit[gs]; }
+    sakla(); ciz_gosterge(); ciz_kural();
+    toast(kisaAd(k.ad) + " → " + yerAdi(yer));
   };
 }
 function amelAl(g, ad) {
