@@ -1172,6 +1172,10 @@ function amelHedef(r, gun) {
     amelAl(gun, k.ad);
   };
 }
+function hedefTemizle() {
+  document.querySelectorAll(".esles-hedef, .isim-hedef, .isim-tasiniyor").forEach(x => x.classList.remove("esles-hedef", "isim-hedef", "isim-tasiniyor"));
+}
+["dragend", "drop"].forEach(t => document.addEventListener(t, () => setTimeout(hedefTemizle, 0), true));
 function yerHedef(r, gun, yer, gelen) {
   r.title = "Bir ismi buraya bırakın: " + yerAdi(yer) + "'e geçer" + (gelen.length ? ", buradaki kişi onun yerine gider" : "");
   r.ondragover = e => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; r.classList.add("esles-hedef"); };
