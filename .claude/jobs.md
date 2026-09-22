@@ -1,4 +1,4 @@
 - [x] Kopya: üst panel içeriğe göre kırpılsın
 - [x] Kopya: ekip tablosu ortalı ve kırpılmış
 - [x] Senkron: JSON birleştirme sürücüsü + yenilemede gün/sekme korunur
-- [ ] Bilgisayarı kapat — son adım
+- [ ] Bilgisayarı kapat — hook engelledi, kullanıcı çalıştıracak
