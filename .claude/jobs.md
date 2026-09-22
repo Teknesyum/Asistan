@@ -1,2 +1,4 @@
-- [x] Nöbet değişiminde ertesi gün rutin yerlerin takası (JS + py)
-- [x] Resmi Kopyala: ekip tablosu canvas'a tek sütun
+- [x] Kopya: üst panel içeriğe göre kırpılsın
+- [x] Kopya: ekip tablosu ortalı ve kırpılmış
+- [x] Senkron: JSON birleştirme sürücüsü + yenilemede gün/sekme korunur
+- [ ] Bilgisayarı kapat — son adım

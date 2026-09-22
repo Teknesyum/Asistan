@@ -62,7 +62,17 @@ async function depoNeden() {
 }
 async function depoVar() { return !(await depoNeden()); }
 
+let surucuTamam = false;
+async function surucu() {
+  if (surucuTamam) return;
+  const bol = f => f.split(path.sep).join("/");
+  const komut = "env ELECTRON_RUN_AS_NODE=1 \"" + bol(process.execPath) + "\" \"" + bol(path.join(KOK, "json-birlestir.js")) + "\" %O %A %B";
+  const r = await gitSessiz(["config", "merge.asistanjson.driver", komut]);
+  if (r.ok) { await gitSessiz(["config", "merge.asistanjson.name", "Asistan JSON birleştirme"]); surucuTamam = true; }
+}
+
 async function kimlik() {
+  await surucu();
   if (!(await gitSessiz(["config", "user.email"])).ok) {
     await gitSessiz(["config", "user.email", os.userInfo().username + "@" + os.hostname()]);
     await gitSessiz(["config", "user.name", os.userInfo().username]);

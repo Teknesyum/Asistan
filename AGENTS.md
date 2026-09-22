@@ -43,6 +43,6 @@ ile senkron sınanır, sonuç son satırda. Deneme: `$env:ASISTAN_KUR_PROVA=1` �
 dakika eşitler. Kod dosyaları değiştiyse uygulama kendini yeniden başlatır, veri değiştiyse
 arayüz yenilenir. Veri her değişiklikten ~5 sn sonra ve çıkışta commit + push edilir.
 Başlık çubuğundaki gösterge durumu gösterir, tıklanınca hemen eşitler. Çakışmada çeken
-makine kazanır (`-X ours`). Git sırası: `.araclar\git`, Program Files\Git, PATH; her çağrı
+makine kazanır (`-X ours`). Veri JSON'ları tek satır olduğundan `.gitattributes` onları `json-birlestir.js` sürücüsüne verir: üç yollu, alan alan birleştirir, yalnız aynı alan iki tarafta değiştiyse yerel kazanır. Sürücüyü `senkron.js` her makinede `git config merge.asistanjson.driver` ile tanıtır (Electron, `ELECTRON_RUN_AS_NODE=1`). Veri gelince arayüz yenilenir, seçili gün ve sekme korunur. Git sırası: `.araclar\git`, Program Files\Git, PATH; her çağrı
 `safe.directory=*` ile gider. "Yalnız bu bilgisayar" ya da "Çevrimdışı" görünürse sebebi göstergenin ipucunda (`ozet()`:
 git'in genel "repository exists" satırları atılır). Başlıkta sürüm: `v<package.json>`.

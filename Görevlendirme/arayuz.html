@@ -2466,10 +2466,15 @@ $("#fileIn").onchange = e => {
 function baslat() {
   $("#ay").value = V.yil + "-" + String(V.ay).padStart(2, "0");
   BUGUN = varsayilanBugun();
+  let eski = null;
+  try { eski = JSON.parse(sessionStorage.getItem("senkDurum") || "null"); sessionStorage.removeItem("senkDurum"); } catch (_) {}
+  if (eski && eski.yil === V.yil && eski.ay === V.ay && eski.gun >= 1 && eski.gun <= gunSayisi()) BUGUN = eski.gun;
   ciz_asistan(); ciz_nobet(); ciz_izin(); ciz_egitim();
   const ok = otoKilit();
   ciz_kural();
   sekmeler();
+  const sb = eski ? $("#nav").querySelectorAll("button")[eski.sekme] : null;
+  if (sb) sb.click();
   if (ok) toast(ok + " geçmiş gün kendiliğinden kilitlendi");
 }
 baslat();
@@ -2494,7 +2499,14 @@ function senkronBagla() {
   S.durum().then(goster).catch(() => {});
   if (S.olay) S.olay(d => {
     if (d.tur === "durum") goster(d.durum);
-    else if (d.tur === "veri") { try { sessionStorage.setItem("senkBildirim", "Başka bilgisayardaki değişiklikler geldi"); } catch (_) {} location.reload(); }
+    else if (d.tur === "veri") {
+      try {
+        sessionStorage.setItem("senkBildirim", "Başka bilgisayardaki değişiklikler geldi");
+        const sk = [...document.querySelectorAll("#nav button")].findIndex(b => b.getAttribute("aria-selected") === "true");
+        sessionStorage.setItem("senkDurum", JSON.stringify({yil: V.yil, ay: V.ay, gun: BUGUN, sekme: sk}));
+      } catch (_) {}
+      location.reload();
+    }
     else if (d.tur === "kod") toast("Yeni sürüm geldi, program yenileniyor…");
   });
   e.onclick = () => { goster({ asama: "esitleniyor" }); S.simdi(); };
@@ -2535,8 +2547,21 @@ $("#btnKalan").onclick = () => {
   ciz_kural();
   toast(k + " gün kilitlendi · ayın kalanı yeniden hesaplandı, " + DEGISEN + " gün değişti");
 };
-async function alanPng(d) {
-  const k = d.getBoundingClientRect();
+function icerikKutu(d) {
+  let l = Infinity, t = Infinity, rr = -Infinity, b = -Infinity;
+  d.querySelectorAll("*").forEach(e => {
+    if (e.children.length && ![...e.childNodes].some(n => n.nodeType === 3 && n.textContent.trim())) return;
+    const st = getComputedStyle(e);
+    if (st.visibility === "hidden" || st.display === "none") return;
+    const k = e.getBoundingClientRect();
+    if (!k.width || !k.height) return;
+    l = Math.min(l, k.left); t = Math.min(t, k.top); rr = Math.max(rr, k.right); b = Math.max(b, k.bottom);
+  });
+  if (l === Infinity) return d.getBoundingClientRect();
+  const p = 6;
+  return {left: l - p, top: t - p, width: rr - l + p * 2, height: b - t + p * 2};
+}
+async function alanPng(k) {
   const png = await PENCERE.kopyala({
     x: Math.max(0, Math.floor(k.left) - 1),
     y: Math.max(0, Math.floor(k.top) - 1),
@@ -2546,33 +2571,36 @@ async function alanPng(d) {
   if (!png || !png.length) throw new Error("görüntü alınamadı");
   return createImageBitmap(new Blob([png], {type: "image/png"}));
 }
-function ekipResim(genislik, olcek) {
-  const satir = [...document.querySelectorAll("#ekip tr")].map(tr => [...tr.cells].map(td => {
-    const st = getComputedStyle(td);
-    return {t: td.textContent, renk: st.color};
-  }));
+function ekipResim(olcek) {
+  const satir = [...document.querySelectorAll("#ekip tr")].map(tr => [...tr.cells].map(td => ({t: td.textContent, renk: getComputedStyle(td).color})));
   const ornek = document.querySelector("#ekip td");
   const st = ornek ? getComputedStyle(ornek) : getComputedStyle(document.body);
   const kok = getComputedStyle(document.documentElement);
   const boy = parseFloat(st.fontSize) * olcek, yuk = Math.round(boy * 1.9), bosluk = Math.round(12 * olcek);
+  const font = st.fontWeight + " " + boy + "px " + st.fontFamily;
+  const olc = document.createElement("canvas").getContext("2d");
+  olc.font = font;
+  const w = [0, 1, 2].map(n => Math.ceil(Math.max(0, ...satir.map(r => r[n] ? olc.measureText(r[n].t).width : 0))) + bosluk * 2);
+  const top = w[0] + w[1] + w[2];
   const c = document.createElement("canvas");
-  c.width = genislik;
-  c.height = satir.length * yuk + bosluk * 2;
+  c.width = top;
+  c.height = satir.length * yuk;
   const x = c.getContext("2d");
   x.fillStyle = kok.getPropertyValue("--tk-bg").trim() || st.backgroundColor;
   x.fillRect(0, 0, c.width, c.height);
-  x.font = st.fontWeight + " " + boy + "px " + st.fontFamily;
+  x.font = font;
   x.textBaseline = "middle";
-  const w = [0, 1, 2].map(n => Math.max(...satir.map(r => r[n] ? x.measureText(r[n].t).width : 0)) + bosluk * 2);
-  const top = Math.min(c.width - bosluk * 2, w[0] + w[1] + w[2]);
+  const cizgi = Math.max(1, Math.round(olcek));
   satir.forEach((r, i) => {
-    const y = bosluk + i * yuk;
-    x.fillStyle = st.borderBottomColor;
-    x.fillRect(bosluk, y + yuk - Math.max(1, olcek), top, Math.max(1, olcek));
-    let sx = bosluk;
+    const y = i * yuk;
+    if (i < satir.length - 1) {
+      x.fillStyle = st.borderBottomColor;
+      x.fillRect(0, y + yuk - cizgi, top, cizgi);
+    }
+    let sx = 0;
     r.forEach((h, n) => {
       x.fillStyle = h.renk;
-      x.fillText(h.t, sx + 4 * olcek, y + yuk / 2);
+      x.fillText(h.t, sx + bosluk, y + yuk / 2);
       sx += w[n];
     });
   });
@@ -2584,15 +2612,18 @@ $("#btnResim").onclick = async () => {
   pnl.classList.add("kopya");
   await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
   try {
-    const ust = await alanPng(pnl);
+    const kutu = icerikKutu(pnl);
+    const ust = await alanPng(kutu);
     pnl.classList.remove("kopya");
-    const alt = ekipResim(ust.width, ust.width / pnl.getBoundingClientRect().width);
+    const alt = ekipResim(ust.width / kutu.width);
     const c = document.createElement("canvas");
-    c.width = ust.width;
+    c.width = Math.max(ust.width, alt.width);
     c.height = ust.height + alt.height;
     const x = c.getContext("2d");
-    x.drawImage(ust, 0, 0);
-    x.drawImage(alt, 0, ust.height);
+    x.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--tk-bg").trim() || "#000";
+    x.fillRect(0, 0, c.width, c.height);
+    x.drawImage(ust, Math.round((c.width - ust.width) / 2), 0);
+    x.drawImage(alt, Math.round((c.width - alt.width) / 2), ust.height);
     const blob = await new Promise(r => c.toBlob(r, "image/png"));
     await navigator.clipboard.write([new ClipboardItem({"image/png": blob})]);
     toast("Panoya kopyalandı");
