@@ -1333,23 +1333,26 @@ function ceteleTablo(liste, sayac, max, s, sade, bas) {
   return t;
 }
 
-function ekipTablo(liste, bas) {
-  const t = el("table", {className: "grid-line"});
-  if (bas) t.appendChild(el("caption", {className: "tablo-bas", textContent: bas}));
+function ekipTablo(liste, s) {
+  const t = el("table", {className: "grid-line ekip-tablo"});
   const tb = el("tbody");
   liste.forEach(a => {
     const tr = el("tr");
+    const g = s ? bugunDurum(s, a.ad) : "";
+    const yok = s && s.yok ? s.yok[a.ad] || "" : "";
+    if (!(s && s.atama && s.atama[a.ad]) && (yok === "İzinli" || yok.indexOf("Nöbet Ertesi") >= 0)) tr.className = "ekip-yok";
     tr.appendChild(el("td", {textContent: kisaAd(a.ad)}));
     tr.appendChild(el("td", {className: "durum-hucre", textContent: a.yer}));
+    tr.appendChild(el("td", {className: "ekip-guncel", textContent: g && g !== a.yer ? "→ " + g : ""}));
     tb.appendChild(tr);
   });
   t.appendChild(tb);
   return t;
 }
 
-function ciz_ekip() {
+function ciz_ekip(s) {
   const c = $("#ekip"); c.innerHTML = "";
-  c.appendChild(ekipTablo(V.asistanlar, ""));
+  c.appendChild(ekipTablo(V.asistanlar, s));
 }
 
 function ciz_cetele(sayac, s) {
@@ -1385,7 +1388,7 @@ function ciz_gosterge() {
 
   matris($("#matris1"), satirlar);
   ciz_cetele(sayac, satirlar[BUGUN-1]);
-  ciz_ekip();
+  ciz_ekip(satirlar[BUGUN-1]);
   ciz_gkural(satirlar, sayac);
   autofit();
 }
@@ -2519,27 +2522,53 @@ $("#btnKalan").onclick = () => {
   ciz_kural();
   toast(k + " gün kilitlendi · ayın kalanı yeniden hesaplandı, " + DEGISEN + " gün değişti");
 };
+async function alanPng(d) {
+  const k = d.getBoundingClientRect();
+  const png = await PENCERE.kopyala({
+    x: Math.max(0, Math.floor(k.left) - 1),
+    y: Math.max(0, Math.floor(k.top) - 1),
+    width: Math.ceil(k.width) + 2,
+    height: Math.ceil(k.height) + 2
+  });
+  if (!png || !png.length) throw new Error("görüntü alınamadı");
+  return createImageBitmap(new Blob([png], {type: "image/png"}));
+}
 $("#btnResim").onclick = async () => {
   if (!PENCERE || !PENCERE.kopyala) { toast("Resim kopyalama yalnız uygulamada çalışır"); return; }
   const pnl = document.querySelector(".a-bugun");
+  let ek = null;
   pnl.classList.add("kopya");
   await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
-  const k = pnl.getBoundingClientRect();
   try {
-    const png = await PENCERE.kopyala({
-      x: Math.max(0, Math.floor(k.left) - 1),
-      y: Math.max(0, Math.floor(k.top) - 1),
-      width: Math.ceil(k.width) + 2,
-      height: Math.ceil(k.height) + 2
-    });
-    if (!png || !png.length) { toast("Kopyalanamadı"); return; }
-    const blob = new Blob([png], {type: "image/png"});
+    const ust = await alanPng(pnl);
+    pnl.classList.remove("kopya");
+    const kp = pnl.getBoundingClientRect();
+    const s = SON && SON.satirlar ? SON.satirlar[BUGUN-1] : null;
+    const yarim = Math.ceil(V.asistanlar.length / 2);
+    ek = el("div", {className: "kopya-ekip"});
+    ek.style.left = kp.left + "px";
+    ek.style.width = kp.width + "px";
+    ek.appendChild(ekipTablo(V.asistanlar.slice(0, yarim), s));
+    ek.appendChild(ekipTablo(V.asistanlar.slice(yarim), s));
+    document.body.appendChild(ek);
+    await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+    const alt = await alanPng(ek);
+    const c = document.createElement("canvas");
+    c.width = Math.max(ust.width, alt.width);
+    c.height = ust.height + alt.height;
+    const x = c.getContext("2d");
+    x.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--tk-bg").trim() || "#000";
+    x.fillRect(0, 0, c.width, c.height);
+    x.drawImage(ust, 0, 0);
+    x.drawImage(alt, 0, ust.height);
+    const blob = await new Promise(r => c.toBlob(r, "image/png"));
     await navigator.clipboard.write([new ClipboardItem({"image/png": blob})]);
     toast("Panoya kopyalandı");
   } catch (e) {
     toast("Kopyalanamadı: " + e.message);
   } finally {
     pnl.classList.remove("kopya");
+    if (ek) ek.remove();
   }
 };
 window.addEventListener("focus", () => $("#cerceve").classList.remove("uykuda"));

@@ -1,2 +1,3 @@
-- [x] Senkron: safe.directory, Git yolu yedeği, "Yalnız bu bilgisayar" sebebi ipucunda
-- [x] Görevlendirme 1.4.3, Nöbet 1.0.1
+- [x] Resmi Kopyala: gün paneli + ekip tablosu montajı
+- [x] Ekip paneli: 3 sütun, başlıksız, İzinli/Nöbet Ertesi kırmızı
+- [x] Sürüm 1.4.8, AGENTS notu, push
