@@ -1,3 +1,2 @@
-- [x] Zorlanan/oto atanan yerde de eksik kişi sebebi gösteriliyor
-- [x] Kademe aşımı ve doldurulamadı uyarıları gün panelinin altındaki Uyarılar şeridine taşındı
-- [x] Sürüm 1.4.2
+- [x] Senkron: safe.directory, Git yolu yedeği, "Yalnız bu bilgisayar" sebebi ipucunda
+- [x] Görevlendirme 1.4.3, Nöbet 1.0.1
