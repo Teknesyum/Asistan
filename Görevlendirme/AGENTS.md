@@ -11,7 +11,7 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
 - `kisayol.ps1` — simgeyi üretir, masaüstü kısayolunu yazar. Yol değişirse yeniden çalıştır.
 - `arayuz.html` — arayüzün kendisi, çevrimdışı, ağ isteği yok. İlk sekme Gösterge:
   seçili gün + sonraki iki gün, ay matrisi, çetele — kaydırmasız. Kademe aşımı ve
-  doldurulamayan yer uyarıları gün panelinin altında ayrı "Uyarılar" şeridinde toplanır. Boşluk sebebi "Ad(İzinli)" biçiminde. Sağ alttaki ekip tablosu: ad, rutin yer, farklıysa "→ güncel yer" (branşı olan Ameliyathane'deyse boş); İzinli/Nöbet Ertesi kırmızı. "Resmi Kopyala" gün panelini ve bu tabloyu iki sütun hâlinde ayrı yakalayıp tek resimde birleştirir (arayüz değişmez). İsim çipi başka çipe ya da bir yer satırına sürüklenebilir: Ameliyathane ↔ Pol/Ybü iki yönde; satırda kişi varsa yer değiştirirler, yoksa `force` yazılır. Veri uygulamada diske yazılır (`%APPDATA%/asistan-gorevlendirme/veri/`, her
+  doldurulamayan yer uyarıları gün panelinin altında ayrı "Uyarılar" şeridinde toplanır. Boşluk sebebi "Ad(İzinli)" biçiminde. Sağ alttaki ekip tablosu: ad, rutin yer, farklıysa "→ güncel yer" (branşı olan Ameliyathane'deyse boş); İzinli/Nöbet Ertesi kırmızı. "Resmi Kopyala" gün panelini yakalar, altına bu tabloyu canvas'a tek sütun çizer (arayüz değişmez). İsim çipi başka çipe ya da bir yer satırına sürüklenebilir: Ameliyathane ↔ Pol/Ybü iki yönde; satırda kişi varsa yer değiştirirler, yoksa `force` yazılır. Veri uygulamada diske yazılır (`%APPDATA%/asistan-gorevlendirme/veri/`, her
   ay ayrı dosya), tarayıcıda localStorage'a. "Dosyaya Kaydet / Yükle" yalnız dışa/içe
   aktarma. Ay değişince önceki ayın sayacı kendiliğinden devredilir. Hesap motoru betikle birebir aynı.
 - `app.css` — arayüzün kendi katmanı, her değer `--tk-*`. Değiştirince
@@ -33,7 +33,7 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
   kilit simgesiyle elle kilitlenebilir.
   `degisim` `[{gun, cikan, giren, karsi}]`: `gun` günü nöbeti çıkan yerine giren tutar; `karsi`
   verilirse o günü de giren yerine çıkan tutar — karşılıklı değişim, iki taraf da yer değiştirir.
-  `karsi: 0` tek taraflıdır. Nöbet listesi olduğu gibi kalır; nöbetçi sayılan ve ertesi gün
+  `karsi: 0` tek taraflıdır. Nöbet ertesi günlerinde (`gun+1`, `karsi+1`) iki kişinin rutin yerleri o gün için yer değiştirir: boşluk eski planın yerinde kalır, sebebinde fiilen nöbet ertesi olan yazar. Nöbet listesi olduğu gibi kalır; nöbetçi sayılan ve ertesi gün
   nöbet ertesi olan, o gün fiilen tutandır. Arayüz karşı günü girenin nöbetlerinden en yakınıyla
   (7 günü aşmıyorsa) önerir.
   `refakat` `[{ad, yer, gun}]`: kişi `gun` gün o yerin refakatçisi olur — kadroya sayılmaz,

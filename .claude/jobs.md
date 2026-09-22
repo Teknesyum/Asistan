@@ -1,1 +1,2 @@
-- [x] Ekip tablosu: branştakiler Ameliyathane'deyse 3. sütun boş
+- [x] Nöbet değişiminde ertesi gün rutin yerlerin takası (JS + py)
+- [x] Resmi Kopyala: ekip tablosu canvas'a tek sütun

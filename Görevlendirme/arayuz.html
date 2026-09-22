@@ -550,7 +550,16 @@ function sakla() {
 function gunSayisi() { return new Date(V.yil, V.ay, 0).getDate(); }
 function haftaGunu(g) { return new Date(V.yil, V.ay - 1, g).getDay(); }
 function kidem() { const m = {}; V.asistanlar.forEach((a,i) => m[a.ad] = i + 1); return m; }
-function yerHarita() { const m = {}; V.asistanlar.forEach(a => m[a.ad] = a.yer); return m; }
+function yerHarita(g) {
+  const m = {};
+  V.asistanlar.forEach(a => m[a.ad] = a.yer);
+  if (g) V.degisim.forEach(d => {
+    if (+d.gun + 1 !== g && !(d.karsi && +d.karsi + 1 === g)) return;
+    if (m[d.cikan] == null || m[d.giren] == null) return;
+    const t = m[d.cikan]; m[d.cikan] = m[d.giren]; m[d.giren] = t;
+  });
+  return m;
+}
 function kisaAd(ad) { const a = V.asistanlar.find(x => x.ad === ad); return a ? (a.kisa || a.ad) : ad; }
 function adlar() { return V.asistanlar.map(a => a.ad); }
 function grup(yer) { return V.gruplar[yer] || yer; }
@@ -691,7 +700,7 @@ function isimSerit(liste, kd, rozet, gun, rf, tasiYer) {
   return d;
 }
 function bugunDurum(s, ad) {
-  const yh = yerHarita();
+  const yh = yerHarita(s && s.gun);
   if (!s) return yh[ad] || "";
   if (s.atama[ad]) return s.atama[ad];
   if (s.yok[ad]) return s.yok[ad];
@@ -753,7 +762,7 @@ function dolmayanlar(boslar, atama, zorla, refakat) {
   return out;
 }
 function bosluklar(yok, g) {
-  const yh = yerHarita(), kd = kidem(), out = [];
+  const yh = yerHarita(g), kd = kidem(), out = [];
   const adet = V.yer_adet[String(g)] || {};
   for (const yer of V.zorunlu_yerler) {
     const kadro = adlar().filter(ad => yh[ad] === yer);
@@ -796,12 +805,13 @@ function ekBosluk(atama, yok, yh, g) {
   }
   return out;
 }
-function havuz(yok, kalsin) {
+function havuz(yok, kalsin, g) {
   kalsin = kalsin || {};
+  const yh = yerHarita(g);
   return V.asistanlar.filter(a =>
     a.havuz !== false &&
-    V.havuz_disi_yerler.indexOf(a.yer) < 0 &&
-    V.zorunlu_yerler.indexOf(a.yer) < 0 &&
+    V.havuz_disi_yerler.indexOf(yh[a.ad]) < 0 &&
+    V.zorunlu_yerler.indexOf(yh[a.ad]) < 0 &&
     !yok[a.ad] && !kalsin[a.ad]
   ).map(a => a.ad);
 }
@@ -847,7 +857,7 @@ function gunAta(boslar, adaylar, sayac, dun, kd, ybn) {
 }
 
 function hesapla() {
-  const kd = kidem(), iz = izinGun(), eg = egitimGun(), n = gunSayisi(), yh = yerHarita();
+  const kd = kidem(), iz = izinGun(), eg = egitimGun(), n = gunSayisi();
   const sayac = {toplam:{}, yer:{}, sonGun:{}, refakat:{}};
   Object.assign(sayac.toplam, V.devir.toplam || {});
   Object.assign(sayac.yer, V.devir.yer || {});
@@ -856,6 +866,7 @@ function hesapla() {
   let dun = new Set();
   for (let g = 1; g <= n; g++) {
     const hg = haftaGunu(g);
+    const yh = yerHarita(g);
     const yok = yokOlanlar(g, iz, eg);
     const kalsin = kalanlar(g, yok);
     let boslar = bosluklar(yok, g);
@@ -878,7 +889,7 @@ function hesapla() {
       kaynak = "hafta sonu";
       boslar = [];
     } else {
-      let ad = havuz(yok, kalsin).filter(x => !atama[x]);
+      let ad = havuz(yok, kalsin, g).filter(x => !atama[x]);
       const sira = V.refakat.slice().sort((x, y) =>
         (dun.has(x.ad) - dun.has(y.ad)) || (sayac.refakat[x.ad] || 0) - (sayac.refakat[y.ad] || 0));
       for (const r of sira) {
@@ -897,7 +908,7 @@ function hesapla() {
       Object.assign(atama, gunAta(boslar, ad, sayac, dun, kd, new Set(nobetGun(g).yb)));
       const ek = ekBosluk(atama, yok, yh, g);
       if (ek.length) {
-        const kalan = havuz(yok, kalsin).filter(x => !atama[x]);
+        const kalan = havuz(yok, kalsin, g).filter(x => !atama[x]);
         Object.assign(atama, gunAta(ek, kalan, sayac, dun, kd, new Set(nobetGun(g).yb)));
         boslar = boslar.concat(ek);
       }
@@ -1088,7 +1099,7 @@ function bugunKart(hedef, gun, s) {
   for (const ad in s.atama) (yerler[s.atama[ad]] = yerler[s.atama[ad]] || []).push(ad);
   const tumYer = V.zorunlu_yerler.concat(Object.keys(yerler).filter(y => V.zorunlu_yerler.indexOf(y) < 0));
   const es = el("div", {className: "esles"});
-  const yh = yerHarita();
+  const yh = yerHarita(gun);
   const kalan = adlar().filter(ad =>
     !s.atama[ad] && !s.yok[ad] &&
     V.zorunlu_yerler.indexOf(yh[ad]) < 0 &&
@@ -1156,7 +1167,7 @@ function bugunKart(hedef, gun, s) {
 }
 
 function yerEksikleri(yer, gun) {
-  const yok = yokOlanlar(gun, izinGun(), egitimGun()), yh = yerHarita();
+  const yok = yokOlanlar(gun, izinGun(), egitimGun()), yh = yerHarita(gun);
   return adlar().filter(ad => yh[ad] === yer && yok[ad]).map(ad => [ad, yok[ad]]);
 }
 function amelHedef(r, gun) {
@@ -1256,7 +1267,7 @@ function matrisBlok(satirlar, ilk, sonG, yeniHar, degisenGun) {
       yeniHar[anahtar] = metin;
       const td = el("td", {textContent: metin});
       if (l && l.some(ad => rf[ad])) {
-        const kadro = adlar().filter(ad => yerHarita()[ad] === y && !s.yok[ad]).map(kisaAd);
+        const kadro = adlar().filter(ad => yerHarita(g)[ad] === y && !s.yok[ad]).map(kisaAd);
         td.title = "(R) refakatçi — kadroya sayılmaz."
           + (kadro.length ? " Yerin kendi kadrosu: " + kadro.join(", ") : "");
       }
@@ -1957,8 +1968,8 @@ function otoAta(yer) {
   const s = SON.satirlar[g-1];
   if (!s) return;
   if (s.kaynak === "geçmiş") { toast(g + ". gün kilitli, önce kilidi açın"); return; }
-  const kd = kidem(), yh = yerHarita();
-  const aday = havuz(s.yok, s.kalsin).filter(ad => !s.atama[ad]);
+  const kd = kidem(), yh = yerHarita(s.gun);
+  const aday = havuz(s.yok, s.kalsin, s.gun).filter(ad => !s.atama[ad]);
   if (!aday.length) { toast("Bugün havuzda uygun kimse kalmadı"); return; }
   const kadro = adlar().filter(ad => yh[ad] === yer);
   const hedef = kadro.length ? kadro.reduce((x, ad) => x + kd[ad], 0) / kadro.length : 9;
@@ -2341,11 +2352,11 @@ $("#btnOneri").onclick = () => {
   const {sayac} = hesapla();
   const kd = kidem(), iz = izinGun(), yok = yokOlanlar(g, iz), kalsin = kalanlar(g, yok);
   void 0;
-  const kadro = adlar().filter(ad => yerHarita()[ad] === yer);
+  const kadro = adlar().filter(ad => yerHarita(g)[ad] === yer);
   const hedef = kadro.length ? kadro.reduce((s,ad) => s + kd[ad], 0) / kadro.length : 9;
   const bos = {yer, hedef};
   const dun = new Set(Object.keys((SON.satirlar[g-2] || {atama:{}}).atama));
-  const liste = havuz(yok, kalsin).map(ad => ({
+  const liste = havuz(yok, kalsin, g).map(ad => ({
     ad,
     m: maliyet(ad, bos, sayac, dun, kd, new Set(nobetGun(g).yb)),
     kidem: kd[ad],
@@ -2535,32 +2546,51 @@ async function alanPng(d) {
   if (!png || !png.length) throw new Error("görüntü alınamadı");
   return createImageBitmap(new Blob([png], {type: "image/png"}));
 }
+function ekipResim(genislik, olcek) {
+  const satir = [...document.querySelectorAll("#ekip tr")].map(tr => [...tr.cells].map(td => {
+    const st = getComputedStyle(td);
+    return {t: td.textContent, renk: st.color};
+  }));
+  const ornek = document.querySelector("#ekip td");
+  const st = ornek ? getComputedStyle(ornek) : getComputedStyle(document.body);
+  const kok = getComputedStyle(document.documentElement);
+  const boy = parseFloat(st.fontSize) * olcek, yuk = Math.round(boy * 1.9), bosluk = Math.round(12 * olcek);
+  const c = document.createElement("canvas");
+  c.width = genislik;
+  c.height = satir.length * yuk + bosluk * 2;
+  const x = c.getContext("2d");
+  x.fillStyle = kok.getPropertyValue("--tk-bg").trim() || st.backgroundColor;
+  x.fillRect(0, 0, c.width, c.height);
+  x.font = st.fontWeight + " " + boy + "px " + st.fontFamily;
+  x.textBaseline = "middle";
+  const w = [0, 1, 2].map(n => Math.max(...satir.map(r => r[n] ? x.measureText(r[n].t).width : 0)) + bosluk * 2);
+  const top = Math.min(c.width - bosluk * 2, w[0] + w[1] + w[2]);
+  satir.forEach((r, i) => {
+    const y = bosluk + i * yuk;
+    x.fillStyle = st.borderBottomColor;
+    x.fillRect(bosluk, y + yuk - Math.max(1, olcek), top, Math.max(1, olcek));
+    let sx = bosluk;
+    r.forEach((h, n) => {
+      x.fillStyle = h.renk;
+      x.fillText(h.t, sx + 4 * olcek, y + yuk / 2);
+      sx += w[n];
+    });
+  });
+  return c;
+}
 $("#btnResim").onclick = async () => {
   if (!PENCERE || !PENCERE.kopyala) { toast("Resim kopyalama yalnız uygulamada çalışır"); return; }
   const pnl = document.querySelector(".a-bugun");
-  let ek = null;
   pnl.classList.add("kopya");
   await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
   try {
     const ust = await alanPng(pnl);
     pnl.classList.remove("kopya");
-    const kp = pnl.getBoundingClientRect();
-    const s = SON && SON.satirlar ? SON.satirlar[BUGUN-1] : null;
-    const yarim = Math.ceil(V.asistanlar.length / 2);
-    ek = el("div", {className: "kopya-ekip"});
-    ek.style.left = kp.left + "px";
-    ek.style.width = kp.width + "px";
-    ek.appendChild(ekipTablo(V.asistanlar.slice(0, yarim), s));
-    ek.appendChild(ekipTablo(V.asistanlar.slice(yarim), s));
-    document.body.appendChild(ek);
-    await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
-    const alt = await alanPng(ek);
+    const alt = ekipResim(ust.width, ust.width / pnl.getBoundingClientRect().width);
     const c = document.createElement("canvas");
-    c.width = Math.max(ust.width, alt.width);
+    c.width = ust.width;
     c.height = ust.height + alt.height;
     const x = c.getContext("2d");
-    x.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--tk-bg").trim() || "#000";
-    x.fillRect(0, 0, c.width, c.height);
     x.drawImage(ust, 0, 0);
     x.drawImage(alt, 0, ust.height);
     const blob = await new Promise(r => c.toBlob(r, "image/png"));
@@ -2570,7 +2600,6 @@ $("#btnResim").onclick = async () => {
     toast("Kopyalanamadı: " + e.message);
   } finally {
     pnl.classList.remove("kopya");
-    if (ek) ek.remove();
   }
 };
 window.addEventListener("focus", () => $("#cerceve").classList.remove("uykuda"));

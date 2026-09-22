@@ -811,18 +811,6 @@ section[role="tabpanel"]:not([hidden]) { animation: tk-belir var(--tk-t-instant)
 .kilit-satir .kilit-mini { color: var(--tk-text-label); }
 .kilit-satir .gun-hucre { color: var(--tk-purple-text); }
 .a-bugun.kopya .pnl-bas .dgm { visibility: hidden; }
-.kopya-ekip {
-  position: fixed;
-  top: 0;
-  z-index: 50;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--tk-sp-3);
-  align-items: start;
-  padding: var(--tk-sp-2) var(--tk-sp-2) var(--tk-sp-3);
-  background: var(--tk-bg);
-}
-.kopya-ekip table { width: 100%; }
 .ekip-yok td { color: var(--tk-danger-text); }
 .ekip-guncel { color: var(--tk-blue); white-space: nowrap; }
 

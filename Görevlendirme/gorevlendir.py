@@ -18,6 +18,7 @@ def yukle(yol):
     v = json.loads(Path(yol).read_text(encoding="utf-8"))
     v["kidem"] = {a["ad"]: i + 1 for i, a in enumerate(v["asistanlar"])}
     v["yer"] = {a["ad"]: a["yer"] for a in v["asistanlar"]}
+    v["yer0"] = dict(v["yer"])
     v["havuzda"] = {a["ad"]: a.get("havuz", True) for a in v["asistanlar"]}
     v["kademe"] = {a["ad"]: a.get("kademe", 1) for a in v["asistanlar"]}
     v.setdefault("force", {})
@@ -258,6 +259,17 @@ def gun_ata(v, boslar, adaylar, sayac, dun_gidenler, yb_nobet=()):
     return {ad: b["yer"] for ad, b in zip(en_iyi, boslar)}, boslar
 
 
+def yer_gun(v, gun):
+    m = dict(v["yer0"])
+    for d in v.get("degisim", []):
+        if int(d["gun"]) + 1 != gun and not (d.get("karsi") and int(d["karsi"]) + 1 == gun):
+            continue
+        if d["cikan"] not in m or d["giren"] not in m:
+            continue
+        m[d["cikan"]], m[d["giren"]] = m[d["giren"]], m[d["cikan"]]
+    return m
+
+
 def calistir(v):
     gun_sayisi = calendar.monthrange(v["yil"], v["ay"])[1]
     sayac = {"toplam": defaultdict(int), "yer": defaultdict(int), "refakat": defaultdict(int)}
@@ -272,6 +284,7 @@ def calistir(v):
     dun_gidenler = set()
     for gun in range(1, gun_sayisi + 1):
         hafta_gunu = calendar.weekday(v["yil"], v["ay"], gun)
+        v["yer"] = yer_gun(v, gun)
         yok = yok_olanlar(v, gun)
         kalsin = kalanlar(v, gun, yok)
         boslar = bosluklar(v, yok, gun)
@@ -363,6 +376,7 @@ def calistir(v):
             "zorlanan": zorlanan,
         })
         dun_gidenler = set(atama)
+    v["yer"] = dict(v["yer0"])
     return satirlar, sayac
 
 
