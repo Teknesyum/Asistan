@@ -1,0 +1,2 @@
+- [x] Senkron: safe.directory, Git yolu yedeği, "Yalnız bu bilgisayar" sebebi ipucunda
+- [x] Görevlendirme 1.4.3, Nöbet 1.0.1

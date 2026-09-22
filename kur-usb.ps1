@@ -3,6 +3,13 @@ Add-Type -AssemblyName System.Drawing
 [System.Windows.Forms.Application]::EnableVisualStyles()
 
 $kaynak = Split-Path -Parent $MyInvocation.MyCommand.Path
+$oturum = (Get-Process -Id $PID).SessionId
+$masaSahibi = Get-CimInstance Win32_Process -Filter "Name='explorer.exe'" -ErrorAction SilentlyContinue | Where-Object { $_.SessionId -eq $oturum } | Select-Object -First 1 | ForEach-Object { Invoke-CimMethod -InputObject $_ -MethodName GetOwner }
+$yeniden = if ($env:ASISTAN_BAT) { $env:ASISTAN_BAT } elseif (-not $kaynak.StartsWith($env:TEMP, [StringComparison]::OrdinalIgnoreCase)) { Join-Path $kaynak "Kur.bat" }
+if ($masaSahibi -and $masaSahibi.User -and ($masaSahibi.Domain + "\" + $masaSahibi.User) -ne ($env:USERDOMAIN + "\" + $env:USERNAME) -and $yeniden -and (Test-Path $yeniden)) {
+  Start-Process explorer.exe ('"' + $yeniden + '"')
+  exit
+}
 $S = [hashtable]::Synchronized(@{
   kaynak = $kaynak
   hedef = Join-Path ([Environment]::GetFolderPath("MyDocuments")) "Asistan"
@@ -26,7 +33,10 @@ $is = {
     Add-Content -Path $S.gunluk -Value $satir -Encoding UTF8
   }
   function Adim([int]$y, [int]$t, [string]$m) { $S.yuzde = $y; $S.tavan = $t; $S.adim = $m; Yaz $m }
-  function Kilitle([string]$f) { icacls $f /inheritance:r /grant:r "$($env:USERNAME):(R)" | Out-Null }
+  function Kilitle([string]$f) {
+    icacls $f /setowner "$env:USERDOMAIN\$env:USERNAME" 2>&1 | Out-Null
+    icacls $f /inheritance:r /grant:r "$env:USERDOMAIN\$($env:USERNAME):(R)" "*S-1-5-18:(F)" | Out-Null
+  }
   function SshKomut([string]$ssh, [string]$anahtar, [string]$bilinen) {
     '"{0}" -i "{1}" -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile="{2}"' -f ($ssh -replace '\\', '/'), ($anahtar -replace '\\', '/'), ($bilinen -replace '\\', '/')
   }
@@ -52,18 +62,28 @@ $is = {
     Adim 2 6 "Git hazırlanıyor"
     $sistemGit = Get-Command git.exe -ErrorAction SilentlyContinue
     $usbGit = Join-Path $kur "git\cmd\git.exe"
-    if ($sistemGit) { $git = $sistemGit.Source; $ssh = "ssh"; Yaz "Bilgisayarda Git var" }
+    if ($sistemGit) {
+      $git = $sistemGit.Source
+      $gitSsh = Join-Path (Split-Path (Split-Path $git)) "usr\bin\ssh.exe"
+      $ssh = if (Test-Path $gitSsh) { $gitSsh } else { "ssh" }
+      Yaz "Bilgisayarda Git var: $git"
+    }
     elseif (Test-Path $usbGit) { $git = $usbGit; $ssh = Join-Path $kur "git\usr\bin\ssh.exe"; Yaz "Bilgisayarda Git yok, taşınabilir Git kullanılacak" }
     else { throw "Git bulunamadı: ne bilgisayarda ne USB'de (.kurulum\git)" }
 
     $anahtarUsb = Join-Path $kur "anahtar\id_ed25519"
-    if (-not (Test-Path $anahtarUsb)) { throw "Erişim anahtarı yok: $anahtarUsb" }
-    $anahtar = Join-Path $gecici "id_ed25519"
-    $bilinen = Join-Path $gecici "known_hosts"
-    Copy-Item $anahtarUsb $anahtar
-    Kilitle $anahtar
-    $env:GIT_SSH_COMMAND = SshKomut $ssh $anahtar $bilinen
-    $env:GIT_TERMINAL_PROMPT = "0"
+    $anahtar = $null
+    if (Test-Path $anahtarUsb) {
+      $anahtar = Join-Path $gecici "id_ed25519"
+      $bilinen = Join-Path $gecici "known_hosts"
+      Copy-Item $anahtarUsb $anahtar
+      Kilitle $anahtar
+      $env:GIT_SSH_COMMAND = SshKomut $ssh $anahtar $bilinen
+      $env:GIT_TERMINAL_PROMPT = "0"
+    } else {
+      $depo = "https://github.com/Teknesyum/Asistan.git"
+      Yaz "Erişim anahtarı yok, GitHub kimliğiyle (https) bağlanılacak"
+    }
 
     Adim 6 12 "GitHub bağlantısı sınanıyor"
     $uzak = & $git ls-remote $depo HEAD 2>&1
@@ -136,14 +156,17 @@ $is = {
     }
     if (-not (Test-Path (Join-Path $hedef ".git"))) { throw "Kurulum klasörü eksik: $hedef" }
 
-    Adim 52 56 "Erişim anahtarı yerleştiriliyor"
     $arac = Join-Path $hedef ".araclar"
-    New-Item -ItemType Directory -Force (Join-Path $arac "anahtar") | Out-Null
-    $kaliciAnahtar = Join-Path $arac "anahtar\id_ed25519"
-    $kaliciBilinen = Join-Path $arac "known_hosts"
-    Copy-Item $anahtar $kaliciAnahtar -Force
-    Kilitle $kaliciAnahtar
-    if (Test-Path $bilinen) { Copy-Item $bilinen $kaliciBilinen -Force }
+    New-Item -ItemType Directory -Force $arac | Out-Null
+    if ($anahtar) {
+      Adim 52 56 "Erişim anahtarı yerleştiriliyor"
+      New-Item -ItemType Directory -Force (Join-Path $arac "anahtar") | Out-Null
+      $kaliciAnahtar = Join-Path $arac "anahtar\id_ed25519"
+      $kaliciBilinen = Join-Path $arac "known_hosts"
+      Copy-Item $anahtar $kaliciAnahtar -Force
+      Kilitle $kaliciAnahtar
+      if (Test-Path $bilinen) { Copy-Item $bilinen $kaliciBilinen -Force }
+    }
     $kaliciSsh = $ssh
     if (-not $sistemGit) {
       Adim 56 76 "Taşınabilir Git kuruluyor"
@@ -152,12 +175,19 @@ $is = {
       $git = Join-Path $arac "git\cmd\git.exe"
       $kaliciSsh = Join-Path $arac "git\usr\bin\ssh.exe"
     }
-    & $git -C $hedef config core.sshCommand ((SshKomut $kaliciSsh $kaliciAnahtar $kaliciBilinen) -replace '"', '\"')
+    if ($anahtar) { & $git -C $hedef config core.sshCommand ((SshKomut $kaliciSsh $kaliciAnahtar $kaliciBilinen) -replace '"', '\"') }
     & $git -C $hedef config remote.origin.url $depo
     & $git -C $hedef config user.name $env:USERNAME
     & $git -C $hedef config user.email "$env:USERNAME@$env:COMPUTERNAME"
     & $git -C $hedef config core.quotepath false
     Yaz "Git ayarları yazıldı"
+    $yonetici = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+    if ($yonetici -and -not $S.prova) {
+      icacls $hedef /setowner "$env:USERDOMAIN\$env:USERNAME" /T /C /Q 2>&1 | Out-Null
+      Yaz "Yönetici olarak çalıştı; klasörün sahibi $env:USERNAME yapıldı"
+    }
+    $guvenli = & $git config --global --get-all safe.directory 2>$null
+    if (-not ($guvenli -contains "*")) { & $git config --global --add safe.directory "*" 2>&1 | Out-Null }
 
     Adim 76 92 "Program motoru kopyalanıyor"
     foreach ($t in $araclar) {
@@ -179,10 +209,17 @@ $is = {
     if ($S.prova) { Yaz "Prova: kısayol yazılmadı" }
     else { foreach ($t in $araclar) { & (Join-Path $hedef "$t\kisayol.ps1") | Select-Object -First 1 | ForEach-Object { Yaz "$_" } } }
 
+    $env:GIT_SSH_COMMAND = $null
+    $sina = & $git -C $hedef ls-remote origin HEAD 2>&1
+    if ($LASTEXITCODE -eq 0) { $senk = "senkron hazır"; Yaz "Senkron sınandı: GitHub'a bağlanıyor" }
+    else {
+      $senk = "senkron sınanamadı"
+      Yaz ("UYARI: senkron sınaması başarısız: " + (($sina | ForEach-Object { "$_" } | Where-Object { $_ -and $_ -notmatch "Could not read from remote|correct access rights|repository exists" }) -join " · "))
+    }
     $surum = (& $git -C $hedef rev-parse --short HEAD) | Select-Object -First 1
     @{ tarih = (Get-Date).ToString("s"); surum = "$surum"; bilgisayar = $env:COMPUTERNAME; cevrimdisi = [bool]$S.cevrimdisi } | ConvertTo-Json | Set-Content (Join-Path $arac "kurulum.json") -Encoding UTF8
     if (-not $S.prova) { Remove-Item $gecici -Recurse -Force -ErrorAction SilentlyContinue }
-    Adim 100 100 "Kurulum tamamlandı · sürüm $surum"
+    Adim 100 100 "Kurulum tamamlandı · sürüm $surum · $senk"
     $S.durum = "bitti"
   } catch {
     Yaz ("HATA: " + $_)

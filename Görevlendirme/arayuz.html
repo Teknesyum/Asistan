@@ -16,6 +16,7 @@
 
 <header class="basbar" id="basbar">
   <span class="marka">Asistan <span class="marka-vurgu">Görevlendirme</span></span>
+  <span class="basbar-surum" id="basbarSurum"></span>
   <span class="basbar-ay" id="basbarAy"></span>
   <span class="basbar-senk" id="basbarSenk"></span>
   <span class="bosluk"></span>
@@ -175,6 +176,19 @@
   <p class="ipucu">Kişi bu kadar gün o yerin refakatçisi olur: kadroya sayılmaz, boşluğu yine başkası doldurur, yanında hep biri bulunur. Süre dolmadan o yere tek başına gönderilmez. Günde tek refakatçi çıkar.</p>
   <table id="tblRefakat" class="grid-line"><thead><tr>
     <th>Kişi</th><th style="width:120px">Yer</th><th style="width:90px">Gün</th><th style="width:190px">Durum</th><th style="width:60px"></th>
+  </tr></thead><tbody></tbody></table>
+
+  <div class="blok-bas">Nöbet Değişimi — Nöbeti Başkası Tuttu</div>
+  <div class="satir">
+    <select id="nGun" class="gir gir-orta"></select>
+    <select id="nCikan" class="gir gir-orta"></select>
+    <select id="nGiren" class="gir gir-orta"></select>
+    <select id="nKarsi" class="gir gir-orta"></select>
+    <button id="btnDegisim" class="dgm dgm-birincil">Değiştir</button>
+  </div>
+  <p class="ipucu">Seçilen günün nöbetini çıkan yerine giren tutar; ertesi günün nöbet ertesi izni de girene geçer. Karşılıklı değişimde girenin kendi nöbet gününü de çıkan tutar — iki taraf da yer değiştirir. Nöbet listesi yeniden içe aktarılsa da bu kayıt durur.</p>
+  <table id="tblDegisim" class="grid-line"><thead><tr>
+    <th style="width:90px">Gün</th><th>Çıkan</th><th>Giren</th><th style="width:160px">Karşılık</th><th style="width:60px"></th>
   </tr></thead><tbody></tbody></table>
 
   <div class="blok-bas">Zorlamalar — Kural Dışı Atama</div>
@@ -370,6 +384,7 @@ const VARSAYILAN = {
   havuz_disi_yerler: ["BaşAsistan","İzin"],
   gruplar: {"Ybü1":"Ybü","Ybü2":"Ybü"},
   yer_min_kademe: {"Ybü1":1,"Ybü2":1},
+  yer_kadro: {"Ybü1":"tek","Ybü2":"tek"},
   kural: {
     yb_nobetci_o_gun_yok: false,
     amel_nobetci_o_gun_yok: false,
@@ -426,6 +441,7 @@ const VARSAYILAN = {
     {gunler:"1-11", kisiler:["FatihEren","Ömer","Alperen"]}
   ],
   force: {},
+  degisim: [],
   gecmis: {
     "1":{"SümeyyeD":"Pol"},
     "2":{"Emrah":"Ybü1","Eyyüp":"Bblok"},
@@ -448,6 +464,13 @@ function kuralRozet(k, isaretli) {
   }
   return {metin: isaretli ? "Mümkün değil" : "Mümkün", hayir: isaretli, pasif: false};
 }
+const KADRO_SIRA = ["tek", "kidemli_tek", "cift"];
+const KADRO_KISA = { tek: "Tek", kidemli_tek: "Kıd.Tek", cift: "Çift" };
+const KADRO_ETIKET = {
+  tek: "Her zaman tek kişi gönderilir",
+  kidemli_tek: "Kıdem eşiğini geçen biri düşerse tek, düşmezse yanına ikinci kişi",
+  cift: "Her zaman çift kişi gönderilir"
+};
 const AGIRLIK_KISA = {
   kidem_farki: "Kıdem farkı",
   toplam_gorev: "Toplam yük",
@@ -497,6 +520,10 @@ function normalize(v) {
   v.kural.nobet_ertesi_yok = true;
   if (!v.gruplar) v.gruplar = {"Ybü1":"Ybü","Ybü2":"Ybü"};
   if (!v.yer_min_kademe) v.yer_min_kademe = {"Ybü1":1,"Ybü2":1};
+  v.yer_kadro = v.yer_kadro || {};
+  v.degisim = (v.degisim || []).filter(d => d && d.gun && d.cikan && d.giren)
+    .map(d => ({gun: +d.gun, cikan: d.cikan, giren: d.giren, karsi: +d.karsi || 0}));
+  for (const y in v.yer_kadro) if (KADRO_SIRA.indexOf(v.yer_kadro[y]) < 0) delete v.yer_kadro[y];
   v.egitim = v.egitim || [];
   v.asistanlar.forEach(a => {
     if (!a.kisa) a.kisa = a.ad;
@@ -566,13 +593,35 @@ function kademesi(ad) {
   return a && a.kademe !== undefined ? a.kademe : 1;
 }
 function yasak(ad, yer) { return kademesi(ad) < (V.yer_min_kademe[yer] || 0); }
+function kadroKurali(yer) { return KADRO_SIRA.indexOf(V.yer_kadro[yer]) >= 0 ? V.yer_kadro[yer] : "tek"; }
 function nobetGun(g) {
+  let n;
   if (g >= 1) {
-    const n = V.nobet[String(g)];
-    return n ? {yb:n.yb||[], amel:n.amel||[], uzman_yb:n.uzman_yb||[], uzman_amel:n.uzman_amel||[]}
-             : {yb:[], amel:[], uzman_yb:[], uzman_amel:[]};
+    const k = V.nobet[String(g)];
+    n = k ? {yb:(k.yb||[]).slice(), amel:(k.amel||[]).slice(), uzman_yb:k.uzman_yb||[], uzman_amel:k.uzman_amel||[]}
+          : {yb:[], amel:[], uzman_yb:[], uzman_amel:[]};
+  } else {
+    n = {yb:(V.onceki_ay_son_gun_nobet.yb||[]).slice(), amel:(V.onceki_ay_son_gun_nobet.amel||[]).slice(),
+         uzman_yb:[], uzman_amel:[]};
   }
-  return {yb: V.onceki_ay_son_gun_nobet.yb||[], amel: V.onceki_ay_son_gun_nobet.amel||[], uzman_yb:[], uzman_amel:[]};
+  V.degisim.forEach(d => {
+    const ters = d.karsi && +d.karsi === g;
+    if (+d.gun !== g && !ters) return;
+    const cik = ters ? d.giren : d.cikan, gir = ters ? d.cikan : d.giren;
+    ["yb", "amel"].forEach(t => {
+      const i = n[t].indexOf(cik);
+      if (i >= 0) n[t][i] = gir;
+    });
+  });
+  return n;
+}
+function nobetGunleri(ad) {
+  const out = [];
+  for (let g = 1; g <= gunSayisi(); g++) {
+    const k = V.nobet[String(g)];
+    if (k && (k.yb || []).concat(k.amel || []).indexOf(ad) >= 0) out.push(g);
+  }
+  return out;
 }
 function refakatKaydi(ad) { return V.refakat.find(r => r.ad === ad); }
 function refakatSuruyor(ad, sayilan) {
@@ -707,21 +756,42 @@ function bosluklar(yok, g) {
   const adet = V.yer_adet[String(g)] || {};
   for (const yer of V.zorunlu_yerler) {
     const kadro = adlar().filter(ad => yh[ad] === yer);
-    const gerek = adet[yer] == null ? 1 : adet[yer];
+    const gerek = adet[yer] == null ? (kadroKurali(yer) === "cift" ? 2 : 1) : adet[yer];
+    const yalniz = gerek <= 1;
     if (!kadro.length) {
-      for (let i = 0; i < gerek; i++) out.push({yer, eksik: [["—","Kadro yok"]], hedef: 9});
+      for (let i = 0; i < gerek; i++) out.push({yer, eksik: [["—","Kadro yok"]], hedef: 9, yalniz});
       continue;
     }
     const hedef = kadro.reduce((s,ad) => s + kd[ad], 0) / kadro.length;
     const mevcut = kadro.filter(ad => !yok[ad]);
     const eksik = gerek - mevcut.length;
+    const yoklar = kadro.filter(ad => yok[ad]).map(ad => [ad, yok[ad]]);
     for (let i = 0; i < eksik; i++) {
       out.push({
-        yer,
-        eksik: mevcut.length ? [["—", "Ek kadro isteniyor"]] : kadro.map(ad => [ad, yok[ad]]),
+        yer, yalniz,
+        eksik: !yoklar.length ? [["—", "Ek kadro isteniyor"]]
+             : yoklar.length === eksik ? [yoklar[i]] : yoklar,
         hedef
       });
     }
+  }
+  return out;
+}
+function yerdekiler(atama, yok, yh, yer) {
+  return adlar().filter(ad => atama[ad] === yer || (yh[ad] === yer && !yok[ad] && !atama[ad]));
+}
+function ekBosluk(atama, yok, yh, g) {
+  const adet = V.yer_adet[String(g)] || {}, kd = kidem(), out = [];
+  for (const yer of V.zorunlu_yerler) {
+    if (kadroKurali(yer) !== "kidemli_tek" || adet[yer] != null) continue;
+    const kisiler = yerdekiler(atama, yok, yh, yer);
+    if (kisiler.length !== 1 || !yasak(kisiler[0], yer)) continue;
+    const kadro = adlar().filter(ad => yh[ad] === yer);
+    out.push({
+      yer, yalniz: false,
+      eksik: [["—", "Kıdem eşiğinin altı, yanına ikinci kişi"]],
+      hedef: kadro.length ? kadro.reduce((s, ad) => s + kd[ad], 0) / kadro.length : 9
+    });
   }
   return out;
 }
@@ -745,7 +815,7 @@ function refakatBekliyor(ad, sayilan, yer) {
 function maliyet(ad, bos, sayac, dun, kd, ybn) {
   const w = V.agirlik;
   const tercih = (V.kural.yb_nobetci_ybu_tercih && ybn && ybn.has(ad) && grup(bos.yer) === "Ybü") ? 1 : 0;
-  return 1e6 * (yasak(ad, bos.yer) ? 1 : 0)
+  return 1e6 * (bos.yalniz !== false && yasak(ad, bos.yer) ? 1 : 0)
        + 1e6 * (refakatBekliyor(ad, sayac.refakat, bos.yer) ? 1 : 0)
        - 1e3 * tercih
        + (w.kidem_farki||0) * Math.abs(kd[ad] - bos.hedef)
@@ -802,13 +872,14 @@ function hesapla() {
     if (V.gecmis[String(g)]) {
       atama = Object.assign({}, V.gecmis[String(g)], atama);
       kaynak = "geçmiş";
+      if (!Object.keys(atama).length) boslar = [];
     } else if (hg === 0 || hg === 6) {
       kaynak = "hafta sonu";
       boslar = [];
     } else {
       let ad = havuz(yok, kalsin).filter(x => !atama[x]);
       const sira = V.refakat.slice().sort((x, y) =>
-        (sayac.refakat[x.ad] || 0) - (sayac.refakat[y.ad] || 0));
+        (dun.has(x.ad) - dun.has(y.ad)) || (sayac.refakat[x.ad] || 0) - (sayac.refakat[y.ad] || 0));
       for (const r of sira) {
         if (refakat.length) break;
         if (atama[r.ad] || ad.indexOf(r.ad) < 0) continue;
@@ -823,6 +894,12 @@ function hesapla() {
         ad = ad.filter(x => x !== r.ad);
       }
       Object.assign(atama, gunAta(boslar, ad, sayac, dun, kd, new Set(nobetGun(g).yb)));
+      const ek = ekBosluk(atama, yok, yh, g);
+      if (ek.length) {
+        const kalan = havuz(yok, kalsin).filter(x => !atama[x]);
+        Object.assign(atama, gunAta(ek, kalan, sayac, dun, kd, new Set(nobetGun(g).yb)));
+        boslar = boslar.concat(ek);
+      }
     }
     refakat = refakat.filter(r => {
       const baska = Object.keys(atama).some(a => a !== r.ad && atama[a] === r.yer) ||
@@ -845,7 +922,8 @@ function hesapla() {
       atama: Object.assign({}, atama),
       dolmayan: dolmayanlar(boslar, atama, zorla, refakat),
       zorla: zorla.map(z => z.ad),
-      kademeAsimi: Object.keys(atama).filter(ad => yasak(ad, atama[ad]))
+      kademeAsimi: Object.keys(atama).filter(ad =>
+        yasak(ad, atama[ad]) && yerdekiler(atama, yok, yh, atama[ad]).length < 2)
     });
     dun = new Set(Object.keys(atama));
   }
@@ -1023,6 +1101,7 @@ function bugunKart(hedef, gun, s) {
   amelHedef(ar, gun);
   es.appendChild(ar);
   let n2 = 0;
+  const uyarilar = [];
   tumYer.forEach(yer => {
     const boslarY = s.boslar.filter(b => b.yer === yer);
     const bos = boslarY[0];
@@ -1033,12 +1112,14 @@ function bugunKart(hedef, gun, s) {
     r.appendChild(el("div", {className: "esles-yer", textContent: yer}));
     const kim = el("div", {className: "esles-kim"});
     const nic = el("div", {className: "esles-sebep"});
-    if (boslarY.length) {
-      boslarY.forEach(b => b.eksik.forEach(e => {
-        kim.appendChild(el("div", {textContent: kisaAd(e[0])}));
-        nic.appendChild(el("div", {textContent: e[1]}));
-      }));
-    }
+    const sebepler = boslarY.length
+      ? boslarY.reduce((a, b) => a.concat(b.eksik), [])
+      : yerEksikleri(yer, gun);
+    sebepler.forEach(e => {
+      if (!e) return;
+      kim.appendChild(el("div", {textContent: kisaAd(e[0])}));
+      nic.appendChild(el("div", {textContent: e[1]}));
+    });
     r.appendChild(kim);
     r.appendChild(nic);
     r.appendChild(el("div", {className: "esles-ok", textContent: gelen ? "→" : "×"}));
@@ -1047,23 +1128,35 @@ function bugunKart(hedef, gun, s) {
     (s.refakat || []).forEach(r => { if (r.yer === yer) rf[r.ad] = 1; });
     if (gelen) {
       sag.appendChild(isimSerit(gelen, kd, false, gun, rf, yer));
-      if (gelen.some(ad => yasak(ad, yer))) {
+      const asan = gelen.filter(ad => yasak(ad, yer));
+      if (asan.length) {
         r.classList.add("esles-ihlal");
-        sag.appendChild(cip("Kademe alt sınırı aşıldı", "cip-ihlal"));
+        uyarilar.push(asan.map(kisaAd).join(", ") + " → " + yer + ": kademe alt sınırı aşıldı");
       }
     } else {
       sag.textContent = "Doldurulamadı";
       sag.className = "esles-gelir hata-metin";
+      uyarilar.push(yer + ": doldurulamadı, havuzda uygun kimse yok");
     }
     r.appendChild(sag);
     es.appendChild(r);
   });
+  if (uyarilar.length) {
+    const u = el("div", {className: "gun-uyari"});
+    u.appendChild(el("span", {className: "gun-uyari-bas", textContent: "Uyarılar"}));
+    uyarilar.forEach(x => u.appendChild(el("span", {className: "gun-uyari-oge", textContent: x})));
+    es.appendChild(u);
+  }
   if (!n2 && s.kaynak === "hafta sonu") {
     es.appendChild(el("p", {className: "ipucu", textContent: "Hafta sonu, görevlendirme yok."}));
   }
   hedef.appendChild(es);
 }
 
+function yerEksikleri(yer, gun) {
+  const yok = yokOlanlar(gun, izinGun(), egitimGun()), yh = yerHarita();
+  return adlar().filter(ad => yh[ad] === yer && yok[ad]).map(ad => [ad, yok[ad]]);
+}
 function amelHedef(r, gun) {
   r.title = "Bir ismi buraya bırakın: ameliyathaneye geçer, yerine en uygun kişi görevlendirilir";
   r.ondragover = e => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; r.classList.add("esles-hedef"); };
@@ -1120,7 +1213,7 @@ function matrisBlok(satirlar, ilk, sonG, yeniHar, degisenGun) {
     const kb = el("button", {type: "button", className: "kilit-sim kilit-mini",
       textContent: kilitli ? "🔒" : "🔓"});
     kb.title = kilitli ? g + ". gün kilitli — açmak için tıklayın"
-                       : g + ". günü kilitle: bugünkü atama aynen sabitlenir";
+                       : g + ". günü kilitle: o günkü atama (boşsa boş olarak) sabitlenir";
     kb.onclick = () => gunKilit(g);
     gh.appendChild(kb);
     tr.appendChild(gh);
@@ -1296,7 +1389,7 @@ function gunKilit(g) {
   }
   if (!SON) hesapla();
   const s = SON.satirlar[g-1];
-  if (!s || !Object.keys(s.atama).length) { toast(g + ". günde kilitlenecek atama yok"); return; }
+  if (!s) return;
   V.gecmis[gs] = Object.assign({}, s.atama);
   sakla(); ciz_gosterge(); ciz_kural();
   toast(g + ". gün kilitlendi");
@@ -1371,6 +1464,7 @@ function adDegistir(eski, yeni) {
   for (const g in V.gecmis) if (V.gecmis[g][eski] !== undefined) { V.gecmis[g][yeni] = V.gecmis[g][eski]; delete V.gecmis[g][eski]; }
   for (const g in V.force) V.force[g].forEach(z => { if (z.ad === eski) z.ad = yeni; });
   V.refakat.forEach(r => { if (r.ad === eski) r.ad = yeni; });
+  V.degisim.forEach(d => { if (d.cikan === eski) d.cikan = yeni; if (d.giren === eski) d.giren = yeni; });
   if (V.devir.refakat && V.devir.refakat[eski] !== undefined) {
     V.devir.refakat[yeni] = V.devir.refakat[eski]; delete V.devir.refakat[eski];
   }
@@ -1384,6 +1478,7 @@ function asistanSil(ad) {
   for (const g in V.gecmis) delete V.gecmis[g][ad];
   for (const g in V.force) V.force[g] = V.force[g].filter(z => z.ad !== ad);
   V.refakat = V.refakat.filter(r => r.ad !== ad);
+  V.degisim = V.degisim.filter(d => d.cikan !== ad && d.giren !== ad);
   sakla(); ciz_nobet(); ciz_izin(); ciz_kural();
 }
 $("#btnEkle").onclick = () => {
@@ -1523,6 +1618,22 @@ $("#btnEgitimEkle").onclick = () => { V.egitim.push({gunler: "1-1", kisiler: []}
 
 /* ---------- kural / force / geçmiş ---------- */
 
+function kadroDugmeleri(mini, yenile) {
+  const d = el("div", {className: "gk-satir"});
+  V.zorunlu_yerler.forEach(yer => {
+    const m = kadroKurali(yer);
+    const b = el("button", {type: "button", className: "dgm" + (mini ? " dgm-mini" : ""),
+      textContent: yer + ": " + KADRO_KISA[m]});
+    b.title = yer + " — " + KADRO_ETIKET[m] + ". Tıkla: Tek → Kıd.Tek → Çift";
+    b.onclick = () => {
+      V.yer_kadro[yer] = KADRO_SIRA[(KADRO_SIRA.indexOf(m) + 1) % KADRO_SIRA.length];
+      sakla(); yenile();
+    };
+    d.appendChild(b);
+  });
+  return d;
+}
+
 function ciz_kural() {
   const kc = $("#kurallar"); kc.innerHTML = "";
   for (const k in KURAL_ETIKET) {
@@ -1548,6 +1659,11 @@ function ciz_kural() {
     value: (V.onceki_ay_son_gun_nobet.yb||[]).concat(V.onceki_ay_son_gun_nobet.amel||[]).join(", ")});
   i2.onchange = () => { V.onceki_ay_son_gun_nobet = {yb: bol(i2.value), amel: []}; sakla(); };
   l2.appendChild(i2); kc.appendChild(l2);
+
+  const l3 = el("div"); l3.style.marginTop = "12px";
+  l3.appendChild(el("div", {className: "ipucu", textContent: "Yer kadrosu — o yere kaç kişi gönderilsin"}));
+  l3.appendChild(kadroDugmeleri(false, () => { ciz_kural(); ciz_gosterge(); }));
+  kc.appendChild(l3);
 
   const ac = $("#agirliklar"); ac.innerHTML = "";
   for (const k in AGIRLIK_ETIKET) {
@@ -1576,7 +1692,15 @@ function ciz_kural() {
   adlar().forEach(a => rk.appendChild(el("option", {value: a, textContent: a})));
   const ry = $("#rYer"); ry.innerHTML = "";
   V.zorunlu_yerler.forEach(y => ry.appendChild(el("option", {value: y, textContent: y})));
-  ciz_refakat(); ciz_force(); ciz_gecmis();
+  gunOpt($("#nGun"));
+  ["#nCikan", "#nGiren"].forEach(s => {
+    const e = $(s); e.innerHTML = "";
+    adlar().forEach(a => e.appendChild(el("option", {value: a, textContent: a})));
+  });
+  karsiOpt($("#nKarsi"), $("#nGiren").value, $("#nGun").value);
+  $("#nGiren").onchange = () => karsiOpt($("#nKarsi"), $("#nGiren").value, $("#nGun").value);
+  $("#nGun").onchange = () => karsiOpt($("#nKarsi"), $("#nGiren").value, $("#nGun").value);
+  ciz_refakat(); ciz_force(); ciz_degisim(); ciz_gecmis();
 }
 function ciz_refakat() {
   const tb = $("#tblRefakat tbody"); tb.innerHTML = "";
@@ -1614,6 +1738,52 @@ $("#btnRefakat").onclick = () => {
   sakla(); ciz_kural(); ciz_gosterge();
   toast(kisaAd(ad) + " → " + yer + " refakati " + gun + " gün");
 };
+function ciz_degisim() {
+  const tb = $("#tblDegisim tbody"); tb.innerHTML = "";
+  V.degisim.slice().sort((a, b) => a.gun - b.gun).forEach(d => {
+    const tr = el("tr");
+    tr.appendChild(el("td", {className: "gun-hucre", textContent: d.gun}));
+    tr.appendChild(el("td", {textContent: d.cikan}));
+    tr.appendChild(el("td", {textContent: d.giren}));
+    tr.appendChild(el("td", {className: "gun-hucre",
+      textContent: d.karsi ? d.karsi + ". gün karşılığı" : "tek taraflı"}));
+    const td = el("td"), b = el("button", {className: "dgm", textContent: "Sil"});
+    b.onclick = () => {
+      V.degisim = V.degisim.filter(x => x !== d);
+      sakla(); ciz_degisim(); ciz_gosterge();
+    };
+    td.appendChild(b); tr.appendChild(td); tb.appendChild(tr);
+  });
+}
+function degisimEkle(gun, cikan, giren, karsi) {
+  if (cikan === giren) { toast("Çıkan ve giren aynı kişi olamaz"); return; }
+  const n = nobetGun(+gun);
+  if (n.yb.concat(n.amel).indexOf(cikan) < 0) { toast(gun + ". gün " + kisaAd(cikan) + " nöbetçi değil"); return; }
+  if (karsi === undefined) karsi = karsiOneri(giren, gun);
+  karsi = +karsi || 0;
+  if (karsi && nobetGunleri(giren).indexOf(karsi) < 0) {
+    toast(karsi + ". gün " + kisaAd(giren) + " nöbetçi değil"); return;
+  }
+  V.degisim = V.degisim.filter(d => !(+d.gun === +gun && d.cikan === cikan));
+  V.degisim.push({gun: +gun, cikan, giren, karsi});
+  sakla(); ciz_degisim(); ciz_gosterge();
+  toast(karsi
+    ? kisaAd(cikan) + " ile " + kisaAd(giren) + " nöbet değişti: " + gun + " ↔ " + karsi
+    : gun + ". gün nöbeti " + kisaAd(cikan) + " yerine " + kisaAd(giren) + " tuttu");
+}
+function karsiOneri(giren, gun) {
+  const gl = nobetGunleri(giren).filter(x => x !== +gun);
+  if (!gl.length) return 0;
+  const y = gl.reduce((a, b) => Math.abs(b - gun) < Math.abs(a - gun) ? b : a);
+  return Math.abs(y - gun) <= 7 ? y : 0;
+}
+function karsiOpt(sec, giren, gun) {
+  sec.innerHTML = "";
+  sec.appendChild(el("option", {value: "0", textContent: "tek taraflı"}));
+  nobetGunleri(giren).filter(x => x !== +gun).forEach(x =>
+    sec.appendChild(el("option", {value: x, textContent: x + ". günü çıkan tutsun"})));
+  sec.value = String(karsiOneri(giren, gun) || 0);
+}
 function ciz_force() {
   const tb = $("#tblForce tbody"); tb.innerHTML = "";
   Object.keys(V.force).sort((a,b) => a-b).forEach(g => {
@@ -1628,6 +1798,7 @@ function ciz_force() {
     });
   });
 }
+$("#btnDegisim").onclick = () => degisimEkle($("#nGun").value, $("#nCikan").value, $("#nGiren").value, $("#nKarsi").value);
 $("#btnForce").onclick = () => {
   const g = $("#fGun").value, ad = $("#fKisi").value, yer = $("#fYer").value;
   V.force[g] = (V.force[g]||[]).filter(z => z.ad !== ad);
@@ -1649,7 +1820,7 @@ function ciz_gecmis() {
     const m = V.gecmis[g];
     const kl = Object.keys(m);
     if (kl.length) kl.forEach(ad => t.appendChild(cip(ad + " → " + m[ad], "cip-yer")));
-    else t.textContent = "Boş";
+    else t.appendChild(cip("Görevlendirme yok", "cip-yer"));
     tr.appendChild(t);
     const d = el("td"); const b = el("button", {className:"dgm", textContent:"Kilidi Aç"});
     b.onclick = () => { delete V.gecmis[g]; sakla(); ciz_gecmis(); };
@@ -1688,7 +1859,7 @@ function ciz_cikti() {
     const b1 = el("button", {className: "dgm", textContent: "Kopyala"});
     b1.onclick = () => kopyala(gunMetin(s), s.gun + ". gün kopyalandı");
     hd.appendChild(b1);
-    if (s.kaynak !== "geçmiş" && Object.keys(s.atama).length) {
+    if (s.kaynak !== "geçmiş") {
       const b2 = el("button", {className: "dgm", textContent: "Geçmişe Kaydet"});
       b2.onclick = () => { V.gecmis[String(s.gun)] = Object.assign({}, s.atama); sakla(); ciz_cikti(); toast(s.gun + ". gün kilitlendi"); };
       hd.appendChild(b2);
@@ -1710,8 +1881,7 @@ $("#btnKilitle").onclick = () => {
   if (!SON) hesapla();
   let k = 0;
   SON.satirlar.forEach(s => {
-    if (s.gun > son || s.kaynak === "geçmiş") return;
-    if (!Object.keys(s.atama).length) return;
+    if (s.gun > son || s.kaynak === "geçmiş" || s.kaynak === "hafta sonu") return;
     V.gecmis[String(s.gun)] = Object.assign({}, s.atama); k++;
   });
   sakla(); ciz_cikti(); ciz_kural();
@@ -1779,8 +1949,8 @@ function ciz_gkural(satirlar, sayac) {
   const g = BUGUN, gs = String(g);
   c.appendChild(el("div", {className: "gk-ust", textContent: "Kurallar — " + g + " " + AYLAR[V.ay-1]}));
 
-  const bl = (bas) => {
-    const d = el("div", {className: "gk-blok"});
+  const bl = (bas, alan) => {
+    const d = el("div", {className: "gk-blok gkb-" + alan});
     d.appendChild(el("div", {className: "gk-bas", textContent: bas}));
     return d;
   };
@@ -1790,7 +1960,7 @@ function ciz_gkural(satirlar, sayac) {
     return s2;
   };
 
-  const b0 = bl("Genel kurallar");
+  const b0 = bl("Genel kurallar", "genel");
   for (const k in KURAL_ETIKET) {
     const l = el("label", {className: "gk-kural"});
     const cb = el("input", {type: "checkbox", checked: !!V.kural[k]});
@@ -1809,9 +1979,10 @@ function ciz_gkural(satirlar, sayac) {
     }
     b0.appendChild(l);
   }
+  b0.appendChild(kadroDugmeleri(true, () => { ciz_gosterge(); ciz_kural(); }));
   c.appendChild(b0);
 
-  const b1 = bl("Bugünün ek kuralları");
+  const b1 = bl("Bugünün ek kuralları", "bugun");
   const f1 = el("div", {className: "gk-satir"});
   const k1 = kisiSec();
   const d1 = el("button", {type: "button", className: "dgm dgm-mini", textContent: "Sabitle"});
@@ -1863,6 +2034,18 @@ function ciz_gkural(satirlar, sayac) {
   };
   f3.appendChild(y3); f3.appendChild(n3); f3.appendChild(d3);
   b1.appendChild(f3);
+
+  const f6 = el("div", {className: "gk-satir"});
+  const nb = nobetGun(g);
+  const c6 = el("select", {className: "gir gir-mini"});
+  nb.yb.concat(nb.amel).forEach(a => c6.appendChild(el("option", {value: a, textContent: kisaAd(a)})));
+  const g6 = kisiSec();
+  const d6 = el("button", {type: "button", className: "dgm dgm-mini", textContent: "Nöbet Değişti"});
+  d6.title = "Bugünün nöbetini çıkan yerine giren tutar; girenin kendi nöbet günü tekse onu da çıkan tutar";
+  d6.disabled = !c6.options.length;
+  d6.onclick = () => degisimEkle(g, c6.value, g6.value);
+  f6.appendChild(c6); f6.appendChild(g6); f6.appendChild(d6);
+  b1.appendChild(f6);
 
   const f4 = el("div", {className: "gk-satir"});
   f4.appendChild(el("span", {className: "gk-bos", textContent: "Otomatik ata:"}));
@@ -1919,11 +2102,20 @@ function ciz_gkural(satirlar, sayac) {
     x.onclick = () => { V.force[gs].splice(i,1); if (!V.force[gs].length) delete V.force[gs]; sakla(); ciz_gosterge(); ciz_kural(); };
     r.appendChild(x); liste.appendChild(r);
   });
+  V.degisim.filter(d => +d.gun === g || (d.karsi && +d.karsi === g)).forEach(d => {
+    const r = el("div", {className: "gk-oge"});
+    const ters = +d.gun !== g;
+    r.appendChild(el("span", {textContent: "Nöbet: " + kisaAd(ters ? d.giren : d.cikan) +
+      " → " + kisaAd(ters ? d.cikan : d.giren) + (d.karsi ? " (karşılıklı)" : "")}));
+    const x = el("button", {type: "button", className: "gk-sil", textContent: "×", title: "Kaldır"});
+    x.onclick = () => { V.degisim = V.degisim.filter(y => y !== d); sakla(); ciz_gosterge(); ciz_kural(); };
+    r.appendChild(x); liste.appendChild(r);
+  });
   if (!liste.children.length) liste.appendChild(el("div", {className: "gk-bos", textContent: "Bugüne ek kural yok"}));
   b1.appendChild(liste);
   c.appendChild(b1);
 
-  const b2 = bl("Dengeleme ağırlıkları");
+  const b2 = bl("Dengeleme ağırlıkları", "agirlik");
   const ag = el("div", {className: "gk-agirlik"});
   for (const k in AGIRLIK_ETIKET) {
     const l = el("label", {className: "gk-ag"});
@@ -1942,7 +2134,7 @@ function ciz_gkural(satirlar, sayac) {
   b2.appendChild(ob);
   c.appendChild(b2);
 
-  const b4 = bl("Ay devri");
+  const b4 = bl("Ay devri", "devir");
   const dv = el("div", {className: "gk-satir"});
   const dt = Object.values(V.devir.toplam || {}).reduce((x,y) => x+y, 0);
   dv.appendChild(el("span", {className: "gk-bos",
@@ -1968,7 +2160,7 @@ function ciz_gkural(satirlar, sayac) {
   c.appendChild(b4);
 
   const bak = analizUyarilari(satirlar, sayac);
-  const b3 = bl("Uyarılar");
+  const b3 = bl("Uyarılar", "uyari");
   if (bak.length) bak.forEach(x => b3.appendChild(el("div", {className: "uyari gk-uyari", textContent: x})));
   else b3.appendChild(el("div", {className: "gk-bos", textContent: "Uyarı yok"}));
   c.appendChild(b3);
@@ -2253,6 +2445,8 @@ function senkronBagla() {
     e.dataset.durum = a;
     e.textContent = METIN[a] + ((a === "esitlendi" || a === "cevrimdisi") && d.zaman ? " · " + saat(d.zaman) : "");
     e.title = (d.hata ? d.hata + "\n" : "") + "Tıkla: şimdi eşitle";
+    const sr = $("#basbarSurum");
+    if (sr && d.uygulama) { sr.textContent = "v" + d.uygulama + (d.kod ? " · " + d.kod : ""); sr.title = "Program sürümü · kod: " + (d.kod || "?"); }
   };
   S.durum().then(goster).catch(() => {});
   if (S.olay) S.olay(d => {
@@ -2279,8 +2473,7 @@ function kilitle(son) {
   const {satirlar} = hesapla();
   let k = 0;
   satirlar.forEach(x => {
-    if (x.gun > son || x.kaynak === "geçmiş") return;
-    if (!Object.keys(x.atama).length) return;
+    if (x.gun > son || x.kaynak === "geçmiş" || x.kaynak === "hafta sonu") return;
     V.gecmis[String(x.gun)] = Object.assign({}, x.atama); k++;
   });
   return k;
@@ -2288,7 +2481,7 @@ function kilitle(son) {
 function otoKilit() {
   const d = new Date();
   if (d.getFullYear() !== V.yil || d.getMonth() + 1 !== V.ay) return 0;
-  const k = kilitle(d.getDate());
+  const k = kilitle(d.getDate() - 1);
   if (k) sakla();
   return k;
 }

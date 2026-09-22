@@ -69,6 +69,13 @@ body { overflow: hidden; background: transparent; }
   -webkit-app-region: no-drag;
 }
 
+.basbar-surum {
+  font-size: var(--tk-fs-1);
+  line-height: var(--tk-lh-heading);
+  color: var(--tk-disabled);
+  -webkit-app-region: no-drag;
+}
+.basbar-surum:empty { display: none; }
 .basbar-senk {
   display: inline-flex;
   align-items: center;

@@ -7,7 +7,8 @@ const KOK = path.resolve(__dirname, "..");
 const ARAC = "Görevlendirme";
 const IZLENEN = ["Görevlendirme/main.js", "Görevlendirme/preload.js", "Görevlendirme/arayuz.html", "Görevlendirme/app.css", "Görevlendirme/package.json", "Görevlendirme/gorevlendir.py", "Görevlendirme/senkron.js"];
 const YEREL_GIT = path.join(KOK, ".araclar", "git", "cmd", "git.exe");
-const GIT = fs.existsSync(YEREL_GIT) ? YEREL_GIT : "git";
+const GIT = [YEREL_GIT, path.join(process.env.ProgramFiles || "C:\\Program Files", "Git", "cmd", "git.exe")]
+  .find(f => fs.existsSync(f)) || "git";
 
 let gunluk = [];
 function not(s) {
@@ -28,7 +29,7 @@ function durumYaz(asama, hata) {
 
 function gitSessiz(args, opt) {
   return new Promise(coz => {
-    execFile(GIT, ["-c", "core.quotepath=false"].concat(args), {
+    execFile(GIT, ["-c", "core.quotepath=false", "-c", "safe.directory=*"].concat(args), {
       cwd: KOK,
       encoding: "utf-8",
       windowsHide: true,
@@ -40,6 +41,12 @@ function gitSessiz(args, opt) {
   });
 }
 
+function ozet(c) {
+  const s = String(c || "").split("\n").map(x => x.trim()).filter(Boolean);
+  const k = s.filter(x => !/Could not read from remote|correct access rights|repository exists/i.test(x));
+  return (k.length ? k.slice(-2) : s.slice(-1)).join(" · ");
+}
+
 let sira = Promise.resolve();
 function sirala(is) {
   const s = sira.then(is, is);
@@ -47,9 +54,13 @@ function sirala(is) {
   return s;
 }
 
-async function depoVar() {
-  return fs.existsSync(path.join(KOK, ".git")) && (await gitSessiz(["remote", "get-url", "origin"])).ok;
+async function depoNeden() {
+  if (!fs.existsSync(path.join(KOK, ".git"))) return "Klasör git deposu değil: " + KOK;
+  const r = await gitSessiz(["remote", "get-url", "origin"]);
+  if (r.ok) return "";
+  return (ozet(r.cikti) || "git çalışmadı") + " (git: " + GIT + ")";
 }
+async function depoVar() { return !(await depoNeden()); }
 
 async function kimlik() {
   if (!(await gitSessiz(["config", "user.email"])).ok) {
@@ -79,7 +90,8 @@ async function yerelKaydet(mesaj) {
 }
 
 async function cekIc() {
-  if (!(await depoVar())) { durumYaz("yerel"); return { ok: false, kodDegisti: false, veriDegisti: false, sebep: "depo yok" }; }
+  const neden = await depoNeden();
+  if (neden) { not("depo yok: " + neden); durumYaz("yerel", neden); return { ok: false, kodDegisti: false, veriDegisti: false, sebep: neden }; }
   durumYaz("esitleniyor");
   await kimlik();
   const once = await surum();
@@ -88,7 +100,7 @@ async function cekIc() {
   if (!r.ok) {
     not("çekme başarısız: " + r.cikti.split("\n").slice(-2).join(" "));
     await gitSessiz(["merge", "--abort"]);
-    durumYaz("cevrimdisi", r.cikti.split("\n").slice(-1)[0]);
+    durumYaz("cevrimdisi", ozet(r.cikti));
     return { ok: false, kodDegisti: false, veriDegisti: false, sebep: r.cikti };
   }
   const list = await degisenler(once, await surum());
@@ -105,7 +117,7 @@ async function itIc() {
   if (ileride.ok && ileride.cikti === "0") return true;
   durumYaz("esitleniyor");
   const r = await gitSessiz(["push", "origin", "HEAD"], { timeout: 45000 });
-  if (!r.ok) { not("gönderim başarısız: " + r.cikti.split("\n").slice(-1)[0]); durumYaz("cevrimdisi", r.cikti.split("\n").slice(-1)[0]); }
+  if (!r.ok) { not("gönderim başarısız: " + ozet(r.cikti)); durumYaz("cevrimdisi", ozet(r.cikti)); }
   else durumYaz("esitlendi");
   return r.ok;
 }
@@ -151,7 +163,9 @@ function izle(ms, fn) {
 }
 
 async function durum() {
-  return Object.assign({ depo: await depoVar(), gunluk: kayit() }, durumBilgi);
+  let uygulama = "";
+  try { uygulama = JSON.parse(fs.readFileSync(path.join(__dirname, "package.json"), "utf-8")).version; } catch (e) {}
+  return Object.assign({ depo: await depoVar(), gunluk: kayit(), uygulama, kod: (await surum()).slice(0, 7) }, durumBilgi);
 }
 
 function arkadaGonder() {
