@@ -41,6 +41,12 @@ function gitSessiz(args, opt) {
   });
 }
 
+function ozet(c) {
+  const s = String(c || "").split("\n").map(x => x.trim()).filter(Boolean);
+  const k = s.filter(x => !/Could not read from remote|correct access rights|repository exists/i.test(x));
+  return (k.length ? k.slice(-2) : s.slice(-1)).join(" · ");
+}
+
 let sira = Promise.resolve();
 function sirala(is) {
   const s = sira.then(is, is);
@@ -52,7 +58,7 @@ async function depoNeden() {
   if (!fs.existsSync(path.join(KOK, ".git"))) return "Klasör git deposu değil: " + KOK;
   const r = await gitSessiz(["remote", "get-url", "origin"]);
   if (r.ok) return "";
-  return (r.cikti.split("\n").filter(Boolean).slice(-1)[0] || "git çalışmadı") + " (git: " + GIT + ")";
+  return (ozet(r.cikti) || "git çalışmadı") + " (git: " + GIT + ")";
 }
 async function depoVar() { return !(await depoNeden()); }
 
@@ -94,7 +100,7 @@ async function cekIc() {
   if (!r.ok) {
     not("çekme başarısız: " + r.cikti.split("\n").slice(-2).join(" "));
     await gitSessiz(["merge", "--abort"]);
-    durumYaz("cevrimdisi", r.cikti.split("\n").slice(-1)[0]);
+    durumYaz("cevrimdisi", ozet(r.cikti));
     return { ok: false, kodDegisti: false, veriDegisti: false, sebep: r.cikti };
   }
   const list = await degisenler(once, await surum());
@@ -111,7 +117,7 @@ async function itIc() {
   if (ileride.ok && ileride.cikti === "0") return true;
   durumYaz("esitleniyor");
   const r = await gitSessiz(["push", "origin", "HEAD"], { timeout: 45000 });
-  if (!r.ok) { not("gönderim başarısız: " + r.cikti.split("\n").slice(-1)[0]); durumYaz("cevrimdisi", r.cikti.split("\n").slice(-1)[0]); }
+  if (!r.ok) { not("gönderim başarısız: " + ozet(r.cikti)); durumYaz("cevrimdisi", ozet(r.cikti)); }
   else durumYaz("esitlendi");
   return r.ok;
 }
@@ -157,7 +163,9 @@ function izle(ms, fn) {
 }
 
 async function durum() {
-  return Object.assign({ depo: await depoVar(), gunluk: kayit() }, durumBilgi);
+  let uygulama = "";
+  try { uygulama = JSON.parse(fs.readFileSync(path.join(__dirname, "package.json"), "utf-8")).version; } catch (e) {}
+  return Object.assign({ depo: await depoVar(), gunluk: kayit(), uygulama, kod: (await surum()).slice(0, 7) }, durumBilgi);
 }
 
 function arkadaGonder() {

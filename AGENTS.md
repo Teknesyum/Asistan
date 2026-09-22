@@ -32,7 +32,10 @@ kısayolların gösterdiği klasörler) bulur, verisini `%LOCALAPPDATA%\Asistan\
 GitHub'a iter, siler; güncel sürümü klonlar (çevrimdışıysa USB'den kopyalar) Belgeler\Asistan'a.
 Git yoksa `.kurulum\git` (PortableGit) `.araclar\git`e kopyalanır. Özel depoya erişim
 `.kurulum\anahtar` deploy key'i ile (okuma-yazma); anahtar depoya girmez, `.kurulum/` ve
-`.araclar/` gitignore'da. Deneme: `$env:ASISTAN_KUR_PROVA=1` — silmez, kısayol yazmaz, TEMP'e kurar.
+`.araclar/` gitignore'da. Yönetici olarak başka hesapla açılırsa kurulum `explorer.exe` ile masaüstü
+kullanıcısı adına yeniden başlar (bat yolunu `ASISTAN_BAT` taşır); aynı hesapla yöneticiyse klasörün
+sahibi kullanıcıya verilir. ssh, Git'in kendi `usr\bin\ssh.exe`'sidir. Kurulum sonunda `ls-remote origin`
+ile senkron sınanır, sonuç son satırda. Deneme: `$env:ASISTAN_KUR_PROVA=1` — silmez, kısayol yazmaz, TEMP'e kurar.
 
 ## Senkron
 
@@ -41,4 +44,5 @@ dakika eşitler. Kod dosyaları değiştiyse uygulama kendini yeniden başlatır
 arayüz yenilenir. Veri her değişiklikten ~5 sn sonra ve çıkışta commit + push edilir.
 Başlık çubuğundaki gösterge durumu gösterir, tıklanınca hemen eşitler. Çakışmada çeken
 makine kazanır (`-X ours`). Git sırası: `.araclar\git`, Program Files\Git, PATH; her çağrı
-`safe.directory=*` ile gider. "Yalnız bu bilgisayar" görünürse sebebi göstergenin ipucunda.
+`safe.directory=*` ile gider. "Yalnız bu bilgisayar" ya da "Çevrimdışı" görünürse sebebi göstergenin ipucunda (`ozet()`:
+git'in genel "repository exists" satırları atılır). Başlıkta sürüm: `v<package.json> · <commit>`.

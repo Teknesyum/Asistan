@@ -1,5 +1,12 @@
 & {
   $ErrorActionPreference = "Stop"
+  $oturum = (Get-Process -Id $PID).SessionId
+  $masaSahibi = Get-CimInstance Win32_Process -Filter "Name='explorer.exe'" -ErrorAction SilentlyContinue | Where-Object { $_.SessionId -eq $oturum } | Select-Object -First 1 | ForEach-Object { Invoke-CimMethod -InputObject $_ -MethodName GetOwner }
+  if ($masaSahibi -and $masaSahibi.User -and ($masaSahibi.Domain + "\" + $masaSahibi.User) -ne ($env:USERDOMAIN + "\" + $env:USERNAME) -and $env:ASISTAN_BAT -and (Test-Path $env:ASISTAN_BAT)) {
+    Write-Host ("Kurulum " + $masaSahibi.User + " adına yeniden başlatılıyor") -ForegroundColor Cyan
+    Start-Process explorer.exe ('"' + $env:ASISTAN_BAT + '"')
+    return
+  }
   $ProgressPreference = "SilentlyContinue"
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
   $t = Join-Path $env:TEMP ("asistan-" + [guid]::NewGuid().ToString("N").Substring(0, 8))

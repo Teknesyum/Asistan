@@ -16,6 +16,7 @@
 
 <header class="basbar" id="basbar">
   <span class="marka">Asistan <span class="marka-vurgu">Görevlendirme</span></span>
+  <span class="basbar-surum" id="basbarSurum"></span>
   <span class="basbar-ay" id="basbarAy"></span>
   <span class="basbar-senk" id="basbarSenk"></span>
   <span class="bosluk"></span>
@@ -2444,6 +2445,8 @@ function senkronBagla() {
     e.dataset.durum = a;
     e.textContent = METIN[a] + ((a === "esitlendi" || a === "cevrimdisi") && d.zaman ? " · " + saat(d.zaman) : "");
     e.title = (d.hata ? d.hata + "\n" : "") + "Tıkla: şimdi eşitle";
+    const sr = $("#basbarSurum");
+    if (sr && d.uygulama) { sr.textContent = "v" + d.uygulama + (d.kod ? " · " + d.kod : ""); sr.title = "Program sürümü · kod: " + (d.kod || "?"); }
   };
   S.durum().then(goster).catch(() => {});
   if (S.olay) S.olay(d => {
