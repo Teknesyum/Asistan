@@ -770,8 +770,8 @@ function bosluklar(yok, g) {
     for (let i = 0; i < eksik; i++) {
       out.push({
         yer, yalniz,
-        eksik: !yoklar.length ? [["—", "Ek kadro isteniyor"]]
-             : yoklar.length === eksik ? [yoklar[i]] : yoklar,
+        eksik: i >= yoklar.length ? [["—", "Ek kadro isteniyor"]]
+             : i < eksik - 1 ? [yoklar[i]] : yoklar.slice(i),
         hedef
       });
     }

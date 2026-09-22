@@ -162,12 +162,12 @@ def bosluklar(v, yok, gun):
         yoklar = [(ad, yok[ad]) for ad in kadro if ad in yok]
         kac = gerek - len(mevcut)
         for i in range(kac):
-            if not yoklar:
+            if i >= len(yoklar):
                 eksik = [("—", "Ek kadro isteniyor")]
-            elif len(yoklar) == kac:
+            elif i < kac - 1:
                 eksik = [yoklar[i]]
             else:
-                eksik = yoklar
+                eksik = yoklar[i:]
             sonuc.append({"yer": yer, "eksik": eksik, "hedef_kidem": hedef_kidem,
                           "yalniz": gerek <= 1})
     return sonuc
