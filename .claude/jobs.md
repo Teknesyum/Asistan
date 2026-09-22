@@ -1,3 +1,1 @@
-- [x] Resmi Kopyala: gün paneli + ekip tablosu montajı
-- [x] Ekip paneli: 3 sütun, başlıksız, İzinli/Nöbet Ertesi kırmızı
-- [x] Sürüm 1.4.8, AGENTS notu, push
+- [x] Ekip tablosu: branştakiler Ameliyathane'deyse 3. sütun boş

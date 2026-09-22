@@ -1343,7 +1343,9 @@ function ekipTablo(liste, s) {
     if (!(s && s.atama && s.atama[a.ad]) && (yok === "İzinli" || yok.indexOf("Nöbet Ertesi") >= 0)) tr.className = "ekip-yok";
     tr.appendChild(el("td", {textContent: kisaAd(a.ad)}));
     tr.appendChild(el("td", {className: "durum-hucre", textContent: a.yer}));
-    tr.appendChild(el("td", {className: "ekip-guncel", textContent: g && g !== a.yer ? "→ " + g : ""}));
+    const brans = V.zorunlu_yerler.indexOf(a.yer) < 0 && V.havuz_disi_yerler.indexOf(a.yer) < 0;
+    const farkli = g && g !== a.yer && !(g === "Ameliyathane" && brans);
+    tr.appendChild(el("td", {className: "ekip-guncel", textContent: farkli ? "→ " + g : ""}));
     tb.appendChild(tr);
   });
   t.appendChild(tb);
