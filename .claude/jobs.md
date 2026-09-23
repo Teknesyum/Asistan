@@ -1,1 +1,1 @@
-- [x] Resmi Kopyala: alt tablo zemini üst yakalamadan örneklenir
+- [x] Resmi Kopyala: üstte ve iki tablo arasında boşluk

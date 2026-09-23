@@ -2627,12 +2627,13 @@ $("#btnResim").onclick = async () => {
     const alt = ekipResim(ust.width / kutu.width, zemin);
     const c = document.createElement("canvas");
     c.width = Math.max(ust.width, alt.width);
-    c.height = ust.height + alt.height;
+    const ara = Math.round(16 * ust.width / kutu.width);
+    c.height = ara + ust.height + ara + alt.height;
     const x = c.getContext("2d");
     x.fillStyle = zemin;
     x.fillRect(0, 0, c.width, c.height);
-    x.drawImage(ust, Math.round((c.width - ust.width) / 2), 0);
-    x.drawImage(alt, Math.round((c.width - alt.width) / 2), ust.height);
+    x.drawImage(ust, Math.round((c.width - ust.width) / 2), ara);
+    x.drawImage(alt, Math.round((c.width - alt.width) / 2), ara + ust.height + ara);
     const blob = await new Promise(r => c.toBlob(r, "image/png"));
     await navigator.clipboard.write([new ClipboardItem({"image/png": blob})]);
     toast("Panoya kopyalandı");
