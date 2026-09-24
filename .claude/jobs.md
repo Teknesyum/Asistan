@@ -1,1 +1,3 @@
-- [x] Telefona: uguu.se yükleme + QR penceresi
+- [x] Görevlendirme: "Telefona" düğmesi → "QR"
+- [x] Görevlendirme: başlıkta Teknesyum yanında tüm sekmeyi yakalayıp QR gösteren düğme
+- [x] Nöbet: aynı sistem (yükleme IPC, qr.js, başlık düğmesi, QR penceresi)

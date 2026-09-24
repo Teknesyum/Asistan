@@ -852,3 +852,28 @@ section[role="tabpanel"]:not([hidden]) { animation: tk-belir var(--tk-t-instant)
 
 #istekIc th.mat-gun-bas,
 #istekIc tbody td { min-width: 24px; }
+
+.tel-dlg {
+  background: var(--tk-surface);
+  color: var(--tk-text);
+  border: var(--tk-border-w) solid var(--tk-border);
+  border-radius: var(--tk-r);
+  padding: var(--tk-sp-3);
+  box-shadow: var(--tk-shadow-panel);
+  width: min(360px, 90vw);
+}
+.tel-dlg[open] { display: grid; gap: var(--tk-sp-2); }
+.tel-dlg::backdrop { background: var(--tk-scrim); }
+.tel-qr { width: 100%; height: auto; border-radius: var(--tk-r-box); image-rendering: pixelated; }
+.tel-adim { margin: 0; padding-left: var(--tk-sp-4); font-size: var(--tk-fs-1); color: var(--tk-text-label); display: grid; gap: var(--tk-sp-1); }
+.tel-link {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  font-size: var(--tk-fs-1);
+  color: var(--tk-blue);
+  text-align: center;
+  word-break: break-all;
+}

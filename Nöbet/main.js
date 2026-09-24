@@ -89,6 +89,16 @@ app.whenReady().then(async () => {
     try { clipboard.write({ image: img }); } catch (e) {}
     return img.toPNG();
   });
+  ipcMain.handle("pencere:yukle", async (e, bayt) => {
+    const f = new FormData();
+    f.append("files[]", new Blob([Buffer.from(bayt)], { type: "image/png" }), "nobet.png");
+    const r = await fetch("https://uguu.se/upload", { method: "POST", body: f, signal: AbortSignal.timeout(30000) });
+    let j = null;
+    try { j = await r.json(); } catch (err) {}
+    const u = j && j.success && j.files && j.files[0] && j.files[0].url;
+    if (!u || !/^https:\/\//.test(u)) throw new Error((j && j.description) || "sunucu " + r.status + " döndü");
+    return u;
+  });
   ipcMain.on("pencere:ac", (e, u) => { if (/^https:\/\//.test(u)) shell.openExternal(u); });
   ipcMain.on("pencere:kapat", e => { const w = hedef(e); if (w) w.close(); });
   ipcMain.on("veri:oku", (e, k) => {

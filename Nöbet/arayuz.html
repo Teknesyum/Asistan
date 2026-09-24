@@ -20,6 +20,7 @@
   <span class="basbar-ay" id="basbarAy"></span>
   <span class="basbar-senk" id="basbarSenk"></span>
   <span class="bosluk"></span>
+  <button type="button" class="imza" id="btnSayfaQr" title="Açık sekmeyi resim olarak yükler, telefonla okutulacak QR gösterir">QR</button>
   <button type="button" class="imza" id="imza" title="Teknesyum — GitHub sayfamız">Teknesyum</button>
   <div class="pdgm-grup">
     <button type="button" class="pdgm" id="pKucult" aria-label="Küçült">
@@ -119,6 +120,17 @@
 </aside>
 
 <div class="bildirim" id="toast" role="status" aria-live="polite"></div>
+<dialog id="telDlg" class="tel-dlg" aria-labelledby="telBas">
+  <div class="pnl-bas"><span id="telBas">Telefona Aktar</span><span class="bosluk"></span><button type="button" id="telKapat" class="dgm dgm-mini">Kapat</button></div>
+  <canvas id="telQr" class="tel-qr"></canvas>
+  <ol class="tel-adim">
+    <li>Telefon kamerasıyla QR'ı okut, resim açılır.</li>
+    <li>Resme uzun bas → Paylaş → WhatsApp.</li>
+    <li>Resim 3 saat sonra sunucudan silinir.</li>
+  </ol>
+  <button type="button" id="telLink" class="tel-link" title="Bağlantıyı kopyala"></button>
+</dialog>
+<script src="qr.js"></script>
 <script>
 "use strict";
 
@@ -1713,6 +1725,43 @@ if (PENCERE) {
 }
 window.addEventListener("focus", () => $("#cerceve").classList.remove("uykuda"));
 window.addEventListener("blur", () => $("#cerceve").classList.add("uykuda"));
+function qrCiz(cv, metin) {
+  const q = qrcode(0, "M");
+  q.addData(metin);
+  q.make();
+  const n = q.getModuleCount(), kenar = 4, h = 8;
+  cv.width = cv.height = (n + kenar * 2) * h;
+  const x = cv.getContext("2d");
+  x.fillStyle = "#fff";
+  x.fillRect(0, 0, cv.width, cv.height);
+  x.fillStyle = "#000";
+  for (let r = 0; r < n; r++) for (let k = 0; k < n; k++) if (q.isDark(r, k)) x.fillRect((k + kenar) * h, (r + kenar) * h, h, h);
+}
+async function qrGoster(dugme, uret) {
+  if (!PENCERE || !PENCERE.yukle) { toast("QR yalnız uygulamada çalışır"); return; }
+  dugme.disabled = true;
+  try {
+    const bayt = await uret();
+    toast("Yükleniyor…");
+    const u = await PENCERE.yukle(bayt);
+    qrCiz($("#telQr"), u);
+    $("#telLink").textContent = u;
+    $("#telDlg").showModal();
+  } catch (e) {
+    toast("Yüklenemedi: " + String(e.message).replace(/^.*Error: /, ""));
+  } finally {
+    dugme.disabled = false;
+  }
+}
+async function sayfaBayt() {
+  const b = $("#basbar").getBoundingClientRect(), c = $("#cerceve").getBoundingClientRect();
+  const png = await PENCERE.kopyala({x: Math.round(c.left), y: Math.ceil(b.bottom), width: Math.round(c.width), height: Math.floor(c.bottom - b.bottom)});
+  if (!png || !png.length) throw new Error("görüntü alınamadı");
+  return new Uint8Array(png);
+}
+$("#btnSayfaQr").onclick = () => qrGoster($("#btnSayfaQr"), sayfaBayt);
+$("#telKapat").onclick = () => $("#telDlg").close();
+$("#telLink").onclick = () => kopyala($("#telLink").textContent);
 </script>
 </body>
 </html>

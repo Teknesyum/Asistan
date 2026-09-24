@@ -6,6 +6,7 @@ contextBridge.exposeInMainWorld("pencere", {
   kapat: () => ipcRenderer.send("pencere:kapat"),
   ac: u => ipcRenderer.send("pencere:ac", u),
   kopyala: r => ipcRenderer.invoke("pencere:kopyala", r),
+  yukle: b => ipcRenderer.invoke("pencere:yukle", b),
   senkron: {
     durum: () => ipcRenderer.invoke("senkron:durum"),
     simdi: () => ipcRenderer.invoke("senkron:simdi"),

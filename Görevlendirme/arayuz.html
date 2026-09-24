@@ -20,6 +20,7 @@
   <span class="basbar-ay" id="basbarAy"></span>
   <span class="basbar-senk" id="basbarSenk"></span>
   <span class="bosluk"></span>
+  <button type="button" class="imza" id="btnSayfaQr" title="Açık sekmeyi resim olarak yükler, telefonla okutulacak QR gösterir">QR</button>
   <button type="button" class="imza" id="imza" title="Teknesyum — GitHub sayfamız">Teknesyum</button>
   <div class="pdgm-grup">
     <button type="button" class="pdgm" id="pKucult" aria-label="Küçült">
@@ -77,7 +78,7 @@
           <span class="bosluk"></span>
           <button type="button" id="btnKalan" class="dgm dgm-mini">Kalanı Hesapla</button>
           <button type="button" id="btnResim" class="dgm dgm-mini">Resmi Kopyala</button>
-          <button type="button" id="btnTelefon" class="dgm dgm-mini" title="Resmi yükler, telefonla okutulacak QR gösterir">Telefona</button>
+          <button type="button" id="btnTelefon" class="dgm dgm-mini" title="Resmi yükler, telefonla okutulacak QR gösterir">QR</button>
         </div>
         <div class="pnl-icerik" id="bugunIc"></div>
       </div>
@@ -2669,24 +2670,31 @@ $("#btnResim").onclick = async () => {
   try { await resimUret(); toast("Panoya kopyalandı"); }
   catch (e) { toast("Kopyalanamadı: " + e.message); }
 };
-$("#btnTelefon").onclick = async () => {
-  if (!PENCERE || !PENCERE.yukle) { toast("Telefona aktarma yalnız uygulamada çalışır"); return; }
-  const b = $("#btnTelefon");
-  b.disabled = true;
-  toast("Yükleniyor…");
+async function qrGoster(dugme, uret) {
+  if (!PENCERE || !PENCERE.yukle) { toast("QR yalnız uygulamada çalışır"); return; }
+  dugme.disabled = true;
   try {
-    const blob = await resimUret();
-    const u = await PENCERE.yukle(new Uint8Array(await blob.arrayBuffer()));
+    const bayt = await uret();
+    toast("Yükleniyor…");
+    const u = await PENCERE.yukle(bayt);
     qrCiz($("#telQr"), u);
     $("#telLink").textContent = u;
     $("#telDlg").showModal();
   } catch (e) {
     toast("Yüklenemedi: " + String(e.message).replace(/^.*Error: /, ""));
   } finally {
-    b.disabled = false;
+    dugme.disabled = false;
   }
-};
+}
+async function sayfaBayt() {
+  const b = $("#basbar").getBoundingClientRect(), c = $("#cerceve").getBoundingClientRect();
+  const png = await PENCERE.kopyala({x: Math.round(c.left), y: Math.ceil(b.bottom), width: Math.round(c.width), height: Math.floor(c.bottom - b.bottom)});
+  if (!png || !png.length) throw new Error("görüntü alınamadı");
+  return new Uint8Array(png);
+}
+$("#btnSayfaQr").onclick = () => qrGoster($("#btnSayfaQr"), sayfaBayt);
 $("#telKapat").onclick = () => $("#telDlg").close();
+$("#btnTelefon").onclick = () => qrGoster($("#btnTelefon"), async () => new Uint8Array(await (await resimUret()).arrayBuffer()));
 $("#telLink").onclick = () => kopyala($("#telLink").textContent, "Bağlantı kopyalandı");
 window.addEventListener("focus", () => $("#cerceve").classList.remove("uykuda"));
 window.addEventListener("blur", () => $("#cerceve").classList.add("uykuda"));

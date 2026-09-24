@@ -14,6 +14,8 @@ Katı kota, nöbet ertesi izni, istek/izin, uzman çakışması, sunum yükü, h
   kişi dengesi; bir kişiye tıklamak orta paneli o kişinin dökümüne çevirir), **3 Çıktı**
   (Excel'e Kopyala = TSV, CSV Kopyala = `;`). Ağırlıklar, hafta günü eğimi, sunum günleri,
   Oto Ayarla ve sütun listesi sağdan açılan **Kurallar çekmecesindedir** (`#cekmece`).
+  Başlıkta Teknesyum yanındaki "QR", başlık altındaki açık sekmeyi yakalar, uguu.se'ye yükler
+  (`main.js` `pencere:yukle`, 3 saat) ve bağlantının QR'ını gösterir; QR `qr.js` ile çevrimdışı.
   Açıklamalar `?` balonlarında. Çevrimdışı. Veri depoda (`Nöbet/veri/`),
   tarayıcıda localStorage. 1440×900'de yalnız nöbet tablosu dikey kaydırır.
 - **İki motor birebir aynı listeyi üretir.** Ortak 32 bit xorshift (`Zar`) sayesinde aynı
