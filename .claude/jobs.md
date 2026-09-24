@@ -1,1 +1,1 @@
-- [x] Resmi Kopyala: üstte ve iki tablo arasında boşluk
+- [x] Telefona: uguu.se yükleme + QR penceresi
