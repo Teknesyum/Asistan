@@ -1,0 +1,50 @@
+{
+ "arac": "Nöbet",
+ "gecti": true,
+ "sonuc": [
+  {
+   "ad": "uygulama.js yüklendi",
+   "gecti": true,
+   "deger": true
+  },
+  {
+   "ad": "veri diskten okundu",
+   "gecti": true,
+   "deger": true
+  },
+  {
+   "ad": "senkron rozeti görünür ve eşitlendi",
+   "gecti": true,
+   "deger": true
+  },
+  {
+   "ad": "sürüm başlıkta",
+   "gecti": true,
+   "deger": true
+  },
+  {
+   "ad": "sekmeler dolaşılır",
+   "gecti": true,
+   "deger": true
+  },
+  {
+   "ad": "pencere düğmeleri IPC'ye gider",
+   "gecti": true,
+   "deger": true
+  },
+  {
+   "ad": "IPC küçült/büyült alındı",
+   "gecti": true,
+   "deger": {
+    "veri:hepsi": 1,
+    "pencere:kucult": 1,
+    "pencere:buyult": 1
+   }
+  },
+  {
+   "ad": "konsol hatası yok",
+   "gecti": true,
+   "deger": []
+  }
+ ]
+}

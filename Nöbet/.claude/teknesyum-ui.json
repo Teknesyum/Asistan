@@ -1,0 +1,71 @@
+{
+  "version": "1.1.0",
+  "template": "benim",
+  "off": false,
+  "targets": [
+    "css"
+  ],
+  "typography": {
+    "sans": "'Atkinson Hyperlegible Next', 'Segoe UI', system-ui, sans-serif",
+    "mono": "'Cascadia Mono', Consolas, ui-monospace, monospace",
+    "scale": [
+      14,
+      16,
+      20,
+      24,
+      32
+    ]
+  },
+  "signature": {
+    "off": false,
+    "text": "by Teknesyum",
+    "github": "https://github.com/Teknesyum",
+    "sponsor": "https://github.com/sponsors/Teknesyum",
+    "supportText": "Buy me a coffee"
+  },
+  "note": "",
+  "palette": {
+    "primary": "#6fb7ff",
+    "secondary": "#cba7d2",
+    "tertiary": "#c3a3ff",
+    "surface": "#000000",
+    "dark": true
+  },
+  "duzen": "b3a56d17ff70849c",
+  "notlar": [
+    "Arka plan tasarımı: duz (token karşılığı yok).",
+    "Kaydırma çubuğu biçimi: solan.",
+    "Arayüz geçiş eğrisi: emphasized (önizlemede --tk-e-out yerine).",
+    "Cam bulanıklığı: 0 px.",
+    "Panel gölgesi gücü: ×0.",
+    "Pencere kenarı: yok.",
+    "Düğme: 28 px yükseklik, 10 px yatay dolgu.",
+    "Üst çubuk yüksekliği: 28 px (titlebar-h-min)."
+  ],
+  "installedAt": "2026-09-26T22:32:14.974Z",
+  "ignore": [
+    {
+      "rule": "states/hover-without-focus",
+      "file": "app.css",
+      "line": 261,
+      "reason": "Satır vurgusu yalnız okuma yardımı; satır odak almaz, içindeki denetimler temanın :focus-visible halkasını taşır."
+    },
+    {
+      "rule": "states/hover-without-focus",
+      "file": "app.css",
+      "line": 745,
+      "reason": "Kaydırma çubuğu tutamacı klavyeyle odaklanmaz; klavyede kaydırma tuşları çalışır."
+    },
+    {
+      "rule": "states/hover-without-focus",
+      "file": "app.css",
+      "line": 213,
+      "reason": "Ayırıcı yalnız fareyle sürüklenen panel bölücüsü (ayiraclar()); klavye karşılığı yok, düzen varsayılanı yeterli."
+    },
+    {
+      "rule": "guncelleme/panel-yok",
+      "file": "senkron.js",
+      "reason": "Kurulum penceresi depo kökündeki kur-usb.ps1 (Adim/tavan/16 ms sözleşmesi); iki uygulamayı birlikte kurar, tarama kökü uygulama klasörü olduğu için görülmüyor."
+    }
+  ]
+}

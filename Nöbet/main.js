@@ -101,9 +101,12 @@ app.whenReady().then(async () => {
   });
   ipcMain.on("pencere:ac", (e, u) => { if (/^https:\/\//.test(u)) shell.openExternal(u); });
   ipcMain.on("pencere:kapat", e => { const w = hedef(e); if (w) w.close(); });
-  ipcMain.on("veri:oku", (e, k) => {
-    try { e.returnValue = fs.readFileSync(veriYol(k), "utf-8"); }
-    catch (err) { e.returnValue = null; }
+  ipcMain.handle("veri:hepsi", () => {
+    const o = {};
+    for (const f of fs.readdirSync(veriDizin())) if (f.endsWith(".json")) {
+      try { o[f.slice(0, -5)] = fs.readFileSync(path.join(veriDizin(), f), "utf-8"); } catch (err) {}
+    }
+    return o;
   });
   ipcMain.on("veri:yaz", (e, { k, m }) => {
     try { fs.writeFileSync(veriYol(k), m, "utf-8"); senkron.gecikmeliGonder(5000); } catch (err) {}

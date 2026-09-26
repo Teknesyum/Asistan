@@ -1,0 +1,21 @@
+KONTRAST 0
+HEDEF 18
+td.gun-hucre > button.kilit-sim.kilit-mini 21x21 | gosterge,qr,bildirim
+label.gk-kural > input 11x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 51x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 60x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 63x17 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 76x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 46x17 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 55x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 37x17 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 52x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 61x17 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 73x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 77x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 29x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 41x17 | gosterge,qr,bildirim
+label.gk-ag > input.gir.gir-mini 44x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 62x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 103x17 | gosterge,qr,bildirim
+HATALAR []

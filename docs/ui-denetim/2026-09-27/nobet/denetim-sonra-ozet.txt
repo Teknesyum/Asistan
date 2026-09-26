@@ -1,0 +1,11 @@
+KONTRAST 0
+HEDEF 8
+td.hucre-doldur > input.gir.gir-mini 130x20 | kadro
+td.hucre-doldur > input.gir.gir-mini 128x20 | kadro
+td.hucre-doldur > input.gir.gir-mini 129x20 | kadro
+div.rozet-grup > button.acma.acma-rozet 29x19 | kadro
+div.rozet-grup > button.acma.acma-rozet 31x19 | kadro
+div.duzen-grup > button.dgm.dgm-mini 21x19 | kadro
+td.mat-td > button.mat-hucre.mat-bos 19x19 | kadro
+td.mat-td > button.mat-hucre.gd-izin 19x19 | kadro
+HATALAR []

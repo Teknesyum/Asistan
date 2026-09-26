@@ -41,3 +41,4 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
   gönderilmez. Günde tek refakatçi çıkar (sayacı en az olan) ve yalnız o yerde tek kişi
   planlandığı günlerde — yani bir yere aynı anda üçüncü kişi gitmez. Sayaç `devir.refakat` ile aya devrolur.
 - `.claude/launch.json` — arayüzü localhost:8777'de servis eder (preview_start "arayuz").
+- `uygulama.js` — arayüzün betiği; `arayuz.html` onu `veri.hazir()` (preload, `veri:hepsi` ile tüm veri JSONlarını tek seferde önbelleğe alır) çözüldükten sonra yükler. Başlık çubuğu `teknesyum-ui/ustcubuk/titlebar.css`, senkron rozeti `teknesyum-ui/durum/badge.css` şablonlarından; rozet durumu hâlâ `senkron.js` verir. `teknesyum-ui/` altı değişirse uygulama kendini yeniden başlatır. Denetim: `araclar/` ve `docs/ui-denetim/`.

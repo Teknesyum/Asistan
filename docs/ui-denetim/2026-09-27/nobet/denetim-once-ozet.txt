@@ -1,0 +1,54 @@
+KONTRAST 38
+? header#basbar > span.marka #ffffff/#ffffff 1 | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 35
+? button.adim > span #ffffff/#ffffff 1 | kadro:dinlenik,kadro:focus-visible,liste:dinlenik,liste:focus-visible 14
+? header.ust > label.tk-sr-only #ffffff/#ffffff 1 | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 35
+? button#btnKurallar #ffffff/#ffffff 1 | kadro:dinlenik,kadro:focus-visible,liste:dinlenik,liste:focus-visible 14
+? button#btnKaydet #ffffff/#ffffff 1 | kadro:dinlenik,kadro:focus-visible,liste:dinlenik,liste:focus-visible 14
+? button#btnYukle #ffffff/#ffffff 1 | kadro:dinlenik,kadro:focus-visible,liste:dinlenik,liste:focus-visible 14
+? span.marka > span.marka-vurgu #00f3ff/#ffffff 1.38 | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 35
+? span#basbarAy #00f3ff/#ffffff 1.38 | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 35
+? button#btnSayfaQr #00f3ff/#ffffff 1.38 | kadro:dinlenik,liste:dinlenik,kisi:dinlenik,cikti:dinlenik 8
+? button#imza #00f3ff/#ffffff 1.38 | kadro:dinlenik,liste:dinlenik,kisi:dinlenik,cikti:dinlenik 8
+? button.adim > span.adim-no #00f3ff/#ffffff 1.38 | kadro:dinlenik,kadro:focus-visible,liste:dinlenik,liste:focus-visible 14
+? button.adim > span #00f3ff/#ffffff 1.38 | kadro:dinlenik,kadro:focus-visible,liste:dinlenik,liste:focus-visible 14
+? span#basbarSenk #34d399/#ffffff 1.92 | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 35
+? span#basbarSurum #71717a/#ffffff 4.83 | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 35
+? button#btnSayfaQr #ec13ec/#ffffff 3.58 | kadro:hover 1
+? button#imza #ec13ec/#ffffff 3.58 | kadro:hover 1
+? button#btnSayfaQr #ff00ea/#ffffff 3.26 | kadro:focus-visible,liste:focus-visible,kisi:focus-visible,cikti:focus-visible 7
+? button#imza #ff00ea/#ffffff 3.26 | kadro:focus-visible,liste:focus-visible,kisi:focus-visible,cikti:focus-visible 7
+! button#btnCoz #000000/#080d0f 1.07 | kadro:active,liste:active 2
+? button#btnSayfaQr #05eeff/#ffffff 1.43 | kadro:active,liste:active,kisi:active,kurallar:active 4
+? button#imza #05eeff/#ffffff 1.43 | kadro:active,liste:active,kisi:active,kurallar:active 4
+? button#btnSayfaQr #fa05ea/#ffffff 3.35 | liste:hover,kisi:hover,cikti:hover,bildirim:hover 4
+? button#imza #fa05ea/#ffffff 3.35 | liste:hover,kisi:hover,cikti:hover,bildirim:hover 4
+? div#toast #ffffff/#c7c7c8 1.69 | kisi:hover 1
+? div#toast #ffffff/#fefefe 1.01 | kisi:focus-visible 1
+! button#btnCoz #000000/#080e0f 1.08 | kisi:active,kurallar:active 2
+! button#btnCoz #000000/#08090a 1.05 | cikti:active 1
+? button#btnSayfaQr #fb04ea/#ffffff 3.33 | kurallar:hover 1
+? button#imza #fb04ea/#ffffff 3.33 | kurallar:hover 1
+! div.satir > button.dgm.dgm-birincil #000000/#080e0f 1.08 | kurallar:active 1
+? button#btnSayfaQr #ea14ec/#ffffff 3.61 | qr:hover 1
+? button#imza #ea14ec/#ffffff 3.61 | qr:hover 1
+! button#btnCoz #000000/#080d0e 1.07 | qr:active 1
+! div.satir > button.dgm.dgm-birincil #000000/#080d0e 1.07 | qr:active 1
+? button#btnSayfaQr #04efff/#ffffff 1.42 | qr:active,bildirim:active 2
+? button#imza #04efff/#ffffff 1.42 | qr:active,bildirim:active 2
+! button#btnCoz #000000/#071a1c 1.17 | bildirim:active 1
+! div.satir > button.dgm.dgm-birincil #000000/#071a1c 1.17 | bildirim:active 1
+HEDEF 13
+button#btnSayfaQr 42x19 | kadro,liste,kisi,cikti,kurallar,qr,bildirim
+button#imza 107x19 | kadro,liste,kisi,cikti,kurallar,qr,bildirim
+span.ipucu-sar > button.tk-ipucu 16x16 | kadro,liste,kisi,kurallar,qr,bildirim
+div.rozet-grup > button.acma.acma-rozet 34x19 | kadro
+div.rozet-grup > button.acma.acma-rozet 32x19 | kadro
+div.duzen-grup > button.dgm.dgm-mini 21x24 | kadro
+td.mat-td > button.mat-hucre.mat-bos 19x19 | kadro
+td.mat-td > button.mat-hucre.gd-izin 19x19 | kadro
+td.hucre-doldur > select.gir.gir-mini 102x22 | liste,kisi
+td.hucre-doldur > select.gir.gir-mini 174x22 | liste,kisi
+td.hucre-doldur > select.gir.gir-mini 94x22 | liste,kisi
+td.hucre-doldur > select.gir.gir-mini 166x22 | liste,kisi
+button#telLink 334x21 | qr
+HATALAR []

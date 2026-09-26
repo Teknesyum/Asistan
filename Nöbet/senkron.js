@@ -5,7 +5,7 @@ const os = require("os");
 
 const KOK = path.resolve(__dirname, "..");
 const ARAC = "Nöbet";
-const IZLENEN = ["Nöbet/main.js", "Nöbet/preload.js", "Nöbet/arayuz.html", "Nöbet/app.css", "Nöbet/package.json", "Nöbet/nobet.py", "Nöbet/senkron.js", "Nöbet/qr.js"];
+const IZLENEN = ["Nöbet/main.js", "Nöbet/preload.js", "Nöbet/arayuz.html", "Nöbet/app.css", "Nöbet/package.json", "Nöbet/nobet.py", "Nöbet/senkron.js", "Nöbet/qr.js", "Nöbet/uygulama.js"];
 const YEREL_GIT = path.join(KOK, ".araclar", "git", "cmd", "git.exe");
 const GIT = [YEREL_GIT, path.join(process.env.ProgramFiles || "C:\\Program Files", "Git", "cmd", "git.exe")]
   .find(f => fs.existsSync(f)) || "git";
@@ -114,7 +114,7 @@ async function cekIc() {
     return { ok: false, kodDegisti: false, veriDegisti: false, sebep: r.cikti };
   }
   const list = await degisenler(once, await surum());
-  const kodDegisti = list.some(f => IZLENEN.includes(f));
+  const kodDegisti = list.some(f => IZLENEN.includes(f) || f.startsWith(ARAC + "/teknesyum-ui/"));
   const veriDegisti = list.some(f => f.startsWith(ARAC + "/veri/"));
   if (list.length) not("güncellendi: " + list.length + " dosya" + (kodDegisti ? " (kod)" : ""));
   durumYaz("esitlendi");

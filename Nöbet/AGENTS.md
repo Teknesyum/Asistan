@@ -33,3 +33,4 @@ Katı kota, nöbet ertesi izni, istek/izin, uzman çakışması, sunum yükü, h
   kod dosyaları değiştiyse uygulama kendini yeniden başlatır. Veri yazımından 5 sn sonra ve
   çıkışta commit + push. Çakışmada yerel kazanır (`-X ours`). Başlık çubuğundaki küçük not
   son senkron satırıdır, tıklayınca hemen eşitler. `kur.ps1` yeni makinede kurar.
+- `uygulama.js` — arayüzün betiği; `arayuz.html` onu `veri.hazir()` (preload, `veri:hepsi` ile tüm veri JSONlarını tek seferde önbelleğe alır) çözüldükten sonra yükler. Başlık çubuğu `teknesyum-ui/ustcubuk/titlebar.css`, senkron rozeti `teknesyum-ui/durum/badge.css` şablonlarından; rozet durumu hâlâ `senkron.js` verir. `teknesyum-ui/` altı değişirse uygulama kendini yeniden başlatır. Denetim: `araclar/` ve `docs/ui-denetim/`.

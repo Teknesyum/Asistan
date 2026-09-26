@@ -1,0 +1,18 @@
+KONTRAST 4
+! button#btnCoz #000000/#000000 1 | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 28
+! span#basbarSurum #8a8f9a/#000000 6.48 | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 35
+? div#toast #ffffff/#dcdcdd 1.37 | kisi:dinlenik 1
+! div.satir > button.dgm.dgm-birincil #000000/#000000 1 | kurallar:dinlenik,kurallar:hover,kurallar:focus-visible,kurallar:active 12
+HEDEF 11
+button#btnSayfaQr 38x18 | kadro,liste,kisi,cikti,kurallar,qr,bildirim
+button#imza 97x18 | kadro,liste,kisi,cikti,kurallar,qr,bildirim
+span.ipucu-sar > button.tk-ipucu 16x16 | kadro,liste,kisi,kurallar,qr,bildirim
+td.hucre-doldur > input.gir.gir-mini 128x24 | kadro
+td.hucre-doldur > input.gir.gir-mini 119x24 | kadro
+td.hucre-doldur > input.gir.gir-mini 121x24 | kadro
+div.rozet-grup > button.acma.acma-rozet 31x19 | kadro
+div.duzen-grup > button.dgm.dgm-mini 21x24 | kadro
+td.mat-td > button.mat-hucre.mat-bos 19x20 | kadro
+td.mat-td > button.mat-hucre.gd-izin 19x20 | kadro
+button#telLink 334x22 | qr
+HATALAR []

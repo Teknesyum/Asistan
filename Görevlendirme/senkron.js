@@ -5,7 +5,7 @@ const os = require("os");
 
 const KOK = path.resolve(__dirname, "..");
 const ARAC = "Görevlendirme";
-const IZLENEN = ["Görevlendirme/main.js", "Görevlendirme/preload.js", "Görevlendirme/arayuz.html", "Görevlendirme/app.css", "Görevlendirme/package.json", "Görevlendirme/gorevlendir.py", "Görevlendirme/senkron.js", "Görevlendirme/qr.js"];
+const IZLENEN = ["Görevlendirme/main.js", "Görevlendirme/preload.js", "Görevlendirme/arayuz.html", "Görevlendirme/app.css", "Görevlendirme/package.json", "Görevlendirme/gorevlendir.py", "Görevlendirme/senkron.js", "Görevlendirme/qr.js", "Görevlendirme/uygulama.js"];
 const YEREL_GIT = path.join(KOK, ".araclar", "git", "cmd", "git.exe");
 const GIT = [YEREL_GIT, path.join(process.env.ProgramFiles || "C:\\Program Files", "Git", "cmd", "git.exe")]
   .find(f => fs.existsSync(f)) || "git";
@@ -114,7 +114,7 @@ async function cekIc() {
     return { ok: false, kodDegisti: false, veriDegisti: false, sebep: r.cikti };
   }
   const list = await degisenler(once, await surum());
-  const kodDegisti = list.some(f => IZLENEN.includes(f));
+  const kodDegisti = list.some(f => IZLENEN.includes(f) || f.startsWith(ARAC + "/teknesyum-ui/"));
   const veriDegisti = list.some(f => f.startsWith(ARAC + "/veri/"));
   if (list.length) not("güncellendi: " + list.length + " dosya" + (kodDegisti ? " (kod)" : ""));
   durumYaz("esitlendi");
