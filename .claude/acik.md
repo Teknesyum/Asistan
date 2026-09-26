@@ -6,3 +6,4 @@
 - [x] Sonra görüntüleri + alt ajan görüntü bakışı — 2026-09-27 01:33 — jobs.md
 - [x] Rapor docs/ui-denetim/2026-09-27.md — 2026-09-27 01:33 — jobs.md
 - [x] Raf kitapları: depo, guncelleme-paneli, kabuk-standardi, kurulum-paneli, README-kabuk-standardi, ui, ui-duzeni — 2026-09-27 01:33 — jobs.md
+- [x] ajan: Görüntü bakışı (yalnız resim) — 2026-09-27 01:47 — docs/ui-denetim/2026-09-27/goruntu-bakisi.md

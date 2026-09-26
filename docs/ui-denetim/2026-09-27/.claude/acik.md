@@ -1,1 +1,0 @@
-- [ ] ajan: Görüntü bakışı (yalnız resim) — 2026-09-27 01:47 — sonucu aktarılacak
