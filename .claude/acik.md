@@ -1,1 +1,0 @@
-- [x] Hedef 24 px ile zoom: sahip kararı — kaydırmasızlık baskın, zoom kalır (teknesyum-ui.json note)

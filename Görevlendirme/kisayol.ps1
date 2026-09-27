@@ -18,22 +18,20 @@ $jeton = Get-Content -Raw -Encoding UTF8 (Join-Path $kok "teknesyum-ui\theme.tok
 $renk = { param($h) [System.Drawing.ColorTranslator]::FromHtml($h) }
 $zeminR = & $renk $jeton.brand.surface.value
 $birR = & $renk $jeton.brand."renk-1".value
-$ikiR = & $renk $jeton.brand."renk-2-text".value
 $ciz = {
   param($n)
+  $o = $n / 64
   $bmp = New-Object System.Drawing.Bitmap $n, $n
   $g = [System.Drawing.Graphics]::FromImage($bmp)
   $g.SmoothingMode = "AntiAlias"
   $g.TextRenderingHint = "AntiAliasGridFit"
   $g.Clear($zeminR)
-  $c = [Math]::Max(1, [int]($n / 20))
-  $g.DrawRectangle((New-Object System.Drawing.Pen $birR, $c), [int]($c / 2), [int]($c / 2), $n - $c, $n - $c)
-  $font = New-Object System.Drawing.Font "Segoe UI", ([single]($n * 0.36)), ([System.Drawing.FontStyle]::Bold), ([System.Drawing.GraphicsUnit]::Pixel)
-  $orta = New-Object System.Drawing.StringFormat
+  $g.DrawRectangle((New-Object System.Drawing.Pen ([System.Drawing.Color]::FromArgb(128, $birR)), (2 * $o)), $o, $o, (61 * $o), (61 * $o))
+  $font = New-Object System.Drawing.Font "Segoe UI", ([single](26 * 96 / 72 * $o)), ([System.Drawing.FontStyle]::Bold), ([System.Drawing.GraphicsUnit]::Pixel)
+  $orta = New-Object System.Drawing.StringFormat ([System.Drawing.StringFormatFlags] "NoWrap, NoClip")
   $orta.Alignment = "Center"
   $orta.LineAlignment = "Center"
-  $g.DrawString("A", $font, (New-Object System.Drawing.SolidBrush $birR), (New-Object System.Drawing.RectangleF ($n * 0.06), 0, ($n * 0.46), $n), $orta)
-  $g.DrawString("G", $font, (New-Object System.Drawing.SolidBrush $ikiR), (New-Object System.Drawing.RectangleF ($n * 0.48), 0, ($n * 0.46), $n), $orta)
+  $g.DrawString("AG", $font, (New-Object System.Drawing.SolidBrush $birR), (New-Object System.Drawing.RectangleF (-$n / 2), (2 * $o), (2 * $n), (62 * $o)), $orta)
   $g.Dispose()
   $m = New-Object System.IO.MemoryStream
   $bmp.Save($m, [System.Drawing.Imaging.ImageFormat]::Png)
