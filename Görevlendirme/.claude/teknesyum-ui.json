@@ -57,9 +57,9 @@
   ],
   "plugin": "0.26.0",
   "uc": {
-    "surum": "0.20.0",
-    "duzen": "0546268da3b3bc91",
-    "commit": "4c594773e709ad42bf86ed4bc4e347dd7125dd85",
+    "surum": "0.26.0",
+    "duzen": "a0eaf97ec84216aa",
+    "commit": "5e869339adaf07a7a235104343d655171d0bd354",
     "tarih": "2026-09-27"
   }
 }
