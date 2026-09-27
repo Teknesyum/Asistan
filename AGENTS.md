@@ -46,3 +46,8 @@ Başlık çubuğundaki gösterge durumu gösterir, tıklanınca hemen eşitler. 
 makine kazanır (`-X ours`). Veri JSON'ları tek satır olduğundan `.gitattributes` onları `json-birlestir.js` sürücüsüne verir: üç yollu, alan alan birleştirir, yalnız aynı alan iki tarafta değiştiyse yerel kazanır. Sürücüyü `senkron.js` her makinede `git config merge.asistanjson.driver` ile tanıtır (Electron, `ELECTRON_RUN_AS_NODE=1`). Veri gelince arayüz yenilenir, seçili gün ve sekme korunur. Git sırası: `.araclar\git`, Program Files\Git, PATH; her çağrı
 `safe.directory=*` ile gider. "Yalnız bu bilgisayar" ya da "Çevrimdışı" görünürse sebebi göstergenin ipucunda (`ozet()`:
 git'in genel "repository exists" satırları atılır). Başlıkta sürüm: `v<package.json>`.
+
+## Proje Kuralı
+
+Kaydırma çubuğu olmaması baskındır: ekranı sığdıran zoom kalır. Hedef boyutu gibi genel
+kurallar buna uyar; çakışırsa zoom kazanır. İki uygulamanın `teknesyum-ui.json` `note` alanında.

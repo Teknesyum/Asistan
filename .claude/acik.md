@@ -1,11 +1,1 @@
-- [x] Eklenti 0.20.0: setup --apply --template benim (iki uygulama), esle.js 0 fark
-- [x] labels.tr.json/labels.en.json: marka, destek, site, eşitleme, pencere başlığı yazıları oradan
-- [x] scan.js 0 hata (0.20.0 kuralları)
-- [x] axe-core color-contrast + target-size canlı denetim, 6 hâl
-- [x] Görüntüler %100/125/150 sonra + önizleme/uygulama yan yana
-- [x] Alt ajan görüntü bakışı
-- [x] artik.js ölçüm ve temizlik
-- [x] Simge temayla uyumlu + kısayollar
-- [x] Rapor docs/ui-denetim/2026-09-27-2.md, uc.js --bitti, commit + push
-- [x] ajan: Görüntü bakışı (yalnız görüntü)
-- [ ] Hedef 24 px: Görevlendirme Gösterge ve Nöbet Kadro'da zoom sığdırması denetimleri 17–20 px'e küçültüyor — sahibin kararı (zoom kalsın mı)
+- [x] Hedef 24 px ile zoom: sahip kararı — kaydırmasızlık baskın, zoom kalır (teknesyum-ui.json note)

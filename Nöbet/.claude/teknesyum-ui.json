@@ -21,7 +21,7 @@
     "github": "https://github.com/Teknesyum",
     "sponsor": "https://github.com/sponsors/Teknesyum"
   },
-  "note": "",
+  "note": "Bu projede kaydırma çubuğu olmaması baskındır: ekranı sığdıran zoom kalır; hedef boyutu gibi genel kurallar ona uyar, çakışırsa zoom kazanır.",
   "duzen": "52e0c6b7355cba20",
   "installedAt": "2026-09-26T22:32:14.974Z",
   "ignore": [
