@@ -49,5 +49,11 @@
       "reason": "Kurulum penceresi depo kökündeki kur-usb.ps1 (Adim/tavan/16 ms sözleşmesi); iki uygulamayı birlikte kurar, tarama kökü uygulama klasörü olduğu için görülmüyor."
     }
   ],
-  "plugin": "0.20.0"
+  "plugin": "0.20.0",
+  "uc": {
+    "surum": "0.20.0",
+    "duzen": "52e0c6b7355cba20",
+    "commit": "d843d25df2f7009bcbf17fe12e538bd325d54f24",
+    "tarih": "2026-09-27"
+  }
 }
