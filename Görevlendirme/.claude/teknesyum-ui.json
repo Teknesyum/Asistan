@@ -23,7 +23,7 @@
   },
   "note": "Bu projede kaydırma çubuğu olmaması baskındır: ekranı sığdıran zoom kalır; hedef boyutu gibi genel kurallar ona uyar, çakışırsa zoom kazanır.",
   "installedAt": "2026-09-06T16:14:07.216Z",
-  "duzen": "0546268da3b3bc91",
+  "duzen": "a0eaf97ec84216aa",
   "ignore": [
     {
       "rule": "states/hover-without-focus",
@@ -55,7 +55,7 @@
       "reason": "Kurulum penceresi depo kökündeki kur-usb.ps1 (Adim/tavan/16 ms sözleşmesi); iki uygulamayı birlikte kurar, tarama kökü uygulama klasörü olduğu için görülmüyor."
     }
   ],
-  "plugin": "0.20.0",
+  "plugin": "0.26.0",
   "uc": {
     "surum": "0.20.0",
     "duzen": "0546268da3b3bc91",
