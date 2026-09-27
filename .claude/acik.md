@@ -1,9 +1,11 @@
-- [x] Ekran envanteri — 2026-09-27 01:33 — jobs.md
-- [x] Yakalama + canlı denetim düzeneği (araclar/ui-cek.js) — 2026-09-27 01:33 — jobs.md
-- [x] Önce görüntüleri — 2026-09-27 01:33 — jobs.md
-- [x] benim şablonunu iki uygulamaya uygula — 2026-09-27 01:33 — jobs.md
-- [x] scan.js + canlı denetim bulgularını düzelt — 2026-09-27 01:33 — jobs.md
-- [x] Sonra görüntüleri + alt ajan görüntü bakışı — 2026-09-27 01:33 — jobs.md
-- [x] Rapor docs/ui-denetim/2026-09-27.md — 2026-09-27 01:33 — jobs.md
-- [x] Raf kitapları: depo, guncelleme-paneli, kabuk-standardi, kurulum-paneli, README-kabuk-standardi, ui, ui-duzeni — 2026-09-27 01:33 — jobs.md
-- [x] ajan: Görüntü bakışı (yalnız resim) — 2026-09-27 01:47 — docs/ui-denetim/2026-09-27/goruntu-bakisi.md
+- [x] Eklenti 0.20.0: setup --apply --template benim (iki uygulama), esle.js 0 fark
+- [x] labels.tr.json/labels.en.json: marka, destek, site, eşitleme, pencere başlığı yazıları oradan
+- [x] scan.js 0 hata (0.20.0 kuralları)
+- [x] axe-core color-contrast + target-size canlı denetim, 6 hâl
+- [x] Görüntüler %100/125/150 sonra + önizleme/uygulama yan yana
+- [x] Alt ajan görüntü bakışı
+- [x] artik.js ölçüm ve temizlik
+- [x] Simge temayla uyumlu + kısayollar
+- [x] Rapor docs/ui-denetim/2026-09-27-2.md, uc.js --bitti, commit + push
+- [x] ajan: Görüntü bakışı (yalnız görüntü)
+- [ ] Hedef 24 px: Görevlendirme Gösterge ve Nöbet Kadro'da zoom sığdırması denetimleri 17–20 px'e küçültüyor — sahibin kararı (zoom kalsın mı)

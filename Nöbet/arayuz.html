@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Asistan Nöbet</title>
+<title></title>
 <link rel="stylesheet" href="teknesyum-ui/css/theme.css">
 <link rel="stylesheet" href="teknesyum-ui/css/a11y.css">
 <link rel="stylesheet" href="teknesyum-ui/css/forms.css">
@@ -18,7 +18,7 @@
 
 <header class="tk-titlebar" id="basbar">
   <div class="tk-titlebar__brand">
-    <span class="tk-titlebar__name">Asistan <span class="tk-titlebar__accent">Nöbet</span></span>
+    <span class="tk-titlebar__name" id="basbarAd"></span>
     <span class="basbar-surum" id="basbarSurum"></span>
     <span class="basbar-ay" id="basbarAy"></span>
   </div>
@@ -26,7 +26,8 @@
   <div class="tk-titlebar__tools">
     <button type="button" class="tk-sync" id="basbarSenk" hidden></button>
     <button type="button" class="tk-titlebar__chip" id="btnSayfaQr" title="Açık sekmeyi resim olarak yükler, telefonla okutulacak QR gösterir">QR</button>
-    <button type="button" class="tk-titlebar__chip" id="imza" title="Teknesyum — GitHub sayfamız">Teknesyum</button>
+    <button type="button" class="tk-titlebar__chip tk-titlebar__chip--brand" id="imza"></button>
+    <button type="button" class="tk-titlebar__chip tk-titlebar__chip--support" id="destek"></button>
     <div class="tk-titlebar__window" id="pGrup">
       <button type="button" class="tk-titlebar__control" id="pKucult" aria-label="Küçült" title="Küçült"><span class="tk-titlebar__minimize" aria-hidden="true"></span></button>
       <button type="button" class="tk-titlebar__control" id="pBuyult" aria-label="Büyüt" title="Büyüt"><span class="tk-titlebar__maximize" aria-hidden="true"></span></button>
@@ -132,11 +133,15 @@
 </dialog>
 <script src="qr.js"></script>
 <script>
-((window.pencere && window.pencere.veri.hazir) ? window.pencere.veri.hazir() : Promise.resolve()).then(() => {
+{
+const W = window.pencere;
+Promise.all([W ? W.veri.hazir() : null, (W ? W.etiket() : Promise.all(["teknesyum-ui/css/labels.tr.json", "package.json"].map(y => fetch(y).then(c => c.json()))).then(([e, p]) => ({ ...e, "app.title": p.productName }))).catch(() => ({}))]).then(([, et]) => {
+  window.ETIKET = et || {};
   const s = document.createElement("script");
   s.src = "uygulama.js";
   document.body.append(s);
 });
+}
 </script>
 </body>
 </html>

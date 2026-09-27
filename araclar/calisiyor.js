@@ -9,6 +9,7 @@ const CIKTI = path.resolve(arg("cikti"));
 app.whenReady().then(async () => {
   const ipc = {};
   const say = k => () => { ipc[k] = (ipc[k] || 0) + 1; };
+  ipcMain.handle("etiket:hepsi", () => ({ ...JSON.parse(fs.readFileSync(path.join(ARAC, "teknesyum-ui", "css", "labels.tr.json"), "utf-8")), "app.title": require(path.join(ARAC, "package.json")).productName }));
   ipcMain.handle("veri:hepsi", () => { say("veri:hepsi")(); const o = {}; for (const f of fs.readdirSync(path.join(ARAC, "veri"))) if (f.endsWith(".json")) o[f.slice(0, -5)] = fs.readFileSync(path.join(ARAC, "veri", f), "utf-8"); return o; });
   for (const k of ["veri:yaz", "pencere:kucult", "pencere:buyult", "pencere:kapat", "pencere:ac"]) ipcMain.on(k, say(k));
   ipcMain.handle("pencere:kopyala", () => false);
@@ -29,6 +30,11 @@ app.whenReady().then(async () => {
   await sina("veri diskten okundu", `document.querySelector("#basbarAy").textContent.trim().length > 0`);
   await sina("senkron rozeti görünür ve eşitlendi", `(e => !e.hidden && e.dataset.state === "synced")(document.querySelector("#basbarSenk"))`);
   await sina("sürüm başlıkta", `/^v\\d/.test(document.querySelector("#basbarSurum").textContent)`);
+  const ET = ({ ...JSON.parse(fs.readFileSync(path.join(ARAC, "teknesyum-ui", "css", "labels.tr.json"), "utf-8")), "app.title": require(path.join(ARAC, "package.json")).productName });
+  const q = v => JSON.stringify(v);
+  await sina("pencere başlığı labels.tr.json'dan", `document.title === ${q(ET["app.title"])} && document.querySelector("#basbarAd").textContent === ${q(ET["app.title"])}`);
+  await sina("imza ve destek yazıları labels.tr.json'dan", `document.querySelector("#imza").textContent === ${q(ET["sig.brand"])} && document.querySelector("#destek").textContent === ${q(ET["sig.support"])}`);
+  await sina("eşitleme yazısı labels.tr.json'dan", `document.querySelector("#basbarSenk").textContent.startsWith(${q(ET["sync.synced"])})`);
   await sina("sekmeler dolaşılır", `(() => { const b = [...document.querySelectorAll("#nav button, #adimlar button")]; b.forEach(x => x.click()); b[0] && b[0].click(); return b.length > 1; })()`);
   await sina("pencere düğmeleri IPC'ye gider", `(() => { ["#pKucult", "#pBuyult"].forEach(s => document.querySelector(s).click()); return true; })()`);
   await new Promise(r => setTimeout(r, 300));

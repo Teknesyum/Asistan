@@ -1,0 +1,3 @@
+  380.2 MB  Görevlendirme/node_modules  (node_modules)
+  380.1 MB  Nöbet/node_modules  (node_modules)
+Toplam 760.4 MB, silinebilir 0.0 MB

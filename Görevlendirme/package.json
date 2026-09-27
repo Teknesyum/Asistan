@@ -1,7 +1,8 @@
 {
   "name": "asistan-gorevlendirme",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "private": true,
+  "productName": "Asistan Görevlendirme",
   "description": "Aylik nobet ve izin listesinden zorunlu yerlere asistan gorevlendirme",
   "main": "main.js",
   "scripts": {

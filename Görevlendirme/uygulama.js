@@ -86,11 +86,23 @@ addEventListener("resize", autofit);
 addEventListener("load", () => setTimeout(autofit, 60));
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => setTimeout(autofit, 0));
 
-const IMZA_ADRES = "https://github.com/Teknesyum";
-document.getElementById("imza").onclick = () => {
-  if (window.pencere && window.pencere.ac) window.pencere.ac(IMZA_ADRES);
-  else window.open(IMZA_ADRES, "_blank", "noopener");
-};
+const ET = window.ETIKET || {};
+(() => {
+  const ad = ET["app.title"] || "";
+  const i = ad.indexOf(" ");
+  document.title = ad;
+  const b = document.getElementById("basbarAd");
+  b.textContent = i < 0 ? ad : ad.slice(0, i + 1);
+  if (i >= 0) { const v = document.createElement("span"); v.className = "tk-titlebar__accent"; v.textContent = ad.slice(i + 1); b.append(v); }
+  const bag = (id, metin, ipucu, adres) => {
+    const e = document.getElementById(id);
+    e.textContent = ET[metin] || "";
+    e.title = ET[ipucu] || "";
+    e.onclick = () => { if (window.pencere && window.pencere.ac) window.pencere.ac(adres); else window.open(adres, "_blank", "noopener"); };
+  };
+  bag("imza", "sig.brand", "sig.brandTitle", "https://github.com/Teknesyum");
+  bag("destek", "sig.support", "sig.supportTitle", "https://github.com/sponsors/Teknesyum");
+})();
 
 const DEPO = (window.pencere && window.pencere.veri)
   ? {disk: true,
@@ -2237,7 +2249,7 @@ function senkronBagla() {
   if (!S || !e) return;
   const saat = t => t ? new Date(t).toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" }) : "";
   const DURUM = { bekliyor: "waiting", esitleniyor: "syncing", esitlendi: "synced", cevrimdisi: "offline", yerel: "local" };
-  const METIN = { bekliyor: "Bağlanıyor…", esitleniyor: "Eşitleniyor…", esitlendi: "Eşitlendi", cevrimdisi: "Çevrimdışı", yerel: "Yalnız bu bilgisayar" };
+  const METIN = { bekliyor: "Bağlanıyor…", esitleniyor: "Eşitleniyor…", esitlendi: ET["sync.synced"], cevrimdisi: ET["sync.offline"], yerel: "Yalnız bu bilgisayar" };
   const goster = d => {
     if (!d) return;
     const a = METIN[d.asama] ? d.asama : "bekliyor";
@@ -2245,7 +2257,7 @@ function senkronBagla() {
     e.classList.toggle("tk-sync-progress", a === "esitleniyor");
     e.hidden = false;
     e.textContent = METIN[a] + ((a === "esitlendi" || a === "cevrimdisi") && d.zaman ? " · " + saat(d.zaman) : "");
-    e.title = (d.hata ? d.hata + "\n" : "") + "Tıkla: şimdi eşitle";
+    e.title = (d.hata ? d.hata + "\n" : "") + (ET["sync.now"] || "");
     const sr = $("#basbarSurum");
     if (sr && d.uygulama) { sr.textContent = "v" + d.uygulama; }
   };

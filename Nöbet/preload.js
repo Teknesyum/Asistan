@@ -5,6 +5,7 @@ let onbellek = {};
 const hazir = ipcRenderer.invoke("veri:hepsi").then(o => { onbellek = o || {}; });
 
 contextBridge.exposeInMainWorld("pencere", {
+  etiket: () => ipcRenderer.invoke("etiket:hepsi"),
   kucult: () => ipcRenderer.send("pencere:kucult"),
   buyult: () => ipcRenderer.send("pencere:buyult"),
   kapat: () => ipcRenderer.send("pencere:kapat"),

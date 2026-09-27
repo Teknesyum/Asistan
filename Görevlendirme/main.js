@@ -2,6 +2,7 @@ const { app, BrowserWindow, Menu, ipcMain, clipboard, shell } = require("electro
 const path = require("path");
 const fs = require("fs");
 const senkron = require("./senkron");
+const etiket = () => { try { return { ...JSON.parse(fs.readFileSync(path.join(__dirname, "teknesyum-ui", "css", "labels.tr.json"), "utf-8")), "app.title": require("./package.json").productName }; } catch (err) { return {}; } };
 
 let VERIDIZIN = null;
 function veriDizin() {
@@ -42,7 +43,7 @@ function pencere() {
     backgroundColor: "#00000000",
     autoHideMenuBar: true,
     icon: path.join(__dirname, "simge.ico"),
-    title: "Asistan Görevlendirme",
+    title: etiket()["app.title"],
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,
@@ -101,6 +102,7 @@ app.whenReady().then(async () => {
   });
   ipcMain.on("pencere:ac", (e, u) => { if (/^https:\/\//.test(u)) shell.openExternal(u); });
   ipcMain.on("pencere:kapat", e => { const w = hedef(e); if (w) w.close(); });
+  ipcMain.handle("etiket:hepsi", () => etiket());
   ipcMain.handle("veri:hepsi", () => {
     const o = {};
     for (const f of fs.readdirSync(veriDizin())) if (f.endsWith(".json")) {

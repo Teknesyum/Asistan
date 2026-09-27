@@ -18,31 +18,12 @@
   },
   "signature": {
     "off": false,
-    "text": "by Teknesyum",
     "github": "https://github.com/Teknesyum",
-    "sponsor": "https://github.com/sponsors/Teknesyum",
-    "supportText": "Buy me a coffee"
+    "sponsor": "https://github.com/sponsors/Teknesyum"
   },
   "note": "",
-  "palette": {
-    "primary": "#6fb7ff",
-    "secondary": "#cba7d2",
-    "tertiary": "#c3a3ff",
-    "surface": "#000000",
-    "dark": true
-  },
   "installedAt": "2026-09-06T16:14:07.216Z",
-  "duzen": "b3a56d17ff70849c",
-  "notlar": [
-    "Arka plan tasarımı: duz (token karşılığı yok).",
-    "Kaydırma çubuğu biçimi: solan.",
-    "Arayüz geçiş eğrisi: emphasized (önizlemede --tk-e-out yerine).",
-    "Cam bulanıklığı: 0 px.",
-    "Panel gölgesi gücü: ×0.",
-    "Pencere kenarı: yok.",
-    "Düğme: 28 px yükseklik, 10 px yatay dolgu.",
-    "Üst çubuk yüksekliği: 28 px (titlebar-h-min)."
-  ],
+  "duzen": "52e0c6b7355cba20",
   "ignore": [
     {
       "rule": "states/hover-without-focus",
@@ -73,5 +54,6 @@
       "file": "senkron.js",
       "reason": "Kurulum penceresi depo kökündeki kur-usb.ps1 (Adim/tavan/16 ms sözleşmesi); iki uygulamayı birlikte kurar, tarama kökü uygulama klasörü olduğu için görülmüyor."
     }
-  ]
+  ],
+  "plugin": "0.20.0"
 }
