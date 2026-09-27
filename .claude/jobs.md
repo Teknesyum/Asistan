@@ -1,0 +1,3 @@
+- [x] MustafaD ve SümeyyeD için 28-30 Eylül izni eklendi
+- [x] 28 Eylül görüntüsü yeniden üretildi, yeni link gönderildi
+- [ ] 1-2 Ekim izni — Ekim ay dosyası henüz yok, ay açılınca uygulamada girilecek
