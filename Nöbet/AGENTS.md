@@ -14,14 +14,16 @@ Katı kota, nöbet ertesi izni, istek/izin, uzman çakışması, sunum yükü, h
   kişi dengesi; bir kişiye tıklamak orta paneli o kişinin dökümüne çevirir), **3 Çıktı**
   (Excel'e Kopyala = TSV, CSV Kopyala = `;`). Ağırlıklar, hafta günü eğimi, sunum günleri,
   Oto Ayarla ve sütun listesi sağdan açılan **Kurallar çekmecesindedir** (`#cekmece`).
+  Başlıkta Teknesyum yanındaki "QR", başlık altındaki açık sekmeyi yakalar, uguu.se'ye yükler
+  (`main.js` `pencere:yukle`, 3 saat) ve bağlantının QR'ını gösterir; QR `qr.js` ile çevrimdışı.
   Açıklamalar `?` balonlarında. Çevrimdışı. Veri depoda (`Nöbet/veri/`),
   tarayıcıda localStorage. 1440×900'de yalnız nöbet tablosu dikey kaydırır.
 - **İki motor birebir aynı listeyi üretir.** Ortak 32 bit xorshift (`Zar`) sayesinde aynı
   JSON + tur + tohum = aynı CSV. Motoru değiştirdiysen iki tarafı da değiştir ve `nobet.py`
   çıktısını arayüzün `csvMetin()` çıktısıyla karşılaştır. CSV başlıkları ve gün adları iki
   tarafta da uzun yazılır, isim alanı `ad`, dosya BOM'lu.
-- `main.js`/`preload.js`/`package.json` — çerçevesiz Electron kabuğu. `kisayol.ps1` masaüstü
-  kısayolunu yazar; **BOM'lu UTF-8 kalmalı**, yoksa PS 5.1 adı bozar. `app.css` — her değer
+- `main.js`/`preload.js`/`package.json` — çerçevesiz Electron kabuğu. `kisayol.ps1` simgeyi token renklerinden üretir, masaüstü ve
+  Başlat menüsü kısayolunu yazar; **BOM'lu UTF-8 kalmalı**, yoksa PS 5.1 adı bozar. `app.css` — her değer
   `--tk-*`; `node <teknesyum-ui>/scripts/scan.js .` sıfır hata.
 - `<ay>.json` — sutunlar, asistanlar (kıdem sırası, `torba`, `kota`, `izin`, `istiyor`,
   `istemiyor`, `ozel`), tatil, sunum_gunleri, sunum_yok, uzman, kilit, agirlik.
@@ -31,3 +33,4 @@ Katı kota, nöbet ertesi izni, istek/izin, uzman çakışması, sunum yükü, h
   kod dosyaları değiştiyse uygulama kendini yeniden başlatır. Veri yazımından 5 sn sonra ve
   çıkışta commit + push. Çakışmada yerel kazanır (`-X ours`). Başlık çubuğundaki küçük not
   son senkron satırıdır, tıklayınca hemen eşitler. `kur.ps1` yeni makinede kurar.
+- `uygulama.js` — arayüzün betiği; `arayuz.html` onu `veri.hazir()` (preload, `veri:hepsi` ile tüm veri JSONlarını tek seferde önbelleğe alır) çözüldükten sonra yükler. Başlık çubuğu `teknesyum-ui/ustcubuk/titlebar.css`, senkron rozeti `teknesyum-ui/durum/badge.css` şablonlarından; rozet durumu hâlâ `senkron.js` verir. `teknesyum-ui/` altı değişirse uygulama kendini yeniden başlatır. Denetim: `araclar/` ve `docs/ui-denetim/`. Yazılar (marka, destek, site, eşitleme, başlık) `teknesyum-ui/css/labels.tr.json`dan: `main.js` `etiket:hepsi` ile verir, `app.title`ı `package.json` `productName` doldurur; `arayuz.html` `window.ETIKET` kurar. Tema `setup.js --apply --template benim --project <uygulama> --force` ile tazelenir, `esle.js --denetle` 0 fark olmalı.

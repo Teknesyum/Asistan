@@ -2,6 +2,7 @@ const { app, BrowserWindow, Menu, ipcMain, clipboard, shell } = require("electro
 const path = require("path");
 const fs = require("fs");
 const senkron = require("./senkron");
+const etiket = () => { try { return { ...JSON.parse(fs.readFileSync(path.join(__dirname, "teknesyum-ui", "css", "labels.tr.json"), "utf-8")), "app.title": require("./package.json").productName }; } catch (err) { return {}; } };
 
 let VERIDIZIN = null;
 function veriDizin() {
@@ -42,7 +43,7 @@ function pencere() {
     backgroundColor: "#00000000",
     autoHideMenuBar: true,
     icon: path.join(__dirname, "simge.ico"),
-    title: "Asistan Nöbet",
+    title: etiket()["app.title"],
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,
@@ -89,11 +90,25 @@ app.whenReady().then(async () => {
     try { clipboard.write({ image: img }); } catch (e) {}
     return img.toPNG();
   });
+  ipcMain.handle("pencere:yukle", async (e, bayt) => {
+    const f = new FormData();
+    f.append("files[]", new Blob([Buffer.from(bayt)], { type: "image/png" }), "nobet.png");
+    const r = await fetch("https://uguu.se/upload", { method: "POST", body: f, signal: AbortSignal.timeout(30000) });
+    let j = null;
+    try { j = await r.json(); } catch (err) {}
+    const u = j && j.success && j.files && j.files[0] && j.files[0].url;
+    if (!u || !/^https:\/\//.test(u)) throw new Error((j && j.description) || "sunucu " + r.status + " döndü");
+    return u;
+  });
   ipcMain.on("pencere:ac", (e, u) => { if (/^https:\/\//.test(u)) shell.openExternal(u); });
   ipcMain.on("pencere:kapat", e => { const w = hedef(e); if (w) w.close(); });
-  ipcMain.on("veri:oku", (e, k) => {
-    try { e.returnValue = fs.readFileSync(veriYol(k), "utf-8"); }
-    catch (err) { e.returnValue = null; }
+  ipcMain.handle("etiket:hepsi", () => etiket());
+  ipcMain.handle("veri:hepsi", () => {
+    const o = {};
+    for (const f of fs.readdirSync(veriDizin())) if (f.endsWith(".json")) {
+      try { o[f.slice(0, -5)] = fs.readFileSync(path.join(veriDizin(), f), "utf-8"); } catch (err) {}
+    }
+    return o;
   });
   ipcMain.on("veri:yaz", (e, { k, m }) => {
     try { fs.writeFileSync(veriYol(k), m, "utf-8"); senkron.gecikmeliGonder(5000); } catch (err) {}

@@ -1,0 +1,37 @@
+KONTRAST 0
+HEDEF 19
+td.gun-hucre > button.kilit-sim.kilit-mini 21x21 | gosterge,qr,bildirim
+label.gk-kural > input 11x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 51x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 60x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 64x17 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 77x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 46x17 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 55x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 38x17 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 53x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 62x17 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 73x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 78x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 29x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 41x17 | gosterge,qr,bildirim
+label.gk-ag > input.gir.gir-mini 44x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 63x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 104x17 | gosterge,qr,bildirim
+button#basbarSenk 130x24 | gosterge,asistanlar,nobet,izinler,kural,cikti,analiz,qr,bildirim
+HATALAR []
+AXE 14
+target-size .gkb-genel > .gk-satir > .dgm-mini.dgm[type="button"]:nth-child(1) | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gkb-genel > .gk-satir > .dgm-mini.dgm[type="button"]:nth-child(4) | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gk-satir:nth-child(2) > .gir-mini | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gk-satir:nth-child(3) > .gir-mini:nth-child(1) | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gk-satir:nth-child(5) > .gir-mini:nth-child(2) | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gkb-bugun > .gk-satir:nth-child(5) > .dgm-mini.dgm[type="button"] | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gk-satir:nth-child(6) > .dgm-mini.dgm[type="button"]:nth-child(3) | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gk-satir:nth-child(6) > .dgm-mini.dgm[type="button"]:nth-child(5) | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gk-ag:nth-child(1) > .gir-mini[step="0.5"][min="0"] | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gk-ag:nth-child(2) > .gir-mini[step="0.5"][min="0"] | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gk-ag:nth-child(3) > .gir-mini[step="0.5"][min="0"] | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gk-ag:nth-child(4) > .gir-mini[step="0.5"][min="0"] | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gk-ag:nth-child(5) > .gir-mini[step="0.5"][min="0"] | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8
+target-size .gkb-agirlik > .gk-satir > .dgm-mini.dgm[type="button"] | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active,bildirim:dinlenik,bildirim:hover 8

@@ -18,6 +18,7 @@ def yukle(yol):
     v = json.loads(Path(yol).read_text(encoding="utf-8"))
     v["kidem"] = {a["ad"]: i + 1 for i, a in enumerate(v["asistanlar"])}
     v["yer"] = {a["ad"]: a["yer"] for a in v["asistanlar"]}
+    v["yer0"] = dict(v["yer"])
     v["havuzda"] = {a["ad"]: a.get("havuz", True) for a in v["asistanlar"]}
     v["kademe"] = {a["ad"]: a.get("kademe", 1) for a in v["asistanlar"]}
     v.setdefault("force", {})
@@ -35,6 +36,11 @@ def yukle(yol):
     v.setdefault("ders", {})
     v.setdefault("gruplar", {})
     v.setdefault("yer_min_kademe", {})
+    v.setdefault("yer_kadro", {})
+    v["degisim"] = [
+        {"gun": int(d["gun"]), "cikan": d["cikan"], "giren": d["giren"], "karsi": int(d.get("karsi") or 0)}
+        for d in v.get("degisim", []) if d.get("gun") and d.get("cikan") and d.get("giren")
+    ]
     v.setdefault("egitim", [])
     for a in v["asistanlar"]:
         a.setdefault("kisa", a["ad"])
@@ -85,8 +91,24 @@ def gruplar(v):
 
 def nobet_o_gun(v, gun):
     if gun >= 1:
-        return v["nobet"].get(str(gun), {"yb": [], "amel": []})
-    return v["onceki_ay_son_gun_nobet"]
+        k = v["nobet"].get(str(gun), {})
+    else:
+        k = v["onceki_ay_son_gun_nobet"]
+    n = {
+        "yb": list(k.get("yb", [])),
+        "amel": list(k.get("amel", [])),
+        "uzman_yb": k.get("uzman_yb", []),
+        "uzman_amel": k.get("uzman_amel", []),
+    }
+    for d in v.get("degisim", []):
+        ters = int(d.get("karsi") or 0) == gun
+        if int(d["gun"]) != gun and not ters:
+            continue
+        cik, gir = (d["giren"], d["cikan"]) if ters else (d["cikan"], d["giren"])
+        for t in ("yb", "amel"):
+            if cik in n[t]:
+                n[t][n[t].index(cik)] = gir
+    return n
 
 
 def yok_olanlar(v, gun):
@@ -120,6 +142,14 @@ def kalanlar(v, gun, yok):
     return sebep
 
 
+KADRO_SIRA = ("tek", "kidemli_tek", "cift")
+
+
+def kadro_kurali(v, yer):
+    m = v.get("yer_kadro", {}).get(yer, "tek")
+    return m if m in KADRO_SIRA else "tek"
+
+
 def bosluklar(v, yok, gun):
     sonuc = []
     adet = v["yer_adet"].get(str(gun), {})
@@ -127,12 +157,43 @@ def bosluklar(v, yok, gun):
         kadro = [ad for ad, y in v["yer"].items() if y == yer]
         if not kadro:
             continue
-        gerek = adet.get(yer, 1)
+        gerek = adet.get(yer, 2 if kadro_kurali(v, yer) == "cift" else 1)
         mevcut = [ad for ad in kadro if ad not in yok]
         hedef_kidem = sum(v["kidem"][ad] for ad in kadro) / len(kadro)
-        eksik = [(ad, yok[ad]) for ad in kadro] if not mevcut else [("—", "Ek kadro isteniyor")]
-        for _ in range(gerek - len(mevcut)):
-            sonuc.append({"yer": yer, "eksik": eksik, "hedef_kidem": hedef_kidem})
+        yoklar = [(ad, yok[ad]) for ad in kadro if ad in yok]
+        kac = gerek - len(mevcut)
+        for i in range(kac):
+            if i >= len(yoklar):
+                eksik = [("—", "Ek kadro isteniyor")]
+            elif i < kac - 1:
+                eksik = [yoklar[i]]
+            else:
+                eksik = yoklar[i:]
+            sonuc.append({"yer": yer, "eksik": eksik, "hedef_kidem": hedef_kidem,
+                          "yalniz": gerek <= 1})
+    return sonuc
+
+
+def yerdekiler(v, atama, yok, yer):
+    return [ad for ad in v["kidem"]
+            if atama.get(ad) == yer or (v["yer"][ad] == yer and ad not in yok and ad not in atama)]
+
+
+def ek_bosluk(v, atama, yok, gun):
+    adet = v["yer_adet"].get(str(gun), {})
+    sonuc = []
+    for yer in v["zorunlu_yerler"]:
+        if kadro_kurali(v, yer) != "kidemli_tek" or yer in adet:
+            continue
+        kisiler = yerdekiler(v, atama, yok, yer)
+        if len(kisiler) != 1 or not yasak(v, kisiler[0], yer):
+            continue
+        kadro = [ad for ad, y in v["yer"].items() if y == yer]
+        sonuc.append({
+            "yer": yer, "yalniz": False,
+            "eksik": [("—", "Kıdem eşiğinin altı, yanına ikinci kişi")],
+            "hedef_kidem": sum(v["kidem"][ad] for ad in kadro) / len(kadro) if kadro else 9,
+        })
     return sonuc
 
 
@@ -173,7 +234,7 @@ def maliyet(v, ad, bos, sayac, dun_gidenler, yb_nobet=()):
         and grup(v, bos["yer"]) == "Ybü"
     )
     return (
-        1e6 * yasak(v, ad, bos["yer"])
+        1e6 * (bos.get("yalniz", True) and yasak(v, ad, bos["yer"]))
         + 1e6 * refakat_bekliyor(v, ad, sayac["refakat"], bos["yer"])
         - 1e3 * bool(tercih)
         +
@@ -198,6 +259,17 @@ def gun_ata(v, boslar, adaylar, sayac, dun_gidenler, yb_nobet=()):
     return {ad: b["yer"] for ad, b in zip(en_iyi, boslar)}, boslar
 
 
+def yer_gun(v, gun):
+    m = dict(v["yer0"])
+    for d in v.get("degisim", []):
+        if int(d["gun"]) + 1 != gun and not (d.get("karsi") and int(d["karsi"]) + 1 == gun):
+            continue
+        if d["cikan"] not in m or d["giren"] not in m:
+            continue
+        m[d["cikan"]], m[d["giren"]] = m[d["giren"]], m[d["cikan"]]
+    return m
+
+
 def calistir(v):
     gun_sayisi = calendar.monthrange(v["yil"], v["ay"])[1]
     sayac = {"toplam": defaultdict(int), "yer": defaultdict(int), "refakat": defaultdict(int)}
@@ -212,6 +284,7 @@ def calistir(v):
     dun_gidenler = set()
     for gun in range(1, gun_sayisi + 1):
         hafta_gunu = calendar.weekday(v["yil"], v["ay"], gun)
+        v["yer"] = yer_gun(v, gun)
         yok = yok_olanlar(v, gun)
         kalsin = kalanlar(v, gun, yok)
         boslar = bosluklar(v, yok, gun)
@@ -226,6 +299,8 @@ def calistir(v):
         if str(gun) in v["gecmis"]:
             atama = {**v["gecmis"][str(gun)], **atama}
             kaynak = "geçmiş"
+            if not atama:
+                boslar = []
         elif hafta_gunu >= 5:
             kaynak = "hafta sonu"
             boslar = []
@@ -255,6 +330,12 @@ def calistir(v):
                 adaylar = [a for a in adaylar if a != r["ad"]]
             ek, _ = gun_ata(v, boslar, adaylar, sayac, dun_gidenler, set(nobet_o_gun(v, gun)["yb"]))
             atama.update(ek)
+            ikinci = ek_bosluk(v, atama, yok, gun)
+            if ikinci:
+                kalan = [a for a in havuz(v, yok, kalsin) if a not in atama]
+                ek2, _ = gun_ata(v, ikinci, kalan, sayac, dun_gidenler, set(nobet_o_gun(v, gun)["yb"]))
+                atama.update(ek2)
+                boslar = boslar + ikinci
         elenen = []
         for r in refakat:
             baska = any(a != r["ad"] and y == r["yer"] for a, y in atama.items()) or \
@@ -295,6 +376,7 @@ def calistir(v):
             "zorlanan": zorlanan,
         })
         dun_gidenler = set(atama)
+    v["yer"] = dict(v["yer0"])
     return satirlar, sayac
 
 

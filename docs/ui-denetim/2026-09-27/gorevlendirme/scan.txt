@@ -1,0 +1,6 @@
+app.css:115  states/five-states  .dgm-birincil — states not defined: disabled
+app.css:688  states/five-states  .kilit-sim — states not defined: pressed, disabled
+app.css:798  colour/border-alpha  /20 border on a non-decorative selector — default is /55
+app.css:840  states/five-states  .gk-sil — states not defined: pressed, disabled
+app.css:866  colour/border-alpha  /20 border on a non-decorative selector — default is /55
+18 files · 5 open · 0 fixed · 0 error(s) · 7 ignored

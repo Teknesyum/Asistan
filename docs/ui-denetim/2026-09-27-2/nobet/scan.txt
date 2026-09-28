@@ -1,0 +1,8 @@
+app.css:105  states/five-states  .dgm-birincil — states not defined: disabled
+app.css:311  states/five-states  .mat-hucre — states not defined: pressed, disabled
+app.css:354  states/five-states  .ay-hucre — states not defined: pressed, disabled
+app.css:449  states/five-states  .egim-dgm — states not defined: pressed, disabled
+app.css:512  states/five-states  .tk-ipucu — states not defined: pressed, disabled
+app.css:576  states/five-states  .uyari — states not defined: pressed, disabled
+app.css:674  states/five-states  .acma — states not defined: pressed, disabled
+10 files · 7 open · 0 fixed · 0 error(s) · 5 ignored

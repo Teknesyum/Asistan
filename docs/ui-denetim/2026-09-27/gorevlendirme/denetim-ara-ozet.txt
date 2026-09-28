@@ -1,0 +1,43 @@
+KONTRAST 16
+! td.gun-hucre > button.kilit-sim.kilit-mini #000000 0%/#000000 1 | gosterge:dinlenik,gosterge:focus-visible,gosterge:active,qr:dinlenik 9
+! span#basbarSurum #8a8f9a/#000000 6.48 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 45
+! td.gun-hucre > span #8a8f9a/#000000 6.48 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 15
+! tr > td.sayi.sayi-sonuk #8a8f9a/#000000 6.48 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 20
+! div.gk-satir > span.gk-bos #8a8f9a/#000000 6.48 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 15
+! div.gk-liste > div.gk-bos #8a8f9a/#000000 6.48 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 15
+! td.gun-hucre > button.kilit-sim.kilit-mini #8a8f9a/#000000 6.48 | gosterge:hover,qr:hover,bildirim:hover 3
+! button#btnEkle #000000/#000000 1 | asistanlar:dinlenik,asistanlar:hover,asistanlar:focus-visible,asistanlar:active 4
+! button#btnIzinEkle #000000/#000000 1 | izinler:dinlenik,izinler:hover,izinler:focus-visible,izinler:active 4
+! button#btnEgitimEkle #000000/#000000 1 | izinler:dinlenik,izinler:hover,izinler:focus-visible,izinler:active 4
+! button#btnRefakat #000000/#000000 1 | kural:dinlenik,kural:hover,kural:focus-visible,kural:active 4
+! button#btnDegisim #000000/#000000 1 | kural:dinlenik,kural:hover,kural:focus-visible,kural:active 4
+! button#btnForce #000000/#000000 1 | kural:dinlenik,kural:hover,kural:focus-visible,kural:active 4
+! tr > td.gk-bos #8a8f9a/#000000 6.48 | kural:dinlenik,kural:hover,kural:focus-visible,kural:active 5
+! button#btnHesapla #000000/#000000 1 | cikti:dinlenik,cikti:hover,cikti:focus-visible,cikti:active 4
+! button#btnOneri #000000/#000000 1 | analiz:dinlenik,analiz:hover,analiz:focus-visible,analiz:active 4
+HEDEF 24
+button#btnSayfaQr 38x18 | gosterge,asistanlar,nobet,izinler,kural,cikti,analiz,qr,bildirim
+button#imza 97x18 | gosterge,asistanlar,nobet,izinler,kural,cikti,analiz,qr,bildirim
+td.gun-hucre > button.kilit-sim.kilit-mini 22x17 | gosterge,qr,bildirim
+label.gk-kural > input 9x9 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 51x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 60x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 63x17 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 76x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 46x17 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 55x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 37x17 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 52x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 61x17 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 73x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 77x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 29x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 41x17 | gosterge,qr,bildirim
+label.gk-ag > input.gir.gir-mini 44x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 62x17 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 103x17 | gosterge,qr,bildirim
+td > input 13x13 | asistanlar
+label > input 13x13 | kural
+input#ciktiBos 13x13 | cikti
+button#telLink 334x22 | qr
+HATALAR []

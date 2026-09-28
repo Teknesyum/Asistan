@@ -1,0 +1,5542 @@
+{
+ "olcek": "1",
+ "etiket": "sonra",
+ "ekranlar": {
+  "gosterge": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 323,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 51.3,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 60.2,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 60.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 63.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 46,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 53.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 62,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 77.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 63,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 103.9,
+      "height": 17.1
+     }
+    ],
+    "axe": [
+     {
+      "kural": "target-size",
+      "etki": "serious",
+      "dugumler": [
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (51.3px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(4)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(2) > .gir-mini",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(3) > .gir-mini:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(5) > .gir-mini:nth-child(2)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-bugun > .gk-satir:nth-child(5) > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(3)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (37.7px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(5)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (41px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(1) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(2) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(3) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(4) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(5) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-agirlik > .gk-satir > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.8px instead of at least 24px."
+       }
+      ]
+     }
+    ]
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 323,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 51.3,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 60.2,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 60.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 63.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 46,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 53.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 62,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 77.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 63,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 103.9,
+      "height": 17.1
+     }
+    ],
+    "axe": [
+     {
+      "kural": "target-size",
+      "etki": "serious",
+      "dugumler": [
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (51.3px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(4)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(2) > .gir-mini",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(3) > .gir-mini:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(5) > .gir-mini:nth-child(2)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-bugun > .gk-satir:nth-child(5) > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(3)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (37.7px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(5)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (41px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(1) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(2) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(3) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(4) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(5) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-agirlik > .gk-satir > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.8px instead of at least 24px."
+       }
+      ]
+     }
+    ]
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 323,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 51.3,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 60.2,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 60.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 63.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 46,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 53.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 62,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 77.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 63,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 103.9,
+      "height": 17.1
+     }
+    ],
+    "axe": [
+     {
+      "kural": "target-size",
+      "etki": "serious",
+      "dugumler": [
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (51.3px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(4)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(2) > .gir-mini",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(3) > .gir-mini:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(5) > .gir-mini:nth-child(2)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-bugun > .gk-satir:nth-child(5) > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(3)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (37.7px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(5)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (41px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(1) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(2) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(3) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(4) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(5) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-agirlik > .gk-satir > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.8px instead of at least 24px."
+       }
+      ]
+     }
+    ]
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 323,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "button#basbarSenk",
+      "text": "Eşitlendi · 07:02",
+      "width": 130,
+      "height": 23.9
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 51.3,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 60.2,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 60.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 63.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 46,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 53.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 62,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 77.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 63,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 103.9,
+      "height": 17.1
+     }
+    ],
+    "axe": [
+     {
+      "kural": "target-size",
+      "etki": "serious",
+      "dugumler": [
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (51.3px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(4)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(2) > .gir-mini",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(3) > .gir-mini:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(5) > .gir-mini:nth-child(2)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-bugun > .gk-satir:nth-child(5) > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(3)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (37.7px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(5)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (41px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(1) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(2) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(3) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(4) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(5) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-agirlik > .gk-satir > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.8px instead of at least 24px."
+       }
+      ]
+     }
+    ]
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 257,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   }
+  },
+  "asistanlar": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 86,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 86,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 86,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 86,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "button#basbarSenk",
+      "text": "Eşitlendi · 07:02",
+      "width": 130,
+      "height": 23.9
+     }
+    ],
+    "axe": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 55,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   }
+  },
+  "nobet": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 61,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 61,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 61,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 61,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "button#basbarSenk",
+      "text": "Eşitlendi · 07:02",
+      "width": 130,
+      "height": 23.9
+     }
+    ],
+    "axe": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 45,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   }
+  },
+  "izinler": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 34,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 34,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 34,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 34,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "button#basbarSenk",
+      "text": "Eşitlendi · 07:02",
+      "width": 130,
+      "height": 23.9
+     }
+    ],
+    "axe": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 15,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   }
+  },
+  "kural": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 187,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 187,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 187,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 187,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "button#basbarSenk",
+      "text": "Eşitlendi · 07:02",
+      "width": 130,
+      "height": 23.9
+     }
+    ],
+    "axe": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 134,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   }
+  },
+  "cikti": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 306,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 306,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 306,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 306,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "button#basbarSenk",
+      "text": "Eşitlendi · 07:02",
+      "width": 130,
+      "height": 23.9
+     }
+    ],
+    "axe": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 254,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   }
+  },
+  "analiz": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 113,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 113,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 113,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 113,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "button#basbarSenk",
+      "text": "Eşitlendi · 07:02",
+      "width": 130,
+      "height": 23.9
+     }
+    ],
+    "axe": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 99,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   }
+  },
+  "qr": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 329,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 51.3,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 60.2,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 60.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 63.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 46,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 53.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 62,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 77.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 63,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 103.9,
+      "height": 17.1
+     }
+    ],
+    "axe": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 329,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 51.3,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 60.2,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 60.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 63.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 46,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 53.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 62,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 77.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 63,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 103.9,
+      "height": 17.1
+     }
+    ],
+    "axe": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 329,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 51.3,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 60.2,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 60.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 63.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 46,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 53.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 62,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 77.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 63,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 103.9,
+      "height": 17.1
+     }
+    ],
+    "axe": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 329,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "button#basbarSenk",
+      "text": "Eşitlendi · 07:02",
+      "width": 130,
+      "height": 23.9
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 51.3,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 60.2,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 60.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 63.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 46,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 53.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 62,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 77.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 63,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 103.9,
+      "height": 17.1
+     }
+    ],
+    "axe": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 261,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   }
+  },
+  "bildirim": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 324,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 51.3,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 60.2,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 60.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 63.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 46,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 53.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 62,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 77.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 63,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 103.9,
+      "height": 17.1
+     }
+    ],
+    "axe": [
+     {
+      "kural": "target-size",
+      "etki": "serious",
+      "dugumler": [
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (51.3px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(4)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(2) > .gir-mini",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(3) > .gir-mini:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(5) > .gir-mini:nth-child(2)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-bugun > .gk-satir:nth-child(5) > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(3)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (37.7px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(5)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (41px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(1) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(2) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(3) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(4) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(5) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-agirlik > .gk-satir > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.8px instead of at least 24px."
+       }
+      ]
+     }
+    ]
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 324,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 51.3,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 60.2,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 60.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 63.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 46,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 53.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 62,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 77.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 63,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 103.9,
+      "height": 17.1
+     }
+    ],
+    "axe": [
+     {
+      "kural": "target-size",
+      "etki": "serious",
+      "dugumler": [
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (51.3px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(4)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(2) > .gir-mini",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(3) > .gir-mini:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(5) > .gir-mini:nth-child(2)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-bugun > .gk-satir:nth-child(5) > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(3)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (37.7px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(5)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (41px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(1) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(2) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(3) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(4) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(5) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-agirlik > .gk-satir > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.8px instead of at least 24px."
+       }
+      ]
+     }
+    ]
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 324,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 51.3,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 60.2,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 60.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 63.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 46,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 53.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 62,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 77.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 63,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 103.9,
+      "height": 17.1
+     }
+    ],
+    "axe": [
+     {
+      "kural": "target-size",
+      "etki": "serious",
+      "dugumler": [
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (51.3px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(4)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(2) > .gir-mini",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(3) > .gir-mini:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(5) > .gir-mini:nth-child(2)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-bugun > .gk-satir:nth-child(5) > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(3)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (37.7px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(5)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (41px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(1) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(2) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(3) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(4) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(5) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-agirlik > .gk-satir > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.8px instead of at least 24px."
+       }
+      ]
+     }
+    ]
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 324,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "button#basbarSenk",
+      "text": "Eşitlendi · 07:02",
+      "width": 130,
+      "height": 23.9
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 51.3,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 60.2,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 60.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 63.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 46,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 53.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 62,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 77.4,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 77.5,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.9,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.7,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 41,
+      "height": 17.1
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 44.1,
+      "height": 17.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 63,
+      "height": 17.1
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 103.9,
+      "height": 17.1
+     }
+    ],
+    "axe": [
+     {
+      "kural": "target-size",
+      "etki": "serious",
+      "dugumler": [
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (51.3px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-genel > .gk-satir > .dgm-mini.dgm[type=\"button\"]:nth-child(4)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(2) > .gir-mini",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(3) > .gir-mini:nth-child(1)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(5) > .gir-mini:nth-child(2)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.4px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-bugun > .gk-satir:nth-child(5) > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (77.5px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(3)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (37.7px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-satir:nth-child(6) > .dgm-mini.dgm[type=\"button\"]:nth-child(5)",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (41px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(1) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(2) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(3) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(4) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gk-ag:nth-child(5) > .gir-mini[step=\"0.5\"][min=\"0\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (44.1px by 17.9px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17.6px instead of at least 24px."
+       },
+       {
+        "hedef": ".gkb-agirlik > .gk-satir > .dgm-mini.dgm[type=\"button\"]",
+        "ozet": "Fix any of the following:\n  Target has insufficient size (63px by 17.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20.8px instead of at least 24px."
+       }
+      ]
+     }
+    ]
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 257,
+    "pairs": [],
+    "targets": [],
+    "axe": []
+   }
+  }
+ },
+ "hatalar": []
+}

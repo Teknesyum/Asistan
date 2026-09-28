@@ -1,0 +1,726 @@
+KONTRAST 0
+HEDEF 8
+td.hucre-doldur > input.gir.gir-mini 130x20 | kadro
+td.hucre-doldur > input.gir.gir-mini 128x20 | kadro
+div.rozet-grup > button.acma.acma-rozet 29x20 | kadro
+div.rozet-grup > button.acma.acma-rozet 31x20 | kadro
+div.duzen-grup > button.dgm.dgm-mini 21x20 | kadro
+td.mat-td > button.mat-hucre.mat-bos 19x19 | kadro
+td.mat-td > button.mat-hucre.gd-izin 19x19 | kadro
+button#basbarSenk 130x24 | kadro,liste,kisi,cikti,kurallar,qr,bildirim
+HATALAR []
+AXE 714
+target-size tr:nth-child(1) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(2) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(2) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(2) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(2) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(2) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(2) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(2) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(2) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(2) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(2) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(2) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(4) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(4) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(4) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(4) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(4) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(4) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(4) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(4) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(4) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(4) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(4) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(6) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(6) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(6) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(6) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(6) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(6) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(6) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(6) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(6) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(6) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(6) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(9) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(9) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(9) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(9) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(9) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(9) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(9) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(9) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(9) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(9) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(9) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(10) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(10) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(10) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(10) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(10) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(10) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(10) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(10) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(10) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(10) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(10) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(12) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(12) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(12) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(12) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(12) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(12) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(12) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(12) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(12) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(12) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(12) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(13) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(13) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(13) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(13) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(13) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(13) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(13) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(13) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(13) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(13) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(13) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(14) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(14) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(14) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(14) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(14) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(14) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(14) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(14) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(14) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(14) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(14) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(16) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(16) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(16) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(16) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(16) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(16) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(16) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(16) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(16) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(16) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(16) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(17) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(17) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Kıdemli"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(17) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="YBÜ Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(17) > td:nth-child(5) > .rozet-grup > .acma-rozet.acma[title="Ameliyathane Çömez"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(17) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay başında yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(17) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay sonunda yoğun"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(17) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Ay ortasında boş"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(17) > td:nth-child(6) > .rozet-grup > .acma-rozet.acma[title="Gün aşırı serbest"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(17) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde yükselt"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(17) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Kıdemde indir"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(17) > td:nth-child(7) > .duzen-grup > .dgm-mini.dgm[title="Listeden çıkar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > .mat-td:nth-child(4) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > .mat-td:nth-child(6) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > .mat-td:nth-child(11) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > .mat-td:nth-child(13) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > .mat-td:nth-child(18) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > .mat-td:nth-child(20) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > .mat-td:nth-child(25) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > .mat-td:nth-child(27) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaÖ · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(1) > .mat-td:nth-child(32) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 03.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 05.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 10.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 12.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 17.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 19.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 24.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 26.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ayşe · 31.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > .mat-td:nth-child(4) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > .mat-td:nth-child(6) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > .mat-td:nth-child(11) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > .mat-td:nth-child(13) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > .mat-td:nth-child(18) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > .mat-td:nth-child(20) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > .mat-td:nth-child(25) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > .mat-td:nth-child(27) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Bahtiyar · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(3) > .mat-td:nth-child(32) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 03.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 05.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 10.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 12.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 17.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 19.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 24.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 26.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ali · 31.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(2) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(4) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(6) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(8) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(9) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(11) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(13) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(15) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(16) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(18) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(20) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(22) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(23) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(25) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(27) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(29) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(30) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihTalha · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(5) > .mat-td:nth-child(32) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 03.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 05.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 10.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 12.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 17.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 19.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 24.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 26.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Emrah · 31.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > .mat-td:nth-child(4) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > .mat-td:nth-child(6) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > .mat-td:nth-child(11) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > .mat-td:nth-child(13) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > .mat-td:nth-child(18) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > .mat-td:nth-child(20) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > .mat-td:nth-child(25) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > .mat-td:nth-child(27) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="MustafaD · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(7) > .mat-td:nth-child(32) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > .mat-td:nth-child(4) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > .mat-td:nth-child(6) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > .mat-td:nth-child(11) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > .mat-td:nth-child(13) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > .mat-td:nth-child(18) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > .mat-td:nth-child(20) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > .mat-td:nth-child(25) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > .mat-td:nth-child(27) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="SümeyyeD · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(8) > .mat-td:nth-child(32) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 03.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 05.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 10.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 12.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 17.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 19.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 24.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 26.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Hilal · 31.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 03.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 05.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 10.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 12.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 17.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 19.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 24.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 26.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Eyyüp · 31.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > .mat-td:nth-child(2) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(11) > .mat-td:nth-child(4) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(6) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(8) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(9) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(11) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(13) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(15) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(16) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(18) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(20) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(22) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(23) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(25) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(27) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(29) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(30) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="BayramAli · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size .mat-td:nth-child(32) > .gd-izin.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 03.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 05.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 10.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 12.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 17.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 19.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 24.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 26.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Büşra · 31.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 03.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 05.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 10.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 12.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 17.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 19.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 24.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 26.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Rümeysa · 31.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 03.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 05.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 10.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 12.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 17.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 19.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 24.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 26.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Harun · 31.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(2) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(4) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(6) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(8) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(9) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(11) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(13) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(15) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(16) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(18) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(20) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(22) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(23) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(25) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(27) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(29) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(30) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="FatihEren · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size tr:nth-child(15) > .mat-td:nth-child(32) > .mat-bos.mat-hucre | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 03.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 05.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 10.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 12.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 17.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 19.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 24.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 26.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Ömer · 31.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 01.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 02.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 03.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 04.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 05.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 06.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 07.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 08.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 09.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 10.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 11.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 12.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 13.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 14.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 15.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 16.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 17.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 18.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 19.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 20.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 21.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 22.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 23.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 24.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 25.10.26 - Pazar"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 26.10.26 - Pazartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 27.10.26 - Salı"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 28.10.26 - Çarşamba"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 29.10.26 - Perşembe"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 30.10.26 - Cuma"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4
+target-size button[title="Alperen · 31.10.26 - Cumartesi"] | kadro:dinlenik,kadro:hover,kadro:focus-visible,kadro:active 4

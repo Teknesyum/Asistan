@@ -1,0 +1,110 @@
+KONTRAST 83
+? header#basbar > span.marka #ffffff/#ffffff 1 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 45
+? nav#nav > button.sekme #ffffff/#ffffff 1 | gosterge:dinlenik,gosterge:focus-visible,asistanlar:dinlenik,asistanlar:focus-visible 18
+? header.ust > label.tk-sr-only #ffffff/#ffffff 1 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 45
+? button#btnKaydet #ffffff/#ffffff 1 | gosterge:dinlenik,gosterge:focus-visible,asistanlar:dinlenik,asistanlar:focus-visible 18
+? button#btnYukle #ffffff/#ffffff 1 | gosterge:dinlenik,gosterge:focus-visible,asistanlar:dinlenik,asistanlar:focus-visible 18
+! td.gun-hucre > button.kilit-sim.kilit-mini #000000 0%/#08090a 1 | gosterge:dinlenik,gosterge:focus-visible,gosterge:active,qr:dinlenik 9
+! td.gun-hucre > button.kilit-sim.kilit-mini #000000 0%/#073336 1 | gosterge:dinlenik,gosterge:focus-visible,gosterge:active,qr:dinlenik 9
+? span#basbarAy #00f3ff/#ffffff 1.38 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 45
+? button#btnSayfaQr #00f3ff/#ffffff 1.38 | gosterge:dinlenik,asistanlar:dinlenik,nobet:dinlenik,izinler:dinlenik 9
+? button#imza #00f3ff/#ffffff 1.38 | gosterge:dinlenik,asistanlar:dinlenik,nobet:dinlenik,izinler:dinlenik 9
+? nav#nav > button.sekme #00f3ff/#ffffff 1.38 | gosterge:dinlenik,gosterge:focus-visible,asistanlar:dinlenik,asistanlar:focus-visible 18
+? span#basbarSenk #34d399/#ffffff 1.92 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 45
+? span.marka > span.marka-vurgu #ff54eb/#ffffff 2.72 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 45
+! td.gun-hucre > span #71717a/#08090a 4.12 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 15
+! tr > td.sayi.sayi-sonuk #71717a/#08090a 4.12 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 15
+! div.gk-satir > span.gk-bos #71717a/#08090a 4.12 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 15
+! div.gk-liste > div.gk-bos #71717a/#08090a 4.12 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 15
+? span#basbarSurum #71717a/#ffffff 4.83 | gosterge:dinlenik,gosterge:hover,gosterge:focus-visible,gosterge:active 45
+? button#btnSayfaQr #fb04ea/#ffffff 3.33 | gosterge:hover,nobet:hover 2
+? button#imza #fb04ea/#ffffff 3.33 | gosterge:hover,nobet:hover 2
+! td.gun-hucre > button.kilit-sim.kilit-mini #ff54eb 98%/#073336 4.9 | gosterge:hover 1
+? button#btnSayfaQr #ff00ea/#ffffff 3.26 | gosterge:focus-visible,asistanlar:focus-visible,nobet:focus-visible,izinler:hover 10
+? button#imza #ff00ea/#ffffff 3.26 | gosterge:focus-visible,asistanlar:focus-visible,nobet:focus-visible,izinler:hover 10
+? button#btnSayfaQr #b026ff/#ffffff 4.6 | gosterge:active,analiz:active 2
+? button#imza #b026ff/#ffffff 4.6 | gosterge:active,analiz:active 2
+? section#s-asistan > p.ipucu #ffffff/#ffffff 1 | asistanlar:dinlenik,asistanlar:hover,asistanlar:focus-visible,asistanlar:active 5
+? td > button.dgm #ffffff/#ffffff 1 | asistanlar:dinlenik,asistanlar:focus-visible,izinler:dinlenik,izinler:focus-visible 6
+? section#s-asistan > div.blok-bas #00f3ff/#ffffff 1.38 | asistanlar:dinlenik,asistanlar:hover,asistanlar:focus-visible,asistanlar:active 5
+? td > span.tasi #c67eff/#ffffff 2.68 | asistanlar:dinlenik,asistanlar:hover,asistanlar:focus-visible,asistanlar:active 5
+? td > span.sayi #ff54eb/#ffffff 2.72 | asistanlar:dinlenik,asistanlar:hover,asistanlar:focus-visible,asistanlar:active 5
+? p.ipucu > span.sayi #ff54eb/#ffffff 2.72 | asistanlar:dinlenik,asistanlar:hover,asistanlar:focus-visible,asistanlar:active 10
+? button#btnSayfaQr #fa05ea/#ffffff 3.35 | asistanlar:hover,bildirim:hover 2
+? button#imza #fa05ea/#ffffff 3.35 | asistanlar:hover,bildirim:hover 2
+! button#btnEkle #000000/#080d0e 1.07 | asistanlar:active 1
+? button#btnSayfaQr #b125ff/#ffffff 4.59 | asistanlar:active,nobet:active,cikti:active,qr:active 5
+? button#imza #b125ff/#ffffff 4.59 | asistanlar:active,nobet:active,cikti:active,qr:active 5
+? button#btnPrompt #ffffff/#ffffff 1 | nobet:dinlenik,nobet:focus-visible 2
+? button#btnYapistir #ffffff/#ffffff 1 | nobet:dinlenik,nobet:focus-visible 2
+? button#btnNobetTemizle #ffffff/#ffffff 1 | nobet:dinlenik,nobet:focus-visible 2
+? section#s-nobet > p.ipucu #ffffff/#ffffff 1 | nobet:dinlenik,nobet:hover,nobet:focus-visible,nobet:active 5
+? td > span.gun-hucre #ffffff/#ffffff 1 | nobet:dinlenik,nobet:hover,nobet:focus-visible,nobet:active 5
+? section#s-nobet > div.blok-bas #00f3ff/#ffffff 1.38 | nobet:dinlenik,nobet:hover,nobet:focus-visible,nobet:active 5
+? details#dPrompt > summary #00f3ff/#ffffff 1.38 | nobet:dinlenik,nobet:hover,nobet:focus-visible,nobet:active 5
+? details#dIce > summary #00f3ff/#ffffff 1.38 | nobet:dinlenik,nobet:hover,nobet:focus-visible,nobet:active 5
+? section#s-izin > p.ipucu #ffffff/#ffffff 1 | izinler:dinlenik,izinler:hover,izinler:focus-visible,izinler:active 5
+? section#s-izin > div.blok-bas #00f3ff/#ffffff 1.38 | izinler:dinlenik,izinler:hover,izinler:focus-visible,izinler:active 5
+! button#btnIzinEkle #000000/#080e0f 1.08 | izinler:active 1
+! button#btnEgitimEkle #000000/#080e0f 1.08 | izinler:active 1
+? button#btnSayfaQr #b225ff/#ffffff 4.56 | izinler:active 1
+? button#imza #b225ff/#ffffff 4.56 | izinler:active 1
+? section#s-kural > p.ipucu #ffffff/#ffffff 1 | kural:dinlenik,kural:hover,kural:focus-visible,kural:active 5
+? tr > td.gun-hucre #ffffff/#ffffff 1 | kural:dinlenik,kural:hover,kural:focus-visible,kural:active 5
+? tr > td #ffffff/#ffffff 1 | kural:dinlenik,kural:hover,kural:focus-visible,kural:active 15
+? button#btnGecmisEkle #ffffff/#ffffff 1 | kural:dinlenik,kural:focus-visible 2
+? section#s-kural > div.blok-bas #00f3ff/#ffffff 1.38 | kural:dinlenik,kural:hover,kural:focus-visible,kural:active 5
+? td > span.cip.cip-yer #00f3ff/#ffffff 1.38 | kural:dinlenik,kural:hover,kural:focus-visible,kural:active 5
+? tr > td.gk-bos #71717a/#ffffff 4.83 | kural:dinlenik,kural:hover,kural:focus-visible,kural:active 5
+? button#btnSayfaQr #fa04ea/#ffffff 3.35 | kural:hover,analiz:hover,qr:hover 3
+? button#imza #fa04ea/#ffffff 3.35 | kural:hover,analiz:hover,qr:hover 3
+! button#btnRefakat #000000/#071b1d 1.18 | kural:active 1
+! button#btnDegisim #000000/#071b1d 1.18 | kural:active 1
+! button#btnForce #000000/#071b1d 1.18 | kural:active 1
+? button#btnSayfaQr #b623fd/#ffffff 4.52 | kural:active 1
+? button#imza #b623fd/#ffffff 4.52 | kural:active 1
+? button#btnKopyaAy #ffffff/#ffffff 1 | cikti:dinlenik,cikti:focus-visible 2
+? button#btnKopyaTsv #ffffff/#ffffff 1 | cikti:dinlenik,cikti:focus-visible 2
+? button#btnKilitle #ffffff/#ffffff 1 | cikti:dinlenik,cikti:focus-visible 2
+? div.satir > label #ffffff/#ffffff 1 | cikti:dinlenik,cikti:hover,cikti:focus-visible,cikti:active 5
+? div.cikti-bas > span.cip #ffffff/#ffffff 1 | cikti:dinlenik,cikti:hover,cikti:focus-visible,cikti:active 5
+? div.cikti-bas > button.dgm #ffffff/#ffffff 1 | cikti:dinlenik,cikti:focus-visible 2
+? section#s-cikti > div.blok-bas #00f3ff/#ffffff 1.38 | cikti:dinlenik,cikti:hover,cikti:focus-visible,cikti:active 5
+? div.cikti-bas > b.cikti-gun #00f3ff/#ffffff 1.38 | cikti:dinlenik,cikti:hover,cikti:focus-visible,cikti:active 5
+? tr > td #00f3ff/#ffffff 1.38 | cikti:dinlenik,cikti:hover,cikti:focus-visible,cikti:active 5
+? div#uyarilar > div.uyari #fbbf24/#ffffff 1.67 | cikti:dinlenik,cikti:hover,cikti:focus-visible,cikti:active 5
+? button#btnSayfaQr #ec12ec/#ffffff 3.58 | cikti:hover 1
+? button#imza #ec12ec/#ffffff 3.58 | cikti:hover 1
+! button#btnHesapla #000000/#080d0e 1.07 | cikti:active 1
+? section#s-analiz > div.blok-bas #00f3ff/#ffffff 1.38 | analiz:dinlenik,analiz:hover,analiz:focus-visible,analiz:active 5
+? div > div.uyari #fbbf24/#ffffff 1.67 | analiz:dinlenik,analiz:hover,analiz:focus-visible,analiz:active 5
+? tr > td.sayi #ff54eb/#ffffff 2.72 | analiz:dinlenik,analiz:hover,analiz:focus-visible,analiz:active 5
+? tr > td.sayi.sayi-sonuk #71717a/#ffffff 4.83 | analiz:dinlenik,analiz:hover,analiz:focus-visible,analiz:active 5
+! button#btnOneri #000000/#08090a 1.05 | analiz:active 1
+! td.gun-hucre > button.kilit-sim.kilit-mini #ff54eb 98%/#073336 4.87 | qr:hover,bildirim:hover 2
+HEDEF 24
+button#btnSayfaQr 42x19 | gosterge,asistanlar,nobet,izinler,kural,cikti,analiz,qr,bildirim
+button#imza 107x19 | gosterge,asistanlar,nobet,izinler,kural,cikti,analiz,qr,bildirim
+td.gun-hucre > button.kilit-sim.kilit-mini 23x17 | gosterge,qr,bildirim
+label.gk-kural > input 10x10 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 55x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 64x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 68x18 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 79x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 49x18 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 57x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 40x18 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 54x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 66x18 | gosterge,qr,bildirim
+div.gk-satir > select.gir.gir-mini 76x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 83x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 30x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 43x18 | gosterge,qr,bildirim
+label.gk-ag > input.gir.gir-mini 46x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 67x18 | gosterge,qr,bildirim
+div.gk-satir > button.dgm.dgm-mini 111x18 | gosterge,qr,bildirim
+td > input 13x13 | asistanlar
+label > input 13x13 | kural
+input#ciktiBos 13x13 | cikti
+button#telLink 334x21 | qr
+HATALAR []

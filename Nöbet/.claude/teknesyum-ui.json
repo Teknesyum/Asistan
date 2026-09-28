@@ -1,0 +1,59 @@
+{
+  "version": "1.1.0",
+  "template": "benim",
+  "off": false,
+  "targets": [
+    "css"
+  ],
+  "typography": {
+    "sans": "'Atkinson Hyperlegible Next', 'Segoe UI', system-ui, sans-serif",
+    "mono": "'Cascadia Mono', Consolas, ui-monospace, monospace",
+    "scale": [
+      14,
+      16,
+      20,
+      24,
+      32
+    ]
+  },
+  "signature": {
+    "off": false,
+    "github": "https://github.com/Teknesyum",
+    "sponsor": "https://github.com/sponsors/Teknesyum"
+  },
+  "note": "Bu projede kaydırma çubuğu olmaması baskındır: ekranı sığdıran zoom kalır; hedef boyutu gibi genel kurallar ona uyar, çakışırsa zoom kazanır.",
+  "duzen": "a0eaf97ec84216aa",
+  "installedAt": "2026-09-26T22:32:14.974Z",
+  "ignore": [
+    {
+      "rule": "states/hover-without-focus",
+      "file": "app.css",
+      "line": 261,
+      "reason": "Satır vurgusu yalnız okuma yardımı; satır odak almaz, içindeki denetimler temanın :focus-visible halkasını taşır."
+    },
+    {
+      "rule": "states/hover-without-focus",
+      "file": "app.css",
+      "line": 745,
+      "reason": "Kaydırma çubuğu tutamacı klavyeyle odaklanmaz; klavyede kaydırma tuşları çalışır."
+    },
+    {
+      "rule": "states/hover-without-focus",
+      "file": "app.css",
+      "line": 213,
+      "reason": "Ayırıcı yalnız fareyle sürüklenen panel bölücüsü (ayiraclar()); klavye karşılığı yok, düzen varsayılanı yeterli."
+    },
+    {
+      "rule": "guncelleme/panel-yok",
+      "file": "senkron.js",
+      "reason": "Kurulum penceresi depo kökündeki kur-usb.ps1 (Adim/tavan/16 ms sözleşmesi); iki uygulamayı birlikte kurar, tarama kökü uygulama klasörü olduğu için görülmüyor."
+    }
+  ],
+  "plugin": "0.26.0",
+  "uc": {
+    "surum": "0.26.0",
+    "duzen": "a0eaf97ec84216aa",
+    "commit": "5e869339adaf07a7a235104343d655171d0bd354",
+    "tarih": "2026-09-27"
+  }
+}

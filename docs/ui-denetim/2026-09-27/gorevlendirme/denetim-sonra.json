@@ -1,0 +1,4933 @@
+{
+ "olcek": "1",
+ "etiket": "sonra",
+ "ekranlar": {
+  "gosterge": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 322,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 50.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 59.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 59.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 62.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 45.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 52.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 61.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 76.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 62.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 102.7,
+      "height": 16.9
+     }
+    ]
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 322,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 50.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 59.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 59.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 62.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 45.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 52.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 61.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 76.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 62.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 102.7,
+      "height": 16.9
+     }
+    ]
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 322,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 50.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 59.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 59.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 62.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 45.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 52.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 61.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 76.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 62.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 102.7,
+      "height": 16.9
+     }
+    ]
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 322,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 50.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 59.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 59.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 62.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 45.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 52.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 61.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 76.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 62.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 102.7,
+      "height": 16.9
+     }
+    ]
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 257,
+    "pairs": [],
+    "targets": []
+   }
+  },
+  "asistanlar": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 85,
+    "pairs": [],
+    "targets": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 85,
+    "pairs": [],
+    "targets": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 85,
+    "pairs": [],
+    "targets": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 85,
+    "pairs": [],
+    "targets": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 55,
+    "pairs": [],
+    "targets": []
+   }
+  },
+  "nobet": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 60,
+    "pairs": [],
+    "targets": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 60,
+    "pairs": [],
+    "targets": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 60,
+    "pairs": [],
+    "targets": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 60,
+    "pairs": [],
+    "targets": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 45,
+    "pairs": [],
+    "targets": []
+   }
+  },
+  "izinler": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 33,
+    "pairs": [],
+    "targets": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 33,
+    "pairs": [],
+    "targets": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 33,
+    "pairs": [],
+    "targets": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 33,
+    "pairs": [],
+    "targets": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 15,
+    "pairs": [],
+    "targets": []
+   }
+  },
+  "kural": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 186,
+    "pairs": [],
+    "targets": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 186,
+    "pairs": [],
+    "targets": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 186,
+    "pairs": [],
+    "targets": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 186,
+    "pairs": [],
+    "targets": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 134,
+    "pairs": [],
+    "targets": []
+   }
+  },
+  "cikti": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 305,
+    "pairs": [],
+    "targets": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 305,
+    "pairs": [],
+    "targets": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 305,
+    "pairs": [],
+    "targets": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 305,
+    "pairs": [],
+    "targets": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 254,
+    "pairs": [],
+    "targets": []
+   }
+  },
+  "analiz": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 112,
+    "pairs": [],
+    "targets": []
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 112,
+    "pairs": [],
+    "targets": []
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 112,
+    "pairs": [],
+    "targets": []
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 112,
+    "pairs": [],
+    "targets": []
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 99,
+    "pairs": [],
+    "targets": []
+   }
+  },
+  "qr": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 328,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 50.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 59.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 59.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 62.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 45.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 52.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 61.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 76.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 62.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 102.7,
+      "height": 16.9
+     }
+    ]
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 328,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 50.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 59.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 59.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 62.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 45.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 52.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 61.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 76.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 62.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 102.7,
+      "height": 16.9
+     }
+    ]
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 328,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 50.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 59.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 59.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 62.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 45.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 52.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 61.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 76.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 62.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 102.7,
+      "height": 16.9
+     }
+    ]
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 328,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 50.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 59.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 59.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 62.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 45.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 52.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 61.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 76.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 62.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 102.7,
+      "height": 16.9
+     }
+    ]
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 261,
+    "pairs": [],
+    "targets": []
+   }
+  },
+  "bildirim": {
+   "dinlenik": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 323,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 50.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 59.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 59.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 62.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 45.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 52.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 61.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 76.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 62.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 102.7,
+      "height": 16.9
+     }
+    ]
+   },
+   "hover": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 323,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 50.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 59.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 59.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 62.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 45.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 52.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 61.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 76.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 62.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 102.7,
+      "height": 16.9
+     }
+    ]
+   },
+   "focus-visible": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 323,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 50.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 59.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 59.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 62.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 45.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 52.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 61.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 76.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 62.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 102.7,
+      "height": 16.9
+     }
+    ]
+   },
+   "active": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 323,
+    "pairs": [],
+    "targets": [
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.gecmis-satir.kilit-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔒",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.hafta-sonu.gecmis-satir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.bugun-satir.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "tbody > tr.secilebilir > td.gun-hucre > button.kilit-sim.kilit-mini",
+      "text": "🔓",
+      "width": 20.6,
+      "height": 20.6
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > label.gk-kural > input",
+      "text": "",
+      "width": 10.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol: Tek",
+      "width": 50.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1: Tek",
+      "width": 59.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2: Çift",
+      "width": 59.7,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-genel > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok: Tek",
+      "width": 62.8,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sabitle",
+      "width": 45.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok\nDers\nDiğer",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Zorla",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "Pol\nYbü1\nYbü2\nBblok",
+      "width": 55.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "1 kişi\n2 kişi\n3 kişi",
+      "width": 52.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Kadro İste",
+      "width": 61.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nBüşra\nEyyüp\nRümeysa",
+      "width": 73.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > select.gir.gir-mini",
+      "text": "MustafaÖ\nAyşe\nBahtiyar\nAli\nFatihTalha\nEm",
+      "width": 76.2,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Nöbet Değişti",
+      "width": 76.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Pol",
+      "width": 28.5,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü1",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Ybü2",
+      "width": 37.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-bugun > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Bblok",
+      "width": 40.6,
+      "height": 16.9
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div.gk-blok.gkb-agirlik > div.gk-agirlik > label.gk-ag > input.gir.gir-mini",
+      "text": "",
+      "width": 43.6,
+      "height": 17.8
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-agirlik > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Oto Ayarla",
+      "width": 62.3,
+      "height": 16.9
+     },
+     {
+      "selector": "div#gkural > div.gk-blok.gkb-devir > div.gk-satir > button.dgm.dgm-mini",
+      "text": "Sonraki Aya Devret",
+      "width": 102.7,
+      "height": 16.9
+     }
+    ]
+   },
+   "edilgen": {
+    "url": "file:///C:/Users/Administrator/Desktop/Projeler/!Tamamland%C4%B1/Asistan/G%C3%B6revlendirme/arayuz.html",
+    "esik": 7,
+    "hedef": 24,
+    "checked": 258,
+    "pairs": [],
+    "targets": []
+   }
+  }
+ },
+ "hatalar": []
+}

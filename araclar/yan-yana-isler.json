@@ -1,0 +1,15 @@
+[
+ {
+  "adres": "http://localhost:8777/",
+  "uygulama": "docs/ui-denetim/2026-09-27-2/gorevlendirme/gosterge-100-sonra.png",
+  "cikti": "docs/ui-denetim/2026-09-27-2/gorevlendirme/yan-yana-gosterge.png",
+  "veri": "Görevlendirme/veri"
+ },
+ {
+  "adres": "http://localhost:8778/",
+  "uygulama": "docs/ui-denetim/2026-09-27-2/nobet/kadro-100-sonra.png",
+  "cikti": "docs/ui-denetim/2026-09-27-2/nobet/yan-yana-kadro.png",
+  "js": "document.querySelectorAll(\"#adimlar button\")[0].click()",
+  "veri": "Nöbet/veri"
+ }
+]
