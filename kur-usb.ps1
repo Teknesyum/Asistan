@@ -136,10 +136,10 @@ $is = {
     }
     if (-not (Test-Path (Join-Path $hedef ".git"))) { throw "Kurulum klasörü eksik: $hedef" }
 
-    Adim 52 56 "Erişim anahtarı yerleştiriliyor"
+    Adim 52 56 "Bağlantı ayarları yazılıyor"
     $arac = Join-Path $hedef ".araclar"
-    New-Item -ItemType Directory -Force (Join-Path $arac "anahtar") | Out-Null
-    $kaliciAnahtar = Join-Path $arac "anahtar\id_ed25519"
+    New-Item -ItemType Directory -Force $arac | Out-Null
+    $kaliciAnahtar = Join-Path $arac "kurulum.dat"
     $kaliciBilinen = Join-Path $arac "known_hosts"
     Copy-Item $anahtar $kaliciAnahtar -Force
     Kilitle $kaliciAnahtar
