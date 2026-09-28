@@ -1,36 +1,18 @@
 # Asistan Nöbet
 
-Aylık nöbet listesini sıfırdan üretir. 4 sütun: YBÜ Kıdemli, Ameliyathane Kıdemli, YBÜ
-Çömez, Ameliyathane Çömez (sonuncusu `opsiyonel` — kota yetmezse boş kalır, hata değil).
-Katı kota, nöbet ertesi izni, istek/izin, uzman çakışması, sunum yükü, hafta günü dengesi.
+Aylık nöbet listesi, sütun sütun: 1 YBÜ Kıdemli → 2 Ameliyathane Kıdemli → 3 YBÜ Çömez →
+4 Ameliyathane Çömez (`opsiyonel`, boş kalabilir). Her sütun onaylanınca sıradaki kurulur.
 
-- `nobet.py` — motor + CLI. `python -X utf8 nobet.py <ay>.json [--tur=N] [--oto]`, CSV yazar.
-  Saat hedefi kotayla orantılı; kıdem avantajı hafta sonu, sunum ve hafta günü hedeflerine
-  uygulanır. `GUN_TILT` kıdemliye hafta sonunu azaltır, perşembeyi bir tık artırır. İkinci
-  ve zayıf etken isteksizlik kıdemi: en az istek belirten üstte. `--oto` 20 ağırlık bileşimi
-  dener, ağırlıktan bağımsız `denge()` ile seçer (arayüzde Kurallar → Oto Ayarla).
-- `arayuz.html` — motorun JS aynası + üç aşama: **1 Kadro** (asistan tablosu, ay ızgarası,
-  gün paneli, istek matrisi), **2 Liste** (nöbet tablosu · durum ve tıklanabilir uyarılar ·
-  kişi dengesi; bir kişiye tıklamak orta paneli o kişinin dökümüne çevirir), **3 Çıktı**
-  (Excel'e Kopyala = TSV, CSV Kopyala = `;`). Ağırlıklar, hafta günü eğimi, sunum günleri,
-  Oto Ayarla ve sütun listesi sağdan açılan **Kurallar çekmecesindedir** (`#cekmece`).
-  Başlıkta Teknesyum yanındaki "QR", başlık altındaki açık sekmeyi yakalar, uguu.se'ye yükler
-  (`main.js` `pencere:yukle`, 3 saat) ve bağlantının QR'ını gösterir; QR `qr.js` ile çevrimdışı.
-  Açıklamalar `?` balonlarında. Çevrimdışı. Veri depoda (`Nöbet/veri/`),
-  tarayıcıda localStorage. 1440×900'de yalnız nöbet tablosu dikey kaydırır.
-- **İki motor birebir aynı listeyi üretir.** Ortak 32 bit xorshift (`Zar`) sayesinde aynı
-  JSON + tur + tohum = aynı CSV. Motoru değiştirdiysen iki tarafı da değiştir ve `nobet.py`
-  çıktısını arayüzün `csvMetin()` çıktısıyla karşılaştır. CSV başlıkları ve gün adları iki
-  tarafta da uzun yazılır, isim alanı `ad`, dosya BOM'lu.
-- `main.js`/`preload.js`/`package.json` — çerçevesiz Electron kabuğu. `kisayol.ps1` simgeyi token renklerinden üretir, masaüstü ve
-  Başlat menüsü kısayolunu yazar; **BOM'lu UTF-8 kalmalı**, yoksa PS 5.1 adı bozar. `app.css` — her değer
-  `--tk-*`; `node <teknesyum-ui>/scripts/scan.js .` sıfır hata.
-- `<ay>.json` — sutunlar, asistanlar (kıdem sırası, `torba`, `kota`, `izin`, `istiyor`,
-  `istemiyor`, `ozel`), tatil, sunum_gunleri, sunum_yok, uzman, kilit, agirlik.
-- `.claude/launch.json` — arayüzü localhost:8778'de servis eder (8777 komşu projenin).
-
-- `senkron.js` — git tabanlı güncelleme ve geçmiş eşitlemesi. Açılışta `git pull`; `IZLENEN`
-  kod dosyaları değiştiyse uygulama kendini yeniden başlatır. Veri yazımından 5 sn sonra ve
-  çıkışta commit + push. Çakışmada yerel kazanır (`-X ours`). Başlık çubuğundaki küçük not
-  son senkron satırıdır, tıklayınca hemen eşitler. `kur.ps1` yeni makinede kurar.
-- `uygulama.js` — arayüzün betiği; `arayuz.html` onu `veri.hazir()` (preload, `veri:hepsi` ile tüm veri JSONlarını tek seferde önbelleğe alır) çözüldükten sonra yükler. Başlık çubuğu `teknesyum-ui/ustcubuk/titlebar.css`, senkron rozeti `teknesyum-ui/durum/badge.css` şablonlarından; rozet durumu hâlâ `senkron.js` verir. `teknesyum-ui/` altı değişirse uygulama kendini yeniden başlatır. Denetim: `araclar/` ve `docs/ui-denetim/`. Yazılar (marka, destek, site, eşitleme, başlık) `teknesyum-ui/css/labels.tr.json`dan: `main.js` `etiket:hepsi` ile verir, `app.title`ı `package.json` `productName` doldurur; `arayuz.html` `window.ETIKET` kurar. Tema `setup.js --apply --template benim --project <uygulama> --force` ile tazelenir, `esle.js --denetle` 0 fark olmalı.
+- `motor.js` — tek motor, tarayıcıda ve node'da. `node motor.js <ay>.json [tur]` dört sütunu sırayla kurar, tablo basar.
+  `sutunKur(v, si)`: kendi torbası `dagitimAl` kadar, açık kalırsa sonraki sütunun en çömezinden ödünç
+  (`odunc` cezası). Katı: kota, izin, ertesi gün boş, aynı gün tek sütun. Yumuşak: gün grubu dengesi
+  (Pzt+Sal · Per · Cum · Cmt/Tatil · Paz; Çarşamba dengelenmez), ücret dengesi (hafta içi 8, Cum/Paz 16,
+  Cmt/tatil 24 saat), 1-3-5 zinciri, rutini YBÜ olanların aynı günü, istek/istemez, kıdem ve isteksizlik bonusu.
+- `uygulama.js` — ekranlar: Ana Ekran (ay, sütun kartları, Devam Et) · Kadro (asistan, rutin, takvim, istek
+  matrisi) · Sütun (ayarlar · 4 sütunlu liste, seçim = sabitleme · denge ve uyarılar) · Çıktı (TSV/CSV, ücret).
+  Onay kaldırılırsa sonraki sütunların listesi silinir.
+- `<ay>.json` — `sutunlar`, `asistanlar` (kıdem sırası, `torba`, `kota`, `rutin`, `izin`, `istiyor`,
+  `istemiyor`), `tatil`, `uzman`, `kilit[g][sütun]`, `liste[sütun][g]`, `onay`, `dagitim[sütun][ad]`, `tohum`, `agirlik`, `motor: 2`.
+- `app.css` — her değer `--tk-*`; `node <teknesyum-ui>/scripts/scan.js .` sıfır hata.
+- `senkron.js` — git eşitleme; `IZLENEN` kod dosyası değişince uygulama yeniden başlar. `main.js`/`preload.js` — Electron kabuğu; `kisayol.ps1` BOM'lu UTF-8 kalmalı.
+- Önizleme: kökteki `.claude/launch.json` `nobet` (localhost:8778).

@@ -41,16 +41,16 @@
 <header class="ust">
   <nav class="adimlar" id="adimlar" role="tablist" aria-label="Aşamalar"></nav>
   <span class="bosluk"></span>
-  <label class="tk-sr-only" for="ay">Ay</label>
-  <input id="ay" class="gir gir-orta" type="month">
-  <button type="button" id="btnCoz" class="dgm dgm-birincil">Listeyi Oluştur</button>
-  <button id="btnKurallar" class="dgm" type="button">Kurallar</button>
-  <button id="btnKaydet" class="dgm" type="button">Kaydet</button>
-  <button id="btnYukle" class="dgm" type="button">Yükle</button>
+  <button id="btnKaydet" class="dgm" type="button" title="Ayın dosyasını indir">Kaydet</button>
+  <button id="btnYukle" class="dgm" type="button" title="Bir ay dosyası aç">Yükle</button>
   <input id="fileIn" type="file" accept=".json" hidden>
 </header>
 
 <main class="govde" id="govde">
+
+<section id="s-ana" role="tabpanel" hidden>
+  <div class="ana-sar" id="anaIc"></div>
+</section>
 
 <section id="s-kadro" role="tabpanel" hidden>
   <div class="kadro">
@@ -58,42 +58,40 @@
       <div class="pnl-bas"><span id="kadroEkle" class="satir"></span><span class="bosluk"></span><span id="kadroYardim"></span></div>
       <div class="pnl-icerik" id="asistanIc"></div>
     </div>
-    <div class="ayirac ayirac-dikey" data-ayirac="kadro"></div>
     <div class="kadro-sag">
       <div class="kadro-ay">
         <div class="pnl">
-          <div class="pnl-bas"><span class="bosluk"></span><span id="ayYardim"></span></div>
+          <div class="pnl-bas"><span>Takvim</span><span class="bosluk"></span><span id="ayYardim"></span></div>
           <div class="pnl-icerik" id="ayIc"></div>
         </div>
-        <div class="ayirac ayirac-dikey" data-ayirac="kadroAy"></div>
         <div class="pnl">
           <div class="pnl-bas" id="gunBas">Gün</div>
           <div class="pnl-icerik" id="gunIc"></div>
         </div>
       </div>
-      <div class="ayirac ayirac-yatay" data-ayirac="kadroSag"></div>
       <div class="pnl">
-        <div class="pnl-bas"><span class="bosluk"></span><span id="istekYardim"></span></div>
+        <div class="pnl-bas"><span>İzin ve İstekler</span><span class="bosluk"></span><span id="istekYardim"></span></div>
         <div class="pnl-icerik" id="istekIc"></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="s-liste" role="tabpanel" hidden>
-  <div class="liste-duzen">
-    <div class="pnl">
-      <div class="pnl-icerik" id="listeIc"></div>
-    </div>
-    <div class="ayirac ayirac-dikey" data-ayirac="liste1"></div>
-    <div class="pnl">
-      <div class="pnl-bas" id="ortaBas"><span>Durum</span></div>
-      <div class="pnl-icerik" id="durumIc"></div>
-    </div>
-    <div class="ayirac ayirac-dikey" data-ayirac="liste2"></div>
-    <div class="pnl">
-      <div class="pnl-bas"><span class="bosluk"></span><span id="dengeYardim"></span></div>
-      <div class="pnl-icerik" id="dengeIc"></div>
+<section id="s-sutun" role="tabpanel" hidden>
+  <div class="sutun-ekran">
+    <div class="sutun-ust" id="sutunUst"></div>
+    <div class="sutun-duzen">
+      <div class="pnl">
+        <div class="pnl-bas" id="ayarBas"></div>
+        <div class="pnl-icerik" id="ayarIc"></div>
+      </div>
+      <div class="pnl">
+        <div class="pnl-icerik" id="sListeIc"></div>
+      </div>
+      <div class="pnl">
+        <div class="pnl-bas" id="sDengeBas"></div>
+        <div class="pnl-icerik" id="sDengeIc"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -101,10 +99,14 @@
 <section id="s-cikti" role="tabpanel" hidden>
   <div class="cikti-duzen">
     <div class="pnl">
-      <div class="pnl-bas"><span class="bosluk"></span>
+      <div class="pnl-bas"><span>Liste</span><span class="bosluk"></span>
         <button id="btnKopyaTablo" class="dgm dgm-mini" type="button">Excel'e Kopyala</button>
         <button id="btnKopyaCsv" class="dgm dgm-mini" type="button">CSV Kopyala</button></div>
       <div class="pnl-icerik" id="ciktiIc"></div>
+    </div>
+    <div class="pnl">
+      <div class="pnl-bas"><span>Ücret Dengesi</span></div>
+      <div class="pnl-icerik" id="ucretIc"></div>
     </div>
   </div>
 </section>
@@ -112,13 +114,6 @@
 </main>
 </div>
 </div>
-
-<div class="perde" id="perde" data-acik="0"></div>
-<aside class="cekmece" id="cekmece" data-acik="0" aria-label="Kurallar">
-  <div class="cekmece-bas"><span>Kurallar</span><span class="bosluk"></span>
-    <button id="btnKuralKapat" class="dgm dgm-mini" type="button">Kapat</button></div>
-  <div class="cekmece-ic" id="kuralIc"></div>
-</aside>
 
 <div class="bildirim" id="toast" role="status" aria-live="polite"></div>
 <dialog id="telDlg" class="tel-dlg" aria-labelledby="telBas">
@@ -132,6 +127,7 @@
   <button type="button" id="telLink" class="tel-link" title="Bağlantıyı kopyala"></button>
 </dialog>
 <script src="qr.js"></script>
+<script src="motor.js"></script>
 <script>
 {
 const W = window.pencere;

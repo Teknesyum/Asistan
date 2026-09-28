@@ -5,7 +5,7 @@ const os = require("os");
 
 const KOK = path.resolve(__dirname, "..");
 const ARAC = "Nöbet";
-const IZLENEN = ["Nöbet/main.js", "Nöbet/preload.js", "Nöbet/arayuz.html", "Nöbet/app.css", "Nöbet/package.json", "Nöbet/nobet.py", "Nöbet/senkron.js", "Nöbet/qr.js", "Nöbet/uygulama.js"];
+const IZLENEN = ["Nöbet/main.js", "Nöbet/preload.js", "Nöbet/arayuz.html", "Nöbet/app.css", "Nöbet/package.json", "Nöbet/senkron.js", "Nöbet/qr.js", "Nöbet/motor.js", "Nöbet/uygulama.js"];
 const YEREL_GIT = path.join(KOK, ".araclar", "git", "cmd", "git.exe");
 const GIT = [YEREL_GIT, path.join(process.env.ProgramFiles || "C:\\Program Files", "Git", "cmd", "git.exe")]
   .find(f => fs.existsSync(f)) || "git";
