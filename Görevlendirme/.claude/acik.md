@@ -1,0 +1,1 @@
+- [x] Sıra: sonra sürüm at — 2026-09-29 13:03 — çalışırken geldi — Görevlendirme 1.8.0 yayımlandı

@@ -899,7 +899,8 @@ function bugunKart(hedef, gun, s) {
     const boslarY = s.boslar.filter(b => b.yer === yer);
     const bos = boslarY[0];
     const gelen = yerler[yer];
-    if (!bos && !gelen) return;
+    const yerinde = s.kaynak === "hafta sonu" ? [] : adlar().filter(ad => yh[ad] === yer && !s.yok[ad] && !s.atama[ad]);
+    if (!bos && !gelen && !yerinde.length) return;
     n2++;
     const r = el("div", {className: "esles-satir grid-line"});
     r.appendChild(el("div", {className: "esles-yer", textContent: yer}));
@@ -915,20 +916,22 @@ function bugunKart(hedef, gun, s) {
       kim.appendChild(d);
     });
     r.appendChild(kim);
-    r.appendChild(el("div", {className: "esles-ok", textContent: gelen ? "→" : "×"}));
+    r.appendChild(el("div", {className: "esles-ok", textContent: gelen || yerinde.length ? "→" : "×"}));
     const sag = el("div", {className: "esles-gelir"});
     const rf = {};
     (s.refakat || []).forEach(r => { if (r.yer === yer) rf[r.ad] = 1; });
+    const serit = el("div", {className: "isim-serit"});
+    if (gelen) Array.from(isimSerit(gelen, kd, false, gun, rf, yer).childNodes).forEach(c => serit.appendChild(c));
+    if (yerinde.length) Array.from(isimSerit(yerinde, kd, false, gun, null, yer).childNodes).forEach(c => { c.classList.add("isim-yerinde"); serit.appendChild(c); });
+    if (serit.childNodes.length) sag.appendChild(serit);
     if (gelen) {
-      sag.appendChild(isimSerit(gelen, kd, false, gun, rf, yer));
       const asan = gelen.filter(ad => (s.kademeAsimi || []).indexOf(ad) >= 0);
       if (asan.length) {
         r.classList.add("esles-ihlal");
         uyarilar.push(asan.map(kisaAd).join(", ") + " → " + yer + ": kademe alt sınırı aşıldı");
       }
-    } else {
-      sag.textContent = "Doldurulamadı";
-      sag.className = "esles-gelir hata-metin";
+    } else if (bos) {
+      sag.appendChild(el("span", {className: "hata-metin", textContent: "Doldurulamadı"}));
       uyarilar.push(yer + ": doldurulamadı, havuzda uygun kimse yok");
     }
     r.appendChild(sag);
