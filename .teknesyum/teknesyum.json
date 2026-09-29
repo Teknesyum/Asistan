@@ -1,0 +1,76 @@
+{
+  "icon": ".teknesyum/icon.png",
+  "screenshot": ".teknesyum/shot.jpg",
+  "full": ".teknesyum/full.jpg",
+  "catalog": {
+    "category": "medical",
+    "tags": {
+      "tr": [
+        "nöbet",
+        "görevlendirme",
+        "asistan",
+        "özel"
+      ],
+      "en": [
+        "on-call",
+        "duty-roster",
+        "residents",
+        "private"
+      ]
+    },
+    "summary": {
+      "tr": "Anesteziyoloji asistanları için iki masaüstü aracından oluşan özel bir depo. Nöbet aracı aylık nöbet listesini kota, nöbet ertesi izin, istekler ve hafta günü dengesi gözeterek sıfırdan üretir. Görevlendirme aracı nöbet ve izin listesinden sonra boş kalan zorunlu yerleri kıdem ve dengeli dağılıma göre havuzdaki asistanlara atar. Veriler depoda tutulur ve makineler arasında git ile kendiliğinden eşitlenir. Sonuç Excel'e kopyalanabilir ya da QR ile paylaşılabilir. Türkçe, Electron tabanlı.",
+      "en": "A private repository with two desktop tools for anaesthesiology residents. The on-call tool builds the monthly duty roster from scratch, respecting quotas, post-call leave, requests and weekday balance. The assignment tool fills the mandatory posts left empty after duty and leave, assigning residents from the pool by seniority and fair distribution. Data lives in the repository and syncs between machines through git on its own. Results can be copied to Excel or shared as a QR link. Turkish, built on Electron."
+    },
+    "points": {
+      "tr": [
+        "Aylık nöbet ve izin listesinden boş zorunlu yerlere kişi atar",
+        "Kıdem ve dengeli dağılım gözeten atama motoru",
+        "Toplu/CLI ile en dengeli ağırlığı otomatik bulma",
+        "Gösterge panelinde gün, ay matrisi ve uyarı şeridi",
+        "Sürükle-bırak ile kişi/yer değişimi",
+        "Resmi listeyi görsel olarak kopyalama ve QR ile paylaşma",
+        "Nöbet listesini sıfırdan üreten ayrı motor (kota, nöbet ertesi izni, istek/izin)",
+        "CLI ve arayüz motoru birebir aynı sonucu üretir",
+        "Değişim ve refakat kurallarını hesaba katar",
+        "Veri ve ilerleme makineler arası git ile otomatik senkronize olur",
+        "Tamamen çevrimdışı çalışır",
+        "Özel depo, yalnız yetkili kişilerle paylaşılır"
+      ],
+      "en": [
+        "Assigns staff to unfilled mandatory duty slots from monthly roster",
+        "Seniority-aware, balanced assignment engine",
+        "Batch/CLI mode auto-searches the most balanced weighting",
+        "Dashboard with day view, month grid and warning strip",
+        "Drag-and-drop to swap people or posts",
+        "Copies the official list as an image and shares it via QR",
+        "Separate engine builds the on-call roster from scratch (quotas, post-duty leave, requests)",
+        "CLI and UI engines produce byte-identical results",
+        "Accounts for shift swaps and companion/backup assignments",
+        "Data and progress auto-sync across machines via git",
+        "Works fully offline",
+        "Private repo shared only with authorized people"
+      ]
+    },
+    "uses": {
+      "tr": [
+        "Aylık nöbet listesini sıfırdan üret",
+        "Boş görev yerlerine dengeli ata",
+        "Sürükle-bırakla kişilerin yerini değiştir",
+        "Listeyi görsel ya da QR'la paylaş",
+        "İnternet olmadan çalıştır"
+      ],
+      "en": [
+        "Build the monthly duty roster",
+        "Fill open posts fairly",
+        "Swap people with drag and drop",
+        "Share as image or QR",
+        "Work fully offline"
+      ]
+    },
+    "lead": {
+      "tr": "Asistan Nöbet Çizelgesi ve Görev Atama Araçları",
+      "en": "Resident On-Call Roster and Duty Assignment Tools"
+    }
+  }
+}
