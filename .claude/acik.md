@@ -1,0 +1,5 @@
+- [x] 1-2 Ekim izni — izin 28-2 yazıldı, Ekim açılınca kendiliğinden gelir
+- [x] YBÜ çömezine kıdem kısıtı yok (Ömer, Alperen gidebilir)
+- [x] Nöbet değişimi yer değiştirmesin (Bahtiyar Ybü2 sabit, Emrah GenelCerrahi)
+- [x] Ay sınırını aşan izin (28-2) sonraki aya kendiliğinden geçsin
+- [x] Ay sonu nöbet değişimi sonraki ayın 1i nöbet ertesine yansısın, değişimler aya taşınmasın

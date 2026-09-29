@@ -26,14 +26,14 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
   kaç kişi bulunması gerektiğidir (varsayılan 1). `kademe` küçükse çömez; `yer_min_kademe`
   o yere tek başına gidebilmek için gereken en küçük kademedir, aşılırsa gün işaretlenir.
   `yer_kadro` o yere kaç kişi gider: `tek` (varsayılan), `kidemli_tek` (eşiği geçen düşerse tek,
-  düşmezse yanına ikinci kişi), `cift` (her zaman iki kişi). Kurallar panelindeki kısaltmalı
+  düşmezse yanına ikinci kişi), `cift` (her zaman iki kişi; yerde eşiği geçen biri varsa ikinci boşluk çömezdir: kademe ve kıdem farkı aranmaz, kademe 0 da gider). Kurallar panelindeki kısaltmalı
   düğme tıklandıkça bu üçü arasında döner. Gün için verilen `yer_adet` bu kuralı ezer.
   `gecmis` o günü kilitler: boş nesne `{}` de geçerlidir — o gün kimse gönderilmemiş sayılır,
   boş yer uyarısı çıkmaz. Toplu kilit (Kalanı Hesapla, kendiliğinden kilit) hafta sonlarına dokunmaz,
   kilit simgesiyle elle kilitlenebilir.
   `degisim` `[{gun, cikan, giren, karsi}]`: `gun` günü nöbeti çıkan yerine giren tutar; `karsi`
-  verilirse o günü de giren yerine çıkan tutar — karşılıklı değişim, iki taraf da yer değiştirir.
-  `karsi: 0` tek taraflıdır. Nöbet ertesi günlerinde (`gun+1`, `karsi+1`) iki kişinin rutin yerleri o gün için yer değiştirir: boşluk eski planın yerinde kalır, sebebinde fiilen nöbet ertesi olan yazar. Nöbet listesi olduğu gibi kalır; nöbetçi sayılan ve ertesi gün
+  verilirse o günü de giren yerine çıkan tutar — karşılıklı değişim.
+  `karsi: 0` tek taraflıdır. Rutin yerler değişmez: nöbet ertesi olan kendi yerinden düşer, yeri zorunlu değilse boşluk açılmaz. Ay sonu değişimi `devret`/ay geçişinde `onceki_ay_son_gun_nobet`e yansır; `degisim` ve `yer_adet` yeni aya taşınmaz. İzin/eğitim `gunler` ay sonunu aşabilir (`28-2`): bu ay 28-son gün, sonraki ay 1-2 önceki ayın arşivinden kendiliğinden okunur, İzinler sekmesinde not olarak görünür. Nöbet listesi olduğu gibi kalır; nöbetçi sayılan ve ertesi gün
   nöbet ertesi olan, o gün fiilen tutandır. Arayüz karşı günü girenin nöbetlerinden en yakınıyla
   (7 günü aşmıyorsa) önerir.
   `refakat` `[{ad, yer, gun}]`: kişi `gun` gün o yerin refakatçisi olur — kadroya sayılmaz,

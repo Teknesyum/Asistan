@@ -312,14 +312,9 @@ function sakla() {
 function gunSayisi() { return new Date(V.yil, V.ay, 0).getDate(); }
 function haftaGunu(g) { return new Date(V.yil, V.ay - 1, g).getDay(); }
 function kidem() { const m = {}; V.asistanlar.forEach((a,i) => m[a.ad] = i + 1); return m; }
-function yerHarita(g) {
+function yerHarita() {
   const m = {};
   V.asistanlar.forEach(a => m[a.ad] = a.yer);
-  if (g) V.degisim.forEach(d => {
-    if (+d.gun + 1 !== g && !(d.karsi && +d.karsi + 1 === g)) return;
-    if (m[d.cikan] == null || m[d.giren] == null) return;
-    const t = m[d.cikan]; m[d.cikan] = m[d.giren]; m[d.giren] = t;
-  });
   return m;
 }
 function kisaAd(ad) { const a = V.asistanlar.find(x => x.ad === ad); return a ? (a.kisa || a.ad) : ad; }
@@ -347,18 +342,40 @@ function varsayilanBugun() {
   return haftaIci(g);
 }
 
-function araliklar(liste) {
+function aralik(k) {
+  const p = String(k.gunler).split("-");
+  const a = parseInt(p[0], 10), b = parseInt(p[1] !== undefined ? p[1] : p[0], 10);
+  return isNaN(a) || isNaN(b) ? null : {a, b, tasar: b < a};
+}
+function araliklar(liste, alan) {
   const m = {};
+  const ekle = (a, b, kisiler) => {
+    for (let g = a; g <= b; g++) { m[g] = m[g] || new Set(); kisiler.forEach(x => m[g].add(x)); }
+  };
   for (const k of liste) {
-    const p = String(k.gunler).split("-");
-    const a = parseInt(p[0], 10), b = parseInt(p[1] !== undefined ? p[1] : p[0], 10);
-    if (isNaN(a) || isNaN(b)) continue;
-    for (let g = a; g <= b; g++) { m[g] = m[g] || new Set(); k.kisiler.forEach(x => m[g].add(x)); }
+    const r = aralik(k);
+    if (r) ekle(r.a, r.tasar ? gunSayisi() : r.b, k.kisiler);
   }
+  if (alan) devreden(alan).forEach(k => ekle(1, k.son, k.kisiler));
   return m;
 }
-function izinGun() { return araliklar(V.izin); }
-function egitimGun() { return araliklar(V.egitim); }
+let DEVREDEN = {ham: null, v: null};
+function devreden(alan) {
+  const p = oncekiAy(V.yil, V.ay);
+  const ham = DEPO.oku(ayAnahtar(p.y, p.a));
+  if (!ham) return [];
+  if (DEVREDEN.ham !== ham) {
+    let o = null;
+    try { o = JSON.parse(ham); } catch (e) {}
+    DEVREDEN = {ham, v: o};
+  }
+  const o = DEVREDEN.v;
+  if (!o || !Array.isArray(o[alan])) return [];
+  return o[alan].map(k => ({k, r: aralik(k)})).filter(x => x.r && x.r.tasar)
+    .map(x => ({son: x.r.b, kisiler: x.k.kisiler || [], gunler: "1-" + x.r.b, ay: AYLAR[p.a - 1]}));
+}
+function izinGun() { return araliklar(V.izin, "izin"); }
+function egitimGun() { return araliklar(V.egitim, "egitim"); }
 function kademesi(ad) {
   const a = V.asistanlar.find(x => x.ad === ad);
   return a && a.kademe !== undefined ? a.kademe : 1;
@@ -538,9 +555,11 @@ function bosluklar(yok, g) {
     const mevcut = kadro.filter(ad => !yok[ad]);
     const eksik = gerek - mevcut.length;
     const yoklar = kadro.filter(ad => yok[ad]).map(ad => [ad, yok[ad]]);
+    const kidemliVar = mevcut.some(ad => !yasak(ad, yer));
     for (let i = 0; i < eksik; i++) {
+      const comez = !yalniz && (kidemliVar || i > 0);
       out.push({
-        yer, yalniz,
+        yer, yalniz: yalniz || !comez, comez,
         eksik: i >= yoklar.length ? [["—", "Ek kadro isteniyor"]]
              : i < eksik - 1 ? [yoklar[i]] : yoklar.slice(i),
         hedef
@@ -591,7 +610,7 @@ function maliyet(ad, bos, sayac, dun, kd, ybn) {
   return 1e6 * (bos.yalniz !== false && yasak(ad, bos.yer) ? 1 : 0)
        + 1e6 * (refakatBekliyor(ad, sayac.refakat, bos.yer) ? 1 : 0)
        - 1e3 * tercih
-       + (w.kidem_farki||0) * Math.abs(kd[ad] - bos.hedef)
+       + (bos.comez ? 0 : (w.kidem_farki||0) * Math.abs(kd[ad] - bos.hedef))
        + (w.toplam_gorev||0) * (sayac.toplam[ad]||0)
        + (w.ayni_yer_tekrari||0) * (sayac.yer[ad + "|" + grup(bos.yer)]||0)
        + (w.dun_de_gonderildi||0) * (dun.has(ad) ? 1 : 0)
@@ -697,7 +716,7 @@ function hesapla() {
       dolmayan: dolmayanlar(boslar, atama, zorla, refakat),
       zorla: zorla.map(z => z.ad),
       kademeAsimi: Object.keys(atama).filter(ad =>
-        yasak(ad, atama[ad]) && yerdekiler(atama, yok, yh, atama[ad]).length < 2)
+        yasak(ad, atama[ad]) && !yerdekiler(atama, yok, yh, atama[ad]).some(x => !yasak(x, atama[ad])))
     });
     dun = new Set(Object.keys(atama));
   }
@@ -902,7 +921,7 @@ function bugunKart(hedef, gun, s) {
     (s.refakat || []).forEach(r => { if (r.yer === yer) rf[r.ad] = 1; });
     if (gelen) {
       sag.appendChild(isimSerit(gelen, kd, false, gun, rf, yer));
-      const asan = gelen.filter(ad => yasak(ad, yer));
+      const asan = gelen.filter(ad => (s.kademeAsimi || []).indexOf(ad) >= 0);
       if (asan.length) {
         r.classList.add("esles-ihlal");
         uyarilar.push(asan.map(kisaAd).join(", ") + " → " + yer + ": kademe alt sınırı aşıldı");
@@ -1033,7 +1052,7 @@ function matrisBlok(satirlar, ilk, sonG, yeniHar, degisenGun) {
         td.title = "(R) refakatçi — kadroya sayılmaz."
           + (kadro.length ? " Yerin kendi kadrosu: " + kadro.join(", ") : "");
       }
-      if (l && l.some(ad => yasak(ad, y))) td.classList.add("ihlal-hucre");
+      if (l && l.some(ad => (s.kademeAsimi || []).indexOf(ad) >= 0)) td.classList.add("ihlal-hucre");
       if (ONCEKI && ONCEKI[anahtar] !== metin) td.classList.add("degisti");
       tr.appendChild(td);
     });
@@ -1399,6 +1418,9 @@ function ciz_izin() {
     td().appendChild(c);
     tb.appendChild(tr);
   });
+  const dv = devreden("izin"), not = $("#izinDevir");
+  not.hidden = !dv.length;
+  not.textContent = dv.map(k => "Önceki aydan (" + k.ay + "): " + k.gunler + " " + k.kisiler.map(kisaAd).join(", ")).join(" · ");
 }
 $("#btnIzinEkle").onclick = () => { V.izin.push({gunler: "1-1", kisiler: []}); sakla(); ciz_izin(); };
 
@@ -2182,7 +2204,7 @@ $("#ay").onchange = e => {
   sakla();
   const arsiv = DEPO.oku(ayAnahtar(y, a));
   if (arsiv) { V = normalize(JSON.parse(arsiv)); toast(AYLAR[a-1] + " " + y + " arşivden açıldı"); }
-  else { V.yil = y; V.ay = a; V.nobet = {}; V.izin = []; V.egitim = []; V.gecmis = {}; V.force = {}; V.sabit = {}; V.ders = {}; }
+  else { V.yil = y; V.ay = a; V.nobet = {}; V.izin = []; V.egitim = []; V.gecmis = {}; V.force = {}; V.sabit = {}; V.ders = {}; V.degisim = []; V.yer_adet = {}; }
   devirTazele(V);
   sakla(); baslat();
 };
@@ -2196,7 +2218,7 @@ function devret() {
   const yeni = JSON.parse(JSON.stringify(V));
   yeni.yil = y; yeni.ay = a;
   yeni.nobet = {}; yeni.izin = []; yeni.egitim = [];
-  yeni.gecmis = {}; yeni.force = {}; yeni.sabit = {}; yeni.ders = {};
+  yeni.gecmis = {}; yeni.force = {}; yeni.sabit = {}; yeni.ders = {}; yeni.degisim = []; yeni.yer_adet = {};
   yeni.onceki_ay_son_gun_nobet = {yb: (son.yb||[]).slice(), amel: (son.amel||[]).slice()};
   yeni.devir = {toplam: Object.assign({}, sayac.toplam), yer: Object.assign({}, sayac.yer),
     refakat: Object.assign({}, sayac.refakat), kaynak};
