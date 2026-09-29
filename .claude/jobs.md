@@ -1,0 +1,1 @@
+- [x] Ekran görüntüsünde soldaki mavi çizgi — panel kenarlığı kopyada gizlendi (1.8.1)

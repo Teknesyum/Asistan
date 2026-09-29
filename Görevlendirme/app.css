@@ -908,3 +908,4 @@ body.ayirma { cursor: inherit; user-select: none; }
 input[type="checkbox"] { color-scheme: dark; inline-size: var(--tk-target-min); block-size: var(--tk-target-min); margin: 0; vertical-align: middle; accent-color: var(--tk-renk-1); }
 :root { color-scheme: dark; }
 .isim-yerinde { border-color: var(--tk-warning); }
+.a-bugun.kopya { border-color: transparent; }
