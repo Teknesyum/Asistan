@@ -17,7 +17,7 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
 - `app.css` — arayüzün kendi katmanı, her değer `--tk-*`. Değiştirince
   `node <teknesyum-ui>/scripts/scan.js .` sıfır hata vermeli. Sapmalar docs/danisma/001'de.
 - `gorevlendir.py` — toplu/CLI çalıştırma. `python -X utf8 gorevlendir.py <ay>.json`, CSV üretir. `--oto` ağırlık ızgarasını tarayıp
-  en dengeli dörtlüyü basar (arayüzde Kurallar → Oto Ayarla). Oto, kıdem farkı ağırlığını 2nin altına indirmez (elle inilebilir);
+  en dengeli dörtlüyü basar (arayüzde Kurallar → Oto Ayarla, onay sorar; yanında "Ayarları Kaydet / Geri Yükle": `ayar_kayit` ağırlık ve kuralları saklar, ay devrinde taşınır). Oto, kıdem farkı ağırlığını 2nin altına indirmez (elle inilebilir);
   karşılığında min-max farkı 6ya kadar cezasız (`FARK_SINIR`). Yedek başasistanlık yapan (`sayac.vekil`) min hesabına girmez, görev almaya devam eder.
 - `<ay>.json` — asistanlar (kıdem sırası + `kademe`), nöbet, izin, egitim, ders, force, sabit,
   gecmis, devir, yer_adet, kural, agirlik, gruplar, yer_min_kademe, yer_kadro, degisim, refakat. `havuz_disi_yerler` (BaşAsistan, İzin) kişisi
@@ -29,7 +29,7 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
   kaç kişi bulunması gerektiğidir (varsayılan 1). `kademe` küçükse çömez; `yer_min_kademe`
   o yere tek başına gidebilmek için gereken en küçük kademedir, aşılırsa gün işaretlenir.
   `yer_kadro` o yere kaç kişi gider: `tek` (varsayılan), `kidemli_tek` (eşiği geçen düşerse tek,
-  düşmezse yanına ikinci kişi), `cift` (her zaman iki kişi; yerde eşiği geçen biri varsa ikinci boşluk çömezdir: kademe ve kıdem farkı aranmaz, kademe 0 da gider). Kurallar panelindeki kısaltmalı
+  düşmezse yanına ikinci kişi), `cift` (her zaman iki kişi; yerde eşiği geçen biri varsa ikinci boşluk çömezdir: kademe ve kıdem farkı aranmaz, kademe 0 da gider; ama çıkan, kalandan kıdemliyse yerine kalandan kıdemli biri gider, hedef çıkanın kıdemi — `ustSinir`). Kurallar panelindeki kısaltmalı
   düğme tıklandıkça bu üçü arasında döner. Gün için verilen `yer_adet` bu kuralı ezer.
   `gecmis` o günü kilitler (kilit simgesi SVG; kilitliyken `--tk-warning` sarı ve çerçeveli): boş nesne `{}` de geçerlidir — o gün kimse gönderilmemiş sayılır,
   boş yer uyarısı çıkmaz. Toplu kilit (Kalanı Hesapla, kendiliğinden kilit) hafta sonlarına dokunmaz,

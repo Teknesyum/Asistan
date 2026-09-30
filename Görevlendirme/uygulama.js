@@ -569,14 +569,19 @@ function bosluklar(yok, g) {
     const eksik = gerek - mevcut.length;
     const yoklar = kadro.filter(ad => yok[ad]).map(ad => [ad, yok[ad]]);
     const kidemliVar = mevcut.some(ad => !yasak(ad, yer));
+    const ust = mevcut.length ? Math.min(...mevcut.map(ad => kd[ad])) : null;
     for (let i = 0; i < eksik; i++) {
-      const comez = !yalniz && (kidemliVar || i > 0);
-      out.push({
+      const cikan = yoklar[i] ? yoklar[i][0] : null;
+      const yerine = !yalniz && ust != null && cikan && kd[cikan] < ust;
+      const comez = !yerine && !yalniz && (kidemliVar || i > 0);
+      const b = {
         yer, yalniz: yalniz || !comez, comez,
         eksik: i >= yoklar.length ? [["—", "Ek kadro isteniyor"]]
              : i < eksik - 1 ? [yoklar[i]] : yoklar.slice(i),
-        hedef
-      });
+        hedef: yerine ? kd[cikan] : hedef
+      };
+      if (yerine) b.ustSinir = ust;
+      out.push(b);
     }
   }
   return out;
@@ -623,6 +628,7 @@ function maliyet(ad, bos, sayac, dun, kd, ybn) {
   return 1e6 * (bos.yalniz !== false && yasak(ad, bos.yer) ? 1 : 0)
        + 1e6 * (refakatBekliyor(ad, sayac.refakat, bos.yer) ? 1 : 0)
        - 1e3 * tercih
+       + 1e4 * (bos.ustSinir != null && kd[ad] >= bos.ustSinir ? 1 : 0)
        + (bos.comez ? 0 : (w.kidem_farki||0) * Math.abs(kd[ad] - bos.hedef))
        + (w.toplam_gorev||0) * (sayac.toplam[ad]||0)
        + (w.ayni_yer_tekrari||0) * (sayac.yer[ad + "|" + grup(bos.yer)]||0)
@@ -2004,6 +2010,15 @@ function ciz_gkural(satirlar, sayac) {
   bo.title = "Ağırlıkları tarayıp kıdem komşularına göre en dengeli dağılımı bulur";
   bo.onclick = otoAgirlik;
   ob.appendChild(bo);
+  const bk = el("button", {type: "button", className: "dgm dgm-mini", textContent: "Ayarları Kaydet"});
+  bk.title = "Ağırlıklar ve kurallar (kadro, kademe, gruplar, zorunlu, havuz dışı, rotasyon) saklanır";
+  bk.onclick = ayarKaydet;
+  ob.appendChild(bk);
+  const bg = el("button", {type: "button", className: "dgm dgm-mini", textContent: "Geri Yükle"});
+  bg.disabled = !V.ayar_kayit;
+  bg.title = V.ayar_kayit ? "Kayıt: " + new Date(V.ayar_kayit.zaman).toLocaleString("tr-TR") : "Henüz kayıt yok";
+  bg.onclick = ayarGeriYukle;
+  ob.appendChild(bg);
   b2.appendChild(ob);
   c.appendChild(b2);
 
@@ -2142,7 +2157,25 @@ const OTO_IZGARA = {
   kidem_yuku: [0, 0.5, 1, 2]
 };
 
+const AYAR_ALANLARI = ["agirlik", "kural", "yer_kadro", "yer_min_kademe", "gruplar", "zorunlu_yerler", "havuz_disi_yerler", "rotasyon"];
+function ayarKaydet() {
+  if (V.ayar_kayit && !confirm("Önceki ayar kaydının üzerine yazılsın mı?")) return;
+  const k = {zaman: Date.now()};
+  AYAR_ALANLARI.forEach(a => { if (V[a] !== undefined) k[a] = JSON.parse(JSON.stringify(V[a])); });
+  V.ayar_kayit = k;
+  sakla(); ciz_kural();
+  toast("Ayarlar kaydedildi");
+}
+function ayarGeriYukle() {
+  const k = V.ayar_kayit;
+  if (!k || !confirm(new Date(k.zaman).toLocaleString("tr-TR") + " kaydındaki ayarlar geri yüklensin mi? Mevcut ayarlar değişir.")) return;
+  AYAR_ALANLARI.forEach(a => { if (k[a] !== undefined) V[a] = JSON.parse(JSON.stringify(k[a])); });
+  sakla(); ciz_gosterge(); ciz_kural();
+  toast("Ayarlar geri yüklendi");
+}
+
 function otoAgirlik() {
+  if (!confirm("Ağırlıklar otomatik ayarlansın mı? Mevcut değerler değişir.")) return;
   const eski = Object.assign({}, V.agirlik);
   let iyi = null;
   OTO_IZGARA.kidem_farki.forEach(a =>
