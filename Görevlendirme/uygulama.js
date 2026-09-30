@@ -1067,7 +1067,7 @@ function matrisBlok(satirlar, ilk, sonG, yeniHar, degisenGun) {
     tr.classList.add("secilebilir");
     tr.title = g + ". günü düzenlemek için tıklayın";
     tr.onclick = e => { if (e.target.closest(".kilit-sim")) return; gunSec(g); };
-    gh.appendChild(el("span", {textContent: g + " " + s.gunAdi}));
+    gh.appendChild(el("span", {textContent: String(g).padStart(2, " ") + " " + s.gunAdi}));
     const kb = el("button", {type: "button", className: "kilit-sim kilit-mini" + (kilitli ? " kilitli" : "")});
     kb.innerHTML = kilitSvg(kilitli);
     kb.title = kilitli ? g + ". gün kilitli — açmak için tıklayın"
