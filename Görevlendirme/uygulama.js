@@ -872,6 +872,20 @@ function sekmeler() {
 
 /* ---------- gösterge ---------- */
 
+function gunUyarilari(s) {
+  if (!s) return [];
+  const yerler = {};
+  for (const ad in s.atama) (yerler[s.atama[ad]] = yerler[s.atama[ad]] || []).push(ad);
+  const out = [];
+  V.zorunlu_yerler.concat(Object.keys(yerler).filter(y => V.zorunlu_yerler.indexOf(y) < 0)).forEach(yer => {
+    const gelen = yerler[yer];
+    if (gelen) {
+      const asan = gelen.filter(ad => (s.kademeAsimi || []).indexOf(ad) >= 0);
+      if (asan.length) out.push(s.gun + ". gün: " + asan.map(kisaAd).join(", ") + " → " + yer + ": kademe alt sınırı aşıldı");
+    } else if (s.boslar.some(b => b.yer === yer)) out.push(s.gun + ". gün: " + yer + " doldurulamadı, havuzda uygun kimse yok");
+  });
+  return out;
+}
 function bugunKart(hedef, gun, s) {
   hedef.innerHTML = "";
   const kd = kidem();
@@ -919,7 +933,6 @@ function bugunKart(hedef, gun, s) {
     es.appendChild(r);
   });
   let n2 = 0;
-  const uyarilar = [];
   tumYer.forEach(yer => {
     const boslarY = s.boslar.filter(b => b.yer === yer);
     const bos = boslarY[0];
@@ -953,22 +966,14 @@ function bugunKart(hedef, gun, s) {
       const asan = gelen.filter(ad => (s.kademeAsimi || []).indexOf(ad) >= 0);
       if (asan.length) {
         r.classList.add("esles-ihlal");
-        uyarilar.push(asan.map(kisaAd).join(", ") + " → " + yer + ": kademe alt sınırı aşıldı");
       }
     } else if (bos) {
       sag.appendChild(el("span", {className: "hata-metin", textContent: "Doldurulamadı"}));
-      uyarilar.push(yer + ": doldurulamadı, havuzda uygun kimse yok");
     }
     r.appendChild(sag);
     yerHedef(r, gun, yer, gelen || []);
     es.appendChild(r);
   });
-  if (uyarilar.length) {
-    const u = el("div", {className: "gun-uyari"});
-    u.appendChild(el("span", {className: "gun-uyari-bas", textContent: "Uyarılar"}));
-    uyarilar.forEach(x => u.appendChild(el("span", {className: "gun-uyari-oge", textContent: x})));
-    es.appendChild(u);
-  }
   if (!n2 && s.kaynak === "hafta sonu") {
     es.appendChild(el("p", {className: "ipucu", textContent: "Hafta sonu, görevlendirme yok."}));
   }
@@ -2027,7 +2032,7 @@ function ciz_gkural(satirlar, sayac) {
   b4.appendChild(dv);
   c.appendChild(b4);
 
-  const bak = analizUyarilari(satirlar, sayac);
+  const bak = gunUyarilari(satirlar[g-1]).concat(analizUyarilari(satirlar, sayac));
   const b3 = bl("Uyarılar", "uyari");
   if (bak.length) bak.forEach(x => b3.appendChild(el("div", {className: "uyari gk-uyari", textContent: x})));
   else b3.appendChild(el("div", {className: "gk-bos", textContent: "Uyarı yok"}));
