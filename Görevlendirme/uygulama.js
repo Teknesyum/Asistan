@@ -279,7 +279,8 @@ function normalize(v) {
   v.kural = v.kural || {};
   v.agirlik = v.agirlik || {};
   if (v.agirlik.kidem_yuku === undefined) v.agirlik.kidem_yuku = 0;
-  if (!Array.isArray(v.ayri_satir)) v.ayri_satir = [];
+  if (!Array.isArray(v.rotasyon)) v.rotasyon = Array.isArray(v.ayri_satir) ? v.ayri_satir : [];
+  delete v.ayri_satir;
   v.kural.nobet_ertesi_yok = true;
   if (!v.gruplar) v.gruplar = {"Ybü1":"Ybü","Ybü2":"Ybü"};
   if (!v.yer_min_kademe) v.yer_min_kademe = {"Ybü1":1,"Ybü2":1};
@@ -485,7 +486,7 @@ function bugunDurum(s, ad) {
   if (s.atama[ad]) return s.atama[ad];
   if (s.yok[ad]) return s.yok[ad];
   const y = yh[ad] || "";
-  if (V.havuz_disi_yerler.indexOf(y) >= 0 || V.zorunlu_yerler.indexOf(y) >= 0) return y;
+  if (V.havuz_disi_yerler.indexOf(y) >= 0 || V.zorunlu_yerler.indexOf(y) >= 0 || V.rotasyon.indexOf(y) >= 0) return y;
   return "Ameliyathane";
 }
 function nobetTablo(n, sirala) {
@@ -526,9 +527,10 @@ function kalanlar(g, yok) {
   if (k.yb_nobetci_o_gun_yok) bugun.yb.forEach(ad => { if (!s[ad]) s[ad] = "YBÜ Nöbeti"; });
   if (k.amel_nobetci_o_gun_yok) bugun.amel.forEach(ad => { if (!s[ad]) s[ad] = "Ameliyathane Nöbeti"; });
   (V.sabit[String(g)] || []).forEach(ad => { if (!s[ad]) s[ad] = "Sabit"; });
+  V.asistanlar.forEach(a => { if (V.rotasyon.indexOf(a.yer) >= 0 && !s[a.ad]) s[a.ad] = "Rotasyon"; });
   const ba = V.asistanlar.find(a => a.yer === "BaşAsistan");
   if (ba && yok[ba.ad] === "Nöbet Ertesi") {
-    const v = V.asistanlar.find(a => a !== ba && !yok[a.ad] && V.havuz_disi_yerler.indexOf(a.yer) < 0);
+    const v = V.asistanlar.find(a => a !== ba && !yok[a.ad] && V.havuz_disi_yerler.indexOf(a.yer) < 0 && V.rotasyon.indexOf(a.yer) < 0);
     if (v && !s[v.ad]) s[v.ad] = "Vekil";
   }
   for (const ad in yok) delete s[ad];
@@ -891,7 +893,7 @@ function bugunKart(hedef, gun, s) {
   const kalan = adlar().filter(ad =>
     !s.atama[ad] && !s.yok[ad] &&
     V.zorunlu_yerler.indexOf(yh[ad]) < 0 &&
-    V.ayri_satir.indexOf(yh[ad]) < 0 &&
+    V.rotasyon.indexOf(yh[ad]) < 0 &&
     yh[ad] !== "İzin");
   const ar = el("div", {className: "esles-satir esles-amel grid-line"});
   ar.appendChild(el("div", {className: "esles-yer", textContent: "Ameliyathanede"}));
@@ -901,7 +903,7 @@ function bugunKart(hedef, gun, s) {
   ar.appendChild(ad2);
   amelHedef(ar, gun);
   es.appendChild(ar);
-  V.ayri_satir.forEach(y => {
+  V.rotasyon.forEach(y => {
     const l = adlar().filter(ad => yh[ad] === y && !s.atama[ad] && !s.yok[ad]);
     if (!l.length) return;
     const r = el("div", {className: "esles-satir esles-amel grid-line"});
@@ -2065,7 +2067,7 @@ function ciz_analiz() {
 }
 function adaletSkoru(satirlar, sayac) {
   const kd = kidem();
-  const havuzlu = V.asistanlar.filter(x => x.havuz !== false && V.havuz_disi_yerler.indexOf(x.yer) < 0 && V.zorunlu_yerler.indexOf(x.yer) < 0);
+  const havuzlu = V.asistanlar.filter(x => x.havuz !== false && V.havuz_disi_yerler.indexOf(x.yer) < 0 && V.zorunlu_yerler.indexOf(x.yer) < 0 && V.rotasyon.indexOf(x.yer) < 0);
   const sapma = liste => {
     if (liste.length < 2) return 0;
     const y = liste.map(x => sayac.toplam[x.ad] || 0);
@@ -2113,7 +2115,7 @@ function adaletSkoru(satirlar, sayac) {
   };
 }
 
-const FARK_SINIR = 5;
+const FARK_SINIR = 6;
 function yukFarki(havuzlu, sayac) {
   const y = havuzlu.map(x => sayac.toplam[x.ad] || 0);
   const t = havuzlu.filter(x => !(sayac.vekil || {})[x.ad]).map(x => sayac.toplam[x.ad] || 0);
@@ -2151,13 +2153,11 @@ function otoAgirlik() {
 
 function analizUyarilari(satirlar, sayac) {
   const bak = [];
-  const havuzlu = V.asistanlar.filter(x => x.havuz !== false && V.havuz_disi_yerler.indexOf(x.yer) < 0 && V.zorunlu_yerler.indexOf(x.yer) < 0);
+  const havuzlu = V.asistanlar.filter(x => x.havuz !== false && V.havuz_disi_yerler.indexOf(x.yer) < 0 && V.zorunlu_yerler.indexOf(x.yer) < 0 && V.rotasyon.indexOf(x.yer) < 0);
   const yukler = havuzlu.map(x => sayac.toplam[x.ad] || 0);
   if (yukler.length) {
     const {mn, mx} = yukFarki(havuzlu, sayac);
-    const vk = havuzlu.filter(x => (sayac.vekil || {})[x.ad]).map(x => x.ad + " (" + sayac.vekil[x.ad] + " gün)");
-    bak.push("Havuzdaki yük aralığı " + mn + " – " + mx + " görev. Fark " + (mx - mn) + "." +
-      (vk.length ? " Yedek başasistanlık yapanlar en aza sayılmaz: " + vk.join(", ") + "." : ""));
+    if (mx - mn > FARK_SINIR) bak.push("Havuzdaki yük aralığı " + mn + " – " + mx + " görev. Fark " + (mx - mn) + ".");
     if (mx - mn > FARK_SINIR) bak.push('Min-Max Farkı büyük. "Toplam Yük" ağırlığını artırmayı deneyin.');
   }
   havuzlu.forEach(x => {
