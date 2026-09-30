@@ -99,12 +99,15 @@ async function yerelKaydet(mesaj) {
   return c.ok;
 }
 
+let yuklu = "";
+
 async function cekIc() {
   const neden = await depoNeden();
   if (neden) { not("depo yok: " + neden); durumYaz("yerel", neden); return { ok: false, kodDegisti: false, veriDegisti: false, sebep: neden }; }
   durumYaz("esitleniyor");
   await kimlik();
   const once = await surum();
+  if (!yuklu) yuklu = once;
   await yerelKaydet("veri");
   const r = await gitSessiz(["pull", "--no-rebase", "--no-edit", "-X", "ours", "origin", "HEAD"], { timeout: 45000 });
   if (!r.ok) {
@@ -113,8 +116,9 @@ async function cekIc() {
     durumYaz("cevrimdisi", ozet(r.cikti));
     return { ok: false, kodDegisti: false, veriDegisti: false, sebep: r.cikti };
   }
-  const list = await degisenler(once, await surum());
-  const kodDegisti = list.some(f => IZLENEN.includes(f) || f.startsWith(ARAC + "/teknesyum-ui/"));
+  const simdi = await surum();
+  const list = await degisenler(once, simdi);
+  const kodDegisti = (await degisenler(yuklu, simdi)).some(f => IZLENEN.includes(f) || f.startsWith(ARAC + "/teknesyum-ui/"));
   const veriDegisti = list.some(f => f.startsWith(ARAC + "/veri/"));
   if (list.length) not("güncellendi: " + list.length + " dosya" + (kodDegisti ? " (kod)" : ""));
   durumYaz("esitlendi");
