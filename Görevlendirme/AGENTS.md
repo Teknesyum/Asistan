@@ -31,7 +31,7 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
   `yer_kadro` o yere kaç kişi gider: `tek` (varsayılan), `kidemli_tek` (eşiği geçen düşerse tek,
   düşmezse yanına ikinci kişi), `cift` (her zaman iki kişi; yerde eşiği geçen biri varsa ikinci boşluk çömezdir: kademe ve kıdem farkı aranmaz, kademe 0 da gider). Kurallar panelindeki kısaltmalı
   düğme tıklandıkça bu üçü arasında döner. Gün için verilen `yer_adet` bu kuralı ezer.
-  `gecmis` o günü kilitler: boş nesne `{}` de geçerlidir — o gün kimse gönderilmemiş sayılır,
+  `gecmis` o günü kilitler (kilit simgesi SVG; kilitliyken `--tk-warning` sarı ve çerçeveli): boş nesne `{}` de geçerlidir — o gün kimse gönderilmemiş sayılır,
   boş yer uyarısı çıkmaz. Toplu kilit (Kalanı Hesapla, kendiliğinden kilit) hafta sonlarına dokunmaz,
   kilit simgesiyle elle kilitlenebilir.
   `degisim` `[{gun, cikan, giren, karsi}]`: `gun` günü nöbeti çıkan yerine giren tutar; `karsi`

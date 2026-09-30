@@ -473,6 +473,11 @@ function cipSeritDuz(liste) {
   liste.forEach(ad => d.appendChild(isimCip(ad, false, false)));
   return d;
 }
+function kilitSvg(kapali) {
+  return '<svg viewBox="0 0 16 16" width="1em" height="1em" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6">' +
+    '<rect x="3" y="7" width="10" height="7" rx="1.5" fill="currentColor"/>' +
+    (kapali ? '<path d="M5 7V5a3 3 0 0 1 6 0v2"/>' : '<path d="M5 7V5a3 3 0 0 1 5.8-1"/>') + '</svg>';
+}
 function isimSerit(liste, kd, rozet, gun, rf, tasiYer) {
   const d = el("div", {className: "isim-serit"});
   liste.slice().sort((x,y) => kd[x] - kd[y]).forEach(ad =>
@@ -1052,8 +1057,8 @@ function matrisBlok(satirlar, ilk, sonG, yeniHar, degisenGun) {
     tr.title = g + ". günü düzenlemek için tıklayın";
     tr.onclick = e => { if (e.target.closest(".kilit-sim")) return; gunSec(g); };
     gh.appendChild(el("span", {textContent: g + " " + s.gunAdi}));
-    const kb = el("button", {type: "button", className: "kilit-sim kilit-mini",
-      textContent: kilitli ? "🔒" : "🔓"});
+    const kb = el("button", {type: "button", className: "kilit-sim kilit-mini" + (kilitli ? " kilitli" : "")});
+    kb.innerHTML = kilitSvg(kilitli);
     kb.title = kilitli ? g + ". gün kilitli — açmak için tıklayın"
                        : g + ". günü kilitle: o günkü atama (boşsa boş olarak) sabitlenir";
     kb.onclick = () => gunKilit(g);
@@ -1199,6 +1204,7 @@ function ciz_gosterge() {
   $("#btnGunIleri").disabled = BUGUN >= n;
   const kb = $("#btnKilit");
   kb.hidden = !V.gecmis[String(BUGUN)];
+  kb.innerHTML = kilitSvg(true);
   kb.title = "Bu gün kilitli — hesaplanmaz, aynen kullanılır. Kilidi açmak için tıklayın.";
   bugunKart($("#bugunIc"), BUGUN, satirlar[BUGUN-1]);
   $("#basbarAy").textContent = AYLAR[V.ay-1] + " " + V.yil;
