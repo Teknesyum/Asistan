@@ -20,7 +20,8 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
   en dengeli dörtlüyü basar (arayüzde Kurallar → Oto Ayarla).
 - `<ay>.json` — asistanlar (kıdem sırası + `kademe`), nöbet, izin, egitim, ders, force, sabit,
   gecmis, devir, yer_adet, kural, agirlik, gruplar, yer_min_kademe, yer_kadro, degisim, refakat. `havuz_disi_yerler` (BaşAsistan, İzin) kişisi
-  hiçbir zaman sayılmaz: zorlansa bile çetele/analiz/devir sayacına girmez.
+  hiçbir zaman sayılmaz: zorlansa bile çetele/analiz/devir sayacına girmez. BaşAsistan nöbet ertesiyken
+  ondan sonraki en kıdemli (havuz dışı olmayan, o gün var olan) vekil sayılır, havuzdan çıkar; etiketi yazılmaz.
   `sabit` o gün kişiyi havuzdan çıkarır;
   `devir` önceki aydan gelen görev sayacıdır (`toplam`, `yer`); `yer_adet` o gün o yerde
   kaç kişi bulunması gerektiğidir (varsayılan 1). `kademe` küçükse çömez; `yer_min_kademe`
@@ -33,7 +34,7 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
   kilit simgesiyle elle kilitlenebilir.
   `degisim` `[{gun, cikan, giren, karsi}]`: `gun` günü nöbeti çıkan yerine giren tutar; `karsi`
   verilirse o günü de giren yerine çıkan tutar — karşılıklı değişim.
-  `karsi: 0` tek taraflıdır. Rutin yerler değişmez: nöbet ertesi olan kendi yerinden düşer, yeri zorunlu değilse boşluk açılmaz. Ay sonu değişimi `devret`/ay geçişinde `onceki_ay_son_gun_nobet`e yansır; `degisim` ve `yer_adet` yeni aya taşınmaz. İzin/eğitim `gunler` ay sonunu aşabilir (`28-2`): bu ay 28-son gün, sonraki ay 1-2 önceki ayın arşivinden kendiliğinden okunur, İzinler sekmesinde not olarak görünür. Nöbet listesi olduğu gibi kalır; nöbetçi sayılan ve ertesi gün
+  `karsi: 0` tek taraflıdır. Rutin yerler değişmez: nöbet ertesi olan kendi yerinden düşer, yeri zorunlu değilse boşluk açılmaz. Ay sonu değişimi `devret`/ay geçişinde `onceki_ay_son_gun_nobet`e yansır; `degisim` ve `yer_adet` yeni aya taşınmaz. İzin/eğitim `gunler` ay sonunu aşabilir (`28-2`): bu ay 28-son gün, sonraki ay 1-2 önceki ayın arşivinden kendiliğinden okunur, İzinler sekmesinde ve Kurallar panelinde sarı "Önceki Ay:" satırı olarak görünür (1. gün önceki ayın nöbet ertesileri de). Nöbet listesi olduğu gibi kalır; nöbetçi sayılan ve ertesi gün
   nöbet ertesi olan, o gün fiilen tutandır. Arayüz karşı günü girenin nöbetlerinden en yakınıyla
   (7 günü aşmıyorsa) önerir.
   `refakat` `[{ad, yer, gun}]`: kişi `gun` gün o yerin refakatçisi olur — kadroya sayılmaz,

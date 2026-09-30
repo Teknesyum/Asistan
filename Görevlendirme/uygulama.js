@@ -525,6 +525,11 @@ function kalanlar(g, yok) {
   if (k.yb_nobetci_o_gun_yok) bugun.yb.forEach(ad => { if (!s[ad]) s[ad] = "YBÜ Nöbeti"; });
   if (k.amel_nobetci_o_gun_yok) bugun.amel.forEach(ad => { if (!s[ad]) s[ad] = "Ameliyathane Nöbeti"; });
   (V.sabit[String(g)] || []).forEach(ad => { if (!s[ad]) s[ad] = "Sabit"; });
+  const ba = V.asistanlar.find(a => a.yer === "BaşAsistan");
+  if (ba && yok[ba.ad] === "Nöbet Ertesi") {
+    const v = V.asistanlar.find(a => a !== ba && !yok[a.ad] && V.havuz_disi_yerler.indexOf(a.yer) < 0);
+    if (v && !s[v.ad]) s[v.ad] = "Vekil";
+  }
   for (const ad in yok) delete s[ad];
   return s;
 }
@@ -1423,7 +1428,7 @@ function ciz_izin() {
   });
   const dv = devreden("izin"), not = $("#izinDevir");
   not.hidden = !dv.length;
-  not.textContent = dv.map(k => "Önceki aydan (" + k.ay + "): " + k.gunler + " " + k.kisiler.map(kisaAd).join(", ")).join(" · ");
+  not.textContent = dv.map(k => "Önceki Ay: İzin " + k.gunler + " " + k.kisiler.map(kisaAd).join(", ")).join(" · ");
 }
 $("#btnIzinEkle").onclick = () => { V.izin.push({gunler: "1-1", kisiler: []}); sakla(); ciz_izin(); };
 
@@ -1941,6 +1946,18 @@ function ciz_gkural(satirlar, sayac) {
     x.onclick = () => { V.degisim = V.degisim.filter(y => y !== d); sakla(); ciz_gosterge(); ciz_kural(); };
     r.appendChild(x); liste.appendChild(r);
   });
+  const onceki = m => {
+    const r = el("div", {className: "gk-oge gk-onceki"});
+    r.appendChild(el("span", {textContent: "Önceki Ay: " + m}));
+    liste.appendChild(r);
+  };
+  const adl = l => l.map(kisaAd).join(", ");
+  devreden("izin").filter(k => g <= k.son).forEach(k => onceki("İzin " + k.gunler + " " + adl(k.kisiler)));
+  devreden("egitim").filter(k => g <= k.son).forEach(k => onceki("Ders " + k.gunler + " " + adl(k.kisiler)));
+  if (g === 1) {
+    const o = V.onceki_ay_son_gun_nobet || {}, l = (o.yb || []).concat(o.amel || []);
+    if (l.length) onceki("Nöbet ertesi " + adl(l));
+  }
   if (!liste.children.length) liste.appendChild(el("div", {className: "gk-bos", textContent: "Bugüne ek kural yok"}));
   b1.appendChild(liste);
   c.appendChild(b1);

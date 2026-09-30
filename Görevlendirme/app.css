@@ -909,3 +909,4 @@ input[type="checkbox"] { color-scheme: dark; inline-size: var(--tk-target-min); 
 :root { color-scheme: dark; }
 .isim-yerinde { border-color: var(--tk-warning); }
 .a-bugun.kopya { border-color: transparent; }
+.gk-onceki { border-color: var(--tk-warning); color: var(--tk-warning); }
