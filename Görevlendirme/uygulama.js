@@ -279,6 +279,7 @@ function normalize(v) {
   v.kural = v.kural || {};
   v.agirlik = v.agirlik || {};
   if (v.agirlik.kidem_yuku === undefined) v.agirlik.kidem_yuku = 0;
+  if (!Array.isArray(v.ayri_satir)) v.ayri_satir = [];
   v.kural.nobet_ertesi_yok = true;
   if (!v.gruplar) v.gruplar = {"Ybü1":"Ybü","Ybü2":"Ybü"};
   if (!v.yer_min_kademe) v.yer_min_kademe = {"Ybü1":1,"Ybü2":1};
@@ -890,6 +891,7 @@ function bugunKart(hedef, gun, s) {
   const kalan = adlar().filter(ad =>
     !s.atama[ad] && !s.yok[ad] &&
     V.zorunlu_yerler.indexOf(yh[ad]) < 0 &&
+    V.ayri_satir.indexOf(yh[ad]) < 0 &&
     yh[ad] !== "İzin");
   const ar = el("div", {className: "esles-satir esles-amel grid-line"});
   ar.appendChild(el("div", {className: "esles-yer", textContent: "Ameliyathanede"}));
@@ -899,6 +901,16 @@ function bugunKart(hedef, gun, s) {
   ar.appendChild(ad2);
   amelHedef(ar, gun);
   es.appendChild(ar);
+  V.ayri_satir.forEach(y => {
+    const l = adlar().filter(ad => yh[ad] === y && !s.atama[ad] && !s.yok[ad]);
+    if (!l.length) return;
+    const r = el("div", {className: "esles-satir esles-amel grid-line"});
+    r.appendChild(el("div", {className: "esles-yer", textContent: yerAdi(y)}));
+    const d = el("div", {className: "esles-amel-liste"});
+    d.appendChild(isimSerit(l, kd, false, gun, null, ""));
+    r.appendChild(d);
+    es.appendChild(r);
+  });
   let n2 = 0;
   const uyarilar = [];
   tumYer.forEach(yer => {
@@ -2255,6 +2267,7 @@ function devret() {
     refakat: Object.assign({}, sayac.refakat), kaynak};
   V = normalize(yeni); sakla(); baslat();
   toast(AYLAR[a-1] + " " + y + " açıldı · sayaç ve son gün nöbeti devredildi");
+  if (confirm(AYLAR[a-1] + " ayında yeri değişen asistan var mı? Tamam derseniz Asistanlar sekmesi açılır.")) $("#nav").children[1].click();
 }
 $("#btnKaydet").onclick = () => {
   const a = el("a", {href: URL.createObjectURL(new Blob([JSON.stringify(V, null, 2)], {type: "application/json"})),

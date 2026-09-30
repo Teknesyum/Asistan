@@ -21,7 +21,8 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
   karşılığında min-max farkı 5e kadar cezasız (`FARK_SINIR`). Yedek başasistanlık yapan (`sayac.vekil`) min hesabına girmez, görev almaya devam eder.
 - `<ay>.json` — asistanlar (kıdem sırası + `kademe`), nöbet, izin, egitim, ders, force, sabit,
   gecmis, devir, yer_adet, kural, agirlik, gruplar, yer_min_kademe, yer_kadro, degisim, refakat. `havuz_disi_yerler` (BaşAsistan, İzin) kişisi
-  hiçbir zaman sayılmaz: zorlansa bile çetele/analiz/devir sayacına girmez. BaşAsistan nöbet ertesiyken
+  hiçbir zaman sayılmaz: zorlansa bile çetele/analiz/devir sayacına girmez. `ayri_satir` (ör. Algoloji) yerindekiler
+  "Ameliyathanede" yerine gün panelinde kendi satırında çıkar, havuzda kalır. `devret` sonunda "yeri değişen var mı" sorulur. BaşAsistan nöbet ertesiyken
   ondan sonraki en kıdemli (havuz dışı olmayan, o gün var olan) vekil sayılır, havuzdan çıkar; etiketi yazılmaz.
   `sabit` o gün kişiyi havuzdan çıkarır;
   `devir` önceki aydan gelen görev sayacıdır (`toplam`, `yer`); `yer_adet` o gün o yerde
