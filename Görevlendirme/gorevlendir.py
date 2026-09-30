@@ -385,7 +385,7 @@ OTO_IZGARA = {
     "toplam_gorev": [1, 2, 4, 8],
     "ayni_yer_tekrari": [0, 1, 3, 6],
     "dun_de_gonderildi": [0, 1, 3, 6],
-    "kidem_yuku": [0, 0.5, 1, 2],
+    "kidem_yuku": [1, 2, 4, 8],
 }
 
 
@@ -413,7 +413,7 @@ def adalet_skoru(v, satirlar, sayac):
     ters = sum(max(0, y[i] - y[i + 1]) for i in range(len(y) - 1)) / max(1, len(y) - 1)
     yr = len(y) // 2
     ort = lambda z: sum(z) / len(z) if z else 0.0
-    egim = min(1.0, ort(y[yr:]) - ort(y[:yr])) if len(y) > 1 else 0.0
+    egim = ort(y[yr:]) - ort(y[:yr]) if len(y) > 1 else 0.0
     fark = (max(y) - min(y)) if y else 0
     ceza = 100 * max(0, fark - 5)
     ku, na = 0.0, 0
@@ -437,7 +437,7 @@ def adalet_skoru(v, satirlar, sayac):
         if not sayac["toplam"][ad]:
             uy += 1
     return {
-        "skor": 2 * (kidemli + comez) + 4 * ters + 3 * ku + uy - 4 * egim + ceza,
+        "skor": 2 * (kidemli + comez) + 4 * ters + 3 * ku + uy - 6 * egim + ceza,
         "kidemli": kidemli, "comez": comez, "ters": ters, "egim": egim, "fark": fark,
         "kidem_uyum": ku, "uyari": uy,
     }

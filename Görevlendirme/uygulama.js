@@ -1067,7 +1067,7 @@ function matrisBlok(satirlar, ilk, sonG, yeniHar, degisenGun) {
     tr.classList.add("secilebilir");
     tr.title = g + ". günü düzenlemek için tıklayın";
     tr.onclick = e => { if (e.target.closest(".kilit-sim")) return; gunSec(g); };
-    gh.appendChild(el("span", {textContent: String(g).padStart(2, " ") + " " + s.gunAdi}));
+    gh.appendChild(el("span", {textContent: String(g).padStart(2, " ") + " " + s.gunAdi + " "}));
     const kb = el("button", {type: "button", className: "kilit-sim kilit-mini" + (kilitli ? " kilitli" : "")});
     kb.innerHTML = kilitSvg(kilitli);
     kb.title = kilitli ? g + ". gün kilitli — açmak için tıklayın"
@@ -2113,7 +2113,7 @@ function adaletSkoru(satirlar, sayac) {
   ters = yuk.length > 1 ? ters / (yuk.length - 1) : 0;
   const yr = Math.floor(yuk.length / 2);
   const ort = a => a.length ? a.reduce((x,y) => x+y, 0) / a.length : 0;
-  const egim = yuk.length > 1 ? Math.min(1, ort(yuk.slice(yr)) - ort(yuk.slice(0, yr))) : 0;
+  const egim = yuk.length > 1 ? ort(yuk.slice(yr)) - ort(yuk.slice(0, yr)) : 0;
   const fark = yukFarki(havuzlu, sayac).fark;
   const ceza = 100 * Math.max(0, fark - FARK_SINIR);
   let ku = 0, na = 0;
@@ -2136,7 +2136,7 @@ function adaletSkoru(satirlar, sayac) {
     if (!(sayac.toplam[x.ad] || 0)) uy++;
   });
   return {
-    skor: 2 * (kidemliSapma + comezSapma) + 4 * ters + 3 * ku + uy - 4 * egim + ceza,
+    skor: 2 * (kidemliSapma + comezSapma) + 4 * ters + 3 * ku + uy - 6 * egim + ceza,
     kidemliSapma, comezSapma, ters, egim, fark, kidemUyum: ku, uyari: uy
   };
 }
@@ -2154,7 +2154,7 @@ const OTO_IZGARA = {
   toplam_gorev: [1, 2, 4, 8],
   ayni_yer_tekrari: [0, 1, 3, 6],
   dun_de_gonderildi: [0, 1, 3, 6],
-  kidem_yuku: [0, 0.5, 1, 2]
+  kidem_yuku: [1, 2, 4, 8]
 };
 
 const AYAR_ALANLARI = ["agirlik", "kural", "yer_kadro", "yer_min_kademe", "gruplar", "zorunlu_yerler", "havuz_disi_yerler", "rotasyon"];

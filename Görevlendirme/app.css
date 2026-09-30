@@ -911,3 +911,5 @@ input[type="checkbox"] { color-scheme: dark; inline-size: var(--tk-target-min); 
 .a-bugun.kopya { border-color: transparent; }
 .gk-onceki { border-color: var(--tk-warning); color: var(--tk-warning); }
 .kilit-sim.kilitli { color: var(--tk-warning); box-shadow: inset 0 0 0 var(--tk-border-w) var(--tk-warning-border); border-radius: var(--tk-r-btn); }
+.gun-hucre > span, .gun-hucre .kilit-mini { vertical-align: middle; }
+.kilit-mini svg { display: block; margin: 0 auto; }
