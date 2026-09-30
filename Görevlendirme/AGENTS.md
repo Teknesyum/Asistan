@@ -17,7 +17,8 @@ havuzdaki asistanları kıdem ve dengeli dağılım gözeterek atar.
 - `app.css` — arayüzün kendi katmanı, her değer `--tk-*`. Değiştirince
   `node <teknesyum-ui>/scripts/scan.js .` sıfır hata vermeli. Sapmalar docs/danisma/001'de.
 - `gorevlendir.py` — toplu/CLI çalıştırma. `python -X utf8 gorevlendir.py <ay>.json`, CSV üretir. `--oto` ağırlık ızgarasını tarayıp
-  en dengeli dörtlüyü basar (arayüzde Kurallar → Oto Ayarla).
+  en dengeli dörtlüyü basar (arayüzde Kurallar → Oto Ayarla). Oto, kıdem farkı ağırlığını 2nin altına indirmez (elle inilebilir);
+  karşılığında min-max farkı 5e kadar cezasız (`FARK_SINIR`). Yedek başasistanlık yapan (`sayac.vekil`) min hesabına girmez, görev almaya devam eder.
 - `<ay>.json` — asistanlar (kıdem sırası + `kademe`), nöbet, izin, egitim, ders, force, sabit,
   gecmis, devir, yer_adet, kural, agirlik, gruplar, yer_min_kademe, yer_kadro, degisim, refakat. `havuz_disi_yerler` (BaşAsistan, İzin) kişisi
   hiçbir zaman sayılmaz: zorlansa bile çetele/analiz/devir sayacına girmez. BaşAsistan nöbet ertesiyken

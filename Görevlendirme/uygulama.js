@@ -644,7 +644,7 @@ function gunAta(boslar, adaylar, sayac, dun, kd, ybn) {
 
 function hesapla() {
   const kd = kidem(), iz = izinGun(), eg = egitimGun(), n = gunSayisi();
-  const sayac = {toplam:{}, yer:{}, sonGun:{}, refakat:{}};
+  const sayac = {toplam:{}, yer:{}, sonGun:{}, refakat:{}, vekil:{}};
   Object.assign(sayac.toplam, V.devir.toplam || {});
   Object.assign(sayac.yer, V.devir.yer || {});
   Object.assign(sayac.refakat, V.devir.refakat || {});
@@ -655,6 +655,7 @@ function hesapla() {
     const yh = yerHarita(g);
     const yok = yokOlanlar(g, iz, eg);
     const kalsin = kalanlar(g, yok);
+    for (const ad in kalsin) if (kalsin[ad] === "Vekil") sayac.vekil[ad] = (sayac.vekil[ad] || 0) + 1;
     let boslar = bosluklar(yok, g);
     let atama = {}, kaynak = "hesap", refakat = [];
     const onceSayac = {toplam: Object.assign({}, sayac.toplam), yer: Object.assign({}, sayac.yer),
@@ -2073,8 +2074,8 @@ function adaletSkoru(satirlar, sayac) {
   const yr = Math.floor(yuk.length / 2);
   const ort = a => a.length ? a.reduce((x,y) => x+y, 0) / a.length : 0;
   const egim = yuk.length > 1 ? Math.min(1, ort(yuk.slice(yr)) - ort(yuk.slice(0, yr))) : 0;
-  const fark = yuk.length ? Math.max(...yuk) - Math.min(...yuk) : 0;
-  const ceza = 100 * Math.max(0, fark - 3);
+  const fark = yukFarki(havuzlu, sayac).fark;
+  const ceza = 100 * Math.max(0, fark - FARK_SINIR);
   let ku = 0, na = 0;
   satirlar.forEach(s => {
     if (s.kaynak !== "hesap") return;
@@ -2095,13 +2096,21 @@ function adaletSkoru(satirlar, sayac) {
     if (!(sayac.toplam[x.ad] || 0)) uy++;
   });
   return {
-    skor: 2 * (kidemliSapma + comezSapma) + 4 * ters + ku + uy - 4 * egim + ceza,
+    skor: 2 * (kidemliSapma + comezSapma) + 4 * ters + 3 * ku + uy - 4 * egim + ceza,
     kidemliSapma, comezSapma, ters, egim, fark, kidemUyum: ku, uyari: uy
   };
 }
 
+const FARK_SINIR = 5;
+function yukFarki(havuzlu, sayac) {
+  const y = havuzlu.map(x => sayac.toplam[x.ad] || 0);
+  const t = havuzlu.filter(x => !(sayac.vekil || {})[x.ad]).map(x => sayac.toplam[x.ad] || 0);
+  if (!y.length) return {mn: 0, mx: 0, fark: 0};
+  const mx = Math.max(...y), mn = Math.min(...(t.length ? t : y));
+  return {mn, mx, fark: mx - mn};
+}
 const OTO_IZGARA = {
-  kidem_farki: [0.5, 1, 2, 4],
+  kidem_farki: [2, 3, 4, 6],
   toplam_gorev: [1, 2, 4, 8],
   ayni_yer_tekrari: [0, 1, 3, 6],
   dun_de_gonderildi: [0, 1, 3, 6],
@@ -2133,9 +2142,11 @@ function analizUyarilari(satirlar, sayac) {
   const havuzlu = V.asistanlar.filter(x => x.havuz !== false && V.havuz_disi_yerler.indexOf(x.yer) < 0 && V.zorunlu_yerler.indexOf(x.yer) < 0);
   const yukler = havuzlu.map(x => sayac.toplam[x.ad] || 0);
   if (yukler.length) {
-    const mn = Math.min(...yukler), mx = Math.max(...yukler);
-    bak.push("Havuzdaki yük aralığı " + mn + " – " + mx + " görev. Fark " + (mx - mn) + ".");
-    if (mx - mn > 3) bak.push('Min-Max Farkı büyük. "Toplam Yük" ağırlığını artırmayı deneyin.');
+    const {mn, mx} = yukFarki(havuzlu, sayac);
+    const vk = havuzlu.filter(x => (sayac.vekil || {})[x.ad]).map(x => x.ad + " (" + sayac.vekil[x.ad] + " gün)");
+    bak.push("Havuzdaki yük aralığı " + mn + " – " + mx + " görev. Fark " + (mx - mn) + "." +
+      (vk.length ? " Yedek başasistanlık yapanlar en aza sayılmaz: " + vk.join(", ") + "." : ""));
+    if (mx - mn > FARK_SINIR) bak.push('Min-Max Farkı büyük. "Toplam Yük" ağırlığını artırmayı deneyin.');
   }
   havuzlu.forEach(x => {
     const dagilim = gruplar().map(y => sayac.yer[x.ad + "|" + y] || 0);
