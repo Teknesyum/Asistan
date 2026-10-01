@@ -25,6 +25,7 @@
   <div class="tk-titlebar__tabs"></div>
   <div class="tk-titlebar__tools">
     <button type="button" class="tk-sync" id="basbarSenk" hidden></button>
+    <button type="button" class="tk-titlebar__chip" id="btnWp" title="16:00 ve 22:00'de görevlendirme resmini WhatsApp'a kendiliğinden gönderir">WhatsApp</button>
     <button type="button" class="tk-titlebar__chip" id="btnSayfaQr" title="Açık sekmeyi resim olarak yükler, telefonla okutulacak QR gösterir">QR</button>
     <button type="button" class="tk-titlebar__chip tk-titlebar__chip--brand" id="imza"></button>
     <button type="button" class="tk-titlebar__chip tk-titlebar__chip--support" id="destek"></button>
@@ -260,6 +261,33 @@
     <li>Resim 3 saat sonra sunucudan silinir.</li>
   </ol>
   <button type="button" id="telLink" class="tel-link" title="Bağlantıyı kopyala"></button>
+</dialog>
+<dialog id="wpDlg" class="tel-dlg wp-dlg" aria-labelledby="wpBas">
+  <div class="pnl-bas"><span id="wpBas">WhatsApp Otomasyonu</span><span class="bosluk"></span><button type="button" id="wpKapat" class="dgm dgm-mini">Kapat</button></div>
+  <div class="wp-satir"><span id="wpDurum" class="wp-durum" role="status">Bağlantı denetleniyor</span><span class="bosluk"></span><button type="button" id="wpBagla" class="dgm dgm-mini">Bağlan</button><button type="button" id="wpCikis" class="dgm dgm-mini" hidden>Bağlantıyı Kes</button></div>
+  <canvas id="wpQr" class="tel-qr" hidden></canvas>
+  <p id="wpQrNot" class="wp-yardim" hidden>Telefonda WhatsApp → Bağlı cihazlar → Cihaz bağla, bu kodu okut.</p>
+  <div class="wp-hedef">
+    <label for="wpAraA">16:00 Hedefi (A)</label>
+    <span class="wp-secili" id="wpSecA"></span>
+    <div class="wp-ara"><input id="wpAraA" class="gir" type="search" autocomplete="off"><button type="button" class="dgm dgm-mini" data-ara="A">Ara</button></div>
+    <ul class="wp-liste" id="wpListeA" hidden></ul>
+  </div>
+  <div class="wp-hedef">
+    <label for="wpAraB">22:00 Hedefi (B)</label>
+    <span class="wp-secili" id="wpSecB"></span>
+    <div class="wp-ara"><input id="wpAraB" class="gir" type="search" autocomplete="off"><button type="button" class="dgm dgm-mini" data-ara="B">Ara</button></div>
+    <ul class="wp-liste" id="wpListeB" hidden></ul>
+  </div>
+  <div class="wp-satir">
+    <label for="wpGun">Gönderilen gün</label>
+    <select id="wpGun" class="gir gir-orta"><option value="yarin">Yarın</option><option value="bugun">Bugün</option></select>
+    <label class="wp-kutu"><input type="checkbox" id="wpHaftasonu"> Hafta sonunu atla</label>
+  </div>
+  <p class="wp-yardim">Resim gönderim anındaki güncel düzendir: 16:00'da A'ya, 22:00'de B'ye. Bilgisayar açık olmalı; uygulama kapalıysa kendisi açılır.</p>
+  <div class="wp-satir"><span id="wpPlan" class="wp-plan"></span><span class="bosluk"></span><button type="button" id="wpDurdur" class="dgm dgm-mini" hidden>Durdur</button><button type="button" id="wpBaslat" class="dgm dgm-birincil">14 Gün Başlat</button></div>
+  <div class="wp-satir"><span class="wp-yardim">Deneme</span><span class="bosluk"></span><button type="button" class="dgm dgm-mini" data-simdi="A">A'ya Şimdi Gönder</button><button type="button" class="dgm dgm-mini" data-simdi="B">B'ye Şimdi Gönder</button></div>
+  <ol id="wpKayit" class="wp-kayit" aria-label="Son gönderimler"></ol>
 </dialog>
 <script src="qr.js"></script>
 <script>

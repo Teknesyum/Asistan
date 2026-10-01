@@ -2,6 +2,7 @@ const { app, BrowserWindow, Menu, ipcMain, clipboard, shell } = require("electro
 const path = require("path");
 const fs = require("fs");
 const senkron = require("./senkron");
+const whatsapp = require("./whatsapp");
 const etiket = () => { try { return { ...JSON.parse(fs.readFileSync(path.join(__dirname, "teknesyum-ui", "css", "labels.tr.json"), "utf-8")), "app.title": require("./package.json").productName }; } catch (err) { return {}; } };
 
 let VERIDIZIN = null;
@@ -31,6 +32,68 @@ function veriYol(k) {
   return path.join(veriDizin(), ad + ".json");
 }
 
+const wpArg = argv => { const i = argv.indexOf("--wp"); return i >= 0 && /^[AB]$/.test(argv[i + 1]) ? argv[i + 1] : null; };
+const ILK_WP = wpArg(process.argv);
+if (!app.requestSingleInstanceLock()) { app.quit(); process.exit(0); }
+app.commandLine.appendSwitch("disable-renderer-backgrounding");
+app.commandLine.appendSwitch("disable-backgrounding-occluded-windows");
+app.commandLine.appendSwitch("disable-features", "CalculateNativeWinOcclusion");
+let ANA = null, hazirCoz = null, rendererHazir = new Promise(r => { hazirCoz = r; });
+const resimBekleyen = new Map();
+let resimSira = 1, wpZincir = Promise.resolve();
+
+function resimIste(w, a, zorla) {
+  const id = resimSira++;
+  return new Promise((coz, red) => {
+    const t = setTimeout(() => { resimBekleyen.delete(id); red(new Error("resim hazırlanamadı")); }, 60000);
+    resimBekleyen.set(id, { coz, red, t });
+    w.webContents.send("wp:resim-iste", { id, gun: a.gun, haftasonu: a.haftasonu, zorla });
+  });
+}
+
+function wpTetik(h, elle) {
+  const is = wpZincir.then(() => wpGonder(h, elle));
+  wpZincir = is.catch(() => {});
+  return is;
+}
+
+async function wpGonder(h, elle) {
+  const a = whatsapp.ayarOku();
+  const anahtar = whatsapp.tarih(new Date()) + "|" + h;
+  const hedef = a["hedef" + h];
+  if (!elle) {
+    const neden = whatsapp.zamanUygun(h, a);
+    if (neden) {
+      if (/geç/.test(neden)) whatsapp.kaydet({ anahtar, h, ok: false, not: neden });
+      return { ok: false, not: neden };
+    }
+  }
+  if (!hedef || !hedef.jid) {
+    whatsapp.kaydet({ anahtar, h, ok: false, not: "hedef seçilmemiş", elle });
+    return { ok: false, not: "hedef seçilmemiş" };
+  }
+  await Promise.race([rendererHazir, new Promise(r => setTimeout(r, 60000))]);
+  const w = ANA;
+  if (!w || w.isDestroyed()) return { ok: false, not: "pencere yok" };
+  const kucuk = w.isMinimized(), gizli = !w.isVisible();
+  try {
+    if (kucuk || gizli) { w.showInactive(); if (kucuk) w.restore(); await new Promise(r => setTimeout(r, 800)); }
+    const r = await resimIste(w, a, !!elle);
+    if (kucuk) w.minimize();
+    if (r.atla) {
+      whatsapp.kaydet({ anahtar: anahtar + "|atla", h, ok: false, atla: true, not: r.atla, elle });
+      return { ok: false, not: r.atla };
+    }
+    await whatsapp.gonder(hedef.jid, r.bayt, "gorevlendirme-" + h);
+    whatsapp.kaydet({ anahtar, h, ok: true, hedef: hedef.ad, gun: r.etiket, elle });
+    return { ok: true, hedef: hedef.ad, gun: r.etiket };
+  } catch (e) {
+    if (kucuk && !w.isDestroyed() && !w.isMinimized()) w.minimize();
+    whatsapp.kaydet({ anahtar, h, ok: false, hedef: hedef.ad, not: e.message, elle });
+    return { ok: false, not: e.message };
+  }
+}
+
 function pencere() {
   const p = new BrowserWindow({
     width: 1440,
@@ -53,7 +116,7 @@ function pencere() {
   });
   p.maximize();
   p.loadFile(path.join(__dirname, "arayuz.html"));
-  p.once("ready-to-show", () => p.show());
+  p.once("ready-to-show", () => { if (ILK_WP) p.showInactive(); else p.show(); });
   const bildir = () => p.webContents.send("pencere:durum", p.isMaximized());
   p.on("maximize", bildir);
   p.on("unmaximize", bildir);
@@ -83,11 +146,11 @@ app.whenReady().then(async () => {
     if (!w) return;
     if (w.isMaximized()) w.unmaximize(); else w.maximize();
   });
-  ipcMain.handle("pencere:kopyala", async (e, r) => {
+  ipcMain.handle("pencere:kopyala", async (e, r, sessiz) => {
     const w = hedef(e);
     if (!w) return false;
-    const img = await w.webContents.capturePage(r);
-    try { clipboard.write({ image: img }); } catch (e) {}
+    const img = await w.webContents.capturePage(r, { stayHidden: true, stayAwake: true });
+    if (!sessiz) try { clipboard.write({ image: img }); } catch (e) {}
     return img.toPNG();
   });
   ipcMain.handle("pencere:yukle", async (e, bayt) => {
@@ -115,7 +178,34 @@ app.whenReady().then(async () => {
   });
   ipcMain.handle("senkron:durum", () => senkron.durum());
   ipcMain.handle("senkron:simdi", async () => { try { await senkron.simdiGonder(); return await senkron.esitle(); } catch (e) { return false; } });
+  ipcMain.on("wp:hazir", () => hazirCoz());
+  ipcMain.on("wp:resim", (e, d) => {
+    const b = resimBekleyen.get(d && d.id);
+    if (!b) return;
+    resimBekleyen.delete(d.id);
+    clearTimeout(b.t);
+    if (d.hata) b.red(new Error(d.hata)); else b.coz(d);
+  });
+  ipcMain.handle("wp:istek", (e, op, ek) => whatsapp.istek(op, ek || {}));
+  ipcMain.handle("wp:ayar", () => whatsapp.ayarOku());
+  ipcMain.handle("wp:ayar-yaz", (e, d) => { const a = whatsapp.ayarOku(); for (const k of ["hedefA", "hedefB", "gun", "haftasonu"]) if (k in d) a[k] = d[k]; return whatsapp.ayarYaz(a); });
+  ipcMain.handle("wp:zamanla", () => whatsapp.zamanla());
+  ipcMain.handle("wp:durdur", () => whatsapp.durdur());
+  ipcMain.handle("wp:gorev", () => whatsapp.gorevVar());
+  ipcMain.handle("wp:simdi", (e, h) => wpTetik(h, true));
   const w = pencere();
+  ANA = w;
+  whatsapp.dinle(d => { if (!w.isDestroyed()) w.webContents.send("wp:olay", d); });
+  w.webContents.on("did-start-navigation", d => { if (d.isMainFrame && !d.isSameDocument) rendererHazir = new Promise(r => { hazirCoz = r; }); });
+  app.on("second-instance", (e, argv) => {
+    const h = wpArg(argv);
+    if (h) { wpTetik(h, false); return; }
+    if (w.isDestroyed()) return;
+    if (w.isMinimized()) w.restore();
+    w.show();
+    w.focus();
+  });
+  if (ILK_WP) wpTetik(ILK_WP, false);
   senkron.dinle(d => { if (!w.isDestroyed()) w.webContents.send("senkron:olay", d); });
   senkron.izle(60000, r => {
     if (!r || !r.ok || w.isDestroyed()) return;
@@ -132,6 +222,7 @@ app.on("before-quit", () => {
   if (cikisSenkronu) return;
   cikisSenkronu = true;
   try { senkron.arkadaGonder(); } catch (e) {}
+  whatsapp.kapat();
 });
 
 app.on("window-all-closed", () => app.quit());

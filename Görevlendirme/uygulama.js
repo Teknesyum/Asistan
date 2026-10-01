@@ -2436,13 +2436,13 @@ function icerikKutu(d) {
   const p = 6;
   return {left: l - p, top: t - p, width: rr - l + p * 2, height: b - t + p * 2};
 }
-async function alanPng(k) {
+async function alanPng(k, sessiz) {
   const png = await PENCERE.kopyala({
     x: Math.max(0, Math.floor(k.left) - 1),
     y: Math.max(0, Math.floor(k.top) - 1),
     width: Math.ceil(k.width) + 2,
     height: Math.ceil(k.height) + 2
-  });
+  }, sessiz);
   if (!png || !png.length) throw new Error("görüntü alınamadı");
   return createImageBitmap(new Blob([png], {type: "image/png"}));
 }
@@ -2489,13 +2489,13 @@ function ekipResim(olcek, zemin) {
   });
   return c;
 }
-async function resimUret() {
+async function resimUret(pano = true) {
   const pnl = document.querySelector(".a-bugun");
   pnl.classList.add("kopya");
   await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
   try {
     const kutu = icerikKutu(pnl);
-    const ust = await alanPng(kutu);
+    const ust = await alanPng(kutu, !pano);
     pnl.classList.remove("kopya");
     const zemin = zeminRengi(ust);
     const alt = ekipResim(ust.width / kutu.width, zemin);
@@ -2509,7 +2509,7 @@ async function resimUret() {
     x.drawImage(ust, Math.round((c.width - ust.width) / 2), ara);
     x.drawImage(alt, Math.round((c.width - alt.width) / 2), ara + ust.height + ara);
     const blob = await new Promise(r => c.toBlob(r, "image/png"));
-    await navigator.clipboard.write([new ClipboardItem({"image/png": blob})]);
+    if (pano) await navigator.clipboard.write([new ClipboardItem({"image/png": blob})]);
     return blob;
   } finally {
     pnl.classList.remove("kopya");
@@ -2557,4 +2557,135 @@ async function sayfaBayt() {
 $("#btnSayfaQr").onclick = () => qrGoster($("#btnSayfaQr"), sayfaBayt);
 $("#telKapat").onclick = () => $("#telDlg").close();
 $("#btnTelefon").onclick = () => qrGoster($("#btnTelefon"), async () => new Uint8Array(await (await resimUret()).arrayBuffer()));
+function wpHedefGun(kip) {
+  const d = new Date();
+  if (kip !== "bugun") d.setDate(d.getDate() + 1);
+  return d;
+}
+const kare = () => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+async function wpResim(q) {
+  const d = wpHedefGun(q.gun);
+  const etiket = d.toLocaleDateString("tr-TR", {day: "numeric", month: "long", weekday: "long"});
+  if (q.haftasonu && !q.zorla && (d.getDay() === 0 || d.getDay() === 6)) return {atla: etiket + " hafta sonu"};
+  if (d.getFullYear() !== V.yil || d.getMonth() + 1 !== V.ay) return {atla: etiket + " açık ayın dışında"};
+  const eskiGun = BUGUN;
+  const sekmeler = [...$("#nav").querySelectorAll("button")];
+  const eskiSekme = sekmeler.findIndex(b => b.getAttribute("aria-selected") === "true");
+  const acik = [...document.querySelectorAll("dialog[open]")];
+  acik.forEach(x => x.close());
+  try {
+    if ($("#s-gosterge").hidden) sekmeler[0].click();
+    gunSec(d.getDate());
+    await kare();
+    const blob = await resimUret(false);
+    return {bayt: new Uint8Array(await blob.arrayBuffer()), etiket};
+  } finally {
+    gunSec(eskiGun);
+    if (eskiSekme > 0) sekmeler[eskiSekme].click();
+    acik.forEach(x => { if (!x.open) x.showModal(); });
+  }
+}
+function wpKur() {
+  const W = PENCERE && PENCERE.wp;
+  if (!W) { $("#btnWp").hidden = true; return; }
+  W.resimIste(async q => {
+    try { W.resim({id: q.id, ...(await wpResim(q))}); }
+    catch (e) { W.resim({id: q.id, hata: e.message}); }
+  });
+  let durum = {bagli: false, cevrimici: false}, acan = null;
+  const saat = t => new Date(t).toLocaleString("tr-TR", {day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit"});
+  const durumCiz = () => {
+    const e = $("#wpDurum");
+    e.dataset.durum = durum.bagli && durum.cevrimici ? "acik" : durum.bagli ? "" : "kapali";
+    e.textContent = durum.bagli ? (durum.cevrimici ? "Bağlı" : "Bağlanıyor") + " · " + (durum.ad || "") + " +" + (durum.numara || "") : "Bağlı değil";
+    $("#wpBagla").hidden = !!durum.bagli;
+    $("#wpCikis").hidden = !durum.bagli;
+    if (durum.bagli) { $("#wpQr").hidden = true; $("#wpQrNot").hidden = true; }
+  };
+  const ayarCiz = async () => {
+    const a = await W.ayar();
+    for (const h of ["A", "B"]) $("#wpSec" + h).textContent = a["hedef" + h] ? "Seçili: " + a["hedef" + h].ad : "Henüz seçilmedi";
+    $("#wpGun").value = a.gun || "yarin";
+    $("#wpHaftasonu").checked = a.haftasonu !== false;
+    const aktif = a.bitis && a.bitis > Date.now();
+    $("#wpPlan").textContent = aktif ? "Açık · " + new Date(a.bitis).toLocaleDateString("tr-TR", {day: "numeric", month: "long"}) + " sonuna dek" : "Kapalı";
+    $("#wpBaslat").textContent = aktif ? "14 Gün Yenile" : "14 Gün Başlat";
+    $("#wpDurdur").hidden = !aktif;
+    const k = $("#wpKayit"); k.innerHTML = "";
+    const son = (a.kayit || []).slice(-8).reverse();
+    if (!son.length) k.appendChild(el("li", {textContent: "Henüz gönderim yok"}));
+    son.forEach(x => {
+      const li = el("li", {textContent: saat(x.zaman) + " · " + x.h + (x.hedef ? " → " + x.hedef : "") + (x.gun ? " · " + x.gun : "") + " · " + (x.ok ? "gönderildi" : x.not) + (x.elle ? " (elle)" : "")});
+      li.dataset.ok = x.ok || x.atla ? "1" : "0";
+      k.appendChild(li);
+    });
+  };
+  W.olay(d => {
+    if (d.ev === "durum") { durum = d; durumCiz(); }
+    else if (d.ev === "qr") { qrCiz($("#wpQr"), d.kod); $("#wpQr").hidden = false; $("#wpQrNot").hidden = false; }
+    else if (d.ev === "qr_bitti") { $("#wpQr").hidden = true; $("#wpQrNot").hidden = true; toast("QR süresi doldu, yeniden Bağlan"); }
+    else if (d.ev === "ayar") { if ($("#wpDlg").open) ayarCiz(); }
+  });
+  const hata = e => String(e && e.message || e).replace(/^.*Error: /, "");
+  $("#btnWp").onclick = async () => {
+    acan = document.activeElement;
+    $("#wpDlg").showModal();
+    ayarCiz();
+    try { durum = await W.istek("durum"); durumCiz(); } catch (e) { $("#wpDurum").textContent = "Yardımcı açılamadı: " + hata(e); }
+  };
+  $("#wpDlg").addEventListener("close", () => { if (acan && acan.focus) acan.focus(); });
+  $("#wpKapat").onclick = () => $("#wpDlg").close();
+  $("#wpBagla").onclick = async () => {
+    try { await W.istek("bagla"); } catch (e) { toast("Bağlanamadı: " + hata(e)); }
+  };
+  $("#wpCikis").onclick = async () => {
+    if (!confirm("WhatsApp bağlantısı kesilsin mi? Yeniden QR okutmak gerekir.")) return;
+    try { await W.istek("cikis"); } catch (e) { toast("Kesilemedi: " + hata(e)); }
+  };
+  const ara = async h => {
+    const q = $("#wpAra" + h).value.trim(), ul = $("#wpListe" + h);
+    if (!q) return;
+    ul.innerHTML = ""; ul.hidden = false;
+    let v = [];
+    try { v = await W.istek("ara", {q}) || []; } catch (e) { ul.appendChild(el("li", {textContent: hata(e)})); return; }
+    if (!v.length) { ul.appendChild(el("li", {textContent: "Eşleşen grup ya da kişi yok"})); return; }
+    v.forEach(x => {
+      const b = el("button", {type: "button", className: "dgm dgm-mini", textContent: (x.tur === "grup" ? "Grup · " : "Kişi · ") + x.ad + (x.alt ? " · " + x.alt : "")});
+      b.onclick = async () => {
+        await W.ayarYaz({["hedef" + h]: {jid: x.jid, ad: x.ad, tur: x.tur}});
+        ul.hidden = true; $("#wpAra" + h).value = "";
+        ayarCiz(); toast(h + " hedefi: " + x.ad);
+      };
+      ul.appendChild(el("li", {}, )).appendChild(b);
+    });
+  };
+  document.querySelectorAll("[data-ara]").forEach(b => { b.onclick = () => ara(b.dataset.ara); });
+  ["A", "B"].forEach(h => { $("#wpAra" + h).addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); ara(h); } }); });
+  $("#wpGun").onchange = e => W.ayarYaz({gun: e.target.value});
+  $("#wpHaftasonu").onchange = e => W.ayarYaz({haftasonu: e.target.checked});
+  $("#wpBaslat").onclick = async () => {
+    const a = await W.ayar();
+    if (!a.hedefA || !a.hedefB) { toast("Önce A ve B hedefini seç"); return; }
+    $("#wpBaslat").disabled = true;
+    try { await W.zamanla(); toast("Otomasyon 14 gün açık: 16:00 → " + a.hedefA.ad + ", 22:00 → " + a.hedefB.ad); }
+    catch (e) { toast("Zamanlanamadı: " + hata(e)); }
+    finally { $("#wpBaslat").disabled = false; ayarCiz(); }
+  };
+  $("#wpDurdur").onclick = async () => {
+    try { await W.durdur(); toast("Otomasyon durdu"); } catch (e) { toast("Durdurulamadı: " + hata(e)); }
+    ayarCiz();
+  };
+  document.querySelectorAll("[data-simdi]").forEach(b => {
+    b.onclick = async () => {
+      b.disabled = true;
+      try {
+        const r = await W.simdi(b.dataset.simdi);
+        toast(r && r.ok ? r.hedef + " hedefine gönderildi · " + r.gun : "Gönderilemedi: " + (r && r.not));
+      } catch (e) { toast("Gönderilemedi: " + hata(e)); }
+      finally { b.disabled = false; ayarCiz(); }
+    };
+  });
+  W.hazir();
+}
+wpKur();
 $("#telLink").onclick = () => kopyala($("#telLink").textContent, "Bağlantı kopyalandı");
