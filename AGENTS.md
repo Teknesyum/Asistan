@@ -7,6 +7,8 @@ her makinede aynı geçmiş görünür.
 
 ## Yeni makinede kurulum
 
+Base ile: `Kurucu/` NSIS kurucusu (`Asistan-Setup-<sürüm>.exe`, `v*` sürümleri), ayrıntı `Kurucu/AGENTS.md`.
+
 Girişsiz tek satır: `tek-satir.ps1`, `.kurulum\anahtar` deploy key'ini `kur-tek.ps1`'e gömüp
 sıkıştırır, `.kurulum\Kurulum-Komutu.txt`'e ve aynısını çift tıklanır `Asistan Kur.bat` olarak
 `.kurulum\` ile masaüstüne yazar. Komut PortableGit ve Node'u TEMP'e indirir,

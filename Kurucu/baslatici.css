@@ -1,0 +1,74 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+#panel {
+  flex: 1;
+  width: auto;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.gorunum {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--tk-sp-4);
+  min-height: 0;
+}
+
+.gorunum[hidden] {
+  display: none;
+}
+
+.aciklama {
+  margin: 0;
+  font-size: var(--tk-fs-2);
+  line-height: var(--tk-lh-body);
+}
+
+.not {
+  margin: 0;
+  overflow: hidden;
+  color: var(--tk-disabled);
+  font-size: var(--tk-fs-1);
+  line-height: var(--tk-lh-body);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cubuk {
+  height: var(--tk-sp-2);
+  overflow: hidden;
+  background: var(--tk-track);
+  border-radius: var(--tk-r-chip);
+}
+
+.cubuk__dolgu {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--tk-renk-1), var(--tk-renk-2));
+  border-radius: inherit;
+}
+
+[data-status='done'] .cubuk__dolgu {
+  background: var(--tk-success);
+}
+
+[data-status='error'] .cubuk__dolgu {
+  background: var(--tk-danger);
+}
+
+.tk-titlebar__control:disabled {
+  color: var(--tk-disabled);
+  cursor: not-allowed;
+}

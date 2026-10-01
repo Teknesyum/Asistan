@@ -2,6 +2,15 @@
   "icon": ".teknesyum/icon.png",
   "screenshot": ".teknesyum/shot.jpg",
   "full": ".teknesyum/full.jpg",
+  "method": "exe",
+  "asset": "Asistan-Setup-*.exe",
+  "silentArgs": [
+    "/S"
+  ],
+  "run": "Asistan.exe",
+  "requires": [
+    "git"
+  ],
   "catalog": {
     "category": "medical",
     "tags": {

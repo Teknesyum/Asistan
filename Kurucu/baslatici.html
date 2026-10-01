@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'">
+<title>Asistan</title>
+<link rel="stylesheet" href="tema/theme.css">
+<link rel="stylesheet" href="tema/a11y.css">
+<link rel="stylesheet" href="tema/forms.css">
+<link rel="stylesheet" href="tema/states.css">
+<link rel="stylesheet" href="tema/titlebar.css">
+<link rel="stylesheet" href="tema/panel.css">
+<link rel="stylesheet" href="baslatici.css">
+</head>
+<body>
+<header class="tk-titlebar">
+  <div class="tk-titlebar__brand">
+    <span class="tk-titlebar__name">Asistan</span>
+  </div>
+  <div class="tk-titlebar__tabs"></div>
+  <div class="tk-titlebar__tools">
+    <div class="tk-titlebar__window">
+      <button type="button" class="tk-titlebar__control" id="pKucult" aria-label="Küçült" title="Küçült"><span class="tk-titlebar__minimize" aria-hidden="true"></span></button>
+      <button type="button" class="tk-titlebar__control tk-titlebar__control--close" id="pKapat" aria-label="Kapat" title="Kapat"><span class="tk-titlebar__close" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<main class="tk-installer" id="panel" data-status="idle">
+  <div class="tk-installer__head">
+    <img class="tk-installer__icon" src="kaynak/simge/asistan.ico" alt="">
+    <div class="tk-installer__titles">
+      <h1 class="tk-installer__title">Asistan <span class="tk-installer__accent" id="baslik">Başlatıcı</span></h1>
+      <p class="tk-installer__sub" id="altbaslik"></p>
+    </div>
+  </div>
+
+  <section class="gorunum" id="vSecim" hidden>
+    <p class="aciklama">Hangi programı açmak istersiniz?</p>
+    <div class="tk-installer__actions" id="secimDugmeler"></div>
+  </section>
+
+  <section class="gorunum" id="vGitYok" hidden>
+    <p class="aciklama">Eşitleme için Git gerekiyor ve bu bilgisayarda bulunamadı. Git'i kurun, sonra bu pencereyi yeniden açın.</p>
+    <div class="tk-installer__actions">
+      <button type="button" class="tk-btn tk-btn-primary" id="gitIndir">Git'i İndir</button>
+      <button type="button" class="tk-btn" id="gitKapat">Kapat</button>
+    </div>
+  </section>
+
+  <section class="gorunum" id="vBagla" hidden>
+    <p class="aciklama">Programlar ve veriler GitHub'daki özel depodan gelir. Depoyu bu bilgisayara bağlayın.</p>
+    <div class="tk-installer__actions">
+      <button type="button" class="tk-btn tk-btn-primary" id="githubBagla">GitHub ile Bağlan</button>
+      <button type="button" class="tk-btn" id="anahtarBagla">Anahtar Dosyası Seç</button>
+    </div>
+    <p class="not" id="hedefNot"></p>
+  </section>
+
+  <section class="gorunum" id="vIs" hidden>
+    <div class="tk-installer__row">
+      <span class="tk-installer__step" id="adim"></span>
+      <span class="tk-installer__percent" id="yuzde">0%</span>
+    </div>
+    <div class="cubuk" role="progressbar" aria-label="Kurulum ilerlemesi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="cubuk"><div class="cubuk__dolgu" id="dolgu"></div></div>
+    <ul class="tk-installer__log" id="gunluk" aria-live="polite"></ul>
+    <div class="tk-installer__actions" id="sonDugmeler"></div>
+  </section>
+</main>
+<script src="baslatici.ui.js"></script>
+</body>
+</html>

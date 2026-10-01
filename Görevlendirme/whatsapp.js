@@ -131,35 +131,61 @@ function kaydet(k) {
   ayarYaz(a);
 }
 
-function ps(betik) {
+function calis(exe, args) {
   return new Promise((coz, red) => {
-    execFile("powershell.exe", ["-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-Command", betik], { windowsHide: true, timeout: 60000 }, (e, out, err) => {
-      if (e) red(new Error((err || e.message).toString().trim().split(/\r?\n/)[0])); else coz(out);
+    execFile(exe, args, { windowsHide: true, timeout: 60000 }, (e, out, err) => {
+      if (e) red(new Error((err || out || e.message).toString().trim().split(/\r?\n/)[0])); else coz(out);
     });
   });
 }
-const tirnak = s => "'" + String(s).replace(/'/g, "''") + "'";
+const xml = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const iki = n => String(n).padStart(2, "0");
+
+function gorevXml(h, bitis) {
+  const [s, d] = SAAT[h];
+  const bas = new Date(); bas.setHours(s, d, 0, 0);
+  const args = (app.isPackaged ? ["--arac", "gorevlendirme"] : [__dirname]).map(x => /\s/.test(x) ? '"' + x + '"' : x).concat(["--wp", h]).join(" ");
+  return `<?xml version="1.0" encoding="UTF-16"?>
+<Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+  <RegistrationInfo><Description>${xml("Asistan Görevlendirme WhatsApp " + h)}</Description></RegistrationInfo>
+  <Triggers>
+    <CalendarTrigger>
+      <StartBoundary>${tarih(bas)}T${iki(s)}:${iki(d)}:00</StartBoundary>
+      <EndBoundary>${tarih(bitis)}T23:59:00</EndBoundary>
+      <Enabled>true</Enabled>
+      <ScheduleByDay><DaysInterval>1</DaysInterval></ScheduleByDay>
+    </CalendarTrigger>
+  </Triggers>
+  <Principals><Principal id="Author"><LogonType>InteractiveToken</LogonType><RunLevel>LeastPrivilege</RunLevel></Principal></Principals>
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+    <StartWhenAvailable>true</StartWhenAvailable>
+    <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>
+    <Enabled>true</Enabled>
+  </Settings>
+  <Actions Context="Author">
+    <Exec>
+      <Command>${xml(process.execPath)}</Command>
+      <Arguments>${xml(args)}</Arguments>
+      <WorkingDirectory>${xml(__dirname)}</WorkingDirectory>
+    </Exec>
+  </Actions>
+</Task>`;
+}
 
 async function zamanla(gunSayisi = GUN) {
-  const exe = process.execPath;
-  const kok = app.getAppPath();
   const bitis = new Date();
   if (bitis.getHours() >= SAAT.B[0]) bitis.setDate(bitis.getDate() + 1);
   bitis.setDate(bitis.getDate() + gunSayisi - 1);
   bitis.setHours(23, 59, 0, 0);
-  const yerel = tarih(bitis) + "T23:59:00";
-  const sat = [];
   for (const h of ["A", "B"]) {
-    const [s, d] = SAAT[h];
-    sat.push(
-      "$t = New-ScheduledTaskTrigger -Daily -At " + tirnak(String(s).padStart(2, "0") + ":" + String(d).padStart(2, "0")) + ";",
-      "$t.EndBoundary = " + tirnak(yerel) + ";",
-      "$a = New-ScheduledTaskAction -Execute " + tirnak(exe) + " -Argument " + tirnak('"' + kok + '" --wp ' + h) + " -WorkingDirectory " + tirnak(kok) + ";",
-      "$s = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Hours 1);",
-      "Register-ScheduledTask -TaskName " + tirnak(GOREV(h)) + " -Trigger $t -Action $a -Settings $s -Description " + tirnak("Asistan Görevlendirme WhatsApp " + h) + " -Force | Out-Null;"
-    );
+    const dosya = path.join(os.tmpdir(), GOREV(h) + ".xml");
+    fs.writeFileSync(dosya, "\ufeff" + gorevXml(h, bitis), "utf16le");
+    try { await calis("schtasks.exe", ["/Create", "/TN", GOREV(h), "/XML", dosya, "/F"]); }
+    finally { try { fs.unlinkSync(dosya); } catch (e) {} }
   }
-  await ps("$ErrorActionPreference = 'Stop'; " + sat.join(" "));
   const a = ayarOku();
   a.baslangic = Date.now();
   a.bitis = bitis.getTime();
@@ -167,7 +193,7 @@ async function zamanla(gunSayisi = GUN) {
 }
 
 async function durdur() {
-  await ps("$ErrorActionPreference = 'SilentlyContinue'; " + ["A", "B"].map(h => "Unregister-ScheduledTask -TaskName " + tirnak(GOREV(h)) + " -Confirm:$false;").join(" "));
+  for (const h of ["A", "B"]) await calis("schtasks.exe", ["/Delete", "/TN", GOREV(h), "/F"]).catch(() => {});
   const a = ayarOku();
   a.baslangic = null;
   a.bitis = null;
@@ -175,10 +201,9 @@ async function durdur() {
 }
 
 async function gorevVar() {
-  try {
-    const o = await ps("(Get-ScheduledTask -TaskName " + tirnak(GOREV("A")) + "," + tirnak(GOREV("B")) + " -ErrorAction SilentlyContinue | Measure-Object).Count");
-    return parseInt(o, 10) || 0;
-  } catch (e) { return 0; }
+  let n = 0;
+  for (const h of ["A", "B"]) if (await calis("schtasks.exe", ["/Query", "/TN", GOREV(h)]).then(() => true, () => false)) n++;
+  return n;
 }
 
 function kapat() { if (cocuk) try { cocuk.kill(); } catch (e) {} }

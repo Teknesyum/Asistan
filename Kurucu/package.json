@@ -1,0 +1,57 @@
+{
+  "name": "asistan",
+  "version": "1.18.0",
+  "private": true,
+  "productName": "Asistan",
+  "description": "Asistan Görevlendirme ve Nöbet başlatıcısı",
+  "author": "Teknesyum",
+  "main": "baslatici.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --x64 --publish never"
+  },
+  "devDependencies": {
+    "electron": "44.2.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.teknesyum.asistan",
+    "productName": "Asistan",
+    "executableName": "Asistan",
+    "artifactName": "Asistan-Setup-${version}.${ext}",
+    "directories": {
+      "output": "dist",
+      "buildResources": "kaynak"
+    },
+    "files": [
+      "baslatici.js",
+      "baslatici.ui.js",
+      "preload.js",
+      "baslatici.html",
+      "baslatici.css",
+      "tema/**",
+      "kaynak/simge/asistan.ico",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "kaynak/simge",
+        "to": "simge"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "kaynak/simge/asistan.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Asistan",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false,
+      "include": "kaynak/kurucu.nsh"
+    }
+  }
+}
