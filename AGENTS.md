@@ -8,6 +8,7 @@ her makinede aynı geçmiş görünür.
 ## Yeni makinede kurulum
 
 Base ile: `Kurucu/` NSIS kurucusu (`Asistan-Setup-<sürüm>.exe`, `v*` sürümleri), ayrıntı `Kurucu/AGENTS.md`.
+GitHub sürümü yalnız `v*` (kurucu); araç sürümleri yalnız git etiketi, yayın `Kurucu/yayinla.js` ile.
 
 Girişsiz tek satır: `tek-satir.ps1`, `.kurulum\anahtar` deploy key'ini `kur-tek.ps1`'e gömüp
 sıkıştırır, `.kurulum\Kurulum-Komutu.txt`'e ve aynısını çift tıklanır `Asistan Kur.bat` olarak

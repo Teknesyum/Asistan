@@ -12,6 +12,8 @@ Electron ve başlatıcıyı taşır; araçların kodu ve verisi git deposunda ka
 - `baslatici.html/.ui.js/.css` + `tema/` (Görevlendirme `teknesyum-ui` kopyası, `panel.css` şablondan).
 - `kaynak/kurucu.nsh` — iki kısayol (Masaüstü + Başlat): "Asistan Görevlendirme", "Asistan Nöbet".
 - `kaynak/simge/` — araçların `simge.ico` kopyaları.
-- `yayinla.js` — `node yayinla.js --yayinla [--notlar "..."]`: derler, `.sha256` yazar,
-  `v<sürüm>` sürümünü latest olarak yayınlar. Manifest `.teknesyum/teknesyum.json` (`method: exe`).
+- `yayinla.js` — `node yayinla.js --yayinla [--notlar "..."] [--gorevlendirme "..."] [--nobet "..."]`:
+  derler, `.sha256` yazar, araç sürümlerini yalnız git etiketi (`gorevlendirme-v*`, `nobet-v*`) atar,
+  notlarını `v<sürüm>` sürümüne yazıp latest yayınlar. GitHub sürümü yalnız `v*`; araçlara release açılmaz.
+  Manifest `.teknesyum/teknesyum.json` (`method: exe`).
 - Kurulum: `npm install`, sonra `node node_modules/electron/install.js` (postinstall atlanıyor).
