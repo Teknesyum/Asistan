@@ -217,6 +217,20 @@ async function gorevVar() {
   return n;
 }
 
+async function gorevBilgi() {
+  const bilgi = {};
+  for (const h of ["A", "B"]) {
+    const out = await calis("schtasks.exe", ["/Query", "/TN", GOREV(h), "/FO", "LIST"]).catch(() => null);
+    if (out == null) { bilgi[h] = { var: false }; continue; }
+    const satir = out.split(/\r?\n/).map(x => x.trim()).filter(x => x.includes(":"));
+    const deger = i => { const x = satir[i]; return x ? x.slice(x.indexOf(":") + 1).trim() : ""; };
+    const zamanli = /\d{1,4}[./-]\d{1,2}[./-]\d{2,4}.*\d{1,2}:\d{2}/;
+    const sonraki = satir.map((x, i) => deger(i)).find(v => zamanli.test(v)) || "";
+    bilgi[h] = { var: true, sonraki, saat: saat(h).map(n => String(n).padStart(2, "0")).join(":") };
+  }
+  return bilgi;
+}
+
 function kapat() { if (cocuk) try { cocuk.kill(); } catch (e) {} }
 
-module.exports = { dinle, istek, gonder, ayarOku, ayarYaz, zamanUygun, kaydet, zamanla, durdur, gorevVar, kapat, tarih, durumSon: () => son, saat, SAAT_ONTANIM };
+module.exports = { dinle, istek, gonder, ayarOku, ayarYaz, zamanUygun, kaydet, zamanla, durdur, gorevVar, gorevBilgi, kapat, tarih, durumSon: () => son, saat, SAAT_ONTANIM };

@@ -202,6 +202,7 @@ app.whenReady().then(async () => {
   ipcMain.handle("wp:zamanla", () => whatsapp.zamanla());
   ipcMain.handle("wp:durdur", () => whatsapp.durdur());
   ipcMain.handle("wp:gorev", () => whatsapp.gorevVar());
+  ipcMain.handle("wp:gorev-bilgi", () => whatsapp.gorevBilgi());
   ipcMain.handle("wp:simdi", (e, h) => wpTetik(h, true));
   const w = pencere();
   ANA = w;

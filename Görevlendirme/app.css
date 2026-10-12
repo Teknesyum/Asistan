@@ -919,6 +919,7 @@ input[type="checkbox"] { color-scheme: dark; inline-size: var(--tk-target-min); 
 .wp-durum, .wp-plan { font-size: var(--tk-fs-1); font-variant-numeric: tabular-nums; }
 .wp-durum[data-durum="acik"] { color: var(--tk-success); }
 .wp-durum[data-durum="kapali"] { color: var(--tk-warning); }
+.wp-gorev { margin: 0; }
 .wp-yardim { margin: 0; font-size: var(--tk-fs-1); color: var(--tk-text-label); }
 .wp-hedef { display: grid; gap: var(--tk-sp-1); }
 .wp-hedef > label { font-size: var(--tk-fs-1); line-height: var(--tk-lh-body); color: var(--tk-text-label); }

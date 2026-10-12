@@ -25,6 +25,7 @@ contextBridge.exposeInMainWorld("pencere", {
     zamanla: () => ipcRenderer.invoke("wp:zamanla"),
     durdur: () => ipcRenderer.invoke("wp:durdur"),
     gorev: () => ipcRenderer.invoke("wp:gorev"),
+    gorevBilgi: () => ipcRenderer.invoke("wp:gorev-bilgi"),
     simdi: h => ipcRenderer.invoke("wp:simdi", h),
     olay: cb => ipcRenderer.on("wp:olay", (e, d) => cb(d)),
     resimIste: cb => ipcRenderer.on("wp:resim-iste", (e, d) => cb(d)),

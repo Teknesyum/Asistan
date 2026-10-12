@@ -2617,6 +2617,7 @@ function wpKur() {
     $("#wpPlan").textContent = aktif ? "Açık · " + new Date(a.bitis).toLocaleDateString("tr-TR", {day: "numeric", month: "long"}) + " sonuna dek" : "Kapalı";
     $("#wpBaslat").textContent = aktif ? "14 Gün Yenile" : "14 Gün Başlat";
     $("#wpDurdur").hidden = !aktif;
+    gorevCiz();
     const k = $("#wpKayit"); k.innerHTML = "";
     const son = (a.kayit || []).slice(-8).reverse();
     if (!son.length) k.appendChild(el("li", {textContent: "Henüz gönderim yok"}));
@@ -2625,6 +2626,16 @@ function wpKur() {
       li.dataset.ok = x.ok || x.atla ? "1" : "0";
       k.appendChild(li);
     });
+  };
+  const gorevCiz = async () => {
+    const e = $("#wpGorev");
+    e.textContent = "Windows görevi denetleniyor";
+    let b;
+    try { b = await W.gorevBilgi(); } catch (x) { e.textContent = "Windows görevi okunamadı"; return; }
+    const yok = ["A", "B"].filter(h => !b[h] || !b[h].var);
+    if (yok.length === 2) { e.dataset.durum = "kapali"; e.textContent = "Windows görevi yok — Başlat'a basılmadı ya da Durdur'a basıldı"; return; }
+    e.dataset.durum = yok.length ? "kapali" : "acik";
+    e.textContent = ["A", "B"].map(h => h + ": " + (b[h] && b[h].var ? b[h].saat + " · sonraki " + (b[h].sonraki || "?") : "görev yok")).join("  |  ");
   };
   W.olay(d => {
     if (d.ev === "durum") { durum = d; durumCiz(); }
