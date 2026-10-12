@@ -34,13 +34,14 @@ function veriYol(k) {
 
 const wpArg = argv => { const i = argv.indexOf("--wp"); return i >= 0 && /^[AB]$/.test(argv[i + 1]) ? argv[i + 1] : null; };
 const ILK_WP = wpArg(process.argv);
-if (!app.requestSingleInstanceLock()) { app.quit(); process.exit(0); }
+if (!app.requestSingleInstanceLock(ILK_WP ? { wp: ILK_WP } : {})) app.quit();
 app.commandLine.appendSwitch("disable-renderer-backgrounding");
 app.commandLine.appendSwitch("disable-backgrounding-occluded-windows");
 app.commandLine.appendSwitch("disable-features", "CalculateNativeWinOcclusion");
 let ANA = null, hazirCoz = null, rendererHazir = new Promise(r => { hazirCoz = r; });
 const resimBekleyen = new Map();
 let resimSira = 1, wpZincir = Promise.resolve();
+const wpDenendi = new Map();
 
 function resimIste(w, a, zorla) {
   const id = resimSira++;
@@ -52,6 +53,7 @@ function resimIste(w, a, zorla) {
 }
 
 function wpTetik(h, elle) {
+  if (!elle) whatsapp.kaydet({ anahtar: whatsapp.tarih(new Date()) + "|" + h + "|tetik", h, ok: false, tetik: true, not: "tetiklendi" });
   const is = wpZincir.then(() => wpGonder(h, elle));
   wpZincir = is.catch(() => {});
   return is;
@@ -64,7 +66,7 @@ async function wpGonder(h, elle) {
   if (!elle) {
     const neden = whatsapp.zamanUygun(h, a);
     if (neden) {
-      if (/geç/.test(neden)) whatsapp.kaydet({ anahtar, h, ok: false, not: neden });
+      whatsapp.kaydet({ anahtar: anahtar + "|red", h, ok: false, not: neden });
       return { ok: false, not: neden };
     }
   }
@@ -74,7 +76,10 @@ async function wpGonder(h, elle) {
   }
   await Promise.race([rendererHazir, new Promise(r => setTimeout(r, 60000))]);
   const w = ANA;
-  if (!w || w.isDestroyed()) return { ok: false, not: "pencere yok" };
+  if (!w || w.isDestroyed()) {
+    whatsapp.kaydet({ anahtar, h, ok: false, hedef: hedef.ad, not: "pencere yok", elle });
+    return { ok: false, not: "pencere yok" };
+  }
   const kucuk = w.isMinimized(), gizli = !w.isVisible();
   try {
     if (kucuk || gizli) { w.showInactive(); if (kucuk) w.restore(); await new Promise(r => setTimeout(r, 800)); }
@@ -217,8 +222,8 @@ app.whenReady().then(async () => {
     whatsapp.ayarYaz({ ...whatsapp.ayarOku(), saatSurum: 2 });
   })();
   w.webContents.on("did-start-navigation", d => { if (d.isMainFrame && !d.isSameDocument) rendererHazir = new Promise(r => { hazirCoz = r; }); });
-  app.on("second-instance", (e, argv) => {
-    const h = wpArg(argv);
+  app.on("second-instance", (e, argv, cwd, ek) => {
+    const h = (ek && ek.wp) || wpArg(argv);
     if (h) { wpTetik(h, false); return; }
     if (w.isDestroyed()) return;
     if (w.isMinimized()) w.restore();
@@ -226,6 +231,17 @@ app.whenReady().then(async () => {
     w.focus();
   });
   if (ILK_WP) wpTetik(ILK_WP, false);
+  setInterval(() => {
+    if (w.isDestroyed()) return;
+    const a = whatsapp.ayarOku();
+    for (const h of ["A", "B"]) {
+      if (whatsapp.zamanUygun(h, a)) continue;
+      const k = whatsapp.tarih(new Date()) + "|" + h;
+      if (Date.now() - (wpDenendi.get(k) || 0) < 10 * 60e3) continue;
+      wpDenendi.set(k, Date.now());
+      wpTetik(h, false);
+    }
+  }, 30000);
   senkron.dinle(d => { if (!w.isDestroyed()) w.webContents.send("senkron:olay", d); });
   senkron.izle(60000, r => {
     if (!r || !r.ok || w.isDestroyed()) return;
