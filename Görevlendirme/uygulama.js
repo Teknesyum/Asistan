@@ -2604,7 +2604,13 @@ function wpKur() {
   };
   const ayarCiz = async () => {
     const a = await W.ayar();
-    for (const h of ["A", "B"]) $("#wpSec" + h).textContent = a["hedef" + h] ? "Seçili: " + a["hedef" + h].ad : "Henüz seçilmedi";
+    for (const h of ["A", "B"]) {
+      $("#wpSec" + h).textContent = a["hedef" + h] ? "Seçili: " + a["hedef" + h].ad : "Henüz seçilmedi";
+      $("#wpSaat" + h).value = a["saat" + h];
+      $("#wpEtk" + h).textContent = a["saat" + h];
+    }
+    $("#wpEtkC").textContent = a.saatA;
+    $("#wpEtkD").textContent = a.saatB;
     $("#wpGun").value = a.gun || "yarin";
     $("#wpHaftasonu").checked = a.haftasonu !== false;
     const aktif = a.bitis && a.bitis > Date.now();
@@ -2661,13 +2667,20 @@ function wpKur() {
   };
   document.querySelectorAll("[data-ara]").forEach(b => { b.onclick = () => ara(b.dataset.ara); });
   ["A", "B"].forEach(h => { $("#wpAra" + h).addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); ara(h); } }); });
+  ["A", "B"].forEach(h => {
+    $("#wpSaat" + h).onchange = async e => {
+      if (!/^\d{2}:\d{2}$/.test(e.target.value)) { ayarCiz(); return; }
+      await W.ayarYaz({["saat" + h]: e.target.value});
+      ayarCiz(); toast(h + " saati: " + e.target.value);
+    };
+  });
   $("#wpGun").onchange = e => W.ayarYaz({gun: e.target.value});
   $("#wpHaftasonu").onchange = e => W.ayarYaz({haftasonu: e.target.checked});
   $("#wpBaslat").onclick = async () => {
     const a = await W.ayar();
     if (!a.hedefA || !a.hedefB) { toast("Önce A ve B hedefini seç"); return; }
     $("#wpBaslat").disabled = true;
-    try { await W.zamanla(); toast("Otomasyon 14 gün açık: 16:00 → " + a.hedefA.ad + ", 22:00 → " + a.hedefB.ad); }
+    try { await W.zamanla(); toast("Otomasyon 14 gün açık: " + a.saatA + " → " + a.hedefA.ad + ", " + a.saatB + " → " + a.hedefB.ad); }
     catch (e) { toast("Zamanlanamadı: " + hata(e)); }
     finally { $("#wpBaslat").disabled = false; ayarCiz(); }
   };

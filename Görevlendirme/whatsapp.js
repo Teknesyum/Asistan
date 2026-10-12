@@ -4,7 +4,15 @@ const path = require("path");
 const fs = require("fs");
 const os = require("os");
 
-const SAAT = { A: [16, 0], B: [22, 0] };
+const SAAT_ONTANIM = { A: "15:00", B: "21:00" };
+function saatCoz(x) {
+  const m = /^(\d{1,2}):(\d{2})$/.exec(String(x == null ? "" : x).trim());
+  if (!m) return null;
+  return [Math.min(23, Math.max(0, +m[1])), Math.min(59, Math.max(0, +m[2]))];
+}
+function saat(h, a) {
+  return saatCoz((a || ayarOku())["saat" + h]) || saatCoz(SAAT_ONTANIM[h]);
+}
 const GEC_SINIR = 2 * 3600e3;
 const GUN = 14;
 const GOREV = h => "AsistanGorevWP-" + h;
@@ -23,8 +31,9 @@ function klasor() {
 }
 const ayarYol = () => path.join(klasor(), "ayar.json");
 function ayarOku() {
-  try { return { gun: "yarin", haftasonu: true, kayit: [], ...JSON.parse(fs.readFileSync(ayarYol(), "utf-8")) }; }
-  catch (e) { return { gun: "yarin", haftasonu: true, kayit: [] }; }
+  const ont = { gun: "yarin", haftasonu: true, kayit: [], saatA: SAAT_ONTANIM.A, saatB: SAAT_ONTANIM.B };
+  try { return { ...ont, ...JSON.parse(fs.readFileSync(ayarYol(), "utf-8")) }; }
+  catch (e) { return ont; }
 }
 function ayarYaz(a) {
   a.kayit = (a.kayit || []).slice(-60);
@@ -117,7 +126,7 @@ const tarih = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, 
 function zamanUygun(h, a, simdi = new Date()) {
   if (!a.bitis || !a.baslangic) return "otomasyon kapalı";
   if (simdi.getTime() > a.bitis) return "süre doldu";
-  const [s, d] = SAAT[h];
+  const [s, d] = saat(h, a);
   const slot = new Date(simdi); slot.setHours(s, d, 0, 0);
   if (simdi < slot.getTime() - 15 * 60e3) return "saati gelmedi";
   if (simdi - slot > GEC_SINIR) return "saatinden 2 saatten fazla geç";
@@ -142,7 +151,7 @@ const xml = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(
 const iki = n => String(n).padStart(2, "0");
 
 function gorevXml(h, bitis) {
-  const [s, d] = SAAT[h];
+  const [s, d] = saat(h);
   const bas = new Date(); bas.setHours(s, d, 0, 0);
   const args = (app.isPackaged ? ["--arac", "gorevlendirme"] : [__dirname]).map(x => /\s/.test(x) ? '"' + x + '"' : x).concat(["--wp", h]).join(" ");
   return `<?xml version="1.0" encoding="UTF-16"?>
@@ -175,10 +184,12 @@ function gorevXml(h, bitis) {
 </Task>`;
 }
 
-async function zamanla(gunSayisi = GUN) {
-  const bitis = new Date();
-  if (bitis.getHours() >= SAAT.B[0]) bitis.setDate(bitis.getDate() + 1);
-  bitis.setDate(bitis.getDate() + gunSayisi - 1);
+async function zamanla(gunSayisi = GUN, bitisZaman = null) {
+  const bitis = bitisZaman ? new Date(bitisZaman) : new Date();
+  if (!bitisZaman) {
+    if (bitis.getHours() >= saat("B")[0]) bitis.setDate(bitis.getDate() + 1);
+    bitis.setDate(bitis.getDate() + gunSayisi - 1);
+  }
   bitis.setHours(23, 59, 0, 0);
   for (const h of ["A", "B"]) {
     const dosya = path.join(os.tmpdir(), GOREV(h) + ".xml");
@@ -187,7 +198,7 @@ async function zamanla(gunSayisi = GUN) {
     finally { try { fs.unlinkSync(dosya); } catch (e) {} }
   }
   const a = ayarOku();
-  a.baslangic = Date.now();
+  if (!bitisZaman) a.baslangic = Date.now();
   a.bitis = bitis.getTime();
   return ayarYaz(a);
 }
@@ -208,4 +219,4 @@ async function gorevVar() {
 
 function kapat() { if (cocuk) try { cocuk.kill(); } catch (e) {} }
 
-module.exports = { dinle, istek, gonder, ayarOku, ayarYaz, zamanUygun, kaydet, zamanla, durdur, gorevVar, kapat, tarih, durumSon: () => son, SAAT };
+module.exports = { dinle, istek, gonder, ayarOku, ayarYaz, zamanUygun, kaydet, zamanla, durdur, gorevVar, kapat, tarih, durumSon: () => son, saat, SAAT_ONTANIM };

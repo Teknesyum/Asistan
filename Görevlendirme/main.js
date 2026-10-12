@@ -188,7 +188,17 @@ app.whenReady().then(async () => {
   });
   ipcMain.handle("wp:istek", (e, op, ek) => whatsapp.istek(op, ek || {}));
   ipcMain.handle("wp:ayar", () => whatsapp.ayarOku());
-  ipcMain.handle("wp:ayar-yaz", (e, d) => { const a = whatsapp.ayarOku(); for (const k of ["hedefA", "hedefB", "gun", "haftasonu"]) if (k in d) a[k] = d[k]; return whatsapp.ayarYaz(a); });
+  ipcMain.handle("wp:ayar-yaz", async (e, d) => {
+    const a = whatsapp.ayarOku();
+    let saatDegisti = false;
+    for (const k of ["hedefA", "hedefB", "gun", "haftasonu", "saatA", "saatB"]) if (k in d) {
+      if ((k === "saatA" || k === "saatB") && a[k] !== d[k]) saatDegisti = true;
+      a[k] = d[k];
+    }
+    const y = whatsapp.ayarYaz(a);
+    if (saatDegisti && y.bitis && y.bitis > Date.now()) await whatsapp.zamanla(undefined, y.bitis).catch(() => {});
+    return y;
+  });
   ipcMain.handle("wp:zamanla", () => whatsapp.zamanla());
   ipcMain.handle("wp:durdur", () => whatsapp.durdur());
   ipcMain.handle("wp:gorev", () => whatsapp.gorevVar());
@@ -196,6 +206,15 @@ app.whenReady().then(async () => {
   const w = pencere();
   ANA = w;
   whatsapp.dinle(d => { if (!w.isDestroyed()) w.webContents.send("wp:olay", d); });
+  (async () => {
+    const a = whatsapp.ayarOku();
+    if (a.saatSurum === 2 || !a.bitis || a.bitis <= Date.now()) {
+      if (a.saatSurum !== 2) whatsapp.ayarYaz({ ...a, saatSurum: 2 });
+      return;
+    }
+    try { await whatsapp.zamanla(undefined, a.bitis); } catch (e) {}
+    whatsapp.ayarYaz({ ...whatsapp.ayarOku(), saatSurum: 2 });
+  })();
   w.webContents.on("did-start-navigation", d => { if (d.isMainFrame && !d.isSameDocument) rendererHazir = new Promise(r => { hazirCoz = r; }); });
   app.on("second-instance", (e, argv) => {
     const h = wpArg(argv);
