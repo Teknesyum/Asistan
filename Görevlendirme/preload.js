@@ -2,7 +2,9 @@ const { contextBridge, ipcRenderer } = require("electron");
 
 const dosyaAdi = k => String(k).replace(/[^A-Za-z0-9:_-]/g, "_").replace(/:/g, "@");
 let onbellek = {};
-const hazir = ipcRenderer.invoke("veri:hepsi").then(o => { onbellek = o || {}; });
+let veriSurum = 0;
+const hazir = Promise.all([ipcRenderer.invoke("veri:hepsi"), ipcRenderer.invoke("veri:surum")])
+  .then(([o, s]) => { onbellek = o || {}; veriSurum = s || 0; });
 
 contextBridge.exposeInMainWorld("pencere", {
   etiket: () => ipcRenderer.invoke("etiket:hepsi"),
@@ -16,7 +18,7 @@ contextBridge.exposeInMainWorld("pencere", {
   veri: {
     hazir: () => hazir,
     oku: k => (dosyaAdi(k) in onbellek ? onbellek[dosyaAdi(k)] : null),
-    yaz: (k, m) => { onbellek[dosyaAdi(k)] = m; ipcRenderer.send("veri:yaz", { k, m }); }
+    yaz: (k, m) => { onbellek[dosyaAdi(k)] = m; ipcRenderer.send("veri:yaz", { k, m, s: veriSurum }); }
   },
   wp: {
     istek: (op, ek) => ipcRenderer.invoke("wp:istek", op, ek),

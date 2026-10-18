@@ -42,6 +42,7 @@ let ANA = null, hazirCoz = null, rendererHazir = new Promise(r => { hazirCoz = r
 const resimBekleyen = new Map();
 let resimSira = 1, wpZincir = Promise.resolve();
 const wpDenendi = new Map();
+let veriSurum = 1;
 
 function resimIste(w, a, zorla) {
   const id = resimSira++;
@@ -178,7 +179,13 @@ app.whenReady().then(async () => {
     }
     return o;
   });
-  ipcMain.on("veri:yaz", (e, { k, m }) => {
+  ipcMain.handle("veri:surum", () => veriSurum);
+  ipcMain.on("veri:yaz", (e, { k, m, s }) => {
+    if (s !== veriSurum) {
+      senkron.not("eski sayfadan yazma engellendi, arayüz yenileniyor");
+      if (ANA && !ANA.isDestroyed()) ANA.webContents.send("senkron:olay", { tur: "veri" });
+      return;
+    }
     try { fs.writeFileSync(veriYol(k), m, "utf-8"); senkron.gecikmeliGonder(5000); } catch (err) {}
   });
   ipcMain.handle("senkron:durum", () => senkron.durum());
@@ -248,7 +255,10 @@ app.whenReady().then(async () => {
     if (r.kodDegisti) {
       w.webContents.send("senkron:olay", { tur: "kod" });
       setTimeout(() => { app.relaunch(); app.exit(0); }, 2500);
-    } else if (r.veriDegisti) w.webContents.send("senkron:olay", { tur: "veri" });
+    } else if (r.veriDegisti) {
+      veriSurum++;
+      w.webContents.send("senkron:olay", { tur: "veri" });
+    }
   });
   app.on("activate", () => { if (!BrowserWindow.getAllWindows().length) pencere(); });
 });
