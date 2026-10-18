@@ -3,7 +3,7 @@ const { contextBridge, ipcRenderer } = require("electron");
 const dosyaAdi = k => String(k).replace(/[^A-Za-z0-9:_-]/g, "_").replace(/:/g, "@");
 let onbellek = {};
 let veriSurum = 0;
-const hazir = Promise.all([ipcRenderer.invoke("veri:hepsi"), ipcRenderer.invoke("veri:surum")])
+const hazir = Promise.all([ipcRenderer.invoke("veri:hepsi").catch(() => ({})), ipcRenderer.invoke("veri:surum").catch(() => 0)])
   .then(([o, s]) => { onbellek = o || {}; veriSurum = s || 0; });
 
 contextBridge.exposeInMainWorld("pencere", {
