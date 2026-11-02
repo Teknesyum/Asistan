@@ -22,7 +22,7 @@
     "sponsor": "https://github.com/sponsors/Teknesyum"
   },
   "note": "Bu projede kaydırma çubuğu olmaması baskındır: ekranı sığdıran zoom kalır; hedef boyutu gibi genel kurallar ona uyar, çakışırsa zoom kazanır.",
-  "duzen": "a0eaf97ec84216aa",
+  "duzen": "920c61ba2837ca0d",
   "installedAt": "2026-09-26T22:32:14.974Z",
   "ignore": [
     {
@@ -47,13 +47,24 @@
       "rule": "guncelleme/panel-yok",
       "file": "senkron.js",
       "reason": "Kurulum penceresi depo kökündeki kur-usb.ps1 (Adim/tavan/16 ms sözleşmesi); iki uygulamayı birlikte kurar, tarama kökü uygulama klasörü olduğu için görülmüyor."
+    },
+    {
+      "rule": "states/five-states",
+      "file": "app.css",
+      "line": 734,
+      "reason": "Kaydırma çubuğu tutamacı devre dışı kalamaz; basılı hâli tanımlı."
     }
   ],
-  "plugin": "0.26.0",
+  "plugin": "0.37.0",
   "uc": {
     "surum": "0.26.0",
     "duzen": "a0eaf97ec84216aa",
     "commit": "5e869339adaf07a7a235104343d655171d0bd354",
     "tarih": "2026-09-27"
+  },
+  "pencere": "maximize",
+  "denetim": {
+    "tarih": "2026-10-28T10:24:20.519Z",
+    "duzen": "920c61ba2837ca0d"
   }
 }

@@ -23,7 +23,7 @@
   },
   "note": "Bu projede kaydırma çubuğu olmaması baskındır: ekranı sığdıran zoom kalır; hedef boyutu gibi genel kurallar ona uyar, çakışırsa zoom kazanır.",
   "installedAt": "2026-09-06T16:14:07.216Z",
-  "duzen": "a0eaf97ec84216aa",
+  "duzen": "920c61ba2837ca0d",
   "ignore": [
     {
       "rule": "states/hover-without-focus",
@@ -53,13 +53,23 @@
       "rule": "guncelleme/panel-yok",
       "file": "senkron.js",
       "reason": "Kurulum penceresi depo kökündeki kur-usb.ps1 (Adim/tavan/16 ms sözleşmesi); iki uygulamayı birlikte kurar, tarama kökü uygulama klasörü olduğu için görülmüyor."
+    },
+    {
+      "rule": "guncelleme/uzun-cagri-ilerlemesiz",
+      "file": "whatsapp.js",
+      "reason": "Ana süreçte WhatsApp yardımcısını başlatan modül; bekleme durumunu arayüz (uygulama.js) gösterir, burada çizilecek ekran yok."
     }
   ],
-  "plugin": "0.26.0",
+  "plugin": "0.37.0",
   "uc": {
     "surum": "0.26.0",
     "duzen": "a0eaf97ec84216aa",
     "commit": "5e869339adaf07a7a235104343d655171d0bd354",
     "tarih": "2026-09-27"
+  },
+  "pencere": "maximize",
+  "denetim": {
+    "tarih": "2026-10-28T17:16:53.364Z",
+    "duzen": "920c61ba2837ca0d"
   }
 }

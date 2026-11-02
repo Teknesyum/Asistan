@@ -122,6 +122,8 @@ def yok_olanlar(v, gun):
         dun = nobet_o_gun(v, gun - 1)
         for ad in dun["yb"] + dun["amel"]:
             sebep.setdefault(ad, "Nöbet Ertesi")
+    for ad in v.get("ertesi", {}).get(str(gun), []):
+        sebep.setdefault(ad, "Nöbet Ertesi")
     return sebep
 
 

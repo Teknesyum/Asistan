@@ -263,6 +263,7 @@ function normalize(v) {
   v.ders = v.ders || {};
   v.force = v.force || {};
   v.sabit = v.sabit || {};
+  v.ertesi = v.ertesi || {};
   v.devir = v.devir || {toplam:{}, yer:{}, kaynak:""};
   v.devir.refakat = v.devir.refakat || {};
   v.yer_adet = v.yer_adet || {};
@@ -439,6 +440,7 @@ function cipTasi(c, ad, gun, yer) {
     e.dataTransfer.setData("text/plain", JSON.stringify({ad, yer}));
     e.dataTransfer.effectAllowed = "move";
     c.classList.add("isim-tasiniyor");
+    setTimeout(() => durumSerit(gun, ad), 0);
   };
   c.ondragend = () => c.classList.remove("isim-tasiniyor", "isim-hedef");
   c.ondragover = e => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; c.classList.add("isim-hedef"); };
@@ -451,6 +453,36 @@ function cipTasi(c, ad, gun, yer) {
     if (!k || !k.ad || k.ad === ad) return;
     yerTakas(gun, k.ad, k.yer, ad, yer);
   };
+}
+const DURUMLAR = ["İzinli", "Nöbet Ertesi", "Derste"];
+function durumSerit(gun, ad) {
+  durumSeritKapat();
+  const w = el("div", {className: "durum-serit", id: "durumSerit"});
+  w.appendChild(el("span", {className: "durum-baslik", textContent: kisaAd(ad) + " → " + gun + ". gün:"}));
+  DURUMLAR.forEach(d => {
+    const h = el("span", {className: "durum-hedef", textContent: d});
+    h.ondragover = e => { e.preventDefault(); e.dataTransfer.dropEffect = "move"; h.classList.add("durum-uzeri"); };
+    h.ondragleave = () => h.classList.remove("durum-uzeri");
+    h.ondrop = e => {
+      e.preventDefault(); e.stopPropagation();
+      durumAta(gun, ad, d);
+      durumSeritKapat();
+    };
+    w.appendChild(h);
+  });
+  document.body.appendChild(w);
+}
+function durumSeritKapat() { const w = document.getElementById("durumSerit"); if (w) w.remove(); }
+function durumAta(g, ad, d) {
+  const gs = String(g);
+  if (V.gecmis[gs]) { toast(g + ". gün kilitli, önce kilidi açın"); return; }
+  if (V.force[gs]) { V.force[gs] = V.force[gs].filter(z => z.ad !== ad); if (!V.force[gs].length) delete V.force[gs]; }
+  if (V.sabit[gs]) { V.sabit[gs] = V.sabit[gs].filter(x => x !== ad); if (!V.sabit[gs].length) delete V.sabit[gs]; }
+  if (d === "İzinli") V.izin.push({gunler: g + "-" + g, kisiler: [ad]});
+  else if (d === "Derste") V.egitim.push({gunler: g + "-" + g, kisiler: [ad]});
+  else { const l = V.ertesi[gs] = V.ertesi[gs] || []; if (l.indexOf(ad) < 0) l.push(ad); }
+  sakla(); ciz_gosterge(); ciz_kural(); ciz_izin();
+  toast(kisaAd(ad) + " → " + g + ". gün " + d);
 }
 function yerTakas(g, a, ya, b, yb) {
   const gs = String(g);
@@ -494,7 +526,7 @@ function bugunDurum(s, ad) {
   if (V.havuz_disi_yerler.indexOf(y) >= 0 || V.zorunlu_yerler.indexOf(y) >= 0 || V.rotasyon.indexOf(y) >= 0) return y;
   return "Ameliyathane";
 }
-function nobetTablo(n, sirala) {
+function nobetTablo(n, sirala, gun) {
   const t = el("table", {className: "grid-line nobet-tablo"});
   t.innerHTML = "<thead><tr><th></th><th>Uzman</th><th>Asistan</th></tr></thead>";
   const tb = el("tbody");
@@ -502,7 +534,7 @@ function nobetTablo(n, sirala) {
   const serit = (liste, sirali) => {
     if (!liste.length) return el("td", {textContent: "—"});
     const td = el("td");
-    td.appendChild(sirali ? isimSerit(liste, kd, false) : cipSeritDuz(liste));
+    td.appendChild(sirali ? isimSerit(liste, kd, false, gun, null, "") : cipSeritDuz(liste));
     return td;
   };
   [["YBÜ Nöbeti", n.uzman_yb, n.yb], ["Ameliyathane Nöbeti", n.uzman_amel, n.amel]].forEach(r => {
@@ -524,6 +556,7 @@ function yokOlanlar(g, iz, eg) {
     const d = nobetGun(g - 1);
     d.yb.concat(d.amel).forEach(ad => { if (!s[ad]) s[ad] = "Nöbet Ertesi"; });
   }
+  (V.ertesi[String(g)] || []).forEach(ad => { if (!s[ad]) s[ad] = "Nöbet Ertesi"; });
   return s;
 }
 function kalanlar(g, yok) {
@@ -907,7 +940,7 @@ function bugunKart(hedef, gun, s) {
     kutu.appendChild(r);
   };
   const n = nobetGun(gun);
-  hedef.appendChild(nobetTablo(n, sirala));
+  hedef.appendChild(nobetTablo(n, sirala, gun));
   if (!s) return;
 
   const yerler = {};
@@ -1004,6 +1037,7 @@ function amelHedef(r, gun) {
   };
 }
 function hedefTemizle() {
+  durumSeritKapat();
   document.querySelectorAll(".esles-hedef, .isim-hedef, .isim-tasiniyor").forEach(x => x.classList.remove("esles-hedef", "isim-hedef", "isim-tasiniyor"));
 }
 ["dragend", "drop"].forEach(t => document.addEventListener(t, () => setTimeout(hedefTemizle, 0), true));
@@ -2291,7 +2325,7 @@ $("#ay").onchange = e => {
   sakla();
   const arsiv = DEPO.oku(ayAnahtar(y, a));
   if (arsiv) { V = normalize(JSON.parse(arsiv)); toast(AYLAR[a-1] + " " + y + " arşivden açıldı"); }
-  else { V.yil = y; V.ay = a; V.nobet = {}; V.izin = []; V.egitim = []; V.gecmis = {}; V.force = {}; V.sabit = {}; V.ders = {}; V.degisim = []; V.yer_adet = {}; }
+  else { V.yil = y; V.ay = a; V.nobet = {}; V.izin = []; V.egitim = []; V.gecmis = {}; V.force = {}; V.sabit = {}; V.ertesi = {}; V.ders = {}; V.degisim = []; V.yer_adet = {}; }
   devirTazele(V);
   sakla(); baslat();
 };
@@ -2305,7 +2339,7 @@ function devret() {
   const yeni = JSON.parse(JSON.stringify(V));
   yeni.yil = y; yeni.ay = a;
   yeni.nobet = {}; yeni.izin = []; yeni.egitim = [];
-  yeni.gecmis = {}; yeni.force = {}; yeni.sabit = {}; yeni.ders = {}; yeni.degisim = []; yeni.yer_adet = {};
+  yeni.gecmis = {}; yeni.force = {}; yeni.sabit = {}; yeni.ertesi = {}; yeni.ders = {}; yeni.degisim = []; yeni.yer_adet = {};
   yeni.onceki_ay_son_gun_nobet = {yb: (son.yb||[]).slice(), amel: (son.amel||[]).slice()};
   yeni.devir = {toplam: Object.assign({}, sayac.toplam), yer: Object.assign({}, sayac.yer),
     refakat: Object.assign({}, sayac.refakat), kaynak};
@@ -2385,6 +2419,12 @@ function senkronBagla() {
     else if (d.tur === "kod") toast("Yeni sürüm geldi, program yenileniyor…");
   });
   e.onclick = () => { goster({ asama: "esitleniyor" }); S.simdi(); };
+  const sb = $("#basbarSurum");
+  if (sb) {
+    const bas = ET["update.check"] || "";
+    sb.title = bas; sb.setAttribute("aria-label", bas);
+    sb.onclick = () => { toast(bas + "…"); e.onclick(); };
+  }
   try { const m = sessionStorage.getItem("senkBildirim"); if (m) { sessionStorage.removeItem("senkBildirim"); setTimeout(() => toast(m), 400); } } catch (_) {}
 }
 

@@ -795,7 +795,7 @@ body.ayirma { cursor: inherit; user-select: none; }
   gap: var(--tk-sp-1);
   align-content: start;
   padding-top: var(--tk-sp-2);
-  border-top: var(--tk-border-w) solid var(--tk-border-decorative);
+  border-top: var(--tk-border-w) solid var(--tk-border);
 }
 #gkural {
   display: grid;
@@ -864,7 +864,7 @@ body.ayirma { cursor: inherit; user-select: none; }
 .gk-blok > .gk-satir + .gk-satir,
 .gk-blok > .gk-kural + .gk-kural {
   padding-top: var(--tk-sp-1);
-  border-top: var(--tk-border-w) dashed var(--tk-border-decorative);
+  border-top: var(--tk-border-w) dashed var(--tk-border);
 }
 
 .cetele-toplam td {
@@ -932,3 +932,47 @@ input[type="checkbox"] { color-scheme: dark; inline-size: var(--tk-target-min); 
 .wp-kayit { margin: 0; padding-left: var(--tk-sp-4); display: grid; gap: var(--tk-sp-1); font-size: var(--tk-fs-1); font-variant-numeric: tabular-nums; max-height: 120px; overflow: auto; }
 .wp-kayit li[data-ok="0"] { color: var(--tk-warning); }
 .wp-dlg .tel-qr { width: 220px; justify-self: center; }
+
+/* ---------- durumlar ---------- */
+.dgm-birincil:disabled { background: var(--tk-surface); color: var(--tk-disabled); box-shadow: none; cursor: not-allowed; }
+.kilit-sim:active { color: var(--tk-renk-2-text); }
+.kilit-sim:disabled { color: var(--tk-disabled); cursor: not-allowed; }
+.gk-sil:active { color: var(--tk-renk-2); }
+.gk-sil:disabled { color: var(--tk-disabled); cursor: not-allowed; }
+
+/* ---------- sürüm düğmesi ---------- */
+button.basbar-surum { appearance: none; background: transparent; border: var(--tk-border-w) solid transparent; border-radius: var(--tk-r); padding: 0 var(--tk-sp-1); font-family: inherit; cursor: pointer; transition: color var(--tk-t-instant) var(--tk-e-out), border-color var(--tk-t-instant) var(--tk-e-out); }
+button.basbar-surum:hover,
+button.basbar-surum:focus-visible { color: var(--tk-renk-2-text); border-color: var(--tk-border); }
+button.basbar-surum:active { color: var(--tk-renk-1); border-color: var(--tk-renk-1); }
+button.basbar-surum:disabled { color: var(--tk-disabled); cursor: not-allowed; }
+
+/* sürükleme durum şeridi */
+.durum-serit {
+  position: fixed;
+  left: 50%;
+  bottom: var(--tk-sp-4);
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-2);
+  padding: var(--tk-sp-2) var(--tk-sp-3);
+  background: var(--tk-surface);
+  border: 1px solid var(--tk-border);
+  border-radius: var(--tk-r-box);
+  z-index: 50;
+  box-shadow: var(--tk-shadow-panel);
+}
+.durum-baslik { font-size: var(--tk-fs-1); color: var(--tk-text); }
+.durum-hedef {
+  padding: var(--tk-sp-2) var(--tk-sp-3);
+  border: 1px dashed var(--tk-border);
+  border-radius: var(--tk-r-btn);
+  font-size: var(--tk-fs-1);
+  font-weight: var(--tk-fw-semi);
+  color: var(--tk-text);
+}
+.durum-uzeri {
+  outline: var(--tk-focus-w) solid var(--tk-renk-1);
+  outline-offset: var(--tk-focus-offset);
+}

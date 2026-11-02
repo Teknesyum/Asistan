@@ -792,6 +792,58 @@ function ciz_ayar(si, onayli) {
   ic.appendChild(p);
 }
 
+let SURUKLE = null;
+
+function hucreKilit(ad, g, kisi) {
+  const k = String(g);
+  if (kisi) {
+    if (!V.kilit[k]) V.kilit[k] = {};
+    V.kilit[k][ad] = kisi;
+  } else if (V.kilit[k]) {
+    delete V.kilit[k][ad];
+    if (!Object.keys(V.kilit[k]).length) delete V.kilit[k];
+  }
+}
+
+function hucreYaz(sutAd, g, kisi) {
+  if (!V.liste[sutAd]) V.liste[sutAd] = {};
+  if (kisi) V.liste[sutAd][String(g)] = kisi; else delete V.liste[sutAd][String(g)];
+  hucreKilit(sutAd, g, kisi);
+}
+
+function birak(sutAd, g) {
+  const s = SURUKLE; SURUKLE = null;
+  if (!s) return;
+  const eski = (V.liste[sutAd] || {})[String(g)] || "";
+  if (s.sut === sutAd && s.g === g) return;
+  if (s.sut) hucreYaz(s.sut, s.g, eski && eski !== s.ad ? eski : "");
+  hucreYaz(sutAd, g, s.ad);
+  sakla(); ciz();
+}
+
+function surukleKur(td, sutAd, g, ad) {
+  if (ad) {
+    td.draggable = true;
+    td.addEventListener("dragstart", e => {
+      SURUKLE = {ad: ad, sut: sutAd, g: g};
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/plain", ad);
+    });
+    td.addEventListener("dragend", () => { SURUKLE = null; });
+  }
+  td.addEventListener("dragover", e => {
+    if (!SURUKLE) return;
+    e.preventDefault();
+    td.classList.add("surukle-uzeri");
+  });
+  td.addEventListener("dragleave", () => td.classList.remove("surukle-uzeri"));
+  td.addEventListener("drop", e => {
+    e.preventDefault();
+    td.classList.remove("surukle-uzeri");
+    birak(sutAd, g);
+  });
+}
+
 function ciz_sliste(si, onayli) {
   const ic = $("#sListeIc"); ic.innerHTML = "";
   const sutAd = V._sut[si];
@@ -819,6 +871,7 @@ function ciz_sliste(si, onayli) {
         if (j > si) td.classList.add("kol-sonra");
         if (atanan && V._kisi[atanan] && V._kisi[atanan].torba.indexOf(s.ad) < 0) td.classList.add("hucre-odunc");
         if (atanan && atanan === SECILI_KISI) td.classList.add("hucre-secili");
+        surukleKur(td, s.ad, g, atanan && V._kisi[atanan] ? atanan : "");
         tr.appendChild(td);
         return;
       }
@@ -846,6 +899,7 @@ function ciz_sliste(si, onayli) {
         sakla(); ciz();
       };
       td.appendChild(sel);
+      surukleKur(td, sutAd, g, atanan && V._kisi[atanan] ? atanan : "");
       tr.appendChild(td);
     });
     tb.appendChild(tr);
@@ -909,9 +963,25 @@ function ciz_sdenge(si) {
     tr.appendChild(sayiHucre("+" + x.istedigi.length + " −" + x.istemedigi.length, x.istemedigi.length ? "sayi-ihlal" : ""));
     tr.appendChild(sayiHucre(x.cift.length, x.zincir.length ? "sayi-ihlal" : (x.cift.length ? "sayi-sinir" : "")));
     tr.onclick = () => kisiSec(x.ad);
+    tr.draggable = true;
+    tr.title = "Listede bir güne sürükle";
+    tr.addEventListener("dragstart", e => {
+      SURUKLE = {ad: x.ad, sut: "", g: 0};
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/plain", x.ad);
+    });
+    tr.addEventListener("dragend", () => { SURUKLE = null; });
     tb.appendChild(tr);
   });
   ic.appendChild(t);
+  ic.ondragover = e => { if (SURUKLE && SURUKLE.sut) e.preventDefault(); };
+  ic.ondrop = e => {
+    const s = SURUKLE; SURUKLE = null;
+    if (!s || !s.sut) return;
+    e.preventDefault();
+    hucreYaz(s.sut, s.g, "");
+    sakla(); ciz();
+  };
 
   const p = el("div", {className: "durum-ic"});
   const uy = uyariListesi();
@@ -1092,6 +1162,12 @@ function senkronBagla() {
     else if (d.tur === "kod") toast("Yeni sürüm geldi, program yenileniyor…");
   });
   e.onclick = () => { goster({ asama: "esitleniyor" }); S.simdi(); };
+  const sb = $("#basbarSurum");
+  if (sb) {
+    const bas = ET["update.check"] || "";
+    sb.title = bas; sb.setAttribute("aria-label", bas);
+    sb.onclick = () => { toast(bas + "…"); e.onclick(); };
+  }
   try {
     const m = sessionStorage.getItem("senkBildirim");
     if (m) { sessionStorage.removeItem("senkBildirim"); setTimeout(() => toast(m), 400); }

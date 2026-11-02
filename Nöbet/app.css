@@ -785,3 +785,33 @@ section[role="tabpanel"]:not([hidden]) { animation: tk-belir var(--tk-t-instant)
 
 input[type="checkbox"] { color-scheme: dark; inline-size: var(--tk-target-min); block-size: var(--tk-target-min); margin: 0; vertical-align: middle; accent-color: var(--tk-renk-1); }
 :root { color-scheme: dark; }
+
+/* ---------- durumlar ---------- */
+.dgm-birincil:disabled { background: var(--tk-surface); color: var(--tk-disabled); box-shadow: none; cursor: not-allowed; }
+.tbl tbody tr:active { background: var(--tk-glass); }
+.tbl tbody tr[aria-disabled="true"] { color: var(--tk-disabled); cursor: not-allowed; }
+.mat-hucre:active { border-color: var(--tk-renk-1); }
+.mat-hucre:disabled { color: var(--tk-disabled); cursor: not-allowed; }
+.ay-hucre:active { border-color: var(--tk-renk-1); }
+.ay-hucre:disabled { color: var(--tk-disabled); cursor: not-allowed; }
+.tk-ipucu:active { border-color: var(--tk-renk-1); color: var(--tk-renk-1); }
+.tk-ipucu:disabled { color: var(--tk-disabled); cursor: not-allowed; }
+.uyari:active { background: var(--tk-glass); }
+.uyari:disabled { color: var(--tk-disabled); cursor: not-allowed; }
+.acma:active { border-color: var(--tk-renk-1); }
+.acma:disabled { color: var(--tk-disabled); cursor: not-allowed; }
+.pnl-icerik::-webkit-scrollbar-thumb:active { background: var(--tk-renk-1); }
+
+/* ---------- sürükle-bırak ---------- */
+.tbl td[draggable="true"],
+#sDengeIc tbody tr[draggable="true"] { cursor: grab; }
+.tbl td[draggable="true"]:active,
+#sDengeIc tbody tr[draggable="true"]:active { cursor: grabbing; }
+.tbl td.surukle-uzeri { background: var(--tk-glass); outline: var(--tk-border-w) solid var(--tk-renk-1); outline-offset: -2px; }
+
+/* ---------- sürüm düğmesi ---------- */
+button.basbar-surum { appearance: none; background: transparent; border: var(--tk-border-w) solid transparent; border-radius: var(--tk-r); padding: 0 var(--tk-sp-1); font-family: inherit; cursor: pointer; transition: color var(--tk-t-instant) var(--tk-e-out), border-color var(--tk-t-instant) var(--tk-e-out); }
+button.basbar-surum:hover,
+button.basbar-surum:focus-visible { color: var(--tk-renk-2-text); border-color: var(--tk-border); }
+button.basbar-surum:active { color: var(--tk-renk-1); border-color: var(--tk-renk-1); }
+button.basbar-surum:disabled { color: var(--tk-disabled); cursor: not-allowed; }
