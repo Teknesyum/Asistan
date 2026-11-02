@@ -18,8 +18,15 @@ const ozet = crypto.createHash("sha256").update(fs.readFileSync(exe)).digest("he
 fs.writeFileSync(exe + ".sha256", `${ozet}  ${ad}\n`, "ascii");
 console.log(ozet + "  " + ad);
 
-if (process.argv.includes("--yayinla")) {
-  const satirlar = [arg("--notlar") || `Asistan ${version}`, ""];
+const sonSurum = () => { try { return git("describe", "--tags", "--abbrev=0", "--match", "v*"); } catch (e) { return null; } };
+const otoNot = () => {
+  const son = sonSurum();
+  const log = git("log", "--no-merges", "--format=%s", son ? son + "..HEAD" : "HEAD").split("\n").filter(x => x && !x.startsWith("veri ("));
+  return log.length ? log.map(x => "- " + x.trim()).join("\n") : `Asistan ${version}`;
+};
+
+if (!process.argv.includes("--taslak")) {
+  const satirlar = [arg("--notlar") || otoNot(), ""];
   const yeniEtiket = [];
   for (const [klasor, kisa] of ARACLAR) {
     const v = surumu(path.join(depo, klasor));

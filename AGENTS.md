@@ -1,13 +1,13 @@
 # Asistan
 
-Özel depo. Her araç kendi klasöründe: `Görevlendirme`, `Nöbet`.
+Açık (public) depo; veriler de depoda olduğundan okuma serbest, yazma yetkili anahtar/giriş ister. Her araç kendi klasöründe: `Görevlendirme`, `Nöbet`.
 
 Veri de depoda: her aracın `veri/` klasöründeki JSON'lar commit edilir, böylece
 her makinede aynı geçmiş görünür.
 
 ## Yeni makinede kurulum
 
-Base ile: `Kurucu/` NSIS kurucusu (`Asistan-Setup-<sürüm>.exe`, `v*` sürümleri), ayrıntı `Kurucu/AGENTS.md`.
+Base ile: `Kurucu/` NSIS kurucusu (`Asistan-Setup-<sürüm>.exe`, `v*` sürümleri). Kur'a basmak yeter, giriş istemez (açık depo https klonu); yazma için GitHub girişi ya da anahtar sonradan seçilir. Ayrıntı `Kurucu/AGENTS.md`. Yayın tek komut: `node Kurucu/yayinla.js [--notlar "..."]` (`--taslak` yalnız derler, `--derleme-yok` derlemeyi atlar).
 GitHub sürümü yalnız `v*` (kurucu); araç sürümleri yalnız git etiketi, yayın `Kurucu/yayinla.js` ile.
 
 Girişsiz tek satır: `tek-satir.ps1`, `.kurulum\anahtar` deploy key'ini `kur-tek.ps1`'e gömüp

@@ -93,13 +93,14 @@ async function baslangic() {
   if (!bilgi.git) { goster("vGitYok"); $("gitIndir").focus(); return; }
   $("hedefNot").textContent = "Kurulacağı yer: " + bilgi.hedef;
   goster("vBagla");
-  $("githubBagla").focus();
+  $("acikBagla").focus();
 }
 
 $("pKucult").addEventListener("click", () => window.kur.kucult());
 $("pKapat").addEventListener("click", () => window.kur.kapat());
 $("gitIndir").addEventListener("click", () => window.kur.gitIndir());
 $("gitKapat").addEventListener("click", () => window.kur.kapat());
+$("acikBagla").addEventListener("click", () => basla("acik"));
 $("githubBagla").addEventListener("click", () => basla("github"));
 $("anahtarBagla").addEventListener("click", async () => {
   const f = await window.kur.anahtarSec();

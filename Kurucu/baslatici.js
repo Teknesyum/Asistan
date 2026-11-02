@@ -112,6 +112,9 @@ function kurucu() {
         const ileri = f => f.replace(/\\/g, "/");
         ssh = `"${fs.existsSync(sshExe) ? ileri(sshExe) : "ssh"}" -i "${ileri(hedefAnahtar)}" -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile="${ileri(path.join(YEREL, "known_hosts"))}"`;
         env = { GIT_SSH_COMMAND: ssh };
+      } else if (yol === "acik") {
+        adim(8, 14, "Açık depoya bağlanılıyor");
+        env = { GIT_CONFIG_COUNT: "1", GIT_CONFIG_KEY_0: "credential.helper", GIT_CONFIG_VALUE_0: "", GCM_INTERACTIVE: "never" };
       } else {
         adim(8, 14, "GitHub girişi bekleniyor, açılan pencerede oturum açın");
       }

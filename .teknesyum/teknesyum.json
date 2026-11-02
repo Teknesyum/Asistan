@@ -17,19 +17,17 @@
       "tr": [
         "nöbet",
         "görevlendirme",
-        "asistan",
-        "özel"
+        "asistan"
       ],
       "en": [
         "on-call",
         "duty-roster",
-        "residents",
-        "private"
+        "residents"
       ]
     },
     "summary": {
-      "tr": "Anesteziyoloji asistanları için iki masaüstü aracından oluşan özel bir depo. Nöbet aracı aylık nöbet listesini kota, nöbet ertesi izin, istekler ve hafta günü dengesi gözeterek sıfırdan üretir. Görevlendirme aracı nöbet ve izin listesinden sonra boş kalan zorunlu yerleri kıdem ve dengeli dağılıma göre havuzdaki asistanlara atar. Veriler depoda tutulur ve makineler arasında git ile kendiliğinden eşitlenir. Sonuç Excel'e kopyalanabilir ya da QR ile paylaşılabilir. Türkçe, Electron tabanlı.",
-      "en": "A private repository with two desktop tools for anaesthesiology residents. The on-call tool builds the monthly duty roster from scratch, respecting quotas, post-call leave, requests and weekday balance. The assignment tool fills the mandatory posts left empty after duty and leave, assigning residents from the pool by seniority and fair distribution. Data lives in the repository and syncs between machines through git on its own. Results can be copied to Excel or shared as a QR link. Turkish, built on Electron."
+      "tr": "Anesteziyoloji asistanları için iki masaüstü aracından oluşan bir açık depo. Nöbet aracı aylık nöbet listesini kota, nöbet ertesi izin, istekler ve hafta günü dengesi gözeterek sıfırdan üretir. Görevlendirme aracı nöbet ve izin listesinden sonra boş kalan zorunlu yerleri kıdem ve dengeli dağılıma göre havuzdaki asistanlara atar. Veriler depoda tutulur ve makineler arasında git ile kendiliğinden eşitlenir. Sonuç Excel'e kopyalanabilir ya da QR ile paylaşılabilir. Türkçe, Electron tabanlı.",
+      "en": "An open repository with two desktop tools for anaesthesiology residents. The on-call tool builds the monthly duty roster from scratch, respecting quotas, post-call leave, requests and weekday balance. The assignment tool fills the mandatory posts left empty after duty and leave, assigning residents from the pool by seniority and fair distribution. Data lives in the repository and syncs between machines through git on its own. Results can be copied to Excel or shared as a QR link. Turkish, built on Electron."
     },
     "points": {
       "tr": [
@@ -44,7 +42,7 @@
         "Değişim ve refakat kurallarını hesaba katar",
         "Veri ve ilerleme makineler arası git ile otomatik senkronize olur",
         "Tamamen çevrimdışı çalışır",
-        "Özel depo, yalnız yetkili kişilerle paylaşılır"
+        "Açık depo; kurulum için giriş gerekmez, veri yazmak için yetki gerekir"
       ],
       "en": [
         "Assigns staff to unfilled mandatory duty slots from monthly roster",
@@ -58,7 +56,7 @@
         "Accounts for shift swaps and companion/backup assignments",
         "Data and progress auto-sync across machines via git",
         "Works fully offline",
-        "Private repo shared only with authorized people"
+        "Open repo; no login to install, write access needed to sync data"
       ]
     },
     "uses": {
